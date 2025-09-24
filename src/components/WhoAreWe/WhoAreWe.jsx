@@ -10,7 +10,6 @@ import FoundersTeam from './FoundersTeam';
 import Certifications from './Certifications';
 import KeyCollaborations from './KeyCollaborations';
 import BuildingTomorrow from './BuildingTomorrow';
-import Contact from './Contact';
 
 const WhoAreWe = () => {
   return (
@@ -29,8 +28,10 @@ const WhoAreWe = () => {
           <Certifications />
           <KeyCollaborations />
           <BuildingTomorrow />
-          <Contact />
         </div>
+        
+        {/* Spacing before footer */}
+        <div className="w-full h-[120px]"></div>
       </div>
       
       <Footer />

@@ -4,15 +4,15 @@ import { motion } from 'framer-motion';
 
 const Certifications = () => {
   const certifications = [
-    { id: 1, image: "/images/logo1.png" },
-    { id: 2, image: "/images/logo2.png" },
-    { id: 3, image: "/images/logo3.png" },
-    { id: 4, image: "/images/logo4.png" },
-    { id: 5, image: "/images/tvastalogo.png" }
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 }
   ];
 
   return (
-    <div className="flex flex-col items-center gap-[64px] w-full max-w-[1441px] px-[80px]">
+    <div className="flex flex-col items-center gap-[40px] w-full max-w-[1441px] px-[80px]">
       {/* Title */}
       <FadeIn delay={0.2}>
         <div className="flex flex-col items-center gap-[10px] w-full max-w-[1281px]">
@@ -24,29 +24,23 @@ const Certifications = () => {
       
       {/* Certifications Grid */}
       <StaggeredList 
-        className="flex flex-col items-center gap-[50px] w-[950px]"
+        className="flex items-center justify-center gap-[30px] w-full max-w-[800px]"
         delay={0.4}
         staggerDelay={0.1}
       >
-        <div className="flex items-center gap-[50px] w-full">
-          {certifications.map((cert, index) => (
-            <motion.div
-              key={cert.id}
-              className="w-[150px] h-[80px] bg-[#D9D9D9] rounded-[10px] flex items-center justify-center overflow-hidden"
-              whileHover={{ 
-                scale: 1.05,
-                backgroundColor: "#C0C0C0",
-                transition: { duration: 0.3 }
-              }}
-            >
-              <img 
-                src={cert.image} 
-                alt={`Certification ${cert.id}`}
-                className="w-full h-full object-contain p-2"
-              />
-            </motion.div>
-          ))}
-        </div>
+        {certifications.map((cert, index) => (
+          <motion.div
+            key={cert.id}
+            className="w-[120px] h-[60px] bg-[#D1D5DB] rounded-[8px] flex items-center justify-center"
+            whileHover={{ 
+              scale: 1.05,
+              backgroundColor: "#C0C0C0",
+              transition: { duration: 0.3 }
+            }}
+          >
+            {/* Empty gray placeholder */}
+          </motion.div>
+        ))}
       </StaggeredList>
     </div>
   );

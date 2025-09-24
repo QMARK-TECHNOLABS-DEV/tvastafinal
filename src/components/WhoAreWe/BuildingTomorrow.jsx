@@ -56,14 +56,18 @@ const BuildingTomorrow = () => {
       </div>
       
       {/* Right Image */}
-      <SlideInRight delay={0.3} className="w-[508px] h-[400px] flex-shrink-0">
-        <div className="w-full h-full bg-gray-200 rounded-[24px] overflow-hidden">
-          <img 
-            src="/images/whytvasta2.png" 
-            alt="Building Tomorrow" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+      <SlideInRight delay={0.3} className="flex-shrink-0">
+        <img 
+          src="/images/Who Are We/workwithus.png" 
+          alt="Building Tomorrow" 
+          className="w-[508px] h-[400px] object-cover rounded-[24px] opacity-100"
+          style={{ 
+            width: '508px', 
+            height: '400px', 
+            borderRadius: '24px',
+            opacity: 1 
+          }}
+        />
       </SlideInRight>
     </div>
   );
