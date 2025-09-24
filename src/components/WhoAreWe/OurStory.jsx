@@ -28,41 +28,34 @@ const OurStory = () => {
         </div>
       </div>
       
-      {/* Horizontal Scrolling Images */}
-      <div className="w-full max-w-[1441px] h-[468px] overflow-x-auto relative">
+      {/* Images Layout - 3/4 and 1/4 split */}
+      <div className="w-full max-w-[1441px] flex flex-col lg:flex-row items-stretch gap-[40px] px-4 lg:px-[80px]">
         <motion.div 
-          className="flex items-center gap-[40px] px-[80px] h-full min-w-max"
-          initial={{ x: 50, opacity: 0 }}
+          className="w-full lg:w-3/4 h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden"
+          initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          {/* Large Image */}
-          <div className="w-[892px] h-[468px] bg-gray-200 rounded-[12px] overflow-hidden flex-shrink-0">
-            <img 
-              src="/images/ourwork1.png" 
-              alt="Our Story 1" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          
-          {/* Medium Image */}
-          <div className="w-[429px] h-[468px] bg-gray-200 rounded-[12px] overflow-hidden flex-shrink-0">
-            <img 
-              src="/images/ourwork2.png" 
-              alt="Our Story 2" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          
-          {/* Small Image */}
-          <div className="w-[411px] h-[468px] bg-gray-200 rounded-[12px] overflow-hidden flex-shrink-0">
-            <img 
-              src="/images/ourwork3.png" 
-              alt="Our Story 3" 
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <img 
+            src="/images/Who Are We/ourstory1.png" 
+            alt="Our Story 1" 
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+        
+        <motion.div 
+          className="w-full lg:w-1/4 h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden"
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <img 
+            src="/images/Who Are We/ourstory2.png" 
+            alt="Our Story 2" 
+            className="w-full h-full object-cover"
+          />
         </motion.div>
       </div>
     </div>

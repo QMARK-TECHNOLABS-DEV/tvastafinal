@@ -7,27 +7,27 @@ const FoundersTeam = () => {
     {
       name: "Adithya VS",
       position: "Co-Founder & CEO",
-      image: "/images/logo1.png" // Using available logo images as placeholders
+      image: "/images/Who Are We/founders.jpg"
     },
     {
       name: "Parivarthan Reddy",
       position: "Co-Founder & COO",
-      image: "/images/logo2.png"
+      image: "/images/Who Are We/founders.jpg"
     },
     {
       name: "Pragadeeswar",
       position: "CTO Machines",
-      image: "/images/logo3.png"
+      image: "/images/Who Are We/founders.jpg"
     },
     {
       name: "Kalyan",
       position: "CTO Construction R&D",
-      image: "/images/logo4.png"
+      image: "/images/Who Are We/founders.jpg"
     },
     {
       name: "Jay Prakash",
       position: "CFO",
-      image: "/images/tvastalogo.png"
+      image: "/images/Who Are We/founders.jpg"
     }
   ];
 
@@ -51,20 +51,21 @@ const FoundersTeam = () => {
         {founders.map((founder, index) => (
           <motion.div
             key={index}
-            className="flex flex-col justify-end items-start p-[16px_12px] gap-[2px] w-[240.2px] h-[300px] rounded-[24px] relative overflow-hidden flex-grow-0 flex-shrink-0 basis-auto"
-            style={{
-              background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url(${founder.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backdropFilter: 'blur(24px)'
-            }}
+            className="flex flex-col justify-end items-start p-[16px_12px] gap-[2px] w-[240.2px] h-[300px] rounded-[24px] relative overflow-hidden flex-grow-0 flex-shrink-0 basis-auto bg-gray-800"
             whileHover={{ 
               scale: 1.05,
               transition: { duration: 0.3 }
             }}
           >
+            {/* Background Image */}
+            <img 
+              src={founder.image}
+              alt={founder.name}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             
             {/* Content */}
             <div className="relative z-10 flex flex-col gap-[2px] w-full">

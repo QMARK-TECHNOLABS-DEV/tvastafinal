@@ -10,38 +10,37 @@ const WhatWeDo = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-[25px] w-full max-w-[1280px] px-4">
+    <div className="flex flex-col items-center gap-[40px] w-full max-w-[1280px] px-4">
       {/* Title */}
       <FadeIn delay={0.2}>
-        <h2 className="font-outfit font-semibold text-[40px] leading-[50px] text-[#0D192D]">
+        <h2 className="font-outfit font-semibold text-[48px] leading-[58px] text-[#0D192D] text-center">
           What We Do
         </h2>
       </FadeIn>
       
       {/* Video Section */}
-      <SlideInUp delay={0.4} className="relative w-full h-[500px]">
+      <SlideInUp delay={0.4} className="relative w-full max-w-[1008px] h-[432px]">
         <div className="relative w-full h-full bg-gray-900 rounded-[12px] overflow-hidden">
-          {/* Video Background */}
+          {/* Video Background using whatwedo.png */}
           <div 
             className="absolute inset-0 w-full h-full bg-cover bg-center"
             style={{ 
-              backgroundImage: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/videos/7.mp4')",
+              backgroundImage: "linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/images/Who Are We/whatwedo.png')",
               backgroundSize: 'cover'
             }}
           />
           
           {/* Play Button */}
           <motion.button
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] bg-white/89 rounded-full flex items-center justify-center cursor-pointer"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px] bg-white/90 rounded-full flex items-center justify-center cursor-pointer shadow-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handlePlayClick}
           >
             <div 
-              className="w-[44.71px] h-[44.71px] bg-black"
+              className="w-[30px] h-[30px] bg-black ml-1"
               style={{
-                clipPath: 'polygon(0 0, 100% 50%, 0 100%)',
-                transform: 'rotate(90deg)'
+                clipPath: 'polygon(0 0, 100% 50%, 0 100%)'
               }}
             />
           </motion.button>
@@ -50,7 +49,7 @@ const WhatWeDo = () => {
       
       {/* Description */}
       <FadeIn delay={0.6}>
-        <p className="font-outfit font-normal text-[28px] leading-[35px] text-center text-[#1D3357] w-full">
+        <p className="font-outfit font-normal text-[20px] leading-[140%] text-center text-[#1D3357] w-full max-w-[900px]">
           We deliver first-principles-based, end-to-end 3D construction solutions that redefine building. Every structure we create, from shelters to smart pods, is high-quality, low-waste, and future-ready.
         </p>
       </FadeIn>

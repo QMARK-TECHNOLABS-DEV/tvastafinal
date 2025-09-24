@@ -7,8 +7,8 @@ const PageHeader = () => {
     <div className="relative w-full h-[660px] bg-white overflow-hidden">
       {/* Background Pattern - Using herobg.png as specified */}
       <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: "url('/images/herobg.png')" }}
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-60"
+        style={{ backgroundImage: "url('/images/Who Are We/herobg.png')" }}
       />
       
       {/* Blurred Background Ellipse */}
