@@ -1,0 +1,67 @@
+import React from 'react';
+import { FadeIn, SlideInUp, AnimatedButton } from '../utils/animations.jsx';
+
+const Hero = () => {
+  return (
+    <div className="relative w-full h-[818px] overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45))'
+          }}
+        >
+          <source src="/videos/7.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-45"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative flex flex-col items-center justify-center h-full px-4 md:px-[92px] pt-[100px]">
+        <div className="flex flex-col items-center gap-10 w-full max-w-[1256px] text-center">
+          {/* Main Content */}
+          <div className="flex flex-col items-center gap-[30px] w-full filter drop-shadow-[0px_0px_24.9px_rgba(0,0,0,0.59)]">
+            {/* Main Heading */}
+            <FadeIn delay={0.3} duration={0.8}>
+              <h1 className="w-full max-w-[1256px] font-outfit font-semibold text-[32px] md:text-[54px] leading-[106.2%] text-center tracking-[-0.02em] capitalize text-white">
+                Pioneering India's 3D Construction Revolution
+              </h1>
+            </FadeIn>
+
+            {/* Subheading */}
+            <FadeIn delay={0.6} duration={0.8}>
+              <p className="max-w-[857px] font-outfit font-semibold text-[18px] md:text-[24px] leading-[170%] text-center tracking-[-0.02em] text-white">
+                Trusted by innovators. Ready to deploy
+              </p>
+            </FadeIn>
+          </div>
+
+          {/* CTA Button */}
+          <SlideInUp delay={0.9} duration={0.6}>
+            <div className="flex items-start gap-10">
+              <AnimatedButton 
+                className="flex justify-center items-center px-7 py-4 gap-[10px] bg-[#1D3357] rounded-[66px] btn-animate"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="font-outfit font-semibold text-sm leading-[18px] text-white">
+                  Explore Printers
+                </span>
+                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </AnimatedButton>
+            </div>
+          </SlideInUp>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
