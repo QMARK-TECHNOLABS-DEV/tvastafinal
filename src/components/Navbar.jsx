@@ -36,7 +36,7 @@ const Navbar = () => {
             </svg>
           </motion.div>
         </Link>
-        <Link to="/">
+        <Link to="/our-technology">
           <motion.div 
             className="flex items-center gap-2 cursor-pointer"
             whileHover={{ scale: 1.05 }}
