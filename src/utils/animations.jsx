@@ -12,6 +12,38 @@ export const fadeInVariants = {
   }
 };
 
+export const fadeInUp = {
+  initial: { opacity: 0, y: 60 },
+  animate: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+};
+
+export const slideInFromLeft = {
+  initial: { opacity: 0, x: -60 },
+  animate: (i) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      delay: i * 0.1,
+      ease: "easeOut"
+    }
+  })
+};
+
+export const staggerContainer = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1
+    }
+  }
+};
+
 export const slideInLeftVariants = {
   hidden: { opacity: 0, x: -100 },
   visible: { 
