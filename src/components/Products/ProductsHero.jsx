@@ -1,0 +1,51 @@
+import React from 'react';
+import { fadeInUp, staggerContainer } from '../../utils/animations.jsx';
+
+const ProductsHero = () => {
+  return (
+    <section className="relative w-full h-[660px] bg-white overflow-hidden">
+      {/* Background Image - herobg.png */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-60"
+        style={{ backgroundImage: "url('/images/Who Are We/herobg.png')" }}
+      />
+      
+      {/* Background Ellipse Blur */}
+      <div className="absolute top-[-143px] left-1/2 transform -translate-x-1/2 w-[286px] h-[286px] bg-[#ACACAC] rounded-full blur-[250px] opacity-50" />
+      
+      {/* Background Gradient Overlay */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{ 
+          background: 'linear-gradient(178.77deg, rgba(255, 255, 255, 0) 1.05%, #FFFFFF 98.96%)'
+        }}
+      />
+      
+      {/* Content */}
+      <div 
+        className="relative z-10 flex flex-col justify-center items-center h-full px-4 md:px-8 lg:px-16"
+        {...staggerContainer}
+      >
+        <div className="flex flex-col items-center gap-[30px] max-w-[1256px] w-full text-center pt-[80px] md:pt-[100px]">
+          {/* Main Title */}
+          <h1 
+            className="text-[28px] md:text-[36px] lg:text-[48px] xl:text-[54px] font-semibold leading-[1.06] text-[#0D192D] tracking-[-0.02em] capitalize max-w-[677px] px-2"
+            {...fadeInUp}
+          >
+            Tvasta's 3D Printed Furniture
+          </h1>
+          
+          {/* Subtitle */}
+          <p 
+            className="text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-semibold leading-[1.7] text-[#0D192D] tracking-[-0.02em] max-w-[1086px] px-4"
+            {...fadeInUp}
+          >
+            Concrete furniture, reimagined through cutting-edge 3D printing technology.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductsHero;
