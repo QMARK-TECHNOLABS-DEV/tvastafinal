@@ -7,6 +7,17 @@ const ProductsHero = () => {
       className="relative w-full h-[660px] bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: "url('/images/Who Are We/herobg.png')" }}
     >
+      {/* Background Ellipse Blur */}
+      <div className="absolute top-[-143px] left-1/2 transform -translate-x-1/2 w-[286px] h-[286px] bg-[#ACACAC] rounded-full blur-[250px] opacity-50" />
+      
+      {/* Background Gradient Overlay */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{ 
+          background: 'linear-gradient(178.77deg, rgba(255, 255, 255, 0) 1.05%, #FFFFFF 98.96%)'
+        }}
+      />
+      
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-center h-full px-4 md:px-8 lg:px-16">
         <div className="flex flex-col items-center gap-[30px] max-w-[1256px] w-full text-center pt-[80px] md:pt-[100px]">
