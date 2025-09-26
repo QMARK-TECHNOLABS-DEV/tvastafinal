@@ -90,7 +90,7 @@ const Navbar = () => {
             Products
           </motion.span>
         </Link>
-        <Link to="/">
+        <Link to="/tvasta-stories">
           <motion.span 
             className="text-[#0D192D] font-outfit font-medium text-base cursor-pointer"
             whileHover={{ scale: 1.05, color: "#E63946" }}
@@ -200,7 +200,7 @@ const Navbar = () => {
                 </motion.div>
               </Link>
               
-              <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link to="/tvasta-stories" onClick={() => setIsMobileMenuOpen(false)}>
                 <motion.div 
                   className="py-3 border-b border-gray-100"
                   whileHover={{ scale: 1.02 }}
