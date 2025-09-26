@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const OurStory = () => {
   return (
-    <div className="flex flex-col items-center gap-[60px] w-full max-w-[1441px] h-auto px-4">
+    <div className="flex flex-col items-center gap-[60px] w-full max-w-[1441px] h-auto px-4 mt-[80px]">
       {/* Our Story Section */}
       <div className="flex flex-col items-start gap-[40px] w-full max-w-[1280px]">
         <FadeIn delay={0.2}>

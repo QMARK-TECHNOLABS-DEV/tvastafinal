@@ -10,12 +10,6 @@ const Hero = () => {
       className="relative w-full h-[660px] bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${heroBg})` }}
     >
-      {/* Background blur effect */}
-      <div className="absolute top-[-143px] left-1/2 transform -translate-x-1/2 w-[286px] h-[286px] bg-gray-400 rounded-full blur-[250px] opacity-50"></div>
-      
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80"></div>
-
       {/* Content */}
       <motion.div
         variants={staggerContainer}
