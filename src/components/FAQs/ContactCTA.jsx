@@ -41,18 +41,18 @@ const ContactCTA = () => {
         <div 
           className="w-full h-full bg-gray-200 rounded-[24px] bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/images/contact-cta.jpg'), linear-gradient(135deg, #f5f5f5, #e0e0e0)`
+            backgroundImage: `url('/images/FAQs/contactimg.jpg'), linear-gradient(135deg, #f5f5f5, #e0e0e0)`
           }}
         >
           {/* Fallback content if image is not available */}
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300 rounded-[24px]">
+          {/* <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300 rounded-[24px]">
             <div className="text-center p-8">
               <svg className="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               <p className="text-gray-500 font-['Outfit']">Contact Support</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </FadeIn>
     </section>

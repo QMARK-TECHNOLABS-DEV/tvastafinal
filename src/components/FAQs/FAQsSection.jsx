@@ -182,16 +182,14 @@ const FAQsSection = () => {
               <div className="flex flex-row justify-center items-center gap-[10px] w-full">
                 <div className="flex flex-row items-start gap-[40px]">
                   {/* Previous Page Button */}
-                  <div className="flex flex-row items-start gap-[40px]">
-                    <button className="box-border flex flex-row justify-center items-center py-4 px-7 gap-[10px] w-[201px] h-[52px] bg-white border-2 border-[#E63946] rounded-[20px] hover:bg-[#E63946] hover:text-white transition-all duration-300 group">
-                      <svg className="w-5 h-5 text-[#E63946] group-hover:text-white transform rotate-180 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                      <span className="text-[#E63946] group-hover:text-white font-semibold text-[18px] leading-[23px] font-['Outfit'] transition-colors duration-300">
-                        Previous Page
-                      </span>
-                    </button>
-                  </div>
+                  <button className="box-border flex flex-row justify-center items-center py-4 px-7 gap-[10px] w-[201px] h-[52px] bg-white border-2 border-[#E63946] rounded-[20px] hover:bg-[#E63946] hover:text-white transition-all duration-300 group">
+                    <svg className="w-5 h-5 text-[#E63946] group-hover:text-white transform rotate-180 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                    <span className="text-[#E63946] group-hover:text-white font-semibold text-[18px] leading-[23px] font-['Outfit'] transition-colors duration-300 whitespace-nowrap">
+                      Previous Page
+                    </span>
+                  </button>
 
                   {/* Next Page Button */}
                   <div className="flex flex-row items-start gap-[40px]">
