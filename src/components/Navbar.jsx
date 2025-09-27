@@ -99,7 +99,7 @@ const Navbar = () => {
             TVASTA Stories
           </motion.span>
         </Link>
-        <Link to="/">
+        <Link to="/faqs">
           <motion.span 
             className="text-[#0D192D] font-outfit font-medium text-base cursor-pointer"
             whileHover={{ scale: 1.05, color: "#E63946" }}

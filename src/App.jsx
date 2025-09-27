@@ -6,6 +6,7 @@ import OurTechnologyPage from './pages/OurTechnologyPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ProductsPage from './pages/ProductsPage';
 import TvastaStoriesPage from './pages/TvastaStoriesPage';
+import FAQsPage from './pages/FAQsPage';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/tvasta-stories" element={<TvastaStoriesPage />} />
+        <Route path="/faqs" element={<FAQsPage />} />
       </Routes>
     </Router>
   );
