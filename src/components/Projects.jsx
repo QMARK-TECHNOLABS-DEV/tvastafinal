@@ -67,53 +67,51 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             className="w-full"
           >
-            {/* Desktop Masonry Grid Layout */}
-            <div className="hidden lg:block relative w-full h-[423px]">
-              <div className="absolute inset-0 flex justify-center gap-4">
-                {/* First Image - Left */}
-                <ScaleUp delay={0} className="w-[305px] h-[360px] rounded-[12px] overflow-hidden">
-                  <motion.img 
-                    src="/images/Explore Our Projects 1.jpg"
-                    alt="Project 1"
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </ScaleUp>
+            {/* Desktop Layout - Exact match to design */}
+            <div className="hidden lg:flex justify-center items-start gap-4 w-full">
+              {/* Left column - Single tall image */}
+              <ScaleUp delay={0} className="w-[280px]">
+                <motion.img 
+                  src="/images/Explore Our Projects 1.jpg"
+                  alt="Project 1"
+                  className="w-full h-[540px] object-cover rounded-[20px]"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </ScaleUp>
 
-                {/* Second Image - Center Top */}
-                <ScaleUp delay={0.1} className="w-[305px] h-[360px] rounded-[12px] overflow-hidden mt-[63px]">
+              {/* Middle column - Two stacked images */}
+              <div className="flex flex-col gap-4">
+                <ScaleUp delay={0.1} className="w-[280px]">
                   <motion.img 
                     src="/images/Explore Our Projects 2.jpg"
                     alt="Project 2"
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.05 }}
+                    className="w-full h-[260px] object-cover rounded-[20px]"
+                    whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   />
                 </ScaleUp>
-
-                {/* Third Image - Center Bottom */}
-                <ScaleUp delay={0.2} className="w-[305px] h-[360px] rounded-[12px] overflow-hidden mt-[63px]">
+                <ScaleUp delay={0.2} className="w-[280px]">
                   <motion.img 
                     src="/images/Explore Our Projects 3.jpg"
                     alt="Project 3"
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </ScaleUp>
-
-                {/* Fourth Image - Right */}
-                <ScaleUp delay={0.3} className="w-[305px] h-[360px] rounded-[12px] overflow-hidden">
-                  <motion.img 
-                    src="/images/Explore Our Projects 4.jpg"
-                    alt="Project 4"
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.05 }}
+                    className="w-full h-[260px] object-cover rounded-[20px]"
+                    whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   />
                 </ScaleUp>
               </div>
+
+              {/* Right column - Single tall image */}
+              <ScaleUp delay={0.3} className="w-[280px]">
+                <motion.img 
+                  src="/images/Explore Our Projects 4.jpg"
+                  alt="Project 4"
+                  className="w-full h-[540px] object-cover rounded-[20px]"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </ScaleUp>
             </div>
 
             {/* Mobile & Tablet Layout */}

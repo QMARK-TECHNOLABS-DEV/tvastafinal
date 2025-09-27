@@ -3,6 +3,13 @@ import { FadeIn, SlideInLeft, SlideInRight } from '../../utils/animations.jsx';
 import { motion } from 'framer-motion';
 
 const OurStory = () => {
+  const storyText1 = "Founded in 2016 at IIT-Madras, Tvasta emerged with a vision to redefine civil construction through deep-tech innovation. In 2020, we unveiled India's first 3D-printed house, turning a research milestone into an industry-defining moment.";
+  
+  const storyText2 = "Today, we are a vertically integrated construction-tech company that develops 3D printing platforms, smart materials, and proprietary software, powering real-world builds from flood-resilient homes to smart city infrastructure. We're transforming concrete into a tool for innovation, not limitation.";
+
+  const words1 = storyText1.split(' ');
+  const words2 = storyText2.split(' ');
+
   return (
     <div className="flex flex-col items-center gap-[60px] w-full max-w-[1441px] h-auto px-4">
       {/* Our Story Section */}
@@ -14,17 +21,51 @@ const OurStory = () => {
         </FadeIn>
         
         <div className="flex flex-col gap-[20px] w-full">
-          <SlideInLeft delay={0.4}>
-            <p className="font-outfit font-normal text-[32px] leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full">
-              Founded in 2016 at IIT-Madras, Tvasta emerged with a vision to redefine civil construction through deep-tech innovation. In 2020, we unveiled India's first 3D-printed house, turning a research milestone into an industry-defining moment.
-            </p>
-          </SlideInLeft>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="font-outfit font-normal text-[32px] leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
+          >
+            {words1.map((word, index) => (
+              <motion.span
+                key={index}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 }
+                }}
+                transition={{ 
+                  duration: 0.1,
+                  delay: index * 0.05
+                }}
+              >
+                {word}{' '}
+              </motion.span>
+            ))}
+          </motion.div>
           
-          <SlideInLeft delay={0.6}>
-            <p className="font-outfit font-normal text-[32px] leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full">
-              Today, we are a vertically integrated construction-tech company that develops 3D printing platforms, smart materials, and proprietary software, powering real-world builds from flood-resilient homes to smart city infrastructure. We're transforming concrete into a tool for innovation, not limitation.
-            </p>
-          </SlideInLeft>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="font-outfit font-normal text-[32px] leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
+          >
+            {words2.map((word, index) => (
+              <motion.span
+                key={index}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 }
+                }}
+                transition={{ 
+                  duration: 0.1,
+                  delay: (words1.length * 0.05) + (index * 0.05) + 0.5
+                }}
+              >
+                {word}{' '}
+              </motion.span>
+            ))}
+          </motion.div>
         </div>
       </div>
       

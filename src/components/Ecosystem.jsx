@@ -50,30 +50,36 @@ const Ecosystem = () => {
         {/* Ecosystem Cards */}
         <StaggeredList 
           staggerDelay={0.15}
-          className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-8 lg:gap-10 w-full"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
         >
           {ecosystemItems.map((item, index) => (
             <SlideInUp
               key={index}
               delay={index * 0.1}
-              className="relative w-full sm:w-[280px] h-[400px] rounded-3xl overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300"
+              className="relative w-full h-[380px] lg:h-[420px] rounded-[20px] overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300"
             >
               <div 
                 className="w-full h-full bg-cover bg-center relative"
                 style={{
-                  backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('${item.image}')`
+                  backgroundImage: `url('${item.image}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
                 }}
               >
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70"></div>
+
                 {/* Category Tag */}
-                <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-2 bg-white/90 backdrop-blur-md border border-white/15 rounded-full">
-                  <span className="font-outfit font-semibold text-base text-[#0D192D]">
+                <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-1.5 bg-white rounded-full z-10">
+                  <span className="font-outfit font-medium text-sm text-[#0D192D]">
                     {item.tag}
                   </span>
                 </div>
 
                 {/* Content */}
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="font-outfit font-semibold text-base leading-[160%] text-white">
+                <div className="absolute bottom-4 left-4 right-4 z-10">
+                  <p className="font-outfit font-medium text-base leading-[140%] text-white">
                     {item.description}
                   </p>
                 </div>
