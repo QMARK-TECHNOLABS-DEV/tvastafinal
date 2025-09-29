@@ -40,32 +40,24 @@ const WhyChooseTvasta = () => {
   ];
 
   return (
-    <section className="w-full bg-[#0D192D] py-[80px]">
+    <section className="w-full bg-[#0D192D] py-[60px] sm:py-[70px] md:py-[80px]">
       <motion.div
         variants={staggerContainer}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="flex flex-row items-start w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-20 gap-[60px]
-                   lg:flex-row
-                   md:flex-col md:gap-[40px] md:items-center"
+        className="flex flex-col lg:flex-row items-start lg:items-start w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 xl:px-20 gap-[40px] md:gap-[50px] lg:gap-[60px]"
       >
         {/* Left Content */}
         <motion.div
           variants={slideInFromLeft}
-          className="flex flex-col items-start gap-[40px] w-full max-w-[632px]
-                     lg:flex-1"
+          className="flex flex-col items-start gap-[30px] sm:gap-[35px] md:gap-[40px] w-full max-w-[632px] lg:flex-1"
         >
           {/* Title with border */}
-          <div className="flex flex-col items-start gap-[0px] w-full border-l-[5px] border-white pl-[40px]">
+          <div className="flex flex-col items-start gap-[0px] w-full border-l-[3px] sm:border-l-[4px] md:border-l-[5px] border-white pl-[20px] sm:pl-[30px] md:pl-[40px]">
             <motion.h2
               variants={fadeInUp}
-              className="font-outfit font-bold text-[48px] leading-[125%] text-white w-full
-                         xl:text-[48px]
-                         lg:text-[42px]
-                         md:text-[36px]
-                         sm:text-[32px]
-                         xs:text-[28px]"
+              className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold leading-[125%] text-white w-full font-['Outfit']"
             >
               Why Choose Tvasta
             </motion.h2>
@@ -74,33 +66,26 @@ const WhyChooseTvasta = () => {
           {/* Features */}
           <motion.div
             variants={staggerContainer}
-            className="flex flex-col items-start gap-[24px] w-full"
+            className="flex flex-col items-start gap-[20px] sm:gap-[22px] md:gap-[24px] w-full"
           >
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
                 custom={index}
-                className="flex flex-row items-start py-[8px] pr-[48px] pl-[32px] gap-[16px] w-full
-                           sm:pr-[20px] sm:pl-[16px]"
+                className="flex flex-row items-start py-[6px] sm:py-[7px] md:py-[8px] pr-[20px] sm:pr-[30px] md:pr-[40px] lg:pr-[48px] pl-[16px] sm:pl-[24px] md:pl-[32px] gap-[12px] sm:gap-[14px] md:gap-[16px] w-full"
               >
                 {/* Icon */}
-                <div className="flex flex-col justify-center items-center w-[24px] h-[24px] min-w-[24px] mt-1">
+                <div className="flex flex-col justify-center items-center w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px] min-w-[20px] sm:min-w-[22px] md:min-w-[24px] mt-1">
                   {feature.icon}
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col items-start gap-[16px] flex-1">
-                  <h3 className="font-outfit font-bold text-[22px] leading-[27px] tracking-[0.02em] text-white
-                                 lg:text-[22px]
-                                 md:text-[20px]
-                                 sm:text-[18px]">
+                <div className="flex flex-col items-start gap-[12px] sm:gap-[14px] md:gap-[16px] flex-1">
+                  <h3 className="text-[18px] sm:text-[20px] md:text-[22px] font-bold leading-[27px] tracking-[0.02em] text-white font-['Outfit']">
                     {feature.title}
                   </h3>
-                  <p className="font-outfit font-medium text-[20px] leading-[25px] text-[#F0F0F0] opacity-70
-                                lg:text-[20px]
-                                md:text-[18px]
-                                sm:text-[16px]">
+                  <p className="text-[16px] sm:text-[18px] md:text-[20px] font-medium leading-[25px] text-[#F0F0F0] opacity-70 font-['Outfit']">
                     {feature.description}
                   </p>
                 </div>
@@ -111,10 +96,10 @@ const WhyChooseTvasta = () => {
           {/* CTA Button */}
           <motion.div
             variants={fadeInUp}
-            className="flex flex-col items-start gap-[10px] w-[240px] mt-[20px]"
+            className="flex flex-col items-start gap-[10px] w-full max-w-[240px] mt-[15px] sm:mt-[18px] md:mt-[20px]"
           >
-            <button className="flex flex-row justify-center items-center py-[16px] px-[28px] gap-[10px] w-full h-[52px] bg-white rounded-[66px] group hover:bg-gray-100 transition-colors duration-300">
-              <span className="font-outfit font-semibold text-[18px] leading-[23px] text-[#0D192D] whitespace-nowrap">
+            <button className="flex flex-row justify-center items-center py-[14px] sm:py-[15px] md:py-[16px] px-[24px] sm:px-[26px] md:px-[28px] gap-[8px] sm:gap-[9px] md:gap-[10px] w-full h-[48px] sm:h-[50px] md:h-[52px] bg-white rounded-[66px] group hover:bg-gray-100 transition-colors duration-300">
+              <span className="text-[16px] sm:text-[17px] md:text-[18px] font-semibold leading-[23px] text-[#0D192D] whitespace-nowrap font-['Outfit']">
                 Let's Build Together
               </span>
               <svg 
@@ -141,11 +126,7 @@ const WhyChooseTvasta = () => {
         <motion.div
           variants={slideInFromLeft}
           custom={1}
-          className="w-full max-w-[632px] h-[524px] flex-1 overflow-hidden rounded-[24px]
-                     lg:flex-1
-                     md:max-w-[500px] md:h-[400px]
-                     sm:h-[350px]
-                     xs:h-[300px]"
+          className="w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[632px] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[524px] lg:flex-1 overflow-hidden rounded-[20px] sm:rounded-[22px] md:rounded-[24px]"
         >
           <div 
             className="w-full h-full"

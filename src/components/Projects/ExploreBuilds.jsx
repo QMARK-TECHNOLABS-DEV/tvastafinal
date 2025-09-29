@@ -71,28 +71,18 @@ const ExploreBuilds = () => {
         {/* Header */}
         <motion.div
           variants={fadeInUp}
-          className="flex flex-col justify-center items-center gap-[20px] w-full px-4 sm:px-6 lg:px-8"
+          className="flex flex-col justify-center items-center gap-[15px] sm:gap-[20px] w-full px-4 md:px-8 lg:px-16"
         >
           <motion.h2
             variants={fadeInUp}
-            className="font-outfit font-semibold text-[48px] leading-[125%] text-[#0D192D] text-center
-                       xl:text-[48px]
-                       lg:text-[42px]
-                       md:text-[36px]
-                       sm:text-[32px]
-                       xs:text-[28px]"
+            className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-semibold leading-[125%] text-[#0D192D] text-center font-['Outfit']"
           >
             Explore Our Builds
           </motion.h2>
           
           <motion.p
             variants={fadeInUp}
-            className="font-outfit font-medium text-[28px] leading-[125%] text-[#1D3357] text-center capitalize max-w-[1200px]
-                       xl:text-[28px]
-                       lg:text-[24px]
-                       md:text-[22px]
-                       sm:text-[20px] sm:px-4
-                       xs:text-[18px] xs:px-2"
+            className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[28px] font-medium leading-[125%] text-[#1D3357] text-center capitalize max-w-[1200px] mx-auto px-4 font-['Outfit']"
           >
             Projects Powered By Tvasta's Technology—Across Terrains, Timelines, And Typologies.
           </motion.p>
@@ -101,24 +91,14 @@ const ExploreBuilds = () => {
         {/* Category Filter */}
         <motion.div
           variants={fadeInUp}
-          className="flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-8"
+          className="flex flex-col justify-center items-center w-full px-4 md:px-8 lg:px-16"
         >
-          <div className="flex flex-row justify-center items-center py-[11px] px-[60px] gap-[62px] bg-[#F1F1F1] rounded-[200px]
-                          xl:gap-[62px] xl:px-[60px]
-                          lg:gap-[50px] lg:px-[50px]
-                          md:gap-[30px] md:px-[40px] md:py-[10px]
-                          sm:gap-[20px] sm:px-[30px] sm:py-[8px]
-                          xs:gap-[15px] xs:px-[20px] xs:py-[8px] xs:flex-wrap">
+          <div className="flex flex-row justify-center items-center py-[8px] sm:py-[10px] md:py-[11px] px-[20px] sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[60px] gap-[15px] sm:gap-[20px] md:gap-[30px] lg:gap-[50px] xl:gap-[62px] bg-[#F1F1F1] rounded-[200px] flex-wrap">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`flex-shrink-0 px-[28px] py-[12px] rounded-[58px] font-outfit text-[20px] leading-[120%] tracking-[-0.02em] capitalize transition-all duration-300 whitespace-nowrap
-                           xl:text-[20px] xl:px-[28px] xl:py-[12px]
-                           lg:text-[18px] lg:px-[24px] lg:py-[10px]
-                           md:text-[16px] md:px-[20px] md:py-[8px]
-                           sm:text-[15px] sm:px-[18px] sm:py-[7px]
-                           xs:text-[14px] xs:px-[16px] xs:py-[6px]
+                className={`flex-shrink-0 px-[16px] sm:px-[18px] md:px-[20px] lg:px-[24px] xl:px-[28px] py-[6px] sm:py-[7px] md:py-[8px] lg:py-[10px] xl:py-[12px] rounded-[58px] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] leading-[120%] tracking-[-0.02em] capitalize transition-all duration-300 whitespace-nowrap font-['Outfit']
                            ${activeCategory === category
                              ? 'bg-white text-[#0D192D] shadow-[0px_4px_4px_rgba(0,0,0,0.05)] border border-[#DDDDDD]'
                              : 'text-[#0D192D] hover:bg-white/50'
@@ -133,29 +113,19 @@ const ExploreBuilds = () => {
         {/* Projects Grid */}
         <motion.div
           variants={staggerContainer}
-          className="w-full px-4 sm:px-6 lg:px-8 max-w-[1280px]"
+          className="w-full px-4 md:px-8 lg:px-16 max-w-[1280px]"
         >
           {/* First Row */}
           <motion.div
             variants={fadeInUp}
-            className="flex flex-row justify-center items-center gap-[40px] w-full mb-[40px]
-                       xl:gap-[40px]
-                       lg:gap-[30px] lg:flex-row
-                       md:gap-[25px] md:flex-row
-                       sm:gap-[20px] sm:flex-col
-                       xs:gap-[15px] xs:flex-col"
+            className="flex flex-col sm:flex-col md:flex-row justify-center items-center gap-[20px] md:gap-[25px] lg:gap-[30px] xl:gap-[40px] w-full mb-[30px] sm:mb-[35px] md:mb-[40px]"
           >
             {allProjects.slice(0, 3).map((project, index) => (
               <motion.div
                 key={project.id}
                 variants={slideInFromLeft}
                 custom={index}
-                className="flex flex-col justify-between items-start p-[16px] gap-[222px] w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden relative group cursor-pointer
-                           xl:h-[400px] xl:max-w-[400px]
-                           lg:h-[380px] lg:max-w-[380px]
-                           md:h-[350px] md:max-w-[350px] md:gap-[180px]
-                           sm:h-[320px] sm:max-w-[320px] sm:gap-[160px]
-                           xs:h-[280px] xs:max-w-[280px] xs:gap-[140px]"
+                className="flex flex-col justify-between items-start p-[12px] sm:p-[14px] md:p-[16px] gap-[140px] sm:gap-[160px] md:gap-[180px] lg:gap-[200px] xl:gap-[222px] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-[400px] h-[280px] sm:h-[320px] md:h-[350px] lg:h-[380px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden relative group cursor-pointer"
                 style={{
                   background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('${project.image}')`,
                   backgroundSize: 'cover',
@@ -164,23 +134,15 @@ const ExploreBuilds = () => {
                 }}
               >
                 {/* Project Tag */}
-                <div className="flex flex-row justify-center items-center py-[8px] px-[12px] bg-white/90 backdrop-blur-[24px] border border-white/15 rounded-[9999px]">
-                  <span className="font-outfit font-semibold text-[18px] leading-[160%] text-[#0D192D]
-                                   lg:text-[18px]
-                                   md:text-[16px]
-                                   sm:text-[15px]
-                                   xs:text-[14px]">
+                <div className="flex flex-row justify-center items-center py-[6px] sm:py-[7px] md:py-[8px] px-[10px] sm:px-[11px] md:px-[12px] bg-white/90 backdrop-blur-[24px] border border-white/15 rounded-[9999px]">
+                  <span className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
                     Project Name
                   </span>
                 </div>
 
                 {/* Project Description */}
                 <div className="w-full">
-                  <p className="font-outfit font-semibold text-[18px] leading-[160%] text-white w-full
-                                lg:text-[18px]
-                                md:text-[16px]
-                                sm:text-[15px]
-                                xs:text-[14px]">
+                  <p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-white w-full font-['Outfit']">
                     {project.description}
                   </p>
                 </div>
@@ -194,24 +156,14 @@ const ExploreBuilds = () => {
           {/* Second Row */}
           <motion.div
             variants={fadeInUp}
-            className="flex flex-row justify-center items-center gap-[40px] w-full
-                       xl:gap-[40px]
-                       lg:gap-[30px] lg:flex-row
-                       md:gap-[25px] md:flex-row
-                       sm:gap-[20px] sm:flex-col
-                       xs:gap-[15px] xs:flex-col"
+            className="flex flex-col sm:flex-col md:flex-row justify-center items-center gap-[20px] md:gap-[25px] lg:gap-[30px] xl:gap-[40px] w-full"
           >
             {allProjects.slice(3, 6).map((project, index) => (
               <motion.div
                 key={project.id}
                 variants={slideInFromLeft}
                 custom={index + 3}
-                className="flex flex-col justify-between items-start p-[16px] gap-[222px] w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden relative group cursor-pointer
-                           xl:h-[400px] xl:max-w-[400px]
-                           lg:h-[380px] lg:max-w-[380px]
-                           md:h-[350px] md:max-w-[350px] md:gap-[180px]
-                           sm:h-[320px] sm:max-w-[320px] sm:gap-[160px]
-                           xs:h-[280px] xs:max-w-[280px] xs:gap-[140px]"
+                className="flex flex-col justify-between items-start p-[12px] sm:p-[14px] md:p-[16px] gap-[140px] sm:gap-[160px] md:gap-[180px] lg:gap-[200px] xl:gap-[222px] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-[400px] h-[280px] sm:h-[320px] md:h-[350px] lg:h-[380px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden relative group cursor-pointer"
                 style={{
                   background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('${project.image}')`,
                   backgroundSize: 'cover',
@@ -220,23 +172,15 @@ const ExploreBuilds = () => {
                 }}
               >
                 {/* Project Tag */}
-                <div className="flex flex-row justify-center items-center py-[8px] px-[12px] bg-white/90 backdrop-blur-[24px] border border-white/15 rounded-[9999px]">
-                  <span className="font-outfit font-semibold text-[18px] leading-[160%] text-[#0D192D]
-                                   lg:text-[18px]
-                                   md:text-[16px]
-                                   sm:text-[15px]
-                                   xs:text-[14px]">
+                <div className="flex flex-row justify-center items-center py-[6px] sm:py-[7px] md:py-[8px] px-[10px] sm:px-[11px] md:px-[12px] bg-white/90 backdrop-blur-[24px] border border-white/15 rounded-[9999px]">
+                  <span className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
                     Project Name
                   </span>
                 </div>
 
                 {/* Project Description */}
                 <div className="w-full">
-                  <p className="font-outfit font-semibold text-[18px] leading-[160%] text-white w-full
-                                lg:text-[18px]
-                                md:text-[16px]
-                                sm:text-[15px]
-                                xs:text-[14px]">
+                  <p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-white w-full font-['Outfit']">
                     {project.description}
                   </p>
                 </div>
