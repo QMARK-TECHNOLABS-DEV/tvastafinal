@@ -111,13 +111,15 @@ const Navbar = () => {
             <span className="text-[#0D192D] font-outfit font-medium text-sm">Contact Us</span>
           </AnimatedButton>
         </Link>
-        <AnimatedButton 
-          className="flex justify-center items-center px-6 py-3 bg-[#0D192D] rounded-full"
-          whileHover={{ scale: 1.05, backgroundColor: "#1D3357" }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="text-white font-outfit font-medium text-sm">Careers</span>
-        </AnimatedButton>
+        <Link to="/careers">
+          <AnimatedButton 
+            className="flex justify-center items-center px-6 py-3 bg-[#0D192D] rounded-full"
+            whileHover={{ scale: 1.05, backgroundColor: "#1D3357" }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="text-white font-outfit font-medium text-sm">Careers</span>
+          </AnimatedButton>
+        </Link>
       </div>
 
       {/* Mobile Menu Button */}
@@ -223,14 +225,15 @@ const Navbar = () => {
                     <span className="text-[#0D192D] font-outfit font-medium text-sm">Contact Us</span>
                   </AnimatedButton>
                 </Link>
-                <AnimatedButton 
-                  className="flex justify-center items-center px-6 py-3 bg-[#0D192D] rounded-full"
-                  whileHover={{ scale: 1.02, backgroundColor: "#1D3357" }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <span className="text-white font-outfit font-medium text-sm">Careers</span>
-                </AnimatedButton>
+                <Link to="/careers" onClick={() => setIsMobileMenuOpen(false)}>
+                  <AnimatedButton 
+                    className="flex justify-center items-center px-6 py-3 bg-[#0D192D] rounded-full w-full"
+                    whileHover={{ scale: 1.02, backgroundColor: "#1D3357" }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="text-white font-outfit font-medium text-sm">Careers</span>
+                  </AnimatedButton>
+                </Link>
               </div>
             </div>
           </motion.div>

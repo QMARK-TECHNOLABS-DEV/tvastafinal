@@ -8,6 +8,7 @@ import ProductsPage from './pages/ProductsPage';
 import TvastaStoriesPage from './pages/TvastaStoriesPage';
 import FAQsPage from './pages/FAQsPage';
 import ContactUsPage from './pages/ContactUsPage';
+import CareersPage from './pages/CareersPage';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/tvasta-stories" element={<TvastaStoriesPage />} />
         <Route path="/faqs" element={<FAQsPage />} />
         <Route path="/contact-us" element={<ContactUsPage />} />
+        <Route path="/careers" element={<CareersPage />} />
       </Routes>
     </Router>
   );
