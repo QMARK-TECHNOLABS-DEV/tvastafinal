@@ -1,79 +1,81 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = ({ hideContactForm = false }) => {
   return (
     <div className="flex flex-col w-full bg-[#1D3357]">
-      {/* Contact Section */}
-      <div className="flex flex-col gap-[75px] px-8 md:px-16 py-[75px]">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 w-full">
-          <span className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-            CONTACT
-          </span>
-          <span className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-            Start Your 3D Construction Journey
-          </span>
-        </div>
-
-        {/* Contact Form */}
-        <div className="flex flex-col items-end gap-9 w-full">
-          {/* Form Fields */}
-          <div className="flex flex-col lg:flex-row items-center gap-9 w-full">
-            {/* Name Field */}
-            <div className="flex flex-col gap-4 w-full lg:flex-1">
-              <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-                Name
-              </label>
-              <div className="flex justify-center items-center px-4 py-6 border-b border-white w-full">
-                <input 
-                  type="text" 
-                  placeholder="Your Name" 
-                  className="font-outfit font-normal text-lg leading-[140%] text-white bg-transparent w-full outline-none placeholder-white"
-                />
-              </div>
-            </div>
-
-            {/* Email Field */}
-            <div className="flex flex-col gap-4 w-full lg:flex-1">
-              <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-                Email
-              </label>
-              <div className="flex justify-center items-center px-4 py-6 border-b border-white w-full">
-                <input 
-                  type="email" 
-                  placeholder="Your Email" 
-                  className="font-outfit font-normal text-lg leading-[140%] text-white bg-transparent w-full outline-none placeholder-white"
-                />
-              </div>
-            </div>
-
-            {/* Message Field */}
-            <div className="flex flex-col gap-4 w-full lg:flex-1">
-              <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-                Message
-              </label>
-              <div className="flex justify-center items-center px-4 py-6 border-b border-white w-full">
-                <input 
-                  type="text" 
-                  placeholder="Your Message" 
-                  className="font-outfit font-normal text-lg leading-[140%] text-white bg-transparent w-full outline-none placeholder-white"
-                />
-              </div>
-            </div>
+      {/* Contact Section - conditionally rendered */}
+      {!hideContactForm && (
+        <div className="flex flex-col gap-[75px] px-8 md:px-16 py-[75px]">
+          {/* Header */}
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8 w-full">
+            <span className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+              CONTACT
+            </span>
+            <span className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+              Start Your 3D Construction Journey
+            </span>
           </div>
 
-          {/* Submit Button */}
-          <button className="flex justify-center items-center px-6 py-5 bg-white rounded-[35px]">
-            <span className="font-outfit font-medium text-[24px] leading-[130%] text-[#1D3357]">
-              Send Message
-            </span>
-          </button>
-        </div>
+          {/* Contact Form */}
+          <div className="flex flex-col items-end gap-9 w-full">
+            {/* Form Fields */}
+            <div className="flex flex-col lg:flex-row items-center gap-9 w-full">
+              {/* Name Field */}
+              <div className="flex flex-col gap-4 w-full lg:flex-1">
+                <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+                  Name
+                </label>
+                <div className="flex justify-center items-center px-4 py-6 border-b border-white w-full">
+                  <input 
+                    type="text" 
+                    placeholder="Your Name" 
+                    className="font-outfit font-normal text-lg leading-[140%] text-white bg-transparent w-full outline-none placeholder-white"
+                  />
+                </div>
+              </div>
 
-        {/* Divider */}
-        <div className="w-full h-px border-t border-white"></div>
-      </div>
+              {/* Email Field */}
+              <div className="flex flex-col gap-4 w-full lg:flex-1">
+                <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+                  Email
+                </label>
+                <div className="flex justify-center items-center px-4 py-6 border-b border-white w-full">
+                  <input 
+                    type="email" 
+                    placeholder="Your Email" 
+                    className="font-outfit font-normal text-lg leading-[140%] text-white bg-transparent w-full outline-none placeholder-white"
+                  />
+                </div>
+              </div>
+
+              {/* Message Field */}
+              <div className="flex flex-col gap-4 w-full lg:flex-1">
+                <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+                  Message
+                </label>
+                <div className="flex justify-center items-center px-4 py-6 border-b border-white w-full">
+                  <input 
+                    type="text" 
+                    placeholder="Your Message" 
+                    className="font-outfit font-normal text-lg leading-[140%] text-white bg-transparent w-full outline-none placeholder-white"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Submit Button */}
+            <button className="flex justify-center items-center px-6 py-5 bg-white rounded-[35px]">
+              <span className="font-outfit font-medium text-[24px] leading-[130%] text-[#1D3357]">
+                Send Message
+              </span>
+            </button>
+          </div>
+
+          {/* Divider */}
+          <div className="w-full h-px border-t border-white"></div>
+        </div>
+      )}
 
       {/* Footer Links */}
       <div className="flex flex-col gap-16 px-8 md:px-16 py-[75px]">

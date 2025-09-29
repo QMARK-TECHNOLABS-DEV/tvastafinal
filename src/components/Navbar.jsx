@@ -102,13 +102,15 @@ const Navbar = () => {
 
       {/* Action Buttons */}
       <div className="hidden lg:flex items-center gap-3">
-        <AnimatedButton 
-          className="flex justify-center items-center px-6 py-3 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full"
-          whileHover={{ scale: 1.05, backgroundColor: "#E5E7E5" }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="text-[#0D192D] font-outfit font-medium text-sm">Contact Us</span>
-        </AnimatedButton>
+        <Link to="/contact-us">
+          <AnimatedButton 
+            className="flex justify-center items-center px-6 py-3 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full"
+            whileHover={{ scale: 1.05, backgroundColor: "#E5E7E5" }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="text-[#0D192D] font-outfit font-medium text-sm">Contact Us</span>
+          </AnimatedButton>
+        </Link>
         <AnimatedButton 
           className="flex justify-center items-center px-6 py-3 bg-[#0D192D] rounded-full"
           whileHover={{ scale: 1.05, backgroundColor: "#1D3357" }}
@@ -212,14 +214,15 @@ const Navbar = () => {
 
               {/* Mobile Action Buttons */}
               <div className="flex flex-col gap-3 pt-4">
-                <AnimatedButton 
-                  className="flex justify-center items-center px-6 py-3 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full"
-                  whileHover={{ scale: 1.02, backgroundColor: "#E5E7E5" }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <span className="text-[#0D192D] font-outfit font-medium text-sm">Contact Us</span>
-                </AnimatedButton>
+                <Link to="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>
+                  <AnimatedButton 
+                    className="flex justify-center items-center px-6 py-3 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full w-full"
+                    whileHover={{ scale: 1.02, backgroundColor: "#E5E7E5" }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="text-[#0D192D] font-outfit font-medium text-sm">Contact Us</span>
+                  </AnimatedButton>
+                </Link>
                 <AnimatedButton 
                   className="flex justify-center items-center px-6 py-3 bg-[#0D192D] rounded-full"
                   whileHover={{ scale: 1.02, backgroundColor: "#1D3357" }}
