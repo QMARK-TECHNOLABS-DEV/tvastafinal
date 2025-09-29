@@ -2,7 +2,7 @@ import React from 'react';
 import { PageTransition } from '../../utils/animations.jsx';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import { Hero, AboutSection, WhyJoinTvasta, CareerForm, NotFindRole, ContactSection } from './index';
+import { Hero, AboutSection, WhyJoinTvasta, CareerForm, NotFindRole } from './index';
 
 const CareersPage = () => {
   return (

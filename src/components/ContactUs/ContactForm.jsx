@@ -106,7 +106,7 @@ const ContactForm = () => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="Your Phone Number"
-                        className="flex-1 w-[381.33px] h-[12px] text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
+                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
                         required
                       />
                     </div>
@@ -116,25 +116,34 @@ const ContactForm = () => {
 
               {/* Interested In Field */}
               <SlideInRight delay={0.6} duration={0.6}>
-                <div className="flex flex-row items-center gap-[36px] w-[1312px] h-[113px]">
-                  <div className="flex flex-col items-start gap-4 w-[1312px] h-[113px] flex-1">
-                    <label className="w-[134px] h-[17px] text-[24px] font-medium leading-[130%] text-white">
-                      Interested In
-                    </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-[1312px] h-[80px] border-b border-white">
+                <div className="flex flex-col items-start gap-4 w-full">
+                  <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
+                    Interested In
+                  </label>
+                  <div className="relative w-full">
+                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
                       <select
                         name="interestedIn"
                         value={formData.interestedIn}
                         onChange={handleInputChange}
-                        className="flex-1 w-[1238px] h-[12px] text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none appearance-none cursor-pointer"
+                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
+                        style={{ 
+                          background: '#0D192D !important',
+                          color: 'white !important',
+                          border: 'none',
+                          outline: 'none',
+                          WebkitAppearance: 'none',
+                          MozAppearance: 'none',
+                          appearance: 'none'
+                        }}
                       >
-                        <option value="Buying a Printer" className="bg-[#0D192D]">Buying a Printer</option>
-                        <option value="Partnership" className="bg-[#0D192D]">Partnership</option>
-                        <option value="Investment" className="bg-[#0D192D]">Investment</option>
-                        <option value="General Inquiry" className="bg-[#0D192D]">General Inquiry</option>
+                        <option value="Buying a Printer" style={{ backgroundColor: '#0D192D', color: 'white' }}>Buying a Printer</option>
+                        <option value="Partnership" style={{ backgroundColor: '#0D192D', color: 'white' }}>Partnership</option>
+                        <option value="Investment" style={{ backgroundColor: '#0D192D', color: 'white' }}>Investment</option>
+                        <option value="General Inquiry" style={{ backgroundColor: '#0D192D', color: 'white' }}>General Inquiry</option>
                       </select>
-                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="w-8 h-8 flex-none">
-                        <path d="M7.11133 11.7773L15.998 20.664L24.8847 11.7773" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
+                        <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
                   </div>
@@ -143,68 +152,79 @@ const ContactForm = () => {
 
               {/* Second Row - Company, City, Country */}
               <SlideInLeft delay={0.7} duration={0.6}>
-                <div className="flex flex-row items-center gap-[36px] w-[1312px] h-[105px]">
+                <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-[36px] w-full">
                   {/* Company Name Field */}
-                  <div className="flex flex-col justify-between items-start gap-4 w-[413.33px] h-[105px] flex-1">
-                    <label className="w-[174px] h-[17px] text-[24px] font-medium leading-[130%] text-white">
+                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
+                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
                       Company Name
                     </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-[413.33px] h-[60px] border-b border-white">
+                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
                       <input
                         type="text"
                         name="companyName"
                         value={formData.companyName}
                         onChange={handleInputChange}
                         placeholder="Your Company Name"
-                        className="flex-1 w-[381.33px] h-[12px] text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
+                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
                       />
                     </div>
                   </div>
 
                   {/* City Field */}
-                  <div className="flex flex-col justify-between items-start gap-4 w-[413.33px] h-[105px] flex-1">
-                    <label className="w-[44px] h-[17px] text-[24px] font-medium leading-[130%] text-white">
+                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
+                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
                       City
                     </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-[413.33px] h-[60px] border-b border-white">
+                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
                       <input
                         type="text"
                         name="city"
                         value={formData.city}
                         onChange={handleInputChange}
                         placeholder="Your City"
-                        className="flex-1 w-[381.33px] h-[12px] text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
+                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
                       />
                     </div>
                   </div>
 
                   {/* Country Field */}
-                  <div className="flex flex-col items-start gap-4 w-[413.33px] h-[105px] flex-1">
-                    <label className="w-[87px] h-[17px] text-[24px] font-medium leading-[130%] text-white">
+                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
+                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
                       Country
                     </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-[413.33px] h-[72px] border-b border-white">
-                      <select
-                        name="country"
-                        value={formData.country}
-                        onChange={handleInputChange}
-                        className="flex-1 w-[347.33px] h-[12px] text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none appearance-none cursor-pointer"
-                      >
-                        <option value="Your Country" className="bg-[#0D192D]">Your Country</option>
-                        <option value="India" className="bg-[#0D192D]">India</option>
-                        <option value="United States" className="bg-[#0D192D]">United States</option>
-                        <option value="United Kingdom" className="bg-[#0D192D]">United Kingdom</option>
-                        <option value="Canada" className="bg-[#0D192D]">Canada</option>
-                        <option value="Australia" className="bg-[#0D192D]">Australia</option>
-                        <option value="Germany" className="bg-[#0D192D]">Germany</option>
-                        <option value="France" className="bg-[#0D192D]">France</option>
-                        <option value="Japan" className="bg-[#0D192D]">Japan</option>
-                        <option value="Singapore" className="bg-[#0D192D]">Singapore</option>
-                        <option value="Other" className="bg-[#0D192D]">Other</option>
-                      </select>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 flex-none">
-                        <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                    <div className="relative w-full">
+                      <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
+                        <select
+                          name="country"
+                          value={formData.country}
+                          onChange={handleInputChange}
+                          className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
+                          style={{ 
+                            background: '#0D192D !important',
+                            color: 'white !important',
+                            border: 'none',
+                            outline: 'none',
+                            WebkitAppearance: 'none',
+                            MozAppearance: 'none',
+                            appearance: 'none'
+                          }}
+                        >
+                          <option value="Your Country" style={{ backgroundColor: '#0D192D', color: 'white' }}>Your Country</option>
+                          <option value="India" style={{ backgroundColor: '#0D192D', color: 'white' }}>India</option>
+                          <option value="United States" style={{ backgroundColor: '#0D192D', color: 'white' }}>United States</option>
+                          <option value="United Kingdom" style={{ backgroundColor: '#0D192D', color: 'white' }}>United Kingdom</option>
+                          <option value="Canada" style={{ backgroundColor: '#0D192D', color: 'white' }}>Canada</option>
+                          <option value="Australia" style={{ backgroundColor: '#0D192D', color: 'white' }}>Australia</option>
+                          <option value="Germany" style={{ backgroundColor: '#0D192D', color: 'white' }}>Germany</option>
+                          <option value="France" style={{ backgroundColor: '#0D192D', color: 'white' }}>France</option>
+                          <option value="Japan" style={{ backgroundColor: '#0D192D', color: 'white' }}>Japan</option>
+                          <option value="Singapore" style={{ backgroundColor: '#0D192D', color: 'white' }}>Singapore</option>
+                          <option value="Other" style={{ backgroundColor: '#0D192D', color: 'white' }}>Other</option>
+                        </select>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
+                          <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -212,60 +232,82 @@ const ContactForm = () => {
 
               {/* Third Row - Industry, Role */}
               <SlideInRight delay={0.8} duration={0.6}>
-                <div className="flex flex-row items-center gap-[36px] w-[1312px] h-[113px]">
+                <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-[36px] w-full">
                   {/* Industry Field */}
-                  <div className="flex flex-col items-start gap-4 w-[638px] h-[113px] flex-1">
-                    <label className="w-[88px] h-[17px] text-[24px] font-medium leading-[130%] text-white">
+                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
+                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
                       Industry
                     </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-[638px] h-[80px] border-b border-white">
-                      <select
-                        name="industry"
-                        value={formData.industry}
-                        onChange={handleInputChange}
-                        className="flex-1 w-[564px] h-[12px] text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none appearance-none cursor-pointer"
-                      >
-                        <option value="Engineering" className="bg-[#0D192D]">Engineering</option>
-                        <option value="Construction" className="bg-[#0D192D]">Construction</option>
-                        <option value="Architecture" className="bg-[#0D192D]">Architecture</option>
-                        <option value="Real Estate" className="bg-[#0D192D]">Real Estate</option>
-                        <option value="Manufacturing" className="bg-[#0D192D]">Manufacturing</option>
-                        <option value="Technology" className="bg-[#0D192D]">Technology</option>
-                        <option value="Education" className="bg-[#0D192D]">Education</option>
-                        <option value="Government" className="bg-[#0D192D]">Government</option>
-                        <option value="Other" className="bg-[#0D192D]">Other</option>
-                      </select>
-                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="w-8 h-8 flex-none">
-                        <path d="M7.11133 11.7773L15.998 20.664L24.8847 11.7773" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                    <div className="relative w-full">
+                      <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
+                        <select
+                          name="industry"
+                          value={formData.industry}
+                          onChange={handleInputChange}
+                          className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
+                          style={{ 
+                            background: '#0D192D !important',
+                            color: 'white !important',
+                            border: 'none',
+                            outline: 'none',
+                            WebkitAppearance: 'none',
+                            MozAppearance: 'none',
+                            appearance: 'none'
+                          }}
+                        >
+                          <option value="Engineering" style={{ backgroundColor: '#0D192D', color: 'white' }}>Engineering</option>
+                          <option value="Construction" style={{ backgroundColor: '#0D192D', color: 'white' }}>Construction</option>
+                          <option value="Architecture" style={{ backgroundColor: '#0D192D', color: 'white' }}>Architecture</option>
+                          <option value="Real Estate" style={{ backgroundColor: '#0D192D', color: 'white' }}>Real Estate</option>
+                          <option value="Manufacturing" style={{ backgroundColor: '#0D192D', color: 'white' }}>Manufacturing</option>
+                          <option value="Technology" style={{ backgroundColor: '#0D192D', color: 'white' }}>Technology</option>
+                          <option value="Education" style={{ backgroundColor: '#0D192D', color: 'white' }}>Education</option>
+                          <option value="Government" style={{ backgroundColor: '#0D192D', color: 'white' }}>Government</option>
+                          <option value="Other" style={{ backgroundColor: '#0D192D', color: 'white' }}>Other</option>
+                        </select>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
+                          <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
                     </div>
                   </div>
 
                   {/* Your Role Field */}
-                  <div className="flex flex-col items-start gap-4 w-[638px] h-[113px] flex-1">
-                    <label className="w-[100px] h-[17px] text-[24px] font-medium leading-[130%] text-white">
+                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
+                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
                       Your Role
                     </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-[638px] h-[80px] border-b border-white">
-                      <select
-                        name="role"
-                        value={formData.role}
-                        onChange={handleInputChange}
-                        className="flex-1 w-[564px] h-[12px] text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none appearance-none cursor-pointer"
-                      >
-                        <option value="Design Engineer" className="bg-[#0D192D]">Design Engineer</option>
-                        <option value="Project Manager" className="bg-[#0D192D]">Project Manager</option>
-                        <option value="Architect" className="bg-[#0D192D]">Architect</option>
-                        <option value="CEO/Founder" className="bg-[#0D192D]">CEO/Founder</option>
-                        <option value="CTO" className="bg-[#0D192D]">CTO</option>
-                        <option value="Engineer" className="bg-[#0D192D]">Engineer</option>
-                        <option value="Developer" className="bg-[#0D192D]">Developer</option>
-                        <option value="Student" className="bg-[#0D192D]">Student</option>
-                        <option value="Other" className="bg-[#0D192D]">Other</option>
-                      </select>
-                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="w-8 h-8 flex-none">
-                        <path d="M7.11133 11.7773L15.998 20.664L24.8847 11.7773" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                    <div className="relative w-full">
+                      <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
+                        <select
+                          name="role"
+                          value={formData.role}
+                          onChange={handleInputChange}
+                          className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
+                          style={{ 
+                            background: '#0D192D !important',
+                            color: 'white !important',
+                            border: 'none',
+                            outline: 'none',
+                            WebkitAppearance: 'none',
+                            MozAppearance: 'none',
+                            appearance: 'none'
+                          }}
+                        >
+                          <option value="Design Engineer" style={{ backgroundColor: '#0D192D', color: 'white' }}>Design Engineer</option>
+                          <option value="Project Manager" style={{ backgroundColor: '#0D192D', color: 'white' }}>Project Manager</option>
+                          <option value="Architect" style={{ backgroundColor: '#0D192D', color: 'white' }}>Architect</option>
+                          <option value="CEO/Founder" style={{ backgroundColor: '#0D192D', color: 'white' }}>CEO/Founder</option>
+                          <option value="CTO" style={{ backgroundColor: '#0D192D', color: 'white' }}>CTO</option>
+                          <option value="Engineer" style={{ backgroundColor: '#0D192D', color: 'white' }}>Engineer</option>
+                          <option value="Developer" style={{ backgroundColor: '#0D192D', color: 'white' }}>Developer</option>
+                          <option value="Student" style={{ backgroundColor: '#0D192D', color: 'white' }}>Student</option>
+                          <option value="Other" style={{ backgroundColor: '#0D192D', color: 'white' }}>Other</option>
+                        </select>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
+                          <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -273,29 +315,38 @@ const ContactForm = () => {
 
               {/* How Did You Hear About Us */}
               <SlideInLeft delay={0.9} duration={0.6}>
-                <div className="flex flex-row items-center gap-[36px] w-[1312px] h-[113px]">
-                  <div className="flex flex-col items-start gap-4 w-[1312px] h-[113px] flex-1">
-                    <label className="w-[306px] h-[17px] text-[24px] font-medium leading-[130%] text-white">
-                      How Did You Hear About Us?
-                    </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-[1312px] h-[80px] border-b border-white">
+                <div className="flex flex-col items-start gap-4 w-full">
+                  <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
+                    How Did You Hear About Us?
+                  </label>
+                  <div className="relative w-full">
+                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
                       <select
                         name="hearAbout"
                         value={formData.hearAbout}
                         onChange={handleInputChange}
-                        className="flex-1 w-[1238px] h-[12px] text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none appearance-none cursor-pointer"
+                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
+                        style={{ 
+                          background: '#0D192D !important',
+                          color: 'white !important',
+                          border: 'none',
+                          outline: 'none',
+                          WebkitAppearance: 'none',
+                          MozAppearance: 'none',
+                          appearance: 'none'
+                        }}
                       >
-                        <option value="How Did You Hear About Us?" className="bg-[#0D192D]">How Did You Hear About Us?</option>
-                        <option value="Google Search" className="bg-[#0D192D]">Google Search</option>
-                        <option value="Social Media" className="bg-[#0D192D]">Social Media</option>
-                        <option value="News Article" className="bg-[#0D192D]">News Article</option>
-                        <option value="Word of Mouth" className="bg-[#0D192D]">Word of Mouth</option>
-                        <option value="Conference/Event" className="bg-[#0D192D]">Conference/Event</option>
-                        <option value="Advertisement" className="bg-[#0D192D]">Advertisement</option>
-                        <option value="Other" className="bg-[#0D192D]">Other</option>
+                        <option value="How Did You Hear About Us?" style={{ backgroundColor: '#0D192D', color: 'white' }}>How Did You Hear About Us?</option>
+                        <option value="Google Search" style={{ backgroundColor: '#0D192D', color: 'white' }}>Google Search</option>
+                        <option value="Social Media" style={{ backgroundColor: '#0D192D', color: 'white' }}>Social Media</option>
+                        <option value="News Article" style={{ backgroundColor: '#0D192D', color: 'white' }}>News Article</option>
+                        <option value="Word of Mouth" style={{ backgroundColor: '#0D192D', color: 'white' }}>Word of Mouth</option>
+                        <option value="Conference/Event" style={{ backgroundColor: '#0D192D', color: 'white' }}>Conference/Event</option>
+                        <option value="Advertisement" style={{ backgroundColor: '#0D192D', color: 'white' }}>Advertisement</option>
+                        <option value="Other" style={{ backgroundColor: '#0D192D', color: 'white' }}>Other</option>
                       </select>
-                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="w-8 h-8 flex-none">
-                        <path d="M7.11133 11.7773L15.998 20.664L24.8847 11.7773" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
+                        <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
                   </div>
@@ -304,50 +355,44 @@ const ContactForm = () => {
 
               {/* Message Field */}
               <SlideInRight delay={1.0} duration={0.6}>
-                <div className="flex flex-row items-center gap-[36px] w-[1312px] h-[93px]">
-                  <div className="flex flex-col items-start gap-4 w-[1312px] h-[93px] flex-1">
-                    <label className="w-[95px] h-[17px] text-[24px] font-medium leading-[130%] text-white">
-                      Message
-                    </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-[1312px] h-[60px] border-b border-white">
-                      <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder="Message"
-                        rows={1}
-                        className="flex-1 w-[1280px] h-[12px] text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white resize-none"
-                      />
-                    </div>
+                <div className="flex flex-col items-start gap-4 w-full">
+                  <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
+                    Message
+                  </label>
+                  <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Message"
+                      rows={1}
+                      className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white resize-none"
+                    />
                   </div>
                 </div>
               </SlideInRight>
 
               {/* Checkbox */}
               <SlideInUp delay={1.1} duration={0.6}>
-                <div className="flex flex-row items-center gap-2 w-[550px] h-[28px]">
-                  <div className="flex flex-row items-start py-[2px] gap-[10px] w-6 h-[28px]">
-                    <div className="flex flex-row items-start gap-[10px] w-6 h-6">
-                      <div className="relative w-6 h-6">
-                        <input
-                          type="checkbox"
-                          name="acceptTerms"
-                          checked={formData.acceptTerms}
-                          onChange={handleInputChange}
-                          className="absolute w-6 h-6 opacity-0 cursor-pointer z-10"
-                          required
-                        />
-                        <div className={`absolute w-6 h-6 border border-white rounded ${formData.acceptTerms ? 'bg-white' : 'bg-[#A1A1A1]'} transition-colors duration-200`}>
-                          {formData.acceptTerms && (
-                            <svg className="w-4 h-4 text-[#0D192D] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                          )}
-                        </div>
-                      </div>
+                <div className="flex flex-row items-center gap-3 w-full max-w-2xl">
+                  <div className="relative flex-shrink-0 w-6 h-6">
+                    <input
+                      type="checkbox"
+                      name="acceptTerms"
+                      checked={formData.acceptTerms}
+                      onChange={handleInputChange}
+                      className="absolute w-6 h-6 opacity-0 cursor-pointer z-10"
+                      required
+                    />
+                    <div className={`absolute w-6 h-6 border border-white rounded ${formData.acceptTerms ? 'bg-white' : 'bg-[#A1A1A1]'} transition-colors duration-200`}>
+                      {formData.acceptTerms && (
+                        <svg className="w-4 h-4 text-[#0D192D] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      )}
                     </div>
                   </div>
-                  <p className="w-[518px] h-5 text-[24px] font-medium leading-5 tracking-[-0.02em] text-white">
+                  <p className="text-[18px] lg:text-[20px] font-medium leading-6 tracking-[-0.02em] text-white">
                     I accept the Terms & Conditions and Privacy Policy*
                   </p>
                 </div>
@@ -368,7 +413,7 @@ const ContactForm = () => {
 
               {/* Line */}
               <SlideInUp delay={1.3} duration={0.6}>
-                <div className="w-[1312px] h-0 border-t border-white"></div>
+                <div className="w-full h-0 border-t border-white"></div>
               </SlideInUp>
             </form>
           </div>

@@ -240,4 +240,88 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #0D192D;
   }
+
+  /* Custom dropdown select styling */
+  select {
+    background-color: #0D192D !important;
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+  }
+
+  select option {
+    background-color: #0D192D !important;
+    color: white !important;
+    padding: 8px 12px !important;
+    border: none !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+
+  select option:hover {
+    background-color: #1D3357 !important;
+    color: white !important;
+  }
+
+  select option:checked {
+    background-color: #1D3357 !important;
+    color: white !important;
+  }
+
+  /* Firefox specific dropdown styling */
+  @-moz-document url-prefix() {
+    select {
+      background-color: #0D192D !important;
+      color: white !important;
+    }
+    
+    select option {
+      background-color: #0D192D !important;
+      color: white !important;
+    }
+  }
+
+  /* Contact form select specific styling */
+  .contact-form-select {
+    background: #0D192D !important;
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+  }
+
+  .contact-form-select option {
+    background-color: #0D192D !important;
+    background: #0D192D !important;
+    color: white !important;
+    padding: 12px 16px !important;
+    border: none !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+  }
+
+  .contact-form-select option:hover,
+  .contact-form-select option:focus {
+    background-color: #1D3357 !important;
+    background: #1D3357 !important;
+    color: white !important;
+  }
+
+  .contact-form-select option:checked,
+  .contact-form-select option:selected {
+    background-color: #1D3357 !important;
+    background: #1D3357 !important;
+    color: white !important;
+  }
+
+  /* Windows specific styling */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .contact-form-select option {
+      background-color: #0D192D !important;
+      color: white !important;
+    }
+  }
 }
