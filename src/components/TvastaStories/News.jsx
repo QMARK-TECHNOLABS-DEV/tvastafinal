@@ -5,22 +5,22 @@ import { FadeIn, SlideInUp, AnimatedCard } from '../../utils/animations.jsx';
 const News = () => {
   const newsItems = [
     {
-      image: '/images/tvastastories/news1.jpg',
-      logoImage: '/images/tvastastories/newslogo1.png',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/news1.jpg',
+      logoImage: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/newslogo1.png',
       title: "Breaking: Revolutionary 3D Construction Technology Transforms Building Industry",
       readMoreText: "Read More",
       externalLinkText: "View"
     },
     {
-      image: '/images/tvastastories/news2.jpg',
-      logoImage: '/images/tvastastories/newslogo2.png',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/news2.jpg',
+      logoImage: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/newslogo2.png',
       title: "Indian Startup Receives International Recognition for Sustainable Construction",
       readMoreText: "Read More",
       externalLinkText: "View"
     },
     {
-      image: '/images/tvastastories/news3.jpg',
-      logoImage: '/images/tvastastories/newslogo3.png',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/news3.jpg',
+      logoImage: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/newslogo3.png',
       title: "Future of Construction: How 3D Printing is Changing the Game",
       readMoreText: "Read More",
       externalLinkText: "View"

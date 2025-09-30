@@ -54,7 +54,7 @@ const MediaOrPressEnquiry = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
           style={{
-            backgroundImage: `url('/images/tvastastories/mediaorpressenquiry.jpg')`
+            backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/mediaorpressenquiry.jpg')`
           }}
         />
       </SlideInRight>

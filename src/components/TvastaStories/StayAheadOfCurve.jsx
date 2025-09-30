@@ -26,7 +26,7 @@ const StayAheadOfCurve = () => {
         <div 
           className="w-full h-full bg-[#D9D9D9] rounded-[24px] bg-cover bg-center"
           style={{
-            backgroundImage: `url('/images/tvastastories/stayaheadofcurve.jpg')`
+            backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/stayaheadofcurve.jpg')`
           }}
         />
       </SlideInLeft>

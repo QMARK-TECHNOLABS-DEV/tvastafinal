@@ -5,15 +5,15 @@ import { FadeIn, SlideInUp, AnimatedCard } from '../../utils/animations.jsx';
 const InTheSpotlight = () => {
   const spotlightItems = [
     {
-      image: '/images/tvastastories/inthespotlight1.jpg',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/inthespotlight1.jpg',
       title: "India's First 3D Printed House with Ministry of Housing & Urban Affairs"
     },
     {
-      image: '/images/tvastastories/inthespotlight2.jpg',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/inthespotlight2.jpg',
       title: "IIT Madras Collaboration Coverage"
     },
     {
-      image: '/images/tvastastories/inthespotlight3.jpg',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/inthespotlight3.jpg',
       title: "National Awards or Certifications"
     }
   ];
