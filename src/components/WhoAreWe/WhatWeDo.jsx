@@ -25,7 +25,7 @@ const WhatWeDo = () => {
           <div 
             className="absolute inset-0 w-full h-full bg-cover bg-center"
             style={{ 
-              backgroundImage: "linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/images/Who Are We/whatwedo.png')",
+              backgroundImage: "linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/whatwedo.png')",
               backgroundSize: 'cover'
             }}
           />

@@ -5,10 +5,10 @@ const OurMission = () => {
     <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 my-3 sm:my-16 md:my-20 lg:my-10">
       <div className="flex flex-col lg:flex-row items-center gap-[40px] lg:gap-[80px]">
         {/* Left Image */}
-        <SlideInLeft delay={0.2} className="w-full h-[320px] sm:h-[420px] lg:h-[536px] flex-shrink-0">
+        <SlideInLeft delay={0.2} className="w-full lg:w-1/2 h-[320px] sm:h-[420px] lg:h-[536px]">
           <div className="w-full h-full bg-gray-200 rounded-[16px] overflow-hidden">
             <img 
-              src="/images/Who Are We/missionvision.png" 
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/missionvision.png" 
               alt="Our Mission and Vision" 
               className="w-full h-full object-cover"
             />
@@ -16,7 +16,7 @@ const OurMission = () => {
         </SlideInLeft>
         
         {/* Right Content */}
-        <div className="flex flex-col justify-center items-start gap-[48px] w-full flex-grow">
+        <div className="flex flex-col justify-center items-start gap-[48px] w-full lg:w-1/2">
           {/* Our Mission Section */}
           <SlideInRight delay={0.3}>
             <div className="flex flex-col items-start gap-[16px] w-full">

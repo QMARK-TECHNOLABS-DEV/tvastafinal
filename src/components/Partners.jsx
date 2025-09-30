@@ -2,12 +2,12 @@ import { FadeIn, ScaleUp, StaggeredList } from '../utils/animations.jsx';
 
 const Partners = () => {
   const logos = [
-    { src: "/images/logo1.png", alt: "Partner 1", width: "150px", height: "80px" },
-    { src: "/images/logo4.png", alt: "Partner 2", width: "200px", height: "80px" },
-    { src: "/images/navam.png", alt: "Partner 3", width: "219px", height: "56px" },
-    { src: "/images/habitat.png", alt: "Partner 4", width: "120px", height: "40px" },
-    { src: "/images/logo3.png", alt: "Partner 5", width: "150px", height: "80px" },
-    { src: "/images/logo2.png", alt: "Partner 6", width: "150px", height: "80px" }
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/logo1.png", alt: "Partner 1", width: "150px", height: "80px" },
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/logo4.png", alt: "Partner 2", width: "200px", height: "80px" },
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/navam.png", alt: "Partner 3", width: "219px", height: "56px" },
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/habitat.png", alt: "Partner 4", width: "120px", height: "40px" },
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/logo3.png", alt: "Partner 5", width: "150px", height: "80px" },
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/logo2.png", alt: "Partner 6", width: "150px", height: "80px" }
   ];
 
   return (

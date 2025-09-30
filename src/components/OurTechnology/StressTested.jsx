@@ -2,7 +2,7 @@ import React from 'react';
 import { FadeIn, SlideInLeft, SlideInRight } from '../../utils/animations.jsx';
 
 const StressTested = () => {
-  const stressTestedImage = '/images/OurTechnology/Stress-Tested%20and%20Certified%20for%20Performance.jpg';
+  const stressTestedImage = 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Stress-Tested%20and%20Certified%20for%20Performance.jpg';
 
   return (
     <section className="w-full bg-white pt-[120px]">

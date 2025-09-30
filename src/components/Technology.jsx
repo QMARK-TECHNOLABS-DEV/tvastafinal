@@ -37,7 +37,7 @@ const Technology = () => {
           <div 
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url('/images/exploretechnology.jpg')`
+              backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/exploretechnology.jpg')`
             }}
           />
         </SlideInRight>

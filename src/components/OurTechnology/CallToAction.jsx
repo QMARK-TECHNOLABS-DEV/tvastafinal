@@ -3,7 +3,7 @@ import { FadeIn, SlideInLeft, SlideInRight, AnimatedButton } from '../../utils/a
 
 const CallToAction = () => {
   // Using the attached workspace collaboration image
-  const letsTalkImage = '/images/OurTechnology/Letstalk.jpg';
+  const letsTalkImage = 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Letstalk.jpg';
 
   return (
     <section className="w-full bg-white py-[120px]">

@@ -3,12 +3,12 @@ import { FadeIn, StaggeredList } from '../../utils/animations.jsx';
 
 const KeyCollaborations = () => {
   const collaborations = [
-    { id: 1, name: "Saint-Gobain", image: "/images/logo1.png" },
-    { id: 2, name: "Venture Catalyst", image: "/images/logo4.png" },
-    { id: 3, name: "Navam Capital", image: "/images/navam.png" },
-    { id: 4, name: "Habitat for Humanity", image: "/images/habitat.png" },
-    { id: 5, name: "ADB Ventures", image: "/images/logo3.png" },
-    { id: 6, name: "Third Derivative", image: "/images/logo2.png" }
+    { id: 1, name: "Saint-Gobain", image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/logo1.png" },
+    { id: 2, name: "Venture Catalyst", image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/logo4.png" },
+    { id: 3, name: "Navam Capital", image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/navam.png" },
+    { id: 4, name: "Habitat for Humanity", image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/habitat.png" },
+    { id: 5, name: "ADB Ventures", image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/logo3.png" },
+    { id: 6, name: "Third Derivative", image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/logo2.png" }
   ];
 
   return (

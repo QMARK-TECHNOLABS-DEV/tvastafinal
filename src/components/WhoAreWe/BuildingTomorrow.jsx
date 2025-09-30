@@ -58,7 +58,7 @@ const BuildingTomorrow = () => {
         {/* Right Image */}
         <SlideInRight delay={0.3} className="flex-shrink-0 w-full lg:w-auto">
           <img 
-            src="/images/Who Are We/workwithus.png" 
+            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/workwithus.png" 
             alt="Building Tomorrow" 
             className="w-full sm:w-[400px] md:w-full lg:w-[450px] h-[300px] sm:h-[360px] md:h-[380px] lg:h-[400px] object-cover rounded-[24px]"
           />

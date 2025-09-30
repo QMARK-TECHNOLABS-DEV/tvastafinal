@@ -5,25 +5,25 @@ const Ecosystem = () => {
     {
       title: "3D Printers",
       description: "Precision gantries and robotic arms built for scalable, on-site construction.",
-      image: "/images/The Complete 3D Construction Ecosystem 1.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%201.jpg",
       tag: "3D Printers"
     },
     {
       title: "Accessories & Turnkey Services", 
       description: "End-to-end support from hardware to full project execution.",
-      image: "/images/The Complete 3D Construction Ecosystem 2.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%202.jpg",
       tag: "Accessories & Turnkey Services"
     },
     {
       title: "Software",
       description: "Advanced tools for slicing, simulation, and real-time print control.",
-      image: "/images/The Complete 3D Construction Ecosystem 3.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%203.jpg",
       tag: "Software"
     },
     {
       title: "Sustainable Materials",
       description: "Eco-friendly mixes engineered for strength, speed, and durability.",
-      image: "/images/The Complete 3D Construction Ecosystem 4.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%204.jpg",
       tag: "Sustainable Materials"
     }
   ];

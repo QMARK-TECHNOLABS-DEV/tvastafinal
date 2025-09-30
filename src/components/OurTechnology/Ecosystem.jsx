@@ -3,11 +3,11 @@ import { FadeIn, SlideInUp, StaggeredList, AnimatedCard } from '../../utils/anim
 
 const Ecosystem = () => {
   const techImages = [
-    '/images/OurTechnology/Our%203D%20Construction%20Ecosystem%201.jpg',
-    '/images/OurTechnology/Our%203D%20Construction%20Ecosystem%202.jpg',
-    '/images/OurTechnology/Our%203D%20Construction%20Ecosystem%203.jpg',
-    '/images/OurTechnology/Our%203D%20Construction%20Ecosystem%204.jpg',
-    '/images/OurTechnology/Our%203D%20Construction%20Ecosystem%205.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%201.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%202.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%203.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%204.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%205.jpg',
   ];
 
   const ecosystemData = [

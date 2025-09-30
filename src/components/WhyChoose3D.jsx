@@ -29,7 +29,7 @@ const WhyChoose3D = () => {
             >
               <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden">
                 <img 
-                  src="/images/whychose3d1.png" 
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d1.png" 
                   alt="Faster Time to Build" 
                   className="w-full h-full object-cover"
                 />
@@ -50,7 +50,7 @@ const WhyChoose3D = () => {
             >
               <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden">
                 <img 
-                  src="/images/whychose3d2.png" 
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d2.png" 
                   alt="Design Without Limits" 
                   className="w-full h-full object-cover"
                 />
@@ -73,7 +73,7 @@ const WhyChoose3D = () => {
             >
               <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden">
                 <img 
-                  src="/images/whychose3d3.png" 
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d3.png" 
                   alt="Lower Material Waste" 
                   className="w-full h-full object-cover"
                 />
@@ -93,7 +93,7 @@ const WhyChoose3D = () => {
             >
               <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden">
                 <img 
-                  src="/images/whychose3d4.png" 
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d4.png" 
                   alt="Built to Withstand" 
                   className="w-full h-full object-cover"
                 />

@@ -15,10 +15,10 @@ const Projects = () => {
   ];
 
   const projectImages = [
-    { src: "/images/Explore Our Projects 1.jpg", alt: "Project 1", delay: 0 },
-    { src: "/images/Explore Our Projects 2.jpg", alt: "Project 2", delay: 0.1 },
-    { src: "/images/Explore Our Projects 3.jpg", alt: "Project 3", delay: 0.2 },
-    { src: "/images/Explore Our Projects 4.jpg", alt: "Project 4", delay: 0.3 }
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Explore%20Our%20Projects%201.jpg", alt: "Project 1", delay: 0 },
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Explore%20Our%20Projects%202.jpg", alt: "Project 2", delay: 0.1 },
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Explore%20Our%20Projects%203.jpg", alt: "Project 3", delay: 0.2 },
+    { src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Explore%20Our%20Projects%204.jpg", alt: "Project 4", delay: 0.3 }
   ];
 
   return (
@@ -74,7 +74,7 @@ const Projects = () => {
               {/* Left - tall image */}
               <ScaleUp delay={0}>
                 <motion.img 
-                  src="/images/Explore Our Projects 1.jpg"
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Explore%20Our%20Projects%201.jpg"
                   alt="Project 1"
                   className="w-full max-w-[400px] h-[540px] object-cover rounded-[20px]"
                   whileHover={{ scale: 1.02 }}
@@ -86,7 +86,7 @@ const Projects = () => {
               <div className="flex flex-col gap-4">
                 <ScaleUp delay={0.1}>
                   <motion.img 
-                    src="/images/Explore Our Projects 2.jpg"
+                    src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Explore%20Our%20Projects%202.jpg"
                     alt="Project 2"
                     className="w-[280px] h-[260px] object-cover rounded-[20px]"
                     whileHover={{ scale: 1.02 }}
@@ -95,7 +95,7 @@ const Projects = () => {
                 </ScaleUp>
                 <ScaleUp delay={0.2}>
                   <motion.img 
-                    src="/images/Explore Our Projects 3.jpg"
+                    src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Explore%20Our%20Projects%203.jpg"
                     alt="Project 3"
                     className="w-[280px] h-[260px] object-cover rounded-[20px]"
                     whileHover={{ scale: 1.02 }}
@@ -107,7 +107,7 @@ const Projects = () => {
               {/* Right - tall image */}
               <ScaleUp delay={0.3}>
                 <motion.img 
-                  src="/images/Explore Our Projects 4.jpg"
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Explore%20Our%20Projects%204.jpg"
                   alt="Project 4"
                   className="w-[280px] h-[540px] object-cover rounded-[20px]"
                   whileHover={{ scale: 1.02 }}

@@ -19,7 +19,7 @@ const OurWork = () => {
             <div
               className="w-full h-full bg-cover bg-center"
               style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('/images/ourwork1.png')`,
+                backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/ourwork1.png')`,
               }}
             >
               {/* Category Badge */}
@@ -59,7 +59,7 @@ const OurWork = () => {
             <div
               className="w-full h-full bg-cover bg-center"
               style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('/images/ourwork2.png')`,
+                backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/ourwork2.png')`,
               }}
             >
               <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-2 bg-white rounded-full">
@@ -97,7 +97,7 @@ const OurWork = () => {
             <div
               className="w-full h-full bg-cover bg-center"
               style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('/images/ourwork3.png')`,
+                backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/ourwork3.png')`,
               }}
             >
               <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-2 bg-white rounded-full">

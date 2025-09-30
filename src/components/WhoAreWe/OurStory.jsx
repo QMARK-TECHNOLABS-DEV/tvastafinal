@@ -70,27 +70,35 @@ const OurStory = () => {
         </div>
       </div>
 
-      {/* Scrollable Images Section */}
-      <div className="w-full overflow-x-auto mt-14 scrollbar-hide">
-        <div className="flex gap-6 flex-nowrap">
-          {['ourstory1.png', 'ourstory1.png', 'ourstory2.png'].map(
-            (img, index) => (
-              <motion.div
-                key={index}
-                className="min-w-[300px] sm:min-w-[400px] lg:min-w-[468px] h-[300px] sm:h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden flex-shrink-0"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <img
-                  src={`/images/Who Are We/${img}`}
-                  alt={`Our Story ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            )
-          )}
+      {/* Images Section */}
+      <div className="w-full mt-14">
+        <div className="grid grid-cols-4 gap-6">
+          <motion.div
+            className="col-span-4 md:col-span-3 w-full h-[300px] sm:h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory1.png"
+              alt="Our Story 1"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+          <motion.div
+            className="col-span-4 md:col-span-1 w-full h-[300px] sm:h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory2.png"
+              alt="Our Story 2"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
         </div>
       </div>
     </div>
