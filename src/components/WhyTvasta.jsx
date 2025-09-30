@@ -59,7 +59,7 @@ const WhyTvasta = () => {
             <div 
               className="w-full h-full bg-cover bg-center relative"
               style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%), url('/images/whytvasta3.png')`
+                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta3.png')`
               }}
             >
               <div className="absolute bottom-6 left-6 flex flex-col gap-3">
@@ -78,19 +78,19 @@ const WhyTvasta = () => {
 const WhyTvastaAlternative = () => {
   const statsCards = [
     {
-      image: '/images/whytvasta1.png',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.png',
       title: '25,000+ Sq. Ft. 3D Printed',
       gradient: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.86) 67.12%)',
       delay: 0
     },
     {
-      image: '/images/whytvasta2.png',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta2.png',
       title: '66% Cement Replaced in Mixes',
       gradient: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 100%)',
       delay: 0.2
     },
     {
-      image: '/images/whytvasta3.png',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta3.png',
       title: '7 States Covered in India',
       gradient: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%)',
       delay: 0.4

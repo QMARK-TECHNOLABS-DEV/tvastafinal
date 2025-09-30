@@ -51,7 +51,7 @@ const BuildTogether = () => {
           <div 
             className="w-full h-full"
             style={{
-              backgroundImage: `url('/images/Projects/letsbuild.jpg')`,
+              backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/letsbuild.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}

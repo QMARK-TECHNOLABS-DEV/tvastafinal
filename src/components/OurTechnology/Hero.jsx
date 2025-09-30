@@ -2,7 +2,7 @@ import React from 'react';
 import { FadeIn, SlideInUp, AnimatedButton } from '../../utils/animations.jsx';
 
 const Hero = () => {
-  const heroBg = '/images/Who%20Are%20We/herobg.png';
+  const heroBg = 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/herobg.png';
 
   return (
     <section 

@@ -6,27 +6,27 @@ const FoundersTeam = () => {
     {
       name: "Adithya VS",
       position: "Co-Founder & CEO",
-      image: "/images/Who Are We/founders.jpg"
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/founders.jpg"
     },
     {
       name: "Parivarthan Reddy",
       position: "Co-Founder & COO",
-      image: "/images/Who Are We/founders.jpg"
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/founders.jpg"
     },
     {
       name: "Pragadeeswar",
       position: "CTO Machines",
-      image: "/images/Who Are We/founders.jpg"
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/founders.jpg"
     },
     {
       name: "Kalyan",
       position: "CTO Construction R&D",
-      image: "/images/Who Are We/founders.jpg"
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/founders.jpg"
     },
     {
       name: "Jay Prakash",
       position: "CFO",
-      image: "/images/Who Are We/founders.jpg"
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/founders.jpg"
     }
   ];
 

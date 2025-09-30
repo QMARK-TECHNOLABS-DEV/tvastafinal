@@ -7,7 +7,7 @@ const Hero = () => {
     <section 
       className="relative w-full h-[660px] bg-cover bg-center bg-no-repeat overflow-hidden flex items-center justify-center"
       style={{
-        backgroundImage: `url('/images/Who Are We/herobg.png')`,
+        backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/herobg.png')`,
       }}
     >
       {/* Background Ellipse Blur */}

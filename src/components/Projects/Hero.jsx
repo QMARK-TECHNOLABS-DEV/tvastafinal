@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '../../utils/animations';
 
 const Hero = () => {
-  const heroBg = '/images/Who%20Are%20We/herobg.png';
+  const heroBg = 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/herobg.png';
 
   return (
     <section 

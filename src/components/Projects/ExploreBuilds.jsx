@@ -17,42 +17,42 @@ const ExploreBuilds = () => {
       category: 'Commercial',
       title: 'Project Name',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/images/Projects/Explore Our Builds1.png'
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Explore%20Our%20Builds1.png'
     },
     {
       id: 2,
       category: 'Public Infrastructure',
       title: 'Project Name',
       description: 'Porem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/images/Projects/Explore Our Builds2.png'
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Explore%20Our%20Builds2.png'
     },
     {
       id: 3,
       category: 'Residential',
       title: 'Project Name',
       description: 'Sorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/images/Projects/Explore Our Builds3.png'
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Explore%20Our%20Builds3.png'
     },
     {
       id: 4,
       category: 'Commercial',
       title: 'Project Name',
       description: 'Morem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/images/Projects/Explore Our Builds4.png'
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Explore%20Our%20Builds4.png'
     },
     {
       id: 5,
       category: 'Public Infrastructure',
       title: 'Project Name',
       description: 'Sorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/images/Projects/Explore Our Builds5.png'
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Explore%20Our%20Builds5.png'
     },
     {
       id: 6,
       category: 'Residential',
       title: 'Project Name',
       description: 'Morem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/images/Projects/Explore Our Builds6.png'
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Explore%20Our%20Builds6.png'
     }
   ];
 

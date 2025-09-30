@@ -7,7 +7,7 @@ const WhyChooseTvasta = () => {
     {
       icon: (
         <img 
-          src="/images/Projects/Icon1.png" 
+          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Icon1.png" 
           alt="Speed of Execution" 
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
@@ -18,7 +18,7 @@ const WhyChooseTvasta = () => {
     {
       icon: (
         <img 
-          src="/images/Projects/logo2.png" 
+          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/logo2.png" 
           alt="Design Flexibility" 
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
@@ -29,7 +29,7 @@ const WhyChooseTvasta = () => {
     {
       icon: (
         <img 
-          src="/images/Projects/icon3.png" 
+          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon3.png" 
           alt="Sustainable Innovation" 
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
@@ -131,7 +131,7 @@ const WhyChooseTvasta = () => {
           <div 
             className="w-full h-full"
             style={{
-              backgroundImage: `url('/images/Projects/Why%20Choose%20Tvasta.jpg')`,
+              backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Why%20Choose%20Tvasta.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}

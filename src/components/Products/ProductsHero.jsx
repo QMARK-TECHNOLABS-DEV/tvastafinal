@@ -5,7 +5,7 @@ const ProductsHero = () => {
   return (
     <section 
       className="relative w-full h-[660px] bg-cover bg-center bg-no-repeat overflow-hidden"
-      style={{ backgroundImage: "url('/images/Who Are We/herobg.png')" }}
+      style={{ backgroundImage: "url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/herobg.png')" }}
     >
       {/* Background Ellipse Blur */}
       <div className="absolute top-[-143px] left-1/2 transform -translate-x-1/2 w-[286px] h-[286px] bg-[#ACACAC] rounded-full blur-[250px] opacity-50" />
