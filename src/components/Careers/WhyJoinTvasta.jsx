@@ -4,19 +4,19 @@ import { FadeIn, SlideInUp, AnimatedCard } from '../../utils/animations.jsx';
 const WhyJoinTvasta = () => {
   const reasons = [
     {
-      icon: '/images/careers/icon1.png',
+      icon: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/careers/icon1.png',
       title: 'Work on cutting-edge 3D construction technology'
     },
     {
-      icon: '/images/careers/icon2.png',
+      icon: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/careers/icon2.png',
       title: 'Collaborate with top minds from engineering, design, and R&D'
     },
     {
-      icon: '/images/careers/icon3.png',
+      icon: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/careers/icon3.png',
       title: 'Contribute to projects that change lives and cities'
     },
     {
-      icon: '/images/careers/icon4.png',
+      icon: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/careers/icon4.png',
       title: 'Thrive in a culture of innovation, speed, and sustainability'
     }
   ];

@@ -18,7 +18,7 @@ const AboutSection = () => {
         <div className="relative w-full max-w-[1200px] mx-auto">
           <div className="w-full h-[300px] md:h-[450px] lg:h-[500px] rounded-[12px] overflow-hidden shadow-lg">
             <img 
-              src="/images/careers/careermain.jpg"
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/careers/careermain.jpg"
               alt="Tvasta team working on 3D construction technology"
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               onError={(e) => {

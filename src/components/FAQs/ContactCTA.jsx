@@ -41,7 +41,7 @@ const ContactCTA = () => {
         <div 
           className="w-full h-full bg-gray-200 rounded-[24px] bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/images/FAQs/contactimg.jpg'), linear-gradient(135deg, #f5f5f5, #e0e0e0)`
+            backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/FAQs/contactimg.jpg'), linear-gradient(135deg, #f5f5f5, #e0e0e0)`
           }}
         >
           {/* Fallback content if image is not available */}

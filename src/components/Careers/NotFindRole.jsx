@@ -54,7 +54,7 @@ const NotFindRole = () => {
           <div 
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('/images/careers/contactimg.jpg')`,
+              backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/careers/contactimg.jpg')`,
               backgroundColor: '#D9D9D9'
             }}
           />

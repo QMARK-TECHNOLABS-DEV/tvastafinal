@@ -28,7 +28,7 @@ const BuildSmarter = () => {
           <div 
             className="w-full lg:w-[508px] h-[300px] lg:h-[400px] bg-cover bg-center bg-no-repeat rounded-[24px] flex-none bg-[#D9D9D9]"
             style={{
-              backgroundImage: `url('/images/ContactUs/contactus.jpg')`
+              backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/ContactUs/contactus.jpg')`
             }}
           />
         </SlideInRight>
