@@ -1,4 +1,3 @@
-import React from 'react';
 import { FadeIn, SlideInLeft, SlideInRight } from '../utils/animations.jsx';
 
 const WhyTvasta = () => {
@@ -7,19 +6,19 @@ const WhyTvasta = () => {
       <div className="flex flex-col items-start gap-16 w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-20 py-16 lg:py-20">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 lg:gap-16 w-full">
-          <SlideInLeft className="flex flex-col justify-center items-start max-w-[421px]">
+          <SlideInLeft className="flex flex-col justify-center items-start md:w-[40%]">
             <p className="font-outfit font-semibold text-2xl leading-[30px] text-[#E63946] mb-2">
               Why Tvasta
             </p>
-            <h2 className="font-outfit font-semibold text-3xl sm:text-4xl lg:text-5xl leading-[60px] text-[#0D192D]">
+            <h2 className="font-outfit font-semibold text-3xl sm:text-4xl lg:text-[45px] leading-[60px] text-[#0D192D]">
               Built on Research. Proven in Concrete
             </h2>
           </SlideInLeft>
 
-          <SlideInRight className="max-w-[697px]">
-            <p className="font-outfit font-normal text-xl sm:text-2xl leading-[30px] text-[#1D3357]">
+          <SlideInRight className="md:w-[60%]">
+            <p className="font-outfit font-normal text-xl sm:text-[21px] leading-[30px] text-[#1D3357]">
               Founded at IIT Madras in 2016, Tvasta is redefining construction with scalable, sustainable 3D printing technology. Our mission: build intelligently, sustainably, and accessibly. 
-              <span className="text-[#E63946] underline cursor-pointer hover:no-underline transition-all">Know More…</span>
+              <br/><span className="text-[#E63946] underline cursor-pointer hover:no-underline transition-all">Know More…</span>
             </p>
           </SlideInRight>
         </div>
