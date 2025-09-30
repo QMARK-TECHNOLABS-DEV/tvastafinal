@@ -1,6 +1,5 @@
-import React from 'react';
-import { FadeIn, StaggeredList } from '../../utils/animations.jsx';
 import { motion } from 'framer-motion';
+import { FadeIn, StaggeredList } from '../../utils/animations.jsx';
 
 const FoundersTeam = () => {
   const founders = [
@@ -36,7 +35,7 @@ const FoundersTeam = () => {
       {/* Title */}
       <FadeIn delay={0.2}>
         <div className="flex flex-col items-center gap-[10px] w-full max-w-[1281px]">
-          <h2 className="font-outfit font-semibold text-[48px] leading-[140%] text-center text-[#131112] w-full">
+          <h2 className="font-outfit font-semibold text-[32px] md:text-[48px] leading-9 md:leading-[140%] text-center text-[#131112] w-full">
             Founders & Core Team
           </h2>
         </div>

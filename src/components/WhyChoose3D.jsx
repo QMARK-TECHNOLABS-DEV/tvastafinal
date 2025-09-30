@@ -1,6 +1,5 @@
-import React from 'react';
-import { FadeIn, SlideInUp, SlideInLeft, SlideInRight, AnimatedButton } from '../utils/animations.jsx';
 import { motion } from 'framer-motion';
+import { AnimatedButton, FadeIn, SlideInLeft, SlideInRight, SlideInUp } from '../utils/animations.jsx';
 
 const WhyChoose3D = () => {
   return (
@@ -12,7 +11,7 @@ const WhyChoose3D = () => {
             Why Choose 3D Construction
           </h2>
           <p className="max-w-[807px] font-outfit font-medium text-[20px] md:text-[24px] leading-[160%] text-[#1D3357]">
-            Build faster, waste less, and design without limits using precise 3D construction technology.
+           Build faster, waste less, and design smarter with sustainable 3D construction
           </p>
         </div>
       </FadeIn>

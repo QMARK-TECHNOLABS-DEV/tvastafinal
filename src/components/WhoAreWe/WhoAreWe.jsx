@@ -1,18 +1,18 @@
-import React from 'react';
 import { PageTransition } from '../../utils/animations.jsx';
-import Navbar from '../Navbar';
 import Footer from '../Footer';
-import PageHeader from './PageHeader';
-import OurStory from './OurStory';
-import OurMission from './OurMission';
-import WhatWeDo from './WhatWeDo';
-import FoundersTeam from './FoundersTeam';
-import Certifications from './Certifications';
-import KeyCollaborations from './KeyCollaborations';
+import Navbar from '../Navbar';
 import BuildingTomorrow from './BuildingTomorrow';
+import Certifications from './Certifications';
+import FoundersTeam from './FoundersTeam';
+import KeyCollaborations from './KeyCollaborations';
+import OurMission from './OurMission';
+import OurStory from './OurStory';
+import PageHeader from './PageHeader';
+import WhatWeDo from './WhatWeDo';
 
 const WhoAreWe = () => {
   return (
+    <div className='overflow-x-hidden'>
     <PageTransition className="relative w-full min-h-screen bg-white">
       <Navbar />
       
@@ -36,6 +36,7 @@ const WhoAreWe = () => {
       
       <Footer />
     </PageTransition>
+    </div>
   );
 };
 

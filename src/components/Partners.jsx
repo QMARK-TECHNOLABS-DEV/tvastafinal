@@ -1,44 +1,44 @@
-import React from 'react';
-import { FadeIn, StaggeredList, ScaleUp } from '../utils/animations.jsx';
+import { FadeIn, ScaleUp, StaggeredList } from '../utils/animations.jsx';
 
 const Partners = () => {
   const logos = [
     { src: "/images/logo1.png", alt: "Partner 1", width: "150px", height: "80px" },
-    { src: "/images/logo2.png", alt: "Partner 2", width: "200px", height: "80px" },
-    { src: "/images/logo3.png", alt: "Partner 3", width: "219px", height: "56px" },
-    { src: "/images/logo4.png", alt: "Partner 4", width: "120px", height: "40px" },
-    { src: "/images/logo1.png", alt: "Partner 5", width: "150px", height: "80px" },
+    { src: "/images/logo4.png", alt: "Partner 2", width: "200px", height: "80px" },
+    { src: "/images/navam.png", alt: "Partner 3", width: "219px", height: "56px" },
+    { src: "/images/habitat.png", alt: "Partner 4", width: "120px", height: "40px" },
+    { src: "/images/logo3.png", alt: "Partner 5", width: "150px", height: "80px" },
     { src: "/images/logo2.png", alt: "Partner 6", width: "150px", height: "80px" }
   ];
 
   return (
-    <div className="flex flex-col items-center gap-6 w-full max-w-[1440px] px-4">
+    <div className="flex flex-col items-center gap-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-10 my-6 sm:my-16 md:my-10">
       {/* Section Title */}
       <FadeIn delay={0.2}>
-        <h2 className="font-outfit font-medium text-[24px] leading-[30px] text-center text-[#0D192D]">
+        <h2 className="font-outfit font-medium text-[24px]  leading-[140%] text-center text-[#0D192D]">
           Pioneers since 2016
         </h2>
       </FadeIn>
 
       {/* Partners Logos */}
-      <div className="flex flex-col items-center gap-[50px] w-full max-w-[1239px]">
-        <StaggeredList staggerDelay={0.15} className="flex flex-wrap justify-center items-center gap-[50px] w-full">
-          {logos.map((logo, index) => (
-            <ScaleUp
-              key={index}
-              delay={index * 0.1}
-              className={`bg-gray-100 rounded-[10px] overflow-hidden hover-lift hover-scale transition-all duration-300`}
+      <StaggeredList
+        staggerDelay={0.15}
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 sm:gap-8 md:gap-10 w-full max-w-[1200px]"
+      >
+        {logos.map((logo, index) => (
+          <ScaleUp
+            key={index}
+            delay={index * 0.1}
+            className="flex items-center justify-center"
+          >
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className="max-h-[70px] sm:max-h-[80px] md:max-h-[90px] object-contain w-full"
               style={{ width: logo.width, height: logo.height }}
-            >
-              <img 
-                src={logo.src} 
-                alt={logo.alt} 
-                className="w-full h-full object-contain p-2" 
-              />
-            </ScaleUp>
-          ))}
-        </StaggeredList>
-      </div>
+            />
+          </ScaleUp>
+        ))}
+      </StaggeredList>
     </div>
   );
 };
