@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = ({ hideContactForm = false }) => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
     <div className="flex flex-col w-full bg-[#1D3357]">
       {/* Contact Section - conditionally rendered */}
@@ -139,7 +145,10 @@ const Footer = ({ hideContactForm = false }) => {
           </span>
 
           {/* Back to Top */}
-          <span className="font-outfit font-medium text-[24px] leading-[130%] text-right text-white cursor-pointer hover:underline">
+          <span 
+            className="font-outfit font-medium text-[24px] leading-[130%] text-right text-white cursor-pointer hover:underline transition-colors duration-200 hover:text-gray-300"
+            onClick={scrollToTop}
+          >
             BACK TO TOP
           </span>
         </div>
