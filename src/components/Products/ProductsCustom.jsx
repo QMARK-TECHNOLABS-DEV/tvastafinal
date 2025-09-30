@@ -45,7 +45,7 @@ const ProductsCustom = () => {
       <SlideInRight delay={0.4} duration={0.8} className="w-full md:w-[508px] h-[250px] md:h-[350px] rounded-[24px] overflow-hidden order-1 md:order-2">
         <AnimatedCard className="w-full h-full" whileHover={{ scale: 1.05 }}>
           <img 
-            src="/images/Products/wantcustom.jpg" 
+            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/wantcustom.jpg" 
             alt="Custom Furniture Solutions"
             className="w-full h-full object-cover bg-[#D9D9D9] transition-transform duration-300"
           />

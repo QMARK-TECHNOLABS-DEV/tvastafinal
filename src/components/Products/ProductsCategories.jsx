@@ -7,21 +7,21 @@ const ProductsCategories = () => {
       id: 1,
       title: "Sustainable Materials",
       description: "Printed using low-carbon concrete mixes, with options for recycled content",
-      image: "/images/Products/tvastafurniture1.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/tvastafurniture1.jpg",
       buttonText: "Sustainable Materials"
     },
     {
       id: 2,
       title: "Custom Fabrication",
       description: "Profiles, textures, and finishes can be tailored to fit project aesthetics",
-      image: "/images/Products/tvastafurniture2.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/tvastafurniture2.jpg",
       buttonText: "Custom Fabrication"
     },
     {
       id: 3,
       title: "Ready for Urban Integration",
       description: "Ideal for smart city projects, institutional campuses, or contemporary commercial zones",
-      image: "/images/Products/tvastafurniture3.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/tvastafurniture3.jpg",
       buttonText: "Ready for Urban Integration"
     }
   ];

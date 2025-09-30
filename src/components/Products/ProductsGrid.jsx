@@ -6,25 +6,25 @@ const ProductsGrid = () => {
     {
       id: 1,
       name: "Product Name",
-      image: "/images/Products/product1.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/product1.jpg",
       isMain: true
     },
     {
       id: 2,
       name: "Modern Chair",
-      image: "/images/Products/product2.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/product2.jpg",
       isMain: false
     },
     {
       id: 3,
       name: "Contemporary Seating",
-      image: "/images/Products/product3.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/product3.jpg",
       isMain: false
     },
     {
       id: 4,
       name: "Executive Collection",
-      image: "/images/Products/product4.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/product4.jpg",
       isMain: false
     }
   ];
