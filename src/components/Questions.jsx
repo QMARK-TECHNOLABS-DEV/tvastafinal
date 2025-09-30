@@ -1,9 +1,8 @@
-import React from 'react';
-import { FadeIn, SlideInUp, AnimatedButton } from '../utils/animations.jsx';
+import { AnimatedButton, FadeIn, SlideInUp } from '../utils/animations.jsx';
 
 const Questions = () => {
   return (
-    <section className="flex flex-col items-start gap-[40px] w-full max-w-[1280px] mx-auto px-4 py-8">
+    <section className="flex flex-col items-start gap-[40px] w-full max-w-6xl mx-auto px-4 py-8">
       {/* Section Header */}
       <FadeIn>
         <div className="flex flex-col gap-6 w-full">

@@ -1,19 +1,19 @@
-import React from 'react';
-import { PageTransition } from '../utils/animations.jsx';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Partners from '../components/Partners';
-import OurWork from '../components/OurWork';
-import WhyChoose3D from '../components/WhyChoose3D';
-import WhyTvasta from '../components/WhyTvasta';
-import Technology from '../components/Technology';
 import Ecosystem from '../components/Ecosystem';
+import Footer from '../components/Footer';
+import Hero from '../components/Hero';
+import Navbar from '../components/Navbar';
+import OurWork from '../components/OurWork';
+import Partners from '../components/Partners';
 import Projects from '../components/Projects';
 import Questions from '../components/Questions';
-import Footer from '../components/Footer';
+import Technology from '../components/Technology';
+import WhyChoose3D from '../components/WhyChoose3D';
+import WhyTvasta from '../components/WhyTvasta';
+import { PageTransition } from '../utils/animations.jsx';
 
 const HomePage = () => {
   return (
+    <div className='overflow-x-hidden'>
     <PageTransition className="relative w-full bg-white">
       <Navbar />
       <Hero />
@@ -29,6 +29,7 @@ const HomePage = () => {
       </div>
       <Footer />
     </PageTransition>
+    </div>
   );
 };
 

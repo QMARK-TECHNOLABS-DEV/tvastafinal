@@ -1,5 +1,4 @@
-import React from 'react';
-import { FadeIn, SlideInLeft, SlideInRight, AnimatedButton } from '../utils/animations.jsx';
+import { AnimatedButton, SlideInLeft, SlideInRight } from '../utils/animations.jsx';
 
 const Technology = () => {
   return (
@@ -21,15 +20,12 @@ const Technology = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="w-6 h-6 relative">
-              <svg className="w-6 h-6 text-[#E63946]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
-                <path d="M14 2v6h6"/>
-                <path d="M16 13H8"/>
-                <path d="M16 17H8"/>
-                <path d="M10 9H8"/>
-              </svg>
-            </div>
+           <div className="w-6 h-6 relative">
+  <svg className="w-6 h-6 text-[#E63946]" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 16v-8m0 8l-4-4m4 4l4-4M4 20h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+</div>
+
             <span className="font-outfit font-medium text-xl sm:text-2xl leading-[30px] text-[#0D192D]">
               Download the Tech Brochure
             </span>

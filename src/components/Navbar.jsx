@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AnimatedButton } from '../utils/animations.jsx';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,13 +21,12 @@ const Navbar = () => {
       <Link to="/">
         <motion.div 
           className="flex items-center"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
+          
         >
           <img 
             src="/images/tvastanavlogo.png" 
             alt="Tvasta Logo"
-            className="w-[90.64px] h-9 object-contain mix-blend-difference"
+            className="w-16 h-16 object-contain mix-blend-difference"
             onError={(e) => {
               console.error('Logo failed to load:', e.target.src);
               e.target.style.display = 'none';
@@ -44,7 +43,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <span className="text-[#0D192D] font-outfit font-medium text-base">Who We Are</span>
+            <span className="text-[#0D192D] font-outfit font-medium text-[14px]">Who We Are</span>
             <svg className="w-6 h-6 text-[#0D192D]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M7 10l5 5 5-5z"/>
             </svg>
@@ -56,7 +55,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <span className="text-[#0D192D] font-outfit font-medium text-base">Our Technology</span>
+            <span className="text-[#0D192D] font-outfit font-medium text-[14px]">Our Technology</span>
             <svg className="w-6 h-6 text-[#0D192D]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M7 10l5 5 5-5z"/>
             </svg>
@@ -64,7 +63,7 @@ const Navbar = () => {
         </Link>
         <Link to="/projects">
           <motion.span 
-            className="text-[#E63946] font-outfit font-semibold text-base cursor-pointer"
+            className="text-[#E63946] font-outfit font-semibold text-[14px] cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
@@ -73,7 +72,7 @@ const Navbar = () => {
         </Link>
         <Link to="/products">
           <motion.span 
-            className="text-[#0D192D] font-outfit font-medium text-base cursor-pointer"
+            className="text-[#0D192D] font-outfit font-medium text-[14px] cursor-pointer"
             whileHover={{ scale: 1.05, color: "#E63946" }}
             transition={{ duration: 0.2 }}
           >
@@ -82,7 +81,7 @@ const Navbar = () => {
         </Link>
         <Link to="/tvasta-stories">
           <motion.span 
-            className="text-[#0D192D] font-outfit font-medium text-base cursor-pointer"
+            className="text-[#0D192D] font-outfit font-medium text-[14px] cursor-pointer"
             whileHover={{ scale: 1.05, color: "#E63946" }}
             transition={{ duration: 0.2 }}
           >
@@ -91,7 +90,7 @@ const Navbar = () => {
         </Link>
         <Link to="/faqs">
           <motion.span 
-            className="text-[#0D192D] font-outfit font-medium text-base cursor-pointer"
+            className="text-[#0D192D] font-outfit font-medium text-[14px] cursor-pointer"
             whileHover={{ scale: 1.05, color: "#E63946" }}
             transition={{ duration: 0.2 }}
           >
