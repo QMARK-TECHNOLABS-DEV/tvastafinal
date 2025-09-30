@@ -1,6 +1,7 @@
+import React from 'react';
 import { AnimatedButton, FadeIn, SlideInUp } from '../utils/animations.jsx';
 
-const Hero = () => {
+const Hero = React.memo(() => {
   return (
     <div className="relative w-full h-[818px] overflow-hidden">
       {/* Background Video */}
@@ -9,12 +10,13 @@ const Hero = () => {
           autoPlay 
           muted 
           loop 
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45))'
           }}
         >
-          <source src="/videos/7.mp4" type="video/mp4" />
+          <source src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/herovideo.mp4" type="video/mp4" />
         </video>
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-45"></div>
@@ -70,6 +72,8 @@ const Hero = () => {
       </div>
     </div>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;
