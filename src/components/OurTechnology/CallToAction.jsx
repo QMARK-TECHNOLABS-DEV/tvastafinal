@@ -1,30 +1,32 @@
-import React from 'react';
-import { FadeIn, SlideInLeft, SlideInRight, AnimatedButton } from '../../utils/animations.jsx';
+import { AnimatedButton, FadeIn, SlideInLeft } from '../../utils/animations.jsx';
 
 const CallToAction = () => {
-  // Using the attached workspace collaboration image
-  const letsTalkImage = 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Letstalk.jpg';
+  const letsTalkImage =
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Letstalk.jpg';
 
   return (
-    <section className="w-full bg-white py-[120px]">
-      <div className="w-full max-w-[1280px] mx-auto flex gap-[60px] items-center">
+    <section className="w-full bg-white md:py-10 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-[60px] items-center">
+        
+        {/* Left Text Section */}
         <SlideInLeft delay={0.3}>
-          <div className="w-[712px] flex flex-col gap-7 items-start">
+          <div className="w-full lg:w-[712px] flex flex-col gap-5 sm:gap-7 items-start">
             <FadeIn delay={0.5}>
-              <div className="font-outfit font-semibold text-[44px] leading-[130%] text-[#0D192D] tracking-[-0.03em]">
+              <div className="font-outfit font-semibold text-[32px] sm:text-4xl lg:text-[44px] text-[#0D192D] md:leading-[50px] leading-9 tracking-[-0.03em]">
                 Ready to bring your next project to life with 3D Construction?
               </div>
             </FadeIn>
-            
+
             <FadeIn delay={0.7}>
-              <div className="font-outfit font-medium text-[20px] leading-[22px] text-[#1D3357] tracking-[-0.01em]">
+              <div className="font-outfit font-medium text-base sm:text-lg lg:text-[20px] leading-[22px] text-[#1D3357] tracking-[-0.01em]">
                 Whether you're building a home, a shelter, or a smart city facade, we have the tools to make it possible.
               </div>
             </FadeIn>
-            
-            <div className="flex gap-7 mt-4">
+
+            <div className="flex flex-wrap sm:flex-nowrap gap-4 sm:gap-7 mt-4">
+              {/* Let's Talk Button */}
               <AnimatedButton 
-                className="flex items-center bg-[#1D3357] text-white font-outfit font-semibold text-[18px] rounded-[20px] px-7 py-4 border-none gap-[10px] cursor-pointer transition-all duration-300"
+                className="flex items-center bg-[#1D3357] text-white font-outfit font-semibold text-[16px] sm:text-[18px] rounded-[20px] px-5 sm:px-7 py-3 sm:py-4 border-none gap-2 sm:gap-[10px] cursor-pointer transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -35,9 +37,10 @@ const CallToAction = () => {
                   </svg>
                 </div>
               </AnimatedButton>
-              
+
+              {/* Download Button */}
               <AnimatedButton 
-                className="flex items-center border-2 border-[#1D3357] text-[#1D3357] font-outfit font-semibold text-[18px] rounded-[20px] px-7 py-4 bg-transparent gap-[10px] cursor-pointer transition-all duration-300 hover:bg-[#1D3357] hover:text-white"
+                className="flex items-center border-2 border-[#1D3357] text-[#1D3357] font-outfit font-semibold text-[16px] sm:text-[18px] rounded-[20px] px-5 sm:px-7 py-3 sm:py-4 bg-transparent gap-2 sm:gap-[10px] cursor-pointer transition-all duration-300 hover:bg-[#1D3357] hover:text-white"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -51,15 +54,12 @@ const CallToAction = () => {
             </div>
           </div>
         </SlideInLeft>
-        
-        <SlideInRight delay={0.5}>
-          <div 
-            className="w-[508px] h-[400px] rounded-[24px] bg-cover bg-center bg-no-repeat shadow-lg hover:shadow-xl transition-shadow duration-300"
-            style={{ 
-              background: `url(${letsTalkImage}) center/cover no-repeat, #D9D9D9`
-            }}
-          />
-        </SlideInRight>
+
+        {/* Right Image Section */}
+        <div
+          className="w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] rounded-[24px] bg-cover bg-center bg-no-repeat shadow-lg hover:shadow-xl transition-shadow duration-300"
+          style={{ backgroundImage: `url(${letsTalkImage})` }}
+        />
       </div>
     </section>
   );
