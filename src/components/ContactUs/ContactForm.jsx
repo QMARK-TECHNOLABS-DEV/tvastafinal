@@ -36,15 +36,15 @@ const ContactForm = () => {
         <FadeIn delay={0.2} duration={0.8}>
           <div className="w-full max-w-[1200px] mx-auto bg-[#0D192D] rounded-[20px] md:rounded-[24px] p-4 md:p-6 lg:p-8 xl:p-10">
             {/* Header Section */}
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 md:mb-10">
+            <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center mb-8 md:mb-10 text-center lg:text-left">
               <SlideInUp delay={0.3} duration={0.6}>
-                <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-semibold leading-tight text-white mb-2 lg:mb-0">
+                <h2 className="text-[24px] md:text-[28px] lg:text-[36px] font-semibold leading-tight text-white mb-2 lg:mb-0">
                   Get in Touch
                 </h2>
               </SlideInUp>
               
               <SlideInUp delay={0.4} duration={0.6}>
-                <p className="text-[14px] md:text-[16px] font-normal leading-tight text-white/80 whitespace-nowrap lg:text-right">
+                <p className="text-[14px] md:text-[16px] font-normal leading-tight text-white/80 lg:whitespace-nowrap lg:text-right">
                   Fill out the form and our team will reach out shortly.
                 </p>
               </SlideInUp>
