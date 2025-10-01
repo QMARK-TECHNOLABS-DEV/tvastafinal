@@ -4,16 +4,13 @@ import { FadeIn, SlideInUp, SlideInLeft, SlideInRight } from '../../utils/animat
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    interestedIn: 'Buying a Printer',
+    country: 'Select Your Country',
+    fullName: '',
+    workEmail: '',
+    whatsappNumber: '',
     companyName: '',
+    jobRole: 'Design Engineer',
     city: '',
-    country: 'Your Country',
-    industry: 'Engineering',
-    role: 'Design Engineer',
-    hearAbout: 'How Did You Hear About Us?',
     message: '',
     acceptTerms: false
   });
@@ -33,387 +30,234 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="relative w-full bg-[#0D192D] py-[75px]">
+    <section className="relative w-full bg-white pt-4 md:pt-6 lg:pt-8 pb-8 md:pb-12 lg:pb-16">
       {/* Contact Form Container */}
-      <div className="w-full max-w-[1312px] mx-auto px-4 md:px-8 lg:px-16">
+      <div className="w-full max-w-[1600px] mx-auto px-2 md:px-4 lg:px-6">
         <FadeIn delay={0.2} duration={0.8}>
-          <div className="flex flex-col items-start gap-[75px] w-full">
+          <div className="w-full max-w-[1200px] mx-auto bg-[#0D192D] rounded-[20px] md:rounded-[24px] p-4 md:p-6 lg:p-8 xl:p-10">
             {/* Header Section */}
-            <div className="flex flex-col lg:flex-row justify-between items-start w-full pb-[60px] gap-6 lg:gap-[831px] border-b border-white">
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 md:mb-10">
               <SlideInUp delay={0.3} duration={0.6}>
-                <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-medium leading-[140%] text-white">
+                <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-semibold leading-tight text-white mb-2 lg:mb-0">
                   Get in Touch
                 </h2>
               </SlideInUp>
               
               <SlideInUp delay={0.4} duration={0.6}>
-                <p className="text-[18px] md:text-[20px] lg:text-[24px] font-medium leading-[30px] tracking-[-0.04em] text-white max-w-[495px]">
+                <p className="text-[14px] md:text-[16px] font-normal leading-tight text-white/80 whitespace-nowrap lg:text-right">
                   Fill out the form and our team will reach out shortly.
                 </p>
               </SlideInUp>
             </div>
 
             {/* Form Section */}
-            <form onSubmit={handleSubmit} className="flex flex-col justify-center items-start gap-[60px] w-full">
-              {/* First Row - Name, Email, Phone */}
-              <SlideInLeft delay={0.5} duration={0.6}>
-                <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-[36px] w-full">
-                  {/* Name Field */}
-                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
-                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                      Name
-                    </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your Name"
-                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  {/* Email Field */}
-                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
-                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                      Email
-                    </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="Your Email"
-                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  {/* Phone Field */}
-                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
-                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                      Phone Number
-                    </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="Your Phone Number"
-                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-              </SlideInLeft>
-
-              {/* Interested In Field */}
-              <SlideInRight delay={0.6} duration={0.6}>
-                <div className="flex flex-col items-start gap-4 w-full">
-                  <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                    Interested In
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6 md:gap-7">
+              {/* Country Field */}
+              <SlideInUp delay={0.5} duration={0.6}>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                    Country
                   </label>
-                  <div className="relative w-full">
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                      <select
-                        name="interestedIn"
-                        value={formData.interestedIn}
-                        onChange={handleInputChange}
-                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
-                        style={{ 
-                          background: '#0D192D !important',
-                          color: 'white !important',
-                          border: 'none',
-                          outline: 'none',
-                          WebkitAppearance: 'none',
-                          MozAppearance: 'none',
-                          appearance: 'none'
-                        }}
-                      >
-                        <option value="Buying a Printer" style={{ backgroundColor: '#0D192D', color: 'white' }}>Buying a Printer</option>
-                        <option value="Partnership" style={{ backgroundColor: '#0D192D', color: 'white' }}>Partnership</option>
-                        <option value="Investment" style={{ backgroundColor: '#0D192D', color: 'white' }}>Investment</option>
-                        <option value="General Inquiry" style={{ backgroundColor: '#0D192D', color: 'white' }}>General Inquiry</option>
-                      </select>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
-                        <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </SlideInRight>
-
-              {/* Second Row - Company, City, Country */}
-              <SlideInLeft delay={0.7} duration={0.6}>
-                <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-[36px] w-full">
-                  {/* Company Name Field */}
-                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
-                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                      Company Name
-                    </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                      <input
-                        type="text"
-                        name="companyName"
-                        value={formData.companyName}
-                        onChange={handleInputChange}
-                        placeholder="Your Company Name"
-                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
-                      />
-                    </div>
-                  </div>
-
-                  {/* City Field */}
-                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
-                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                      City
-                    </label>
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                      <input
-                        type="text"
-                        name="city"
-                        value={formData.city}
-                        onChange={handleInputChange}
-                        placeholder="Your City"
-                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Country Field */}
-                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
-                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                      Country
-                    </label>
-                    <div className="relative w-full">
-                      <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                        <select
-                          name="country"
-                          value={formData.country}
-                          onChange={handleInputChange}
-                          className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
-                          style={{ 
-                            background: '#0D192D !important',
-                            color: 'white !important',
-                            border: 'none',
-                            outline: 'none',
-                            WebkitAppearance: 'none',
-                            MozAppearance: 'none',
-                            appearance: 'none'
-                          }}
-                        >
-                          <option value="Your Country" style={{ backgroundColor: '#0D192D', color: 'white' }}>Your Country</option>
-                          <option value="India" style={{ backgroundColor: '#0D192D', color: 'white' }}>India</option>
-                          <option value="United States" style={{ backgroundColor: '#0D192D', color: 'white' }}>United States</option>
-                          <option value="United Kingdom" style={{ backgroundColor: '#0D192D', color: 'white' }}>United Kingdom</option>
-                          <option value="Canada" style={{ backgroundColor: '#0D192D', color: 'white' }}>Canada</option>
-                          <option value="Australia" style={{ backgroundColor: '#0D192D', color: 'white' }}>Australia</option>
-                          <option value="Germany" style={{ backgroundColor: '#0D192D', color: 'white' }}>Germany</option>
-                          <option value="France" style={{ backgroundColor: '#0D192D', color: 'white' }}>France</option>
-                          <option value="Japan" style={{ backgroundColor: '#0D192D', color: 'white' }}>Japan</option>
-                          <option value="Singapore" style={{ backgroundColor: '#0D192D', color: 'white' }}>Singapore</option>
-                          <option value="Other" style={{ backgroundColor: '#0D192D', color: 'white' }}>Other</option>
-                        </select>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
-                          <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SlideInLeft>
-
-              {/* Third Row - Industry, Role */}
-              <SlideInRight delay={0.8} duration={0.6}>
-                <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-[36px] w-full">
-                  {/* Industry Field */}
-                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
-                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                      Industry
-                    </label>
-                    <div className="relative w-full">
-                      <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                        <select
-                          name="industry"
-                          value={formData.industry}
-                          onChange={handleInputChange}
-                          className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
-                          style={{ 
-                            background: '#0D192D !important',
-                            color: 'white !important',
-                            border: 'none',
-                            outline: 'none',
-                            WebkitAppearance: 'none',
-                            MozAppearance: 'none',
-                            appearance: 'none'
-                          }}
-                        >
-                          <option value="Engineering" style={{ backgroundColor: '#0D192D', color: 'white' }}>Engineering</option>
-                          <option value="Construction" style={{ backgroundColor: '#0D192D', color: 'white' }}>Construction</option>
-                          <option value="Architecture" style={{ backgroundColor: '#0D192D', color: 'white' }}>Architecture</option>
-                          <option value="Real Estate" style={{ backgroundColor: '#0D192D', color: 'white' }}>Real Estate</option>
-                          <option value="Manufacturing" style={{ backgroundColor: '#0D192D', color: 'white' }}>Manufacturing</option>
-                          <option value="Technology" style={{ backgroundColor: '#0D192D', color: 'white' }}>Technology</option>
-                          <option value="Education" style={{ backgroundColor: '#0D192D', color: 'white' }}>Education</option>
-                          <option value="Government" style={{ backgroundColor: '#0D192D', color: 'white' }}>Government</option>
-                          <option value="Other" style={{ backgroundColor: '#0D192D', color: 'white' }}>Other</option>
-                        </select>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
-                          <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Your Role Field */}
-                  <div className="flex flex-col items-start gap-4 w-full lg:flex-1">
-                    <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                      Your Role
-                    </label>
-                    <div className="relative w-full">
-                      <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                        <select
-                          name="role"
-                          value={formData.role}
-                          onChange={handleInputChange}
-                          className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
-                          style={{ 
-                            background: '#0D192D !important',
-                            color: 'white !important',
-                            border: 'none',
-                            outline: 'none',
-                            WebkitAppearance: 'none',
-                            MozAppearance: 'none',
-                            appearance: 'none'
-                          }}
-                        >
-                          <option value="Design Engineer" style={{ backgroundColor: '#0D192D', color: 'white' }}>Design Engineer</option>
-                          <option value="Project Manager" style={{ backgroundColor: '#0D192D', color: 'white' }}>Project Manager</option>
-                          <option value="Architect" style={{ backgroundColor: '#0D192D', color: 'white' }}>Architect</option>
-                          <option value="CEO/Founder" style={{ backgroundColor: '#0D192D', color: 'white' }}>CEO/Founder</option>
-                          <option value="CTO" style={{ backgroundColor: '#0D192D', color: 'white' }}>CTO</option>
-                          <option value="Engineer" style={{ backgroundColor: '#0D192D', color: 'white' }}>Engineer</option>
-                          <option value="Developer" style={{ backgroundColor: '#0D192D', color: 'white' }}>Developer</option>
-                          <option value="Student" style={{ backgroundColor: '#0D192D', color: 'white' }}>Student</option>
-                          <option value="Other" style={{ backgroundColor: '#0D192D', color: 'white' }}>Other</option>
-                        </select>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
-                          <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SlideInRight>
-
-              {/* How Did You Hear About Us */}
-              <SlideInLeft delay={0.9} duration={0.6}>
-                <div className="flex flex-col items-start gap-4 w-full">
-                  <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                    How Did You Hear About Us?
-                  </label>
-                  <div className="relative w-full">
-                    <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                      <select
-                        name="hearAbout"
-                        value={formData.hearAbout}
-                        onChange={handleInputChange}
-                        className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-[#0D192D] outline-none appearance-none cursor-pointer pr-12 contact-form-select"
-                        style={{ 
-                          background: '#0D192D !important',
-                          color: 'white !important',
-                          border: 'none',
-                          outline: 'none',
-                          WebkitAppearance: 'none',
-                          MozAppearance: 'none',
-                          appearance: 'none'
-                        }}
-                      >
-                        <option value="How Did You Hear About Us?" style={{ backgroundColor: '#0D192D', color: 'white' }}>How Did You Hear About Us?</option>
-                        <option value="Google Search" style={{ backgroundColor: '#0D192D', color: 'white' }}>Google Search</option>
-                        <option value="Social Media" style={{ backgroundColor: '#0D192D', color: 'white' }}>Social Media</option>
-                        <option value="News Article" style={{ backgroundColor: '#0D192D', color: 'white' }}>News Article</option>
-                        <option value="Word of Mouth" style={{ backgroundColor: '#0D192D', color: 'white' }}>Word of Mouth</option>
-                        <option value="Conference/Event" style={{ backgroundColor: '#0D192D', color: 'white' }}>Conference/Event</option>
-                        <option value="Advertisement" style={{ backgroundColor: '#0D192D', color: 'white' }}>Advertisement</option>
-                        <option value="Other" style={{ backgroundColor: '#0D192D', color: 'white' }}>Other</option>
-                      </select>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 absolute right-4 pointer-events-none">
-                        <path d="M5.33398 8.83301L11.9996 15.4997L18.6663 8.83301" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </SlideInLeft>
-
-              {/* Message Field */}
-              <SlideInRight delay={1.0} duration={0.6}>
-                <div className="flex flex-col items-start gap-4 w-full">
-                  <label className="text-[20px] lg:text-[24px] font-medium leading-[130%] text-white">
-                    Message
-                  </label>
-                  <div className="flex flex-row justify-center items-center px-4 py-6 gap-[10px] w-full border-b border-white">
-                    <textarea
-                      name="message"
-                      value={formData.message}
+                  <div className="relative">
+                    <select
+                      name="country"
+                      value={formData.country}
                       onChange={handleInputChange}
-                      placeholder="Message"
-                      rows={1}
-                      className="flex-1 text-[16px] lg:text-[18px] font-normal leading-[140%] text-white bg-transparent outline-none placeholder-white resize-none"
+                      className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white outline-none appearance-none cursor-pointer pr-8"
+                      required
+                    >
+                      <option value="Select Your Country" className="bg-[#1A2332] text-white">Select Your Country</option>
+                      <option value="India" className="bg-[#1A2332] text-white">India</option>
+                      <option value="United States" className="bg-[#1A2332] text-white">United States</option>
+                      <option value="United Kingdom" className="bg-[#1A2332] text-white">United Kingdom</option>
+                      <option value="Canada" className="bg-[#1A2332] text-white">Canada</option>
+                      <option value="Australia" className="bg-[#1A2332] text-white">Australia</option>
+                      <option value="Germany" className="bg-[#1A2332] text-white">Germany</option>
+                      <option value="Other" className="bg-[#1A2332] text-white">Other</option>
+                    </select>
+                    <svg className="absolute right-0 top-1 w-4 h-4 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </SlideInUp>
+
+              {/* Full Name Field */}
+              <SlideInUp delay={0.6} duration={0.6}>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    placeholder="Enter Your Full Name"
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                    required
+                  />
+                </div>
+              </SlideInUp>
+
+              {/* Work Email Field */}
+              <SlideInUp delay={0.7} duration={0.6}>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                    Work Email
+                  </label>
+                  <input
+                    type="email"
+                    name="workEmail"
+                    value={formData.workEmail}
+                    onChange={handleInputChange}
+                    placeholder="Enter Your Work Email"
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                    required
+                  />
+                </div>
+              </SlideInUp>
+
+              {/* WhatsApp Number Field */}
+              <SlideInUp delay={0.8} duration={0.6}>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                    Whatsapp Number
+                  </label>
+                  <div className="flex items-center border-b border-white/30">
+                    <span className="text-[14px] md:text-[16px] text-white mr-2">+91</span>
+                    <input
+                      type="tel"
+                      name="whatsappNumber"
+                      value={formData.whatsappNumber}
+                      onChange={handleInputChange}
+                      placeholder=""
+                      className="flex-1 bg-transparent pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                      required
                     />
                   </div>
                 </div>
-              </SlideInRight>
+              </SlideInUp>
+
+              {/* Company Name Field */}
+              <SlideInUp delay={0.9} duration={0.6}>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                    Company Name
+                  </label>
+                  <input
+                    type="text"
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={handleInputChange}
+                    placeholder="Enter Your Company Name"
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                    required
+                  />
+                </div>
+              </SlideInUp>
+
+              {/* Your Job Role Field */}
+              <SlideInUp delay={1.0} duration={0.6}>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                    Your Job Role
+                  </label>
+                  <div className="relative">
+                    <select
+                      name="jobRole"
+                      value={formData.jobRole}
+                      onChange={handleInputChange}
+                      className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white outline-none appearance-none cursor-pointer pr-8"
+                      required
+                    >
+                      <option value="Design Engineer" className="bg-[#1A2332] text-white">Design Engineer</option>
+                      <option value="Project Manager" className="bg-[#1A2332] text-white">Project Manager</option>
+                      <option value="Architect" className="bg-[#1A2332] text-white">Architect</option>
+                      <option value="CEO/Founder" className="bg-[#1A2332] text-white">CEO/Founder</option>
+                      <option value="CTO" className="bg-[#1A2332] text-white">CTO</option>
+                      <option value="Engineer" className="bg-[#1A2332] text-white">Engineer</option>
+                      <option value="Developer" className="bg-[#1A2332] text-white">Developer</option>
+                      <option value="Student" className="bg-[#1A2332] text-white">Student</option>
+                      <option value="Other" className="bg-[#1A2332] text-white">Other</option>
+                    </select>
+                    <svg className="absolute right-0 top-1 w-4 h-4 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </SlideInUp>
+
+              {/* City Field */}
+              <SlideInUp delay={1.1} duration={0.6}>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                    City
+                  </label>
+                  <input
+                    type="text"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleInputChange}
+                    placeholder="Enter Your City"
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                    required
+                  />
+                </div>
+              </SlideInUp>
+
+              {/* Message Field */}
+              <SlideInUp delay={1.2} duration={0.6}>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Enter Your Message"
+                    rows={1}
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none resize-none"
+                  />
+                </div>
+              </SlideInUp>
 
               {/* Checkbox */}
-              <SlideInUp delay={1.1} duration={0.6}>
-                <div className="flex flex-row items-center gap-3 w-full max-w-2xl">
-                  <div className="relative flex-shrink-0 w-6 h-6">
+              <SlideInUp delay={1.3} duration={0.6}>
+                <div className="flex items-start gap-3 mt-2">
+                  <div className="relative flex-shrink-0 w-4 h-4 mt-1">
                     <input
                       type="checkbox"
                       name="acceptTerms"
                       checked={formData.acceptTerms}
                       onChange={handleInputChange}
-                      className="absolute w-6 h-6 opacity-0 cursor-pointer z-10"
+                      className="absolute w-4 h-4 opacity-0 cursor-pointer z-10"
                       required
                     />
-                    <div className={`absolute w-6 h-6 border border-white rounded ${formData.acceptTerms ? 'bg-white' : 'bg-[#A1A1A1]'} transition-colors duration-200`}>
+                    <div className={`absolute w-4 h-4 border border-white/60 rounded-sm ${formData.acceptTerms ? 'bg-white' : 'bg-transparent'} transition-colors duration-200`}>
                       {formData.acceptTerms && (
-                        <svg className="w-4 h-4 text-[#0D192D] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-3 h-3 text-[#1A2332] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       )}
                     </div>
                   </div>
-                  <p className="text-[18px] lg:text-[20px] font-medium leading-6 tracking-[-0.02em] text-white">
-                    I accept the Terms & Conditions and Privacy Policy*
+                  <p className="text-[12px] md:text-[14px] font-normal leading-relaxed text-white/80 flex-1">
+                    I accept the <span className="underline cursor-pointer hover:text-white">Terms & Conditions</span> and <span className="underline cursor-pointer hover:text-white">Privacy Policy</span>*
                   </p>
                 </div>
               </SlideInUp>
 
               {/* Submit Button */}
-              <SlideInUp delay={1.2} duration={0.6}>
+              <SlideInUp delay={1.4} duration={0.6}>
                 <button
                   type="submit"
-                  className="flex flex-row justify-center items-center py-5 px-6 gap-[10px] w-[163px] h-[52px] bg-white rounded-[35px] hover:bg-gray-100 transition-colors duration-200 disabled:opacity-50"
+                  className="w-full md:w-auto bg-white hover:bg-gray-100 text-[#1A2332] font-medium text-[14px] md:text-[16px] px-8 py-3 rounded-full transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed mt-4"
                   disabled={!formData.acceptTerms}
                 >
-                  <span className="w-[115px] h-[12px] text-[18px] font-normal leading-[23px] text-[#1C1C1C]">
-                    Send Message
-                  </span>
+                  Submit Message
                 </button>
-              </SlideInUp>
-
-              {/* Line */}
-              <SlideInUp delay={1.3} duration={0.6}>
-                <div className="w-full h-0 border-t border-white"></div>
               </SlideInUp>
             </form>
           </div>

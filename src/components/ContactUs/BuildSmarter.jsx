@@ -25,12 +25,13 @@ const BuildSmarter = () => {
 
         {/* Image */}
         <SlideInRight delay={0.6} duration={0.8}>
-          <div 
-            className="w-full lg:w-[508px] h-[300px] lg:h-[400px] bg-cover bg-center bg-no-repeat rounded-[24px] flex-none bg-[#D9D9D9]"
-            style={{
-              backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/ContactUs/contactus.jpg')`
-            }}
-          />
+          <div className="w-full lg:w-[508px] h-[300px] lg:h-[400px] rounded-[24px] overflow-hidden flex-none bg-[#D9D9D9]">
+            <img 
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/ContactUs/contactus.jpg"
+              alt="Let's Build Smarter, Together - Tvasta construction innovation"
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
         </SlideInRight>
       </div>
     </section>

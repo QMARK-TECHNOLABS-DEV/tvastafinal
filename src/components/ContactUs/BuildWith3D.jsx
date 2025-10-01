@@ -4,7 +4,7 @@ import { FadeIn, SlideInUp } from '../../utils/animations.jsx';
 
 const BuildWith3D = () => {
   return (
-    <section className="relative w-full flex flex-col justify-center items-center py-[80px] md:py-[120px] bg-white">
+    <section className="relative w-full flex flex-col justify-center items-center pt-[80px] md:pt-[120px] pb-[40px] md:pb-[60px] bg-white">
       <div className="flex flex-col items-center gap-0 w-full max-w-[1441px] mx-auto px-4 md:px-8">
         <FadeIn delay={0.2} duration={0.8}>
           <div className="flex flex-col justify-center items-center gap-[20px] w-full text-center">

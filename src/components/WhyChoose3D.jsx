@@ -27,13 +27,17 @@ const WhyChoose3D = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden">
+              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d1.png" 
                   alt="Faster Time to Build" 
                   className="w-full h-full object-cover"
                 />
-
+                <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-outfit font-medium text-lg text-center px-6">
+                    Complete homes and infrastructure in days, not months. Ideal for urgent or large-scale needs.
+                  </p>
+                </div>
               </div>
               <h3 className="font-outfit font-semibold text-[26px] leading-[120%] text-[#0D192D]">
                 Faster Time to Build
@@ -48,12 +52,17 @@ const WhyChoose3D = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden">
+              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d2.png" 
                   alt="Design Without Limits" 
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-outfit font-medium text-lg text-center px-6">
+                    Print complex, organic forms without formwork. Bring bold architectural ideas to life.
+                  </p>
+                </div>
               </div>
               <h3 className="font-outfit font-semibold text-[26px] leading-[120%] text-[#0D192D]">
                 Design Without Limits
@@ -71,12 +80,17 @@ const WhyChoose3D = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden">
+              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d3.png" 
                   alt="Lower Material Waste" 
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-outfit font-medium text-lg text-center px-6">
+                    Precision printing cuts down material use and reduces construction waste upto 80%.
+                  </p>
+                </div>
               </div>
               <h3 className="font-outfit font-semibold text-[26px] leading-[120%] text-[#0D192D]">
                 Lower Material Waste
@@ -91,12 +105,17 @@ const WhyChoose3D = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden">
+              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d4.png" 
                   alt="Built to Withstand" 
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-outfit font-medium text-lg text-center px-6">
+                    Structures tested across diverse climates, built to last, backed by real-world performance.
+                  </p>
+                </div>
               </div>
               <h3 className="font-outfit font-semibold text-[26px] leading-[120%] text-[#0D192D]">
                 Built to Withstand
