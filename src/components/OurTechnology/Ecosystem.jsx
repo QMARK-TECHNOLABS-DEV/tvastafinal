@@ -1,10 +1,10 @@
 
 const Ecosystem = () => {
   const techImages = [
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%201.jpg',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%202.jpg',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%203.jpg',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%204.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem1.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem2.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem4.png',
     'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%205.jpg',
   ];
 
