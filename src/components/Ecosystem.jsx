@@ -5,7 +5,7 @@ const Ecosystem = () => {
     {
       title: "3D Printers",
       description: "Precision gantries and robotic arms built for scalable, on-site construction.",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%201.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/3d%20ecosystem.jpg",
       tag: "3D Printers"
     },
     {
@@ -23,7 +23,7 @@ const Ecosystem = () => {
     {
       title: "Sustainable Materials",
       description: "Eco-friendly mixes engineered for strength, speed, and durability.",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%204.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%204.png",
       tag: "Sustainable Materials"
     }
   ];

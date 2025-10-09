@@ -29,7 +29,7 @@ const WhyChoose3D = () => {
             >
               <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
-                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d1.png" 
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d1.jpg" 
                   alt="Faster Time to Build" 
                   className="w-full h-full object-cover"
                 />
@@ -54,7 +54,7 @@ const WhyChoose3D = () => {
             >
               <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
-                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d2.png" 
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d2.jpg" 
                   alt="Design Without Limits" 
                   className="w-full h-full object-cover"
                 />
@@ -82,7 +82,7 @@ const WhyChoose3D = () => {
             >
               <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
-                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d3.png" 
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d3.jpg" 
                   alt="Lower Material Waste" 
                   className="w-full h-full object-cover"
                 />

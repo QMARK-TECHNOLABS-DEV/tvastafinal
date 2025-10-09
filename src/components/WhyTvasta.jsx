@@ -29,7 +29,7 @@ const WhyTvasta = () => {
             <div 
               className="w-full h-full bg-cover bg-center relative"
               style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.86) 67.12%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.png')`
+                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.86) 67.12%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.jpg')`
               }}
             >
               <div className="absolute bottom-6 left-6 flex flex-col gap-3">
@@ -59,7 +59,7 @@ const WhyTvasta = () => {
             <div 
               className="w-full h-full bg-cover bg-center relative"
               style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta3.png')`
+                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta3.jpg')`
               }}
             >
               <div className="absolute bottom-6 left-6 flex flex-col gap-3">
