@@ -1,7 +1,24 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { AnimatedButton, SlideInLeft, SlideInRight } from '../../utils/animations.jsx';
 
 const BuildingTomorrow = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  
+  const images = [
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 my-3 sm:my-16 md:my-10">
       <div className="flex flex-col lg:flex-row items-center gap-[40px] lg:gap-[60px]">
@@ -55,13 +72,38 @@ const BuildingTomorrow = () => {
           </SlideInLeft>
         </div>
         
-        {/* Right Image */}
+        {/* Right Image Slider */}
         <SlideInRight delay={0.3} className="flex-shrink-0 w-full lg:w-auto">
-          <img 
-            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/workwithus.png" 
-            alt="Building Tomorrow" 
-            className="w-full sm:w-[400px] md:w-full lg:w-[450px] h-[300px] sm:h-[360px] md:h-[380px] lg:h-[400px] object-cover rounded-[24px]"
-          />
+          <div className="relative w-full sm:w-[400px] md:w-full lg:w-[450px] h-[300px] sm:h-[360px] md:h-[380px] lg:h-[400px] rounded-[24px] overflow-hidden">
+            {images.map((image, index) => (
+              <motion.img
+                key={index}
+                src={image}
+                alt={`Building Tomorrow ${index + 1}`}
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: activeSlide === index ? 1 : 0,
+                  scale: activeSlide === index ? 1 : 1.1
+                }}
+                transition={{ duration: 0.7 }}
+              />
+            ))}
+            
+            {/* Navigation Dots */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveSlide(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    activeSlide === index ? 'bg-white w-8' : 'bg-white/50'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </SlideInRight>
       </div>
     </div>
