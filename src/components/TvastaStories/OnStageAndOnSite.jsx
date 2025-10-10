@@ -5,15 +5,15 @@ import { FadeIn, SlideInUp, AnimatedCard } from '../../utils/animations.jsx';
 const OnStageAndOnSite = () => {
   const stageItems = [
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/onstageandonsite1.jpg',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/spot1.jpg',
       title: "Industry panel participation"
     },
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/onstageandonsite2.jpg',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/spot2.jpg',
       title: "Academic sessions at IITs"
     },
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/onstageandonsite3.jpg',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/spot2.png',
       title: "Print demos at expos"
     }
   ];

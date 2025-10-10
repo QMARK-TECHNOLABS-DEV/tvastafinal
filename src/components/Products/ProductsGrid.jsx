@@ -5,26 +5,26 @@ const ProductsGrid = () => {
   const products = [
     {
       id: 1,
-      name: "Product Name",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/product1.jpg",
+      name: "",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/prod1.jpg",
       isMain: true
     },
     {
       id: 2,
       name: "Modern Chair",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/product2.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/product2.png",
       isMain: false
     },
     {
       id: 3,
       name: "Contemporary Seating",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/product3.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/prod3.jpg",
       isMain: false
     },
     {
       id: 4,
       name: "Executive Collection",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/product4.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/prod4.jpg",
       isMain: false
     }
   ];
@@ -65,12 +65,12 @@ const ProductsGrid = () => {
                       {products[0].name}
                     </h3>
                     
-                    {/* Arrow Button */}
+                    {/* Arrow Button
                     <div className="flex items-center justify-center w-[50px] h-[50px] bg-white rounded-full group-hover:scale-110 transition-transform duration-300">
                       <svg className="w-[20px] h-[20px] text-[#0D192D]" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
-                    </div>
+                    </div> */}
                   </div>
                 </AnimatedCard>
               </div>

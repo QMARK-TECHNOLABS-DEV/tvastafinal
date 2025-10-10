@@ -6,26 +6,42 @@ const News = () => {
   const newsItems = [
     {
       image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/news1.jpg',
-      logoImage: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/newslogo1.png',
-      title: "Breaking: Revolutionary 3D Construction Technology Transforms Building Industry",
+      logoImage: 'https://cdn.brandfetch.io/idDvP5_hsq/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1758992077027',
+      title: "IIT Madras & Tvasta Develops India's First 3D Printing Technology",
+      source: "Economic Times Realty",
+      date: "October 24, 2018",
+      summary: "Tvasta partnered with IIT Madras to develop India's first construction 3D printing technology, aiming for affordable and rapid construction automation with substantial sustainability benefits.",
+      url: "https://realty.economictimes.indiatimes.com/news/industry/iit-madras-tvasta-develops-indias-first-3d-printing-construction-technology/66361751",
       readMoreText: "Read More",
       externalLinkText: "View"
     },
     {
       image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/news2.jpg',
-      logoImage: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/newslogo2.png',
-      title: "Indian Startup Receives International Recognition for Sustainable Construction",
+      logoImage: 'https://www.surfacesreporter.com/images/SR%20logo%20for%20SVG.svg',
+      title: "India's First 3D Printed House by IIT-M Alumni",
+      source: "Surfaces Reporter",
+      date: "May 9, 2021",
+      summary: "Tvasta, founded by IIT Madras alumni, built India's first fully 3D printed home using industrial waste and recycled materials, dramatically reducing build time and carbon footprint.",
+      url: "https://www.surfacesreporter.com/articles/102589/indias-first-3d-printed-house-by-iit-m-alumni-sr-news-update",
       readMoreText: "Read More",
       externalLinkText: "View"
     },
     {
       image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/news3.jpg',
-      logoImage: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/newslogo3.png',
-      title: "Future of Construction: How 3D Printing is Changing the Game",
+      logoImage: 'https://cdn.brandfetch.io/idDvP5_hsq/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1758992077027',
+      title: "India's First 3D-Printed Villa in Pune",
+      source: "Economic Times",
+      date: "April 2, 2025",
+      summary: "India's first 3D-printed villa in Pune, built using Tvasta's technology, gained attention for rapid construction and innovative building methods.",
+      url: "https://economictimes.com/news/new-updates/this-house-in-pune-wasnt-built-it-was-printed-in-just-4-months-indias-first-3d-printed-2000-sq-ft-villa-stuns-netizens/articleshow/119904239.cms",
       readMoreText: "Read More",
       externalLinkText: "View"
     }
   ];
+
+  const handleReadMore = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="flex flex-col items-center gap-[60px] w-full max-w-[1441px] mx-auto px-4 md:px-8 lg:px-20">
@@ -80,7 +96,7 @@ const News = () => {
                 <div className="flex justify-center items-center p-2.5 gap-2.5 bg-white rounded-[10px] min-w-[70px] h-12">
                   <img 
                     src={item.logoImage} 
-                    alt="Publication Logo" 
+                    alt={`${item.source} Logo`}
                     className="max-w-[50px] max-h-[28px] object-contain"
                   />
                 </div>
@@ -101,6 +117,7 @@ const News = () => {
                 {/* Action Buttons */}
                 <div className="flex justify-between items-center gap-3 w-full">
                   <motion.button 
+                    onClick={() => handleReadMore(item.url)}
                     className="flex justify-center items-center px-3 py-2 bg-white backdrop-blur-[24px] rounded-[10px] min-w-[124px] h-[42px]"
                     whileHover={{ scale: 1.05, backgroundColor: "#f0f0f0" }}
                     whileTap={{ scale: 0.95 }}
@@ -112,6 +129,7 @@ const News = () => {
                   </motion.button>
 
                   <motion.button 
+                    onClick={() => handleReadMore(item.url)}
                     className="flex justify-center items-center px-3 py-2 bg-white backdrop-blur-[24px] rounded-[10px] w-[44px] h-[42px]"
                     whileHover={{ scale: 1.05, backgroundColor: "#f0f0f0" }}
                     whileTap={{ scale: 0.95 }}
