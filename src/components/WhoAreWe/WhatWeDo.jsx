@@ -29,21 +29,6 @@ const WhatWeDo = () => {
               backgroundSize: 'cover'
             }}
           />
-          
-          {/* Play Button */}
-          <motion.button
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px] bg-white/90 rounded-full flex items-center justify-center cursor-pointer shadow-lg"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handlePlayClick}
-          >
-            <div 
-              className="w-[30px] h-[30px] bg-black ml-1"
-              style={{
-                clipPath: 'polygon(0 0, 100% 50%, 0 100%)'
-              }}
-            />
-          </motion.button>
         </div>
       </SlideInUp>
       

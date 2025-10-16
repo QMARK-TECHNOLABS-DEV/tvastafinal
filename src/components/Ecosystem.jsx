@@ -41,7 +41,7 @@ const Ecosystem = () => {
 
           <FadeIn delay={0.2} className="lg:w-[60%]">
             <p className="font-outfit font-normal text-xl sm:text-2xl leading-[30px] text-[#1D3357]">
-              From industrial-grade printers to automation-ready software — Tvasta delivers the full stack for next-gen construction.
+              From industrial-grade printers to automation-ready software.Tvasta delivers the full stack for next-gen construction.
             </p>
           </FadeIn>
         </div>
