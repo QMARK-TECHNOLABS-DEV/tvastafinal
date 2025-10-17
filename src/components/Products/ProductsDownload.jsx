@@ -8,7 +8,7 @@ const ProductsDownload = () => {
       <SlideInLeft delay={0.2} duration={0.8} className="w-full md:w-[508px] h-[250px] md:h-[350px] rounded-[24px] overflow-hidden order-2 md:order-1">
         <AnimatedCard className="w-full h-full" whileHover={{ scale: 1.05 }}>
           <img 
-            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/downloadbrochure.jpg" 
+            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%20133.png" 
             alt="Technical Specifications"
             className="w-full h-full object-cover bg-[#D9D9D9] transition-transform duration-300"
           />

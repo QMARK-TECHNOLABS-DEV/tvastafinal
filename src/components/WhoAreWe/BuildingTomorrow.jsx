@@ -37,7 +37,7 @@ const BuildingTomorrow = () => {
           
           <SlideInLeft delay={0.4}>
             <AnimatedButton 
-              className="flex justify-center items-center px-[28px] py-[16px] gap-[10px] w-[201px] h-[56px] bg-[#1D3357] rounded-[20px]"
+              className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[20px] whitespace-nowrap"
               whileHover={{ 
                 scale: 1.05, 
                 backgroundColor: "#0D192D",
@@ -45,11 +45,11 @@ const BuildingTomorrow = () => {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="font-outfit font-semibold text-card text-white">
+              <span className="font-outfit font-semibold text-sm sm:text-base md:text-lg text-white">
                 Work With Us
               </span>
               <motion.div 
-                className="w-[24px] h-[24px] flex items-center justify-center"
+                className="w-[24px] h-[24px] flex items-center justify-center flex-shrink-0"
                 whileHover={{ rotate: 15 }}
                 transition={{ duration: 0.2 }}
               >

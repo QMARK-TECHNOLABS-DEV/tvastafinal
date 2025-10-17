@@ -34,9 +34,9 @@ const BuildTogether = () => {
           {/* CTA Button */}
           <motion.button
             variants={fadeInUp}
-            className="flex flex-row justify-center items-center py-[18px] sm:py-[19px] md:py-[20px] px-[20px] sm:px-[22px] md:px-[24px] gap-[8px] sm:gap-[9px] md:gap-[10px] w-[180px] sm:w-[190px] md:w-[201px] h-[52px] sm:h-[54px] md:h-[57px] bg-[#1D3357] rounded-[35px] group hover:bg-[#0D192D] transition-colors duration-300"
+            className="flex flex-row justify-center items-center py-3 sm:py-3.5 md:py-4 px-5 sm:px-6 md:px-7 gap-[8px] sm:gap-[9px] md:gap-[10px] bg-[#1D3357] rounded-[35px] group hover:bg-[#0D192D] transition-colors duration-300 whitespace-nowrap"
           >
-            <span className="text-[20px] sm:text-[22px] md:text-[24px] font-medium leading-[130%] text-white font-['Outfit']">
+            <span className="text-base sm:text-lg md:text-xl font-medium leading-[130%] text-white font-['Outfit']">
               Contact Us
             </span>
           </motion.button>

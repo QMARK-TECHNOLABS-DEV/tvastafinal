@@ -41,14 +41,14 @@ const ProductsCustom = () => {
           {/* Contact Button */}
           <FadeIn delay={0.8} duration={0.8}>
             <AnimatedButton 
-              className="flex items-center justify-center px-7 py-4 gap-[10px] bg-[#1D3357] rounded-[20px] hover:bg-[#2d4a73] transition-colors duration-300 group"
+              className="flex items-center justify-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[20px] hover:bg-[#2d4a73] transition-colors duration-300 group whitespace-nowrap"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-card-mobile md:text-card font-semibold text-white">
+              <span className="font-outfit font-semibold text-sm sm:text-base text-white">
                 Contact Us
               </span>
-              <div className="w-[20px] h-[20px] bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-[20px] h-[20px] bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                 <svg className="w-[12px] h-[12px] text-[#1D3357]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>

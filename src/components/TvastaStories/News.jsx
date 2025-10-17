@@ -5,8 +5,7 @@ import { FadeIn, SlideInUp, AnimatedCard } from '../../utils/animations.jsx';
 const News = () => {
   const newsItems = [
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/news1.jpg',
-      logoImage: 'https://cdn.brandfetch.io/idDvP5_hsq/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1758992077027',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/Frame%202085660920.png',
       title: "IIT Madras & Tvasta Develops India's First 3D Printing Technology",
       source: "Economic Times Realty",
       date: "October 24, 2018",
@@ -16,8 +15,7 @@ const News = () => {
       externalLinkText: "View"
     },
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/news2.jpg',
-      logoImage: 'https://www.surfacesreporter.com/images/SR%20logo%20for%20SVG.svg',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/Frame%202085660919.png',
       title: "India's First 3D Printed House by IIT-M Alumni",
       source: "Surfaces Reporter",
       date: "May 9, 2021",
@@ -27,8 +25,7 @@ const News = () => {
       externalLinkText: "View"
     },
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/news3.jpg',
-      logoImage: 'https://cdn.brandfetch.io/idDvP5_hsq/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1758992077027',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/Frame%202085660921.png',
       title: "India's First 3D-Printed Villa in Pune",
       source: "Economic Times",
       date: "April 2, 2025",
@@ -80,31 +77,15 @@ const News = () => {
               }}
               transition={{ duration: 0.3 }}
               style={{
-                background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url(${item.image})`,
+                background: `url(${item.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
               }}
             >
-              {/* Logo Container */}
-              <motion.div 
-                className="flex flex-col items-start gap-2.5 w-full"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
-                <div className="flex justify-center items-center p-2.5 gap-2.5 bg-white rounded-[10px] min-w-[70px] h-12">
-                  <img 
-                    src={item.logoImage} 
-                    alt={`${item.source} Logo`}
-                    className="max-w-[50px] max-h-[28px] object-contain"
-                  />
-                </div>
-              </motion.div>
-
               {/* Content Container */}
               <motion.div 
-                className="flex flex-col items-start gap-3 w-full"
+                className="flex flex-col items-start gap-3 w-full mt-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}

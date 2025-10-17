@@ -9,7 +9,7 @@ const ProductsMain = () => {
         <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-[12px] overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-black/20">
             <img 
-              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/productsmain.jpg" 
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%2034625215%20(1).jpg" 
               alt="3D Printed Furniture Manufacturing"
               className="w-full h-full object-cover"
             />

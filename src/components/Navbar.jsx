@@ -1,14 +1,18 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { AnimatedButton } from '../utils/animations.jsx';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  // Helper function to check if a path is active
+  const isActive = (path) => location.pathname === path;
 
   return (
     <motion.nav 
@@ -21,7 +25,6 @@ const Navbar = () => {
       <Link to="/">
         <motion.div 
           className="flex items-center"
-          
         >
           <img 
             src="/images/tvastanavlogo.png" 
@@ -43,8 +46,14 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <span className="text-[#0D192D] font-outfit font-medium text-[14px]">Who We Are</span>
-            <svg className="w-6 h-6 text-[#0D192D]" fill="currentColor" viewBox="0 0 24 24">
+            <span className={`font-outfit text-[14px] ${
+              isActive('/who-we-are') 
+                ? 'text-[#E63946] font-semibold' 
+                : 'text-[#0D192D] font-medium'
+            }`}>
+              Who We Are
+            </span>
+            <svg className={`w-6 h-6 ${isActive('/who-we-are') ? 'text-[#E63946]' : 'text-[#0D192D]'}`} fill="currentColor" viewBox="0 0 24 24">
               <path d="M7 10l5 5 5-5z"/>
             </svg>
           </motion.div>
@@ -55,15 +64,25 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <span className="text-[#0D192D] font-outfit font-medium text-[14px]">Our Technology</span>
-            <svg className="w-6 h-6 text-[#0D192D]" fill="currentColor" viewBox="0 0 24 24">
+            <span className={`font-outfit text-[14px] ${
+              isActive('/our-technology') 
+                ? 'text-[#E63946] font-semibold' 
+                : 'text-[#0D192D] font-medium'
+            }`}>
+              Our Technology
+            </span>
+            <svg className={`w-6 h-6 ${isActive('/our-technology') ? 'text-[#E63946]' : 'text-[#0D192D]'}`} fill="currentColor" viewBox="0 0 24 24">
               <path d="M7 10l5 5 5-5z"/>
             </svg>
           </motion.div>
         </Link>
         <Link to="/projects">
           <motion.span 
-            className="text-[#E63946] font-outfit font-semibold text-[14px] cursor-pointer"
+            className={`font-outfit text-[14px] cursor-pointer ${
+              isActive('/projects') 
+                ? 'text-[#E63946] font-semibold' 
+                : 'text-[#0D192D] font-medium'
+            }`}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
@@ -72,7 +91,11 @@ const Navbar = () => {
         </Link>
         <Link to="/products">
           <motion.span 
-            className="text-[#0D192D] font-outfit font-medium text-[14px] cursor-pointer"
+            className={`font-outfit text-[14px] cursor-pointer ${
+              isActive('/products') 
+                ? 'text-[#E63946] font-semibold' 
+                : 'text-[#0D192D] font-medium'
+            }`}
             whileHover={{ scale: 1.05, color: "#E63946" }}
             transition={{ duration: 0.2 }}
           >
@@ -81,7 +104,11 @@ const Navbar = () => {
         </Link>
         <Link to="/tvasta-stories">
           <motion.span 
-            className="text-[#0D192D] font-outfit font-medium text-[14px] cursor-pointer"
+            className={`font-outfit text-[14px] cursor-pointer ${
+              isActive('/tvasta-stories') 
+                ? 'text-[#E63946] font-semibold' 
+                : 'text-[#0D192D] font-medium'
+            }`}
             whileHover={{ scale: 1.05, color: "#E63946" }}
             transition={{ duration: 0.2 }}
           >
@@ -90,7 +117,11 @@ const Navbar = () => {
         </Link>
         <Link to="/faqs">
           <motion.span 
-            className="text-[#0D192D] font-outfit font-medium text-[14px] cursor-pointer"
+            className={`font-outfit text-[14px] cursor-pointer ${
+              isActive('/faqs') 
+                ? 'text-[#E63946] font-semibold' 
+                : 'text-[#0D192D] font-medium'
+            }`}
             whileHover={{ scale: 1.05, color: "#E63946" }}
             transition={{ duration: 0.2 }}
           >
@@ -103,7 +134,7 @@ const Navbar = () => {
       <div className="hidden lg:flex items-center gap-3">
         <Link to="/contact-us">
           <AnimatedButton 
-            className="flex justify-center items-center px-6 py-3 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full"
+            className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full whitespace-nowrap"
             whileHover={{ scale: 1.05, backgroundColor: "#E5E7E5" }}
             whileTap={{ scale: 0.95 }}
           >
@@ -112,7 +143,7 @@ const Navbar = () => {
         </Link>
         <Link to="/careers">
           <AnimatedButton 
-            className="flex justify-center items-center px-6 py-3 bg-[#0D192D] rounded-full"
+            className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 bg-[#0D192D] rounded-full whitespace-nowrap"
             whileHover={{ scale: 1.05, backgroundColor: "#1D3357" }}
             whileTap={{ scale: 0.95 }}
           >
@@ -153,8 +184,14 @@ const Navbar = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <span className="text-[#0D192D] font-outfit font-medium text-base">Who We Are</span>
-                  <svg className="w-5 h-5 text-[#0D192D]" fill="currentColor" viewBox="0 0 24 24">
+                  <span className={`font-outfit text-base ${
+                    isActive('/who-we-are') 
+                      ? 'text-[#E63946] font-semibold' 
+                      : 'text-[#0D192D] font-medium'
+                  }`}>
+                    Who We Are
+                  </span>
+                  <svg className={`w-5 h-5 ${isActive('/who-we-are') ? 'text-[#E63946]' : 'text-[#0D192D]'}`} fill="currentColor" viewBox="0 0 24 24">
                     <path d="M7 10l5 5 5-5z"/>
                   </svg>
                 </motion.div>
@@ -166,8 +203,14 @@ const Navbar = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <span className="text-[#0D192D] font-outfit font-medium text-base">Our Technology</span>
-                  <svg className="w-5 h-5 text-[#0D192D]" fill="currentColor" viewBox="0 0 24 24">
+                  <span className={`font-outfit text-base ${
+                    isActive('/our-technology') 
+                      ? 'text-[#E63946] font-semibold' 
+                      : 'text-[#0D192D] font-medium'
+                  }`}>
+                    Our Technology
+                  </span>
+                  <svg className={`w-5 h-5 ${isActive('/our-technology') ? 'text-[#E63946]' : 'text-[#0D192D]'}`} fill="currentColor" viewBox="0 0 24 24">
                     <path d="M7 10l5 5 5-5z"/>
                   </svg>
                 </motion.div>
@@ -179,7 +222,13 @@ const Navbar = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <span className="text-[#E63946] font-outfit font-semibold text-base">Projects</span>
+                  <span className={`font-outfit text-base ${
+                    isActive('/projects') 
+                      ? 'text-[#E63946] font-semibold' 
+                      : 'text-[#0D192D] font-medium'
+                  }`}>
+                    Projects
+                  </span>
                 </motion.div>
               </Link>
               
@@ -189,7 +238,13 @@ const Navbar = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <span className="text-[#0D192D] font-outfit font-medium text-base">Products</span>
+                  <span className={`font-outfit text-base ${
+                    isActive('/products') 
+                      ? 'text-[#E63946] font-semibold' 
+                      : 'text-[#0D192D] font-medium'
+                  }`}>
+                    Products
+                  </span>
                 </motion.div>
               </Link>
               
@@ -199,7 +254,13 @@ const Navbar = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <span className="text-[#0D192D] font-outfit font-medium text-base">TVASTA Stories</span>
+                  <span className={`font-outfit text-base ${
+                    isActive('/tvasta-stories') 
+                      ? 'text-[#E63946] font-semibold' 
+                      : 'text-[#0D192D] font-medium'
+                  }`}>
+                    TVASTA Stories
+                  </span>
                 </motion.div>
               </Link>
               
@@ -209,7 +270,13 @@ const Navbar = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <span className="text-[#0D192D] font-outfit font-medium text-base">FAQ's</span>
+                  <span className={`font-outfit text-base ${
+                    isActive('/faqs') 
+                      ? 'text-[#E63946] font-semibold' 
+                      : 'text-[#0D192D] font-medium'
+                  }`}>
+                    FAQ's
+                  </span>
                 </motion.div>
               </Link>
 
@@ -217,7 +284,7 @@ const Navbar = () => {
               <div className="flex flex-col gap-3 pt-4">
                 <Link to="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>
                   <AnimatedButton 
-                    className="flex justify-center items-center px-6 py-3 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full w-full"
+                    className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full w-full whitespace-nowrap"
                     whileHover={{ scale: 1.02, backgroundColor: "#E5E7E5" }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -226,7 +293,7 @@ const Navbar = () => {
                 </Link>
                 <Link to="/careers" onClick={() => setIsMobileMenuOpen(false)}>
                   <AnimatedButton 
-                    className="flex justify-center items-center px-6 py-3 bg-[#0D192D] rounded-full w-full"
+                    className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 bg-[#0D192D] rounded-full w-full whitespace-nowrap"
                     whileHover={{ scale: 1.02, backgroundColor: "#1D3357" }}
                     whileTap={{ scale: 0.98 }}
                   >

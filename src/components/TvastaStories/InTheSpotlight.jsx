@@ -5,12 +5,12 @@ import { FadeIn, SlideInUp, AnimatedCard } from '../../utils/animations.jsx';
 const InTheSpotlight = () => {
   const spotlightItems = [
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/inspot1.jpg',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/Frame%202085660916.png',
       title: "India's First 3D Printed House with Ministry of Housing & Urban Affairs",
       href: 'https://www.designdekko.com/featured/iit-madras-start-up-builds-indias-first-3d-printed-house'
     },
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/inspot2.jpg',
+      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/Frame%202085660917.png',
       title: "IIT Madras Collaboration Coverage",
       href: 'https://www.ndtv.com/education/iit-madras-faculty-alumni-develop-indias-first-3d-printing-construction-technology-1938598'
     },

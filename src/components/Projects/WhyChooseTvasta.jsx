@@ -13,31 +13,31 @@ const WhyChooseTvasta = () => {
         />
       ),
       title: 'Speed of Execution',
-      description: 'Days, not months. Ideal for urgent or large-scale rollouts'
+      description: `Tvasta's 3D construction printing technology enables faster project completion compared to traditional methods.`
     },
     {
       icon: (
         <img 
-          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/logo2.png" 
-          alt="Design Flexibility" 
+          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon2.png" 
+          alt="Cost Efficiency" 
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
       ),
-      title: 'Design Flexibility',
-      description: 'From curves to cores, match architectural ambition with structural precision.'
-    },
-    {
-      icon: (
-        <img 
-          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon3.png" 
-          alt="Sustainable Innovation" 
-          className="w-5 h-5 object-contain filter brightness-0 invert"
-        />
-      ),
-      title: 'Sustainable Innovation',
-      description: 'Less material, less waste, and up to 66% cement replaced.'
-    }
-  ];
+    title: 'Cost Efficiency',
+    description: 'Reduced labor costs and material waste lead to significant savings on construction projects.'
+  },
+  {
+    icon: (
+      <img 
+        src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon3.png" 
+        alt="Sustainable Innovation" 
+        className="w-5 h-5 object-contain filter brightness-0 invert"
+      />
+    ),
+    title: 'Sustainable Innovation',
+    description: 'Less material, less waste, and up to 66% cement replaced.'
+  }
+];
 
   return (
     <section className="w-full bg-[#0D192D] py-[60px] sm:py-[70px] md:py-[80px]">

@@ -11,13 +11,13 @@ const Ecosystem = () => {
     {
       title: "Accessories & Turnkey Services", 
       description: "End-to-end support from hardware to full project execution.",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%202.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Accessories%20&%20Turnkey%20Services.png",
       tag: "Accessories & Turnkey Services"
     },
     {
       title: "Software",
       description: "Advanced tools for slicing, simulation, and real-time print control.",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%203.jpg",
+      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Software.png",
       tag: "Software"
     },
     {

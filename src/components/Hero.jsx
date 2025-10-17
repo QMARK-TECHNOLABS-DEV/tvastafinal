@@ -46,25 +46,23 @@ const Hero = React.memo(() => {
           <SlideInUp delay={0.9} duration={0.6}>
             <div className="flex items-start gap-10">
               <AnimatedButton 
-                className="flex justify-center items-center px-7 py-4 gap-[10px] bg-[#1D3357] rounded-[66px] btn-animate"
+                className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[66px] btn-animate whitespace-nowrap"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="font-outfit font-semibold text-sm leading-[18px] text-white">
+                <span className="font-outfit font-semibold text-sm sm:text-base leading-[18px] text-white">
                   Explore Printers
                 </span>
                 <svg 
-  className="w-5 h-5 text-white" 
-  fill="none" 
-  stroke="currentColor" 
-  strokeWidth="2" 
-  viewBox="0 0 24 24" 
-  xmlns="http://www.w3.org/2000/svg"
->
- <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-
-</svg>
-
+                  className="w-5 h-5 text-white flex-shrink-0" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  viewBox="0 0 24 24" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </AnimatedButton>
             </div>
           </SlideInUp>

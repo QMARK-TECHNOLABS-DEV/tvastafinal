@@ -82,7 +82,7 @@ const WhyChoose3D = () => {
             >
               <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
-                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d3.jpg" 
+                  src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/sdsd.png" 
                   alt="Lower Material Waste" 
                   className="w-full h-full object-cover"
                 />
@@ -129,14 +129,14 @@ const WhyChoose3D = () => {
       <SlideInUp delay={1.2} duration={0.6}>
         <div className="flex items-start gap-10 mt-6">
           <AnimatedButton 
-            className="flex items-center gap-[10px] bg-[#E63946] text-white font-outfit font-semibold text-lg rounded-[20px] px-7 py-4 border-none cursor-pointer"
+            className="flex items-center justify-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#E63946] text-white font-outfit font-semibold text-sm sm:text-base rounded-[20px] border-none cursor-pointer whitespace-nowrap"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="font-outfit font-semibold text-lg leading-[23px] text-white">
+            <span className="font-outfit font-semibold text-sm sm:text-base leading-[23px] text-white">
               See How It Works
             </span>
-            <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+            <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center flex-shrink-0">
               <svg className="w-4 h-4 text-[#E63946]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M7 17L17 7M17 7H7M17 7V17"/>
               </svg>

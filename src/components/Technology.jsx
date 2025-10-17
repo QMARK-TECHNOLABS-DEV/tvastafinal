@@ -16,17 +16,17 @@ const Technology = () => {
           </div>
 
           <AnimatedButton 
-            className="flex justify-center items-center px-6 py-4 gap-[14px] bg-white rounded-full w-fit"
+            className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[14px] bg-white rounded-full w-fit whitespace-nowrap"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-           <div className="w-6 h-6 relative">
-  <svg className="w-6 h-6 text-[#E63946]" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12 16v-8m0 8l-4-4m4 4l4-4M4 20h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-</div>
+           <div className="w-6 h-6 relative flex-shrink-0">
+              <svg className="w-6 h-6 text-[#E63946]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 16v-8m0 8l-4-4m4 4l4-4M4 20h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
 
-            <span className="font-outfit font-medium text-xl sm:text-2xl leading-[30px] text-[#0D192D]">
+            <span className="font-outfit font-medium text-base sm:text-lg md:text-xl text-[#0D192D]">
               Download the Tech Brochure
             </span>
           </AnimatedButton>

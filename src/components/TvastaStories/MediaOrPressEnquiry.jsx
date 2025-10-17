@@ -21,7 +21,7 @@ const MediaOrPressEnquiry = () => {
           {/* Contact Us Button */}
           <SlideInUp delay={0.7}>
             <AnimatedButton
-              className="flex justify-center items-center px-7 py-4 gap-2.5 bg-[#1D3357] rounded-[20px] hover:bg-[#2D4367] transition-colors duration-300"
+              className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-2.5 bg-[#1D3357] rounded-[20px] hover:bg-[#2D4367] transition-colors duration-300 whitespace-nowrap"
               whileHover={{ scale: 1.05, backgroundColor: "#2D4367" }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
@@ -29,12 +29,12 @@ const MediaOrPressEnquiry = () => {
                 window.location.href = 'mailto:press@tvastaconstruction.com';
               }}
             >
-              <span className="font-outfit font-semibold text-[14px] md:text-[15px] lg:text-[16px] leading-[20px] text-white">
+              <span className="font-outfit font-semibold text-sm sm:text-base text-white">
                 Contact Us
               </span>
               
               <motion.div 
-                className="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                className="w-5 h-5 bg-white rounded-full flex items-center justify-center flex-shrink-0"
                 whileHover={{ rotate: 45 }}
                 transition={{ duration: 0.3 }}
               >
