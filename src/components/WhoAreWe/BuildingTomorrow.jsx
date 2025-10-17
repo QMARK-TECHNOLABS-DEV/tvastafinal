@@ -26,10 +26,10 @@ const BuildingTomorrow = () => {
         <div className="flex flex-col justify-center items-start gap-[28px] w-full flex-grow">
           <SlideInLeft delay={0.2}>
             <div className="flex flex-col items-start gap-[28px] w-full">
-              <h2 className="font-outfit font-semibold text-[32px] sm:text-[36px] md:text-[42px] leading-[130%] tracking-[-0.03em] text-[#0D192D]">
+              <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-subtitle tracking-[-0.03em] text-[#0D192D]">
                 Building tomorrow's infrastructure takes more than concrete.
               </h2>
-              <p className="font-outfit font-medium text-[18px] sm:text-[20px] leading-[140%] tracking-[-0.01em] text-[#1D3357] w-full">
+              <p className="font-outfit font-medium text-card-mobile md:text-card tracking-[-0.01em] text-[#1D3357] w-full">
                 It takes conviction, code, and collaboration.
               </p>
             </div>
@@ -45,7 +45,7 @@ const BuildingTomorrow = () => {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="font-outfit font-semibold text-[18px] leading-[23px] text-white">
+              <span className="font-outfit font-semibold text-card text-white">
                 Work With Us
               </span>
               <motion.div 

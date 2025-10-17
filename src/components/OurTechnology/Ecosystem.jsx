@@ -38,11 +38,12 @@ const Ecosystem = () => {
         >
           <div className="relative w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-[24px] overflow-hidden">
             <div
-              className="w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{
-                background: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url(${item.image}) center/cover no-repeat`
-              }}
-            >
+  className="w-full h-full"
+  style={{
+    background: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url(${item.image}) center/contain no-repeat`,
+    backgroundColor: '#f5f5f5'
+  }}
+>
               <div className="absolute top-4 left-4 bg-white rounded-full px-3 py-2 font-outfit font-semibold text-sm md:text-base lg:text-lg text-[#0D192D] border border-white/15">
                 {item.title}
               </div>

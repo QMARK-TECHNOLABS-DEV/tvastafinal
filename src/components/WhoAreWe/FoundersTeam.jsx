@@ -22,11 +22,6 @@ const FoundersTeam = () => {
       name: "Kalyan",
       position: "CTO Construction R&D",
       image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Kalyan.png"
-    },
-    {
-      name: "Jay Prakash",
-      position: "CFO",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/founders.jpg"
     }
   ];
 
@@ -35,7 +30,7 @@ const FoundersTeam = () => {
       {/* Title */}
       <FadeIn delay={0.2}>
         <div className="flex flex-col items-center gap-[10px] w-full max-w-[1281px]">
-          <h2 className="font-outfit font-semibold text-[32px] md:text-[48px] leading-9 md:leading-[140%] text-center text-[#131112] w-full">
+          <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title text-center text-[#131112] w-full">
             Founders & Core Team
           </h2>
         </div>
@@ -68,10 +63,10 @@ const FoundersTeam = () => {
             
             {/* Content */}
             <div className="relative z-10 flex flex-col gap-[2px] w-full">
-              <h3 className="font-outfit font-bold text-[20px] leading-[160%] text-white w-full">
+              <h3 className="font-outfit font-bold text-card text-white w-full">
                 {founder.name}
               </h3>
-              <p className="font-outfit font-semibold text-[16px] leading-[160%] text-white w-full">
+              <p className="font-outfit font-medium text-card-mobile md:text-card text-white w-full">
                 {founder.position}
               </p>
             </div>

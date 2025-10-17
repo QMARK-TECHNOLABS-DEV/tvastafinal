@@ -13,7 +13,7 @@ const WhatWeDo = () => {
     <div className="flex flex-col items-center gap-[40px] w-full max-w-[1280px] px-4">
       {/* Title */}
       <FadeIn delay={0.2}>
-        <h2 className="font-outfit font-semibold text-[48px] leading-[58px] text-[#0D192D] text-center">
+        <h2 className="font-outfit font-semibold text-title-mobile md:text-title leading-[58px] text-[#0D192D] text-center">
           What We Do
         </h2>
       </FadeIn>
@@ -34,7 +34,7 @@ const WhatWeDo = () => {
       
       {/* Description */}
       <FadeIn delay={0.6}>
-        <p className="font-outfit font-normal text-[20px] leading-[140%] text-center text-[#1D3357] w-full max-w-[900px]">
+        <p className="font-outfit font-normal text-card-mobile md:text-card text-center text-[#1D3357] w-full max-w-[900px]">
           We deliver first-principles-based, end-to-end 3D construction solutions that redefine building. Every structure we create, from shelters to smart pods, is high-quality, low-waste, and future-ready.
         </p>
       </FadeIn>

@@ -16,6 +16,17 @@ export default {
           red: '#E63946',
         }
       },
+      fontSize: {
+        'title': ['48px', { lineHeight: '140%' }],
+        'subtitle': ['32px', { lineHeight: '140%' }],
+        'description': ['24px', { lineHeight: '140%' }],
+        'card': ['20px', { lineHeight: '140%' }],
+        // Responsive variants
+        'title-mobile': ['32px', { lineHeight: '140%' }],
+        'subtitle-mobile': ['24px', { lineHeight: '140%' }],
+        'description-mobile': ['18px', { lineHeight: '140%' }],
+        'card-mobile': ['16px', { lineHeight: '140%' }],
+      },
       spacing: {
         '818': '818px',
         '1240': '1240px',

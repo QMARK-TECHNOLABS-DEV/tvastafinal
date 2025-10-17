@@ -23,13 +23,13 @@ const OnStageAndOnSite = () => {
       {/* Section Header */}
       <FadeIn className="flex flex-col justify-center items-center gap-5 w-full px-4 md:px-8 lg:px-20">
         <SlideInUp delay={0.2}>
-          <h2 className="w-full font-outfit font-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[125%] text-center text-[#0D192D] max-w-[1281px]">
+          <h2 className="w-full font-outfit font-semibold text-subtitle-mobile md:text-title text-center text-[#0D192D] max-w-[1281px]">
             On Stage and On-Site
           </h2>
         </SlideInUp>
         
         <SlideInUp delay={0.4}>
-          <p className="w-full max-w-[1035px] font-outfit font-medium text-[20px] md:text-[24px] lg:text-[28px] leading-[125%] text-center capitalize text-[#1D3357]">
+          <p className="w-full max-w-[1035px] font-outfit font-medium text-description-mobile md:text-description text-center capitalize text-[#1D3357]">
             See where Tvasta's been—live demos, keynotes, and smart city showcases.
           </p>
         </SlideInUp>
@@ -67,7 +67,7 @@ const OnStageAndOnSite = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
-                <p className="font-outfit font-medium text-[18px] md:text-[20px] lg:text-[22px] leading-[28px] text-[#0D192D] text-center">
+                <p className="font-outfit font-medium text-card text-[#0D192D] text-center">
                   {item.title}
                 </p>
               </motion.div>

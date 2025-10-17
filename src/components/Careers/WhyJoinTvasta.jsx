@@ -26,7 +26,7 @@ const WhyJoinTvasta = () => {
       {/* Section Header */}
       <FadeIn delay={0.2} duration={0.8}>
         <div className="flex flex-col justify-center items-center gap-[20px] w-full px-0 sm:px-4 lg:px-12 xl:px-[80px]">
-          <h2 className="w-full font-outfit font-semibold text-[28px] sm:text-[32px] lg:text-[40px] xl:text-[48px] leading-[125%] text-center text-[#0D192D]">
+          <h2 className="w-full font-outfit font-semibold text-subtitle-mobile md:text-title text-center text-[#0D192D]">
             Why Join Tvasta?
           </h2>
         </div>
@@ -52,7 +52,7 @@ const WhyJoinTvasta = () => {
               
               {/* Title */}
               <div className="w-full max-w-[271px] min-h-[58px] flex items-center justify-center px-2">
-                <p className="font-outfit font-semibold text-[16px] sm:text-[17px] lg:text-[18px] leading-[160%] text-center text-[#0D192D]">
+                <p className="font-outfit font-semibold text-card text-center text-[#0D192D]">
                   {reason.title}
                 </p>
               </div>

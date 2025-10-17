@@ -7,7 +7,7 @@ const AboutSection = () => {
       {/* Top Text Content */}
       <FadeIn delay={0.2} duration={0.8}>
         <div className="flex flex-col items-center gap-[10px] w-full">
-          <p className="w-full max-w-[1200px] font-outfit font-normal text-[20px] md:text-[28px] leading-[35px] text-center text-[#0D192D] mx-auto">
+          <p className="w-full max-w-[1200px] font-outfit font-normal text-card-mobile md:text-description text-center text-[#0D192D] mx-auto">
             At Tvasta, we're not just building structures; we're redefining how the world builds. As pioneers in 3D printing technology for construction, our work spans housing, infrastructure, disaster resilience, and sustainable innovation.
           </p>
         </div>
@@ -33,7 +33,7 @@ const AboutSection = () => {
       {/* Bottom Text Content */}
       <FadeIn delay={0.6} duration={0.8}>
         <div className="flex flex-col items-center gap-[10px] w-full">
-          <p className="w-full max-w-[1200px] font-outfit font-normal text-[20px] md:text-[28px] leading-[35px] text-center text-[#0D192D] mx-auto">
+          <p className="w-full max-w-[1200px] font-outfit font-normal text-card-mobile md:text-description text-center text-[#0D192D] mx-auto">
             Whether you're an engineer, designer, researcher, or creator, if you're driven by curiosity and a desire to make real-world impact, there's a place for you here.
           </p>
         </div>

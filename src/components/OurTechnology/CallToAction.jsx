@@ -12,13 +12,13 @@ const CallToAction = () => {
         <SlideInLeft delay={0.3}>
           <div className="w-full lg:w-[712px] flex flex-col gap-5 sm:gap-7 items-start">
             <FadeIn delay={0.5}>
-              <div className="font-outfit font-semibold text-[32px] sm:text-4xl lg:text-[44px] text-[#0D192D] md:leading-[50px] leading-9 tracking-[-0.03em]">
+              <div className="font-outfit font-semibold text-subtitle-mobile md:text-subtitle text-[#0D192D] tracking-[-0.03em]">
                 Ready to bring your next project to life with 3D Construction?
               </div>
             </FadeIn>
 
             <FadeIn delay={0.7}>
-              <div className="font-outfit font-medium text-base sm:text-lg lg:text-[20px] leading-[22px] text-[#1D3357] tracking-[-0.01em]">
+              <div className="font-outfit font-medium text-card-mobile md:text-card text-[#1D3357] tracking-[-0.01em]">
                 Whether you're building a home, a shelter, or a smart city facade, we have the tools to make it possible.
               </div>
             </FadeIn>

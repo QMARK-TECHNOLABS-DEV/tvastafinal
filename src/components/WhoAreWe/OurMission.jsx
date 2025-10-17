@@ -8,7 +8,7 @@ const OurMission = () => {
         <SlideInLeft delay={0.2} className="w-full lg:w-1/2 h-[320px] sm:h-[420px] lg:h-[536px]">
           <div className="w-full h-full bg-gray-200 rounded-[16px] overflow-hidden">
             <img 
-              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/missionvision.png" 
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Rectangle.jpg" 
               alt="Our Mission and Vision" 
               className="w-full h-full object-cover"
             />

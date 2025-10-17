@@ -33,14 +33,14 @@ const PageHeader = () => {
         >
           {/* Main Title */}
           <SlideInUp delay={0.3}>
-            <h1 className="w-full max-w-[1256px] h-[57px] font-outfit font-semibold text-[54px] leading-[106.2%] text-center tracking-[-0.02em] capitalize text-[#0D192D]">
+            <h1 className="w-full max-w-[1256px] h-[57px] font-outfit font-semibold text-title-mobile md:text-title text-center tracking-[-0.02em] capitalize text-[#0D192D]">
               Who We Are
             </h1>
           </SlideInUp>
           
           {/* Subtitle */}
           <SlideInUp delay={0.5}>
-            <p className="w-full max-w-[1086px] h-[41px] font-outfit font-semibold text-[24px] leading-[170%] text-center tracking-[-0.02em] text-[#1D3357]">
+            <p className="w-full max-w-[1086px] h-[41px] font-outfit font-semibold text-description-mobile md:text-description text-center tracking-[-0.02em] text-[#1D3357]">
               Automation-led 3D printing for the future of sustainable construction
             </p>
           </SlideInUp>

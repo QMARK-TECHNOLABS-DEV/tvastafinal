@@ -26,14 +26,14 @@ const ProductsCustom = () => {
         <div className="flex flex-col items-start gap-[28px] w-full">
           {/* Title */}
           <FadeIn delay={0.4} duration={0.8}>
-            <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-semibold leading-[1.3] tracking-[-0.03em] text-[#0D192D] w-full">
+            <h2 className="text-subtitle-mobile md:text-subtitle font-semibold tracking-[-0.03em] text-[#0D192D] w-full">
               Want Something Custom?
             </h2>
           </FadeIn>
           
           {/* Description */}
           <FadeIn delay={0.6} duration={0.8}>
-            <p className="text-[18px] md:text-[20px] lg:text-[24px] font-normal leading-[1.25] text-[#1D3357] w-full">
+            <p className="text-card-mobile md:text-description font-normal text-[#1D3357] w-full">
               Get in touch for bespoke furniture solutions or to integrate Tvasta products into your next public or private project.
             </p>
           </FadeIn>
@@ -45,7 +45,7 @@ const ProductsCustom = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-[16px] md:text-[18px] font-semibold text-white">
+              <span className="text-card-mobile md:text-card font-semibold text-white">
                 Contact Us
               </span>
               <div className="w-[20px] h-[20px] bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

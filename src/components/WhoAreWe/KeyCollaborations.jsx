@@ -16,7 +16,7 @@ const KeyCollaborations = () => {
       {/* Title */}
       <FadeIn delay={0.2}>
         <div className="flex flex-col items-center gap-3 w-full max-w-[1280px]">
-          <h2 className="font-outfit font-semibold text-[28px] sm:text-[36px] md:text-[44px] lg:text-[48px] leading-[140%] text-center text-[#0D192D]">
+          <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title text-center text-[#0D192D]">
             Key Collaborations
           </h2>
         </div>

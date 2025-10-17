@@ -26,13 +26,13 @@ const InTheSpotlight = () => {
       {/* Section Header */}
       <div className="flex flex-col justify-center items-center gap-5 w-full">
         <FadeIn delay={0.2} duration={0.8}>
-          <h2 className="text-[28px] md:text-[36px] lg:text-[44px] xl:text-[48px] font-semibold leading-[1.25] text-center text-[#0D192D] max-w-[800px]">
+          <h2 className="text-subtitle-mobile md:text-title font-semibold text-center text-[#0D192D] max-w-[800px]">
             In the Spotlight
           </h2>
         </FadeIn>
         
         <FadeIn delay={0.4} duration={0.8}>
-          <p className="text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] font-medium leading-[1.25] text-center text-[#1D3357] max-w-[900px]">
+          <p className="text-card-mobile md:text-description font-medium text-center text-[#1D3357] max-w-[900px]">
             Breakthroughs, launches, and landmark collaborations that define who we are and where we're going.
           </p>
         </FadeIn>
@@ -87,7 +87,7 @@ const InTheSpotlight = () => {
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <p className="font-outfit font-medium text-[18px] md:text-[20px] lg:text-[22px] leading-[28px] text-[#0D192D] text-center">
+                    <p className="font-outfit font-medium text-card text-[#0D192D] text-center">
                       {item.title}
                     </p>
                   </motion.div>
@@ -116,7 +116,7 @@ const InTheSpotlight = () => {
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <p className="font-outfit font-medium text-[18px] md:text-[20px] lg:text-[22px] leading-[28px] text-[#0D192D] text-center">
+                    <p className="font-outfit font-medium text-card text-[#0D192D] text-center">
                       {item.title}
                     </p>
                   </motion.div>

@@ -16,21 +16,21 @@ const ExploreBuilds = () => {
       {
         id: 1,
         category: 'Housing',
-        title: 'Project Name',
+        title: 'IITM house',
         description: 'Complete homes and infrastructure in days, not months.',
         image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.jpg'
       },
       {
         id: 2,
         category: 'Housing',
-        title: 'Project Name',
+        title: 'Indian Airforce Guest House',
         description: 'Sustainable housing solutions with innovative design.',
         image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectshouse2.jpg'
       },
       {
         id: 3,
         category: 'Housing',
-        title: 'Project Name',
+        title: 'GPL Villa',
         description: 'Modern residential construction using 3D printing.',
         image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectshouse3.jpg'
       }
@@ -39,21 +39,21 @@ const ExploreBuilds = () => {
       {
         id: 4,
         category: 'Public Infrastructure',
-        title: 'Project Name',
+        title: 'GCC Bus Shelter',
         description: 'Infrastructure projects built for communities.',
         image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic1.jpg'
       },
       {
         id: 5,
         category: 'Public Infrastructure',
-        title: 'Project Name',
+        title: 'Haslat Shelter',
         description: 'Large-scale public construction initiatives.',
         image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic2.jpg'
       },
       {
         id: 6,
         category: 'Public Infrastructure',
-        title: 'Project Name',
+        title: 'Chepauk Boundary wall',
         description: 'Public facilities designed for sustainability.',
         image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic3.jpg'
       }
@@ -62,7 +62,7 @@ const ExploreBuilds = () => {
       {
         id: 7,
         category: 'R&D and Institutional',
-        title: 'Project Name',
+        title: 'IITM booth',
         description: 'Research and institutional development projects.',
         image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectsrd.png'
       }
@@ -152,7 +152,7 @@ const ExploreBuilds = () => {
                     {/* Project Tag */}
                     <div className="flex flex-row justify-center items-center py-[6px] sm:py-[7px] md:py-[8px] px-[10px] sm:px-[11px] md:px-[12px] bg-white/90 backdrop-blur-[24px] border border-white/15 rounded-[9999px]">
                       <span className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
-                        Project Name
+                        {currentProjects[0].title}
                       </span>
                     </div>
 
@@ -189,7 +189,7 @@ const ExploreBuilds = () => {
                         {/* Project Tag */}
                         <div className="flex flex-row justify-center items-center py-[6px] sm:py-[7px] md:py-[8px] px-[10px] sm:px-[11px] md:px-[12px] bg-white/90 backdrop-blur-[24px] border border-white/15 rounded-[9999px]">
                           <span className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
-                            Project Name
+                            {project.title}
                           </span>
                         </div>
 
