@@ -10,14 +10,14 @@ const BuildWith3D = () => {
           <div className="flex flex-col justify-center items-center gap-[20px] w-full text-center">
             {/* Main Heading */}
             <SlideInUp delay={0.3} duration={0.6}>
-              <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-semibold leading-[125%] text-[#0D192D] max-w-[1281px]">
+              <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[125%] text-[#0D192D] max-w-[1281px]">
                 Let's build with 3D.
               </h2>
             </SlideInUp>
 
             {/* Subheading */}
             <SlideInUp delay={0.4} duration={0.6}>
-              <p className="text-[20px] md:text-[24px] lg:text-[28px] font-medium leading-[125%] capitalize text-[#1D3357] max-w-[1035px]">
+              <p className="text-card-mobile md:text-description font-medium leading-[125%] capitalize text-[#1D3357] max-w-[1035px]">
                 Printers, Projects, Or Partnerships - We're Ready When You Are
               </p>
             </SlideInUp>

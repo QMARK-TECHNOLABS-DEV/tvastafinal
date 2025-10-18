@@ -11,12 +11,12 @@ const BuildSmarter = () => {
           <div className="flex flex-col justify-center items-start w-full lg:w-[712px]">
             <div className="flex flex-col items-start gap-[20px] lg:gap-[28px] w-full">
               {/* Main Heading */}
-              <h3 className="text-[32px] md:text-[38px] lg:text-[44px] font-semibold leading-[130%] tracking-[-0.03em] text-[#0D192D] w-full">
+              <h3 className="text-subtitle-mobile md:text-subtitle font-semibold leading-[130%] tracking-[-0.03em] text-[#0D192D] w-full">
                 Let's Build Smarter, Together
               </h3>
 
               {/* Description */}
-              <p className="text-[18px] md:text-[19px] lg:text-[20px] font-medium leading-[22px] tracking-[-0.01em] text-[#1D3357] w-full">
+              <p className="text-card-mobile md:text-card font-medium leading-[22px] tracking-[-0.01em] text-[#1D3357] w-full">
                 We're redefining construction - bringing precision, sustainability, and innovation to every project.
               </p>
             </div>

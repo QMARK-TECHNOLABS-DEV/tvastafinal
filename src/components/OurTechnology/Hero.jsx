@@ -23,7 +23,7 @@ const Hero = () => {
         
         <SlideInUp delay={0.6} duration={0.6}>
           <AnimatedButton 
-            className="flex items-center justify-center bg-[#E63946] text-white font-outfit font-semibold text-card rounded-[20px] px-7 py-4 border-none gap-[10px] cursor-pointer mx-auto"
+            className="flex items-center justify-center bg-[#E63946] text-white font-outfit font-semibold text-card-mobile md:text-card rounded-[20px] px-7 py-4 border-none gap-[10px] cursor-pointer mx-auto"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >

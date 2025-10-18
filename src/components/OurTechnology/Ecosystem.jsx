@@ -1,4 +1,3 @@
-
 const Ecosystem = () => {
   const techImages = [
     'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem1.jpg',
@@ -21,10 +20,10 @@ const Ecosystem = () => {
   <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-16">
     {/* Heading */}
     <div className="flex flex-col items-center gap-3 text-center">
-      <h2 className="font-outfit font-semibold text-3xl md:text-4xl lg:text-5xl text-[#0D192D]">
+      <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title text-[#0D192D]">
         Our 3D Construction Ecosystem
       </h2>
-      <p className="font-outfit font-medium text-base md:text-lg lg:text-2xl text-[#1D3357]">
+      <p className="font-outfit font-medium text-card-mobile md:text-description text-[#1D3357]">
         Where Innovation Becomes Infrastructure
       </p>
     </div>
@@ -44,10 +43,10 @@ const Ecosystem = () => {
     backgroundColor: '#f5f5f5'
   }}
 >
-              <div className="absolute top-4 left-4 bg-white rounded-full px-3 py-2 font-outfit font-semibold text-sm md:text-base lg:text-lg text-[#0D192D] border border-white/15">
+              <div className="absolute top-4 left-4 bg-white rounded-full px-3 py-2 font-outfit font-semibold text-card-mobile md:text-card text-[#0D192D] border border-white/15">
                 {item.title}
               </div>
-              <div className="absolute bottom-4 left-4 right-4 text-white font-outfit font-medium text-sm md:text-base lg:text-lg">
+              <div className="absolute bottom-4 left-4 right-4 text-white font-outfit font-medium text-card-mobile md:text-card">
                 {item.description}
               </div>
             </div>
@@ -60,5 +59,4 @@ const Ecosystem = () => {
 
   );
 };
-
 export default Ecosystem;

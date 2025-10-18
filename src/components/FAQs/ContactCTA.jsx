@@ -9,13 +9,13 @@ const ContactCTA = () => {
         {/* Text Content */}
         <div className="flex flex-col items-start gap-[28px] w-full">
           <FadeIn delay={0.2}>
-            <h2 className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[44px] font-semibold leading-[130%] tracking-[-0.03em] text-[#0D192D] font-['Outfit']">
+            <h2 className="text-subtitle-mobile md:text-subtitle font-semibold leading-[130%] tracking-[-0.03em] text-[#0D192D] font-['Outfit']">
               Got more questions?
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <p className="text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] font-medium leading-[22px] tracking-[-0.01em] text-[#1D3357] font-['Outfit']">
+            <p className="text-card-mobile md:text-card font-medium leading-[22px] tracking-[-0.01em] text-[#1D3357] font-['Outfit']">
               We're just a call away.
             </p>
           </FadeIn>
@@ -23,7 +23,7 @@ const ContactCTA = () => {
           {/* Contact Button */}
           <FadeIn delay={0.6}>
             <AnimatedButton className="flex flex-row justify-center items-center py-4 px-7 gap-[10px] w-[166px] h-[52px] bg-[#1D3357] rounded-[20px] hover:bg-[#2a4a73] transition-all duration-300 group">
-              <span className="text-white font-semibold text-[16px] leading-[20px] font-['Outfit']">
+              <span className="text-white font-semibold text-card-mobile md:text-card leading-[20px] font-['Outfit']">
                 Contact Us
               </span>
               <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">

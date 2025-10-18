@@ -30,7 +30,7 @@ const CallToAction = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="font-outfit font-semibold text-sm sm:text-base text-white">
+                <span className="font-outfit font-semibold text-card-mobile md:text-card text-white">
                   Let's Talk
                 </span>
                 <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0">
@@ -46,7 +46,7 @@ const CallToAction = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="font-outfit font-semibold text-sm sm:text-base">
+                <span className="font-outfit font-semibold text-card-mobile md:text-card">
                   Download Tech Brochure
                 </span>
                 <div className="w-6 h-6 bg-[#1D3357] rounded-full flex items-center justify-center flex-shrink-0">

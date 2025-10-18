@@ -38,13 +38,13 @@ const ContactForm = () => {
             {/* Header Section */}
             <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center mb-8 md:mb-10 text-center lg:text-left">
               <SlideInUp delay={0.3} duration={0.6}>
-                <h2 className="text-[24px] md:text-[28px] lg:text-[36px] font-semibold leading-tight text-white mb-2 lg:mb-0">
+                <h2 className="text-card-mobile md:text-subtitle font-semibold leading-tight text-white mb-2 lg:mb-0">
                   Get in Touch
                 </h2>
               </SlideInUp>
               
               <SlideInUp delay={0.4} duration={0.6}>
-                <p className="text-[14px] md:text-[16px] font-normal leading-tight text-white/80 lg:whitespace-nowrap lg:text-right">
+                <p className="text-card-mobile font-normal leading-tight text-white/80 lg:whitespace-nowrap lg:text-right">
                   Fill out the form and our team will reach out shortly.
                 </p>
               </SlideInUp>
@@ -55,7 +55,7 @@ const ContactForm = () => {
               {/* Country Field */}
               <SlideInUp delay={0.5} duration={0.6}>
                 <div className="flex flex-col gap-3">
-                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                  <label className="text-card-mobile md:text-card font-medium text-white">
                     Country
                   </label>
                   <div className="relative">
@@ -63,7 +63,7 @@ const ContactForm = () => {
                       name="country"
                       value={formData.country}
                       onChange={handleInputChange}
-                      className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white outline-none appearance-none cursor-pointer pr-8"
+                      className="w-full bg-transparent border-b border-white/30 pb-3 text-card-mobile md:text-card text-white outline-none appearance-none cursor-pointer pr-8"
                       required
                     >
                       <option value="Select Your Country" className="bg-[#1A2332] text-white">Select Your Country</option>
@@ -85,7 +85,7 @@ const ContactForm = () => {
               {/* Full Name Field */}
               <SlideInUp delay={0.6} duration={0.6}>
                 <div className="flex flex-col gap-3">
-                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                  <label className="text-card-mobile md:text-card font-medium text-white">
                     Full Name
                   </label>
                   <input
@@ -94,7 +94,7 @@ const ContactForm = () => {
                     value={formData.fullName}
                     onChange={handleInputChange}
                     placeholder="Enter Your Full Name"
-                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-card-mobile md:text-card text-white placeholder-white/60 outline-none"
                     required
                   />
                 </div>
@@ -103,7 +103,7 @@ const ContactForm = () => {
               {/* Work Email Field */}
               <SlideInUp delay={0.7} duration={0.6}>
                 <div className="flex flex-col gap-3">
-                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                  <label className="text-card-mobile md:text-card font-medium text-white">
                     Work Email
                   </label>
                   <input
@@ -112,7 +112,7 @@ const ContactForm = () => {
                     value={formData.workEmail}
                     onChange={handleInputChange}
                     placeholder="Enter Your Work Email"
-                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-card-mobile md:text-card text-white placeholder-white/60 outline-none"
                     required
                   />
                 </div>
@@ -121,18 +121,18 @@ const ContactForm = () => {
               {/* WhatsApp Number Field */}
               <SlideInUp delay={0.8} duration={0.6}>
                 <div className="flex flex-col gap-3">
-                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                  <label className="text-card-mobile md:text-card font-medium text-white">
                     Whatsapp Number
                   </label>
                   <div className="flex items-center border-b border-white/30">
-                    <span className="text-[14px] md:text-[16px] text-white mr-2">+91</span>
+                    <span className="text-card-mobile md:text-card text-white mr-2">+91</span>
                     <input
                       type="tel"
                       name="whatsappNumber"
                       value={formData.whatsappNumber}
                       onChange={handleInputChange}
                       placeholder=""
-                      className="flex-1 bg-transparent pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                      className="flex-1 bg-transparent pb-3 text-card-mobile md:text-card text-white placeholder-white/60 outline-none"
                       required
                     />
                   </div>
@@ -142,7 +142,7 @@ const ContactForm = () => {
               {/* Company Name Field */}
               <SlideInUp delay={0.9} duration={0.6}>
                 <div className="flex flex-col gap-3">
-                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                  <label className="text-card-mobile md:text-card font-medium text-white">
                     Company Name
                   </label>
                   <input
@@ -151,7 +151,7 @@ const ContactForm = () => {
                     value={formData.companyName}
                     onChange={handleInputChange}
                     placeholder="Enter Your Company Name"
-                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-card-mobile md:text-card text-white placeholder-white/60 outline-none"
                     required
                   />
                 </div>
@@ -160,7 +160,7 @@ const ContactForm = () => {
               {/* Your Job Role Field */}
               <SlideInUp delay={1.0} duration={0.6}>
                 <div className="flex flex-col gap-3">
-                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                  <label className="text-card-mobile md:text-card font-medium text-white">
                     Your Job Role
                   </label>
                   <div className="relative">
@@ -168,7 +168,7 @@ const ContactForm = () => {
                       name="jobRole"
                       value={formData.jobRole}
                       onChange={handleInputChange}
-                      className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white outline-none appearance-none cursor-pointer pr-8"
+                      className="w-full bg-transparent border-b border-white/30 pb-3 text-card-mobile md:text-card text-white outline-none appearance-none cursor-pointer pr-8"
                       required
                     >
                       <option value="Design Engineer" className="bg-[#1A2332] text-white">Design Engineer</option>
@@ -191,7 +191,7 @@ const ContactForm = () => {
               {/* City Field */}
               <SlideInUp delay={1.1} duration={0.6}>
                 <div className="flex flex-col gap-3">
-                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                  <label className="text-card-mobile md:text-card font-medium text-white">
                     City
                   </label>
                   <input
@@ -200,7 +200,7 @@ const ContactForm = () => {
                     value={formData.city}
                     onChange={handleInputChange}
                     placeholder="Enter Your City"
-                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none"
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-card-mobile md:text-card text-white placeholder-white/60 outline-none"
                     required
                   />
                 </div>
@@ -209,7 +209,7 @@ const ContactForm = () => {
               {/* Message Field */}
               <SlideInUp delay={1.2} duration={0.6}>
                 <div className="flex flex-col gap-3">
-                  <label className="text-[14px] md:text-[16px] font-medium text-white">
+                  <label className="text-card-mobile md:text-card font-medium text-white">
                     Message
                   </label>
                   <textarea
@@ -218,7 +218,7 @@ const ContactForm = () => {
                     onChange={handleInputChange}
                     placeholder="Enter Your Message"
                     rows={1}
-                    className="w-full bg-transparent border-b border-white/30 pb-3 text-[14px] md:text-[16px] text-white placeholder-white/60 outline-none resize-none"
+                    className="w-full bg-transparent border-b border-white/30 pb-3 text-card-mobile md:text-card text-white placeholder-white/60 outline-none resize-none"
                   />
                 </div>
               </SlideInUp>
@@ -243,7 +243,7 @@ const ContactForm = () => {
                       )}
                     </div>
                   </div>
-                  <p className="text-[12px] md:text-[14px] font-normal leading-relaxed text-white/80 flex-1">
+                  <p className="text-card-mobile font-normal leading-relaxed text-white/80 flex-1">
                     I accept the <span className="underline cursor-pointer hover:text-white">Terms & Conditions</span> and <span className="underline cursor-pointer hover:text-white">Privacy Policy</span>*
                   </p>
                 </div>
@@ -253,7 +253,7 @@ const ContactForm = () => {
               <SlideInUp delay={1.4} duration={0.6}>
                 <button
                   type="submit"
-                  className="w-full md:w-auto bg-white hover:bg-gray-100 text-[#1A2332] font-medium text-[14px] md:text-[16px] px-8 py-3 rounded-full transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed mt-4"
+                  className="w-full md:w-auto bg-white hover:bg-gray-100 text-[#1A2332] font-medium text-card-mobile md:text-card px-8 py-3 rounded-full transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed mt-4"
                   disabled={!formData.acceptTerms}
                 >
                   Submit Message

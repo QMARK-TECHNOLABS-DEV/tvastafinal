@@ -14,7 +14,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle, index }) => {
         {/* Question */}
         <button
           onClick={onToggle}
-          className="text-left w-full text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-normal leading-[40px] text-[#101010] font-['Outfit'] hover:text-[#E63946] transition-colors duration-300 focus:outline-none"
+          className="text-left w-full text-card-mobile md:text-subtitle font-normal leading-[40px] text-[#101010] font-['Outfit'] hover:text-[#E63946] transition-colors duration-300 focus:outline-none"
         >
           {question}
         </button>
@@ -37,8 +37,8 @@ const FAQItem = ({ question, answer, isOpen, onToggle, index }) => {
                   </svg>
                 </div>
                 
-                {/* Answer Text */}
-                <div className="flex-1 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-normal leading-[160%] text-[#101010] font-['Outfit'] whitespace-pre-line">
+                {/* Answer text */}
+                <div className="flex-1 text-card-mobile md:text-description font-normal leading-[160%] text-[#101010] font-['Outfit'] whitespace-pre-line">
                   {answer}
                 </div>
               </div>

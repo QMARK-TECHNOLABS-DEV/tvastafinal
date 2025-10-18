@@ -35,7 +35,7 @@ const ProductsGrid = () => {
         {/* Section Title */}
         <div className="flex flex-col justify-center items-center gap-[20px] w-full">
           <FadeIn delay={0.2} duration={0.8}>
-            <h2 className="text-[28px] md:text-[36px] lg:text-[44px] xl:text-[48px] font-semibold leading-[1.25] text-center text-[#0D192D] px-4">
+            <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[1.25] text-center text-[#0D192D] px-4">
               Our Products
             </h2>
           </FadeIn>
@@ -61,7 +61,7 @@ const ProductsGrid = () => {
                   
                   {/* Content Overlay */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-[6px] text-center px-4">
-                    <h3 className="text-[20px] md:text-[24px] font-semibold leading-[1.7] text-white tracking-[-0.02em]">
+                    <h3 className="text-card-mobile md:text-description font-semibold leading-[1.7] text-white tracking-[-0.02em]">
                       {products[0].name}
                     </h3>
                     
