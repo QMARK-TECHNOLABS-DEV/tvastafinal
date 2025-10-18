@@ -88,14 +88,14 @@ const ExploreBuilds = () => {
         >
           <motion.h2
             variants={fadeInUp}
-            className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-semibold leading-[125%] text-[#0D192D] text-center font-['Outfit']"
+            className="text-subtitle-mobile md:text-title font-semibold leading-[125%] text-[#0D192D] text-center font-['Outfit']"
           >
             Explore Our Builds
           </motion.h2>
           
           <motion.p
             variants={fadeInUp}
-            className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[28px] font-medium leading-[125%] text-[#1D3357] text-center capitalize max-w-[1200px] mx-auto px-4 font-['Outfit']"
+            className="text-card-mobile md:text-description font-medium leading-[125%] text-[#1D3357] text-center capitalize max-w-[1200px] mx-auto px-4 font-['Outfit']"
           >
             Projects Powered By Tvasta's Technology—Across Terrains, Timelines, And Typologies.
           </motion.p>
@@ -111,7 +111,7 @@ const ExploreBuilds = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`flex-shrink-0 px-[16px] sm:px-[18px] md:px-[20px] lg:px-[24px] xl:px-[28px] py-[6px] sm:py-[7px] md:py-[8px] lg:py-[10px] xl:py-[12px] rounded-[58px] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] leading-[120%] tracking-[-0.02em] capitalize transition-all duration-300 whitespace-nowrap font-['Outfit']
+                className={`flex-shrink-0 px-[16px] sm:px-[18px] md:px-[20px] lg:px-[24px] xl:px-[28px] py-[6px] sm:py-[7px] md:py-[8px] lg:py-[10px] xl:py-[12px] rounded-[58px] text-card-mobile leading-[120%] tracking-[-0.02em] capitalize transition-all duration-300 whitespace-nowrap font-['Outfit']
                            ${activeCategory === category
                              ? 'bg-white text-[#0D192D] shadow-[0px_4px_4px_rgba(0,0,0,0.05)] border border-[#DDDDDD]'
                              : 'text-[#0D192D] hover:bg-white/50'
@@ -151,14 +151,14 @@ const ExploreBuilds = () => {
                   >
                     {/* Project Tag */}
                     <div className="flex flex-row justify-center items-center py-[6px] sm:py-[7px] md:py-[8px] px-[10px] sm:px-[11px] md:px-[12px] bg-white/90 backdrop-blur-[24px] border border-white/15 rounded-[9999px]">
-                      <span className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
+                      <span className="text-card-mobile md:text-card font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
                         {currentProjects[0].title}
                       </span>
                     </div>
 
                     {/* Project Description */}
                     <div className="w-full">
-                      <p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-white w-full font-['Outfit']">
+                      <p className="text-card-mobile md:text-card font-semibold leading-[160%] text-white w-full font-['Outfit']">
                         {currentProjects[0].description}
                       </p>
                     </div>
@@ -188,14 +188,14 @@ const ExploreBuilds = () => {
                       >
                         {/* Project Tag */}
                         <div className="flex flex-row justify-center items-center py-[6px] sm:py-[7px] md:py-[8px] px-[10px] sm:px-[11px] md:px-[12px] bg-white/90 backdrop-blur-[24px] border border-white/15 rounded-[9999px]">
-                          <span className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
+                          <span className="text-card-mobile md:text-card font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
                             {project.title}
                           </span>
                         </div>
 
                         {/* Project Description */}
                         <div className="w-full">
-                          <p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-white w-full font-['Outfit']">
+                          <p className="text-card-mobile md:text-card font-semibold leading-[160%] text-white w-full font-['Outfit']">
                             {project.description}
                           </p>
                         </div>
@@ -225,14 +225,14 @@ const ExploreBuilds = () => {
                         >
                           {/* Project Tag */}
                           <div className="flex flex-row justify-center items-center py-[6px] sm:py-[7px] md:py-[8px] px-[10px] sm:px-[11px] md:px-[12px] bg-white/90 backdrop-blur-[24px] border border-white/15 rounded-[9999px]">
-                            <span className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
+                            <span className="text-card-mobile md:text-card font-semibold leading-[160%] text-[#0D192D] font-['Outfit']">
                               Project Name
                             </span>
                           </div>
 
                           {/* Project Description */}
                           <div className="w-full">
-                            <p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] font-semibold leading-[160%] text-white w-full font-['Outfit']">
+                            <p className="text-card-mobile md:text-card font-semibold leading-[160%] text-white w-full font-['Outfit']">
                               {project.description}
                             </p>
                           </div>

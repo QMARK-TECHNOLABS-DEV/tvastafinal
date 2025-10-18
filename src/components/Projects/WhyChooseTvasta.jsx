@@ -99,7 +99,7 @@ const WhyChooseTvasta = () => {
             className="flex flex-col items-start gap-[10px] w-full max-w-[240px] mt-[15px] sm:mt-[18px] md:mt-[20px]"
           >
             <button className="flex flex-row justify-center items-center py-[14px] sm:py-[15px] md:py-[16px] px-[24px] sm:px-[26px] md:px-[28px] gap-[8px] sm:gap-[9px] md:gap-[10px] w-full h-[48px] sm:h-[50px] md:h-[52px] bg-white rounded-[66px] group hover:bg-gray-100 transition-colors duration-300">
-              <span className="text-[16px] sm:text-[17px] md:text-[18px] font-semibold leading-[23px] text-[#0D192D] whitespace-nowrap font-['Outfit']">
+              <span className="text-card-mobile md:text-card font-semibold leading-[23px] text-[#0D192D] whitespace-nowrap font-['Outfit']">
                 Let's Build Together
               </span>
               <svg 

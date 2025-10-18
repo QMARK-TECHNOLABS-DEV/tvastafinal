@@ -34,14 +34,14 @@ const Hero = () => {
         >
           <motion.h1
             variants={fadeInUp}
-            className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[54px] font-semibold leading-[106.2%] text-[#0D192D] tracking-[-0.02em] capitalize max-w-[677px] px-2 font-['Outfit']"
+            className="text-title-mobile md:text-title font-semibold leading-[106.2%] text-[#0D192D] tracking-[-0.02em] capitalize max-w-[677px] px-2 font-['Outfit']"
           >
             Our Projects
           </motion.h1>
           
           <motion.p
             variants={fadeInUp}
-            className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] font-semibold leading-[170%] text-[#0D192D] tracking-[-0.02em] max-w-[1086px] mx-auto px-4 font-['Outfit']"
+            className="text-card-mobile md:text-description font-semibold leading-[170%] text-[#0D192D] tracking-[-0.02em] max-w-[1086px] mx-auto px-4 font-['Outfit']"
           >
             Building everything from India's first 3D-printed home to smart pods and resilient shelters.
           </motion.p>
