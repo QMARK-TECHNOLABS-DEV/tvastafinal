@@ -40,7 +40,7 @@ const PageHeader = () => {
           
           {/* Subtitle */}
           <SlideInUp delay={0.5}>
-            <p className="w-full max-w-[1086px] h-[41px] font-outfit font-semibold text-description-mobile md:text-description text-center tracking-[-0.02em] text-[#1D3357]">
+            <p className="w-full max-w-[1086px] h-[41px] font-outfit font-semibold text-card-mobile md:text-description text-center tracking-[-0.02em] text-[#1D3357]">
               Automation-led 3D printing for the future of sustainable construction
             </p>
           </SlideInUp>

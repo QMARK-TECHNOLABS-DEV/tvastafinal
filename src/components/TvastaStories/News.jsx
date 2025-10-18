@@ -45,13 +45,13 @@ const News = () => {
       {/* Section Header */}
       <FadeIn className="flex flex-col justify-center items-center gap-5 w-full px-4 md:px-8 lg:px-20">
         <SlideInUp delay={0.2}>
-          <h2 className="w-full font-outfit font-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[125%] text-center text-[#0D192D] max-w-[1281px]">
+          <h2 className="w-full font-outfit font-semibold text-subtitle-mobile md:text-title leading-[125%] text-center text-[#0D192D] max-w-[1281px]">
             News
           </h2>
         </SlideInUp>
         
         <SlideInUp delay={0.4}>
-          <p className="w-full max-w-[1035px] font-outfit font-medium text-[20px] md:text-[24px] lg:text-[28px] leading-[125%] text-center capitalize text-[#1D3357]">
+          <p className="w-full max-w-[1035px] font-outfit font-medium text-card-mobile md:text-description leading-[125%] text-center capitalize text-[#1D3357]">
             Explore press features and articles from top publications worldwide.
           </p>
         </SlideInUp>
@@ -91,7 +91,7 @@ const News = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
                 {/* Title */}
-                <h3 className="font-outfit font-semibold text-[16px] md:text-[17px] lg:text-[18px] leading-[160%] text-white w-full">
+                <h3 className="font-outfit font-semibold text-card-mobile md:text-card leading-[160%] text-white w-full">
                   {item.title}
                 </h3>
 
@@ -104,7 +104,7 @@ const News = () => {
                     whileTap={{ scale: 0.95 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <span className="font-outfit font-semibold text-[16px] md:text-[17px] lg:text-[18px] leading-[160%] text-[#0D192D]">
+                    <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[160%] text-[#0D192D]">
                       {item.readMoreText}
                     </span>
                   </motion.button>

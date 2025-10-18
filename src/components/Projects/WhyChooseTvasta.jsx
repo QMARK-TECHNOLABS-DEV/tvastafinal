@@ -57,7 +57,7 @@ const WhyChooseTvasta = () => {
           <div className="flex flex-col items-start gap-[0px] w-full border-l-[3px] sm:border-l-[4px] md:border-l-[5px] border-white pl-[20px] sm:pl-[30px] md:pl-[40px]">
             <motion.h2
               variants={fadeInUp}
-              className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold leading-[125%] text-white w-full font-['Outfit']"
+              className="text-subtitle-mobile md:text-title font-bold leading-[125%] text-white w-full font-['Outfit']"
             >
               Why Choose Tvasta
             </motion.h2>
@@ -82,10 +82,10 @@ const WhyChooseTvasta = () => {
 
                 {/* Content */}
                 <div className="flex flex-col items-start gap-[12px] sm:gap-[14px] md:gap-[16px] flex-1">
-                  <h3 className="text-[18px] sm:text-[20px] md:text-[22px] font-bold leading-[27px] tracking-[0.02em] text-white font-['Outfit']">
+                  <h3 className="text-card-mobile md:text-card font-bold leading-[27px] tracking-[0.02em] text-white font-['Outfit']">
                     {feature.title}
                   </h3>
-                  <p className="text-[16px] sm:text-[18px] md:text-[20px] font-medium leading-[25px] text-[#F0F0F0] opacity-70 font-['Outfit']">
+                  <p className="text-card-mobile md:text-card font-medium leading-[25px] text-[#F0F0F0] opacity-70 font-['Outfit']">
                     {feature.description}
                   </p>
                 </div>

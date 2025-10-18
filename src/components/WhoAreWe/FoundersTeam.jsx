@@ -66,7 +66,7 @@ const FoundersTeam = () => {
               <h3 className="font-outfit font-bold text-card text-white w-full">
                 {founder.name}
               </h3>
-              <p className="font-outfit font-medium text-card-mobile md:text-card text-white w-full">
+              <p className="font-outfit font-medium text-card-mobile text-white w-full">
                 {founder.position}
               </p>
             </div>

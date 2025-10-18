@@ -32,7 +32,7 @@ const ProductsCategories = () => {
         {/* Section Title */}
         <div className="flex flex-col items-center gap-[10px] w-full">
           <FadeIn delay={0.2} duration={0.8}>
-            <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-semibold leading-[1.4] text-center text-[#0D192D]">
+            <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[1.4] text-center text-[#0D192D]">
               Why Choose Tvasta Furniture?
             </h2>
           </FadeIn>
@@ -58,13 +58,13 @@ const ProductsCategories = () => {
             >
               {/* Button */}
               <div className="flex justify-center items-center px-3 py-2 mx-auto bg-white/95 backdrop-blur-md border border-white/15 rounded-full max-w-[90%]">
-                <span className="text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] font-semibold leading-[1.6] text-[#0D192D] text-center px-2">
+                <span className="text-card-mobile md:text-card font-semibold leading-[1.6] text-[#0D192D] text-center px-2">
                   {category.buttonText}
                 </span>
               </div>
               
               {/* Description */}
-              <p className="text-[14px] md:text-[16px] lg:text-[18px] font-semibold leading-[1.6] text-white text-center mx-auto max-w-[90%] px-2">
+              <p className="text-card-mobile md:text-card font-semibold leading-[1.6] text-white text-center mx-auto max-w-[90%] px-2">
                 {category.description}
               </p>
             </AnimatedCard>

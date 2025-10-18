@@ -16,7 +16,7 @@ const OurStory = () => {
       {/* Our Story Section */}
       <div className="flex flex-col items-start gap-[40px] w-full">
         <FadeIn delay={0.2}>
-          <h2 className="font-outfit font-semibold text-[32px] md:text-[48px] leading-[60px] text-[#0D192D] w-full">
+          <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title leading-[60px] text-[#0D192D] w-full">
             Our Story
           </h2>
         </FadeIn>
@@ -26,7 +26,7 @@ const OurStory = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="font-outfit font-normal text-[20px] md:text-[32px] leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
+            className="font-outfit font-normal text-card-mobile md:text-subtitle leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
           >
             {words1.map((word, index) => (
               <motion.span
@@ -49,7 +49,7 @@ const OurStory = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="font-outfit font-normal text-[20px] md:text-[32px] leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
+            className="font-outfit font-normal text-card-mobile md:text-subtitle leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
           >
             {words2.map((word, index) => (
               <motion.span

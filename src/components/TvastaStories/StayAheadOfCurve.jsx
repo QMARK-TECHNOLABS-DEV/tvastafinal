@@ -35,18 +35,18 @@ const StayAheadOfCurve = () => {
       <SlideInRight delay={0.5} className="flex flex-col justify-center items-start gap-2.5 flex-1 w-full lg:w-[712px] h-full">
         <FadeIn delay={0.7} className="flex flex-col items-start gap-7 w-full">
           {/* Title */}
-          <h2 className="font-outfit font-semibold text-[28px] md:text-[36px] lg:text-[44px] leading-[130%] tracking-[-0.03em] text-[#0D192D]">
+          <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-subtitle leading-[130%] tracking-[-0.03em] text-[#0D192D]">
             Stay Ahead of the Curve
           </h2>
 
           {/* Description */}
-          <p className="font-outfit font-medium text-[16px] md:text-[18px] lg:text-[20px] leading-[22px] tracking-[-0.01em] text-[#1D3357] w-full">
+          <p className="font-outfit font-medium text-card-mobile md:text-card leading-[22px] tracking-[-0.01em] text-[#1D3357] w-full">
             Get the latest updates on 3D construction, new projects, and Tvasta's tech, straight to your inbox.
           </p>
 
           {/* Email Input Section */}
           <div className="flex flex-col items-start gap-4 w-full border-b border-[#CACACA] pb-8">
-            <label className="font-outfit font-medium text-[20px] md:text-[22px] lg:text-[24px] leading-[36px] text-[#0D192D]">
+            <label className="font-outfit font-medium text-card-mobile md:text-description leading-[36px] text-[#0D192D]">
               Your Email
             </label>
             
@@ -56,7 +56,7 @@ const StayAheadOfCurve = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address"
-                className="w-full bg-transparent outline-none font-outfit font-medium text-[18px] md:text-[20px] lg:text-[22px] text-[#0D192D] placeholder-[#999999] pb-2"
+                className="w-full bg-transparent outline-none font-outfit font-medium text-card-mobile md:text-card text-[#0D192D] placeholder-[#999999] pb-2"
                 required
               />
             </form>
@@ -78,7 +78,7 @@ const StayAheadOfCurve = () => {
                   </div>
                 </div>
                 
-                <label className="font-outfit font-medium text-[16px] md:text-[18px] lg:text-[24px] leading-[20px] tracking-[-0.02em] text-[#0D192D] cursor-pointer">
+                <label className="font-outfit font-medium text-card-mobile md:text-description leading-[20px] tracking-[-0.02em] text-[#0D192D] cursor-pointer">
                   I agree to terms & conditions
                 </label>
               </div>

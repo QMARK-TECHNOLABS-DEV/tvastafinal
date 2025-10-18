@@ -7,10 +7,10 @@ const WhyChoose3D = () => {
       {/* Section Header */}
       <FadeIn delay={0.2} duration={0.8}>
         <div className="flex flex-col items-center gap-[10px] w-full text-center">
-          <h2 className="font-outfit font-semibold text-[32px] md:text-[48px] leading-[140%] text-[#0D192D]">
+          <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title leading-[140%] text-[#0D192D]">
             Why Choose 3D Construction
           </h2>
-          <p className="max-w-[807px] font-outfit font-medium text-[20px] md:text-[24px] leading-[160%] text-[#1D3357]">
+          <p className="max-w-[807px] font-outfit font-medium text-card-mobile md:text-description leading-[160%] text-[#1D3357]">
            Build faster, waste less, and design smarter with sustainable 3D construction
           </p>
         </div>
@@ -39,7 +39,7 @@ const WhyChoose3D = () => {
                   </p>
                 </div>
               </div>
-              <h3 className="font-outfit font-semibold text-[26px] leading-[120%] text-[#0D192D]">
+              <h3 className="font-outfit font-semibold text-card-mobile md:text-card leading-[120%] text-[#0D192D]">
                 Faster Time to Build
               </h3>
             </motion.div>
@@ -64,7 +64,7 @@ const WhyChoose3D = () => {
                   </p>
                 </div>
               </div>
-              <h3 className="font-outfit font-semibold text-[26px] leading-[120%] text-[#0D192D]">
+              <h3 className="font-outfit font-semibold text-card-mobile md:text-card leading-[120%] text-[#0D192D]">
                 Design Without Limits
               </h3>
             </motion.div>
@@ -92,7 +92,7 @@ const WhyChoose3D = () => {
                   </p>
                 </div>
               </div>
-              <h3 className="font-outfit font-semibold text-[26px] leading-[120%] text-[#0D192D]">
+              <h3 className="font-outfit font-semibold text-card-mobile md:text-card leading-[120%] text-[#0D192D]">
                 Lower Material Waste
               </h3>
             </motion.div>
@@ -117,7 +117,7 @@ const WhyChoose3D = () => {
                   </p>
                 </div>
               </div>
-              <h3 className="font-outfit font-semibold text-[26px] leading-[120%] text-[#0D192D]">
+              <h3 className="font-outfit font-semibold text-card-mobile md:text-card leading-[120%] text-[#0D192D]">
                 Built to Withstand
               </h3>
             </motion.div>

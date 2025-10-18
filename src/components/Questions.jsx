@@ -6,7 +6,7 @@ const Questions = () => {
       {/* Section Header */}
       <FadeIn>
         <div className="flex flex-col gap-6 w-full">
-          <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title text-[#0D192D] w-full">
+          <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-subtitle text-[#0D192D] w-full">
             Still have questions?
           </h2>
         </div>

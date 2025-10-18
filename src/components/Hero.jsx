@@ -29,14 +29,14 @@ const Hero = React.memo(() => {
           <div className="flex flex-col items-center gap-[30px] w-full filter drop-shadow-[0px_0px_24.9px_rgba(0,0,0,0.59)]">
             {/* Main Heading */}
             <FadeIn delay={0.3} duration={0.8}>
-              <h1 className="w-full max-w-[1256px] font-outfit font-semibold text-[32px] md:text-[54px] leading-[106.2%] text-center tracking-[-0.02em] capitalize text-white">
+              <h1 className="w-full max-w-[1256px] font-outfit font-semibold text-subtitle-mobile md:text-title leading-[106.2%] text-center tracking-[-0.02em] capitalize text-white">
                 Pioneering India's 3D Construction Revolution
               </h1>
             </FadeIn>
 
             {/* Subheading */}
             <FadeIn delay={0.6} duration={0.8}>
-              <p className="max-w-[857px] font-outfit font-semibold text-[18px] md:text-[24px] leading-[170%] text-center tracking-[-0.02em] text-white">
+              <p className="max-w-[857px] font-outfit font-semibold text-card-mobile md:text-description leading-[170%] text-center tracking-[-0.02em] text-white">
                 Trusted by innovators. Ready to deploy
               </p>
             </FadeIn>

@@ -4,10 +4,10 @@ const OurWork = () => {
       <div className="flex flex-col items-center gap-16 w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 w-full">
-          <h2 className="font-outfit font-semibold text-[32px] sm:text-[36px] md:text-[48px] leading-[120%] text-[#0D192D] text-center md:text-left">
+          <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title leading-[120%] text-[#0D192D] text-center md:text-left">
             Our Work
           </h2>
-          <span className="font-outfit font-semibold text-base sm:text-lg leading-[20px] text-white bg-[#1D3357] px-4 py-2 rounded-full cursor-pointer">
+          <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[20px] text-white bg-[#1D3357] px-4 py-2 rounded-full cursor-pointer">
             View All Work
           </span>
         </div>

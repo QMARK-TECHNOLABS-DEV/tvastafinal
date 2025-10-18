@@ -7,10 +7,10 @@ const Technology = () => {
         {/* Left Content */}
         <SlideInLeft className="flex flex-col items-start gap-10 w-full lg:w-[710px]">
           <div className="flex flex-col items-start gap-6 w-full">
-            <h2 className="font-outfit font-semibold text-3xl sm:text-4xl lg:text-5xl leading-[60px] text-white">
+            <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title leading-[60px] text-white">
               Explore the Technology Behind the Builds
             </h2>
-            <p className="font-outfit font-normal text-xl sm:text-2xl leading-[30px] text-white/60">
+            <p className="font-outfit font-normal text-card-mobile md:text-description leading-[30px] text-white/60">
               Get the full specs, materials, timelines, and real-world applications in one comprehensive guide.
             </p>
           </div>
@@ -26,7 +26,7 @@ const Technology = () => {
               </svg>
             </div>
 
-            <span className="font-outfit font-medium text-base sm:text-lg md:text-xl text-[#0D192D]">
+            <span className="font-outfit font-medium text-card-mobile md:text-card text-[#0D192D]">
               Download the Tech Brochure
             </span>
           </AnimatedButton>

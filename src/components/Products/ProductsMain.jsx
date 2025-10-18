@@ -19,7 +19,7 @@ const ProductsMain = () => {
       {/* Description Text - animation restored with threshold fix */}
       <div className="w-full">
         <FadeIn delay={0.4} duration={0.8} threshold={0}>
-          <p className="text-[18px] md:text-[22px] lg:text-[26px] xl:text-[28px] font-normal leading-[1.25] text-center text-[#0D192D] max-w-[1280px] px-4">
+          <p className="text-card-mobile md:text-description font-normal leading-[1.25] text-center text-[#0D192D] max-w-[1280px] px-4">
             Crafted with precision and purpose, our concrete furniture range blends aesthetic form with functional design. Whether it's for public spaces, institutions, or contemporary interiors, each piece is made to endure and impress.
           </p>
         </FadeIn>

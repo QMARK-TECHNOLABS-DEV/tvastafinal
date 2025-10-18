@@ -45,7 +45,7 @@ const BuildingTomorrow = () => {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="font-outfit font-semibold text-sm sm:text-base md:text-lg text-white">
+              <span className="font-outfit font-semibold text-card-mobile md:text-card text-white">
                 Work With Us
               </span>
               <motion.div 

@@ -14,7 +14,7 @@ const Partners = () => {
     <div className="flex flex-col items-center gap-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-10 my-6 sm:my-16 md:my-10">
       {/* Section Title */}
       <FadeIn delay={0.2}>
-        <h2 className="font-outfit font-medium text-[24px]  leading-[140%] text-center text-[#0D192D]">
+        <h2 className="font-outfit font-medium text-description-mobile md:text-description leading-[140%] text-center text-[#0D192D]">
           Pioneers since 2016
         </h2>
       </FadeIn>

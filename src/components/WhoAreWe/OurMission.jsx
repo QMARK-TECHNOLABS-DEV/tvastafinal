@@ -20,10 +20,10 @@ const OurMission = () => {
           {/* Our Mission Section */}
           <SlideInRight delay={0.3}>
             <div className="flex flex-col items-start gap-[16px] w-full">
-              <h2 className="font-outfit font-semibold text-[32px] sm:text-[40px] lg:text-[48px] leading-[120%] text-[#0D192D]">
+              <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title leading-[120%] text-[#0D192D]">
                 Our Mission
               </h2>
-              <p className="font-outfit font-normal text-[18px] sm:text-[24px] leading-[140%] text-[#1D3357] w-full">
+              <p className="font-outfit font-normal text-card-mobile md:text-description leading-[140%] text-[#1D3357] w-full">
                 Tvasta, a first principles-based technology builder, leverages automation and robotics to create 3D printing platforms that will revolutionize construction by automating 80% of the process for distributed infrastructure and mass customization, while also enabling high-precision, mass-customized component production across the manufacturing sector.
               </p>
             </div>
@@ -32,10 +32,10 @@ const OurMission = () => {
           {/* Our Vision Section */}
           <SlideInRight delay={0.5}>
             <div className="flex flex-col items-start gap-[16px] w-full">
-              <h2 className="font-outfit font-semibold text-[32px] sm:text-[40px] lg:text-[48px] leading-[120%] text-[#0D192D]">
+              <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title leading-[120%] text-[#0D192D]">
                 Our Vision
               </h2>
-              <p className="font-outfit font-normal text-[18px] sm:text-[24px] leading-[140%] text-[#1D3357] w-full">
+              <p className="font-outfit font-normal text-card-mobile md:text-description leading-[140%] text-[#1D3357] w-full">
                 To revolutionize global construction with modular, intelligent, and environmentally responsible solutions.
               </p>
             </div>

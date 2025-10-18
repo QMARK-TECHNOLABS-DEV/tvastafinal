@@ -34,13 +34,13 @@ const Ecosystem = () => {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-16 w-full">
           <FadeIn className="flex flex-col justify-center items-start lg:w-[40%]">
-            <h2 className="font-outfit font-semibold text-[32px] lg:text-[37px] lg:leading-[60px] leading-8 text-[#0D192D]">
+            <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-subtitle leading-8 lg:leading-[60px] text-[#0D192D]">
               The Complete 3D Construction Ecosystem
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.2} className="lg:w-[60%]">
-            <p className="font-outfit font-normal text-xl sm:text-2xl leading-[30px] text-[#1D3357]">
+            <p className="font-outfit font-normal text-card-mobile md:text-description leading-[30px] text-[#1D3357]">
               From industrial-grade printers to automation-ready software.Tvasta delivers the full stack for next-gen construction.
             </p>
           </FadeIn>

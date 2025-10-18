@@ -28,12 +28,12 @@ const Contact = () => {
       <FadeIn delay={0.2}>
         <div className="flex justify-between items-start w-full max-w-[1312px] gap-[831px]">
           <div className="flex items-center justify-center">
-            <h2 className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+            <h2 className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-white">
               CONTACT
             </h2>
           </div>
           <div className="flex items-center justify-center">
-            <h3 className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+            <h3 className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-white">
               Start Your 3D Construction Journey
             </h3>
           </div>
@@ -46,7 +46,7 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="flex items-center gap-[36px] w-full">
             {/* Name Field */}
             <div className="flex flex-col items-start gap-[16px] w-[413.33px]">
-              <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+              <label className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-white">
                 Name
               </label>
               <div className="flex justify-center items-center px-[16px] py-[24px] gap-[10px] w-full h-[60px] border-b border-white">
@@ -56,14 +56,14 @@ const Contact = () => {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent font-outfit font-normal text-[18px] leading-[140%] text-white placeholder-white/70 outline-none"
+                  className="w-full bg-transparent font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white placeholder-white/70 outline-none"
                 />
               </div>
             </div>
             
             {/* Email Field */}
             <div className="flex flex-col items-start gap-[16px] w-[413.33px]">
-              <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+              <label className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-white">
                 Email
               </label>
               <div className="flex justify-center items-center px-[16px] py-[24px] gap-[10px] w-full h-[60px] border-b border-white">
@@ -73,14 +73,14 @@ const Contact = () => {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent font-outfit font-normal text-[18px] leading-[140%] text-white placeholder-white/70 outline-none"
+                  className="w-full bg-transparent font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white placeholder-white/70 outline-none"
                 />
               </div>
             </div>
             
             {/* Message Field */}
             <div className="flex flex-col items-start gap-[16px] w-[413.33px]">
-              <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
+              <label className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-white">
                 Message
               </label>
               <div className="flex justify-center items-center px-[16px] py-[24px] gap-[10px] w-full h-[60px] border-b border-white">
@@ -90,7 +90,7 @@ const Contact = () => {
                   placeholder="Your Message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent font-outfit font-normal text-[18px] leading-[140%] text-white placeholder-white/70 outline-none"
+                  className="w-full bg-transparent font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white placeholder-white/70 outline-none"
                 />
               </div>
             </div>
@@ -109,7 +109,7 @@ const Contact = () => {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="font-outfit font-medium text-[24px] leading-[130%] text-[#1D3357]">
+            <span className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-[#1D3357]">
               Send Message
             </span>
           </AnimatedButton>

@@ -35,7 +35,7 @@ const Projects = () => {
       {/* Section Header */}
       <div className="flex flex-col items-center gap-[30px] md:gap-[41px] w-full">
         <FadeIn>
-          <h2 className="font-outfit font-semibold text-[28px] sm:text-[48px] md:text-[60px] text-center leading-[120%] tracking-[-0.02em] text-[#0D192D] capitalize">
+          <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title text-center leading-[120%] tracking-[-0.02em] text-[#0D192D] capitalize">
             Explore Our Projects
           </h2>
         </FadeIn>

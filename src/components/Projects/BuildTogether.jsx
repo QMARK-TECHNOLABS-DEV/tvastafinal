@@ -19,14 +19,14 @@ const BuildTogether = () => {
         >
           <motion.h2
             variants={fadeInUp}
-            className="text-[26px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[44px] font-semibold leading-[130%] tracking-[-0.03em] text-[#0D192D] w-full font-['Outfit']"
+            className="text-subtitle-mobile md:text-subtitle font-semibold leading-[130%] tracking-[-0.03em] text-[#0D192D] w-full font-['Outfit']"
           >
             Let's Build Something Together
           </motion.h2>
           
           <motion.p
             variants={fadeInUp}
-            className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] font-normal leading-[30px] text-[#1D3357] w-full font-['Outfit']"
+            className="text-card-mobile md:text-description font-normal leading-[30px] text-[#1D3357] w-full font-['Outfit']"
           >
             Have a project in mind? Connect with us to bring your vision to life.
           </motion.p>
@@ -36,7 +36,7 @@ const BuildTogether = () => {
             variants={fadeInUp}
             className="flex flex-row justify-center items-center py-3 sm:py-3.5 md:py-4 px-5 sm:px-6 md:px-7 gap-[8px] sm:gap-[9px] md:gap-[10px] bg-[#1D3357] rounded-[35px] group hover:bg-[#0D192D] transition-colors duration-300 whitespace-nowrap"
           >
-            <span className="text-base sm:text-lg md:text-xl font-medium leading-[130%] text-white font-['Outfit']">
+            <span className="text-card-mobile md:text-card font-medium leading-[130%] text-white font-['Outfit']">
               Contact Us
             </span>
           </motion.button>

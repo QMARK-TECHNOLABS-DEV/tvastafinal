@@ -13,7 +13,7 @@ const WhatWeDo = () => {
     <div className="flex flex-col items-center gap-[40px] w-full max-w-[1280px] px-4">
       {/* Title */}
       <FadeIn delay={0.2}>
-        <h2 className="font-outfit font-semibold text-title-mobile md:text-title leading-[58px] text-[#0D192D] text-center">
+        <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title leading-[58px] text-[#0D192D] text-center">
           What We Do
         </h2>
       </FadeIn>
