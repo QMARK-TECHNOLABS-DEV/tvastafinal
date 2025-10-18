@@ -29,7 +29,7 @@ const OnStageAndOnSite = () => {
         </SlideInUp>
         
         <SlideInUp delay={0.4}>
-          <p className="w-full max-w-[1035px] font-outfit font-medium text-description-mobile md:text-description text-center capitalize text-[#1D3357]">
+          <p className="w-full max-w-[1035px] font-outfit font-medium text-card-mobile md:text-description text-center capitalize text-[#1D3357]">
             See where Tvasta's been—live demos, keynotes, and smart city showcases.
           </p>
         </SlideInUp>

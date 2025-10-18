@@ -29,7 +29,7 @@ const MediaOrPressEnquiry = () => {
                 window.location.href = 'mailto:press@tvastaconstruction.com';
               }}
             >
-              <span className="font-outfit font-semibold text-sm sm:text-base text-white">
+              <span className="font-outfit font-semibold text-card-mobile md:text-card text-white">
                 Contact Us
               </span>
               

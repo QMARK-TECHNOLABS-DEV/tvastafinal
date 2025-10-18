@@ -26,13 +26,13 @@ const InTheSpotlight = () => {
       {/* Section Header */}
       <div className="flex flex-col justify-center items-center gap-5 w-full">
         <FadeIn delay={0.2} duration={0.8}>
-          <h2 className="text-subtitle-mobile md:text-title font-semibold text-center text-[#0D192D] max-w-[800px]">
+          <h2 className="text-subtitle-mobile md:text-title font-semibold text-center text-[#0D192D] max-w-[800px] font-['Outfit']">
             In the Spotlight
           </h2>
         </FadeIn>
         
         <FadeIn delay={0.4} duration={0.8}>
-          <p className="text-card-mobile md:text-description font-medium text-center text-[#1D3357] max-w-[900px]">
+          <p className="text-card-mobile md:text-description font-medium text-center text-[#1D3357] max-w-[900px] font-['Outfit']">
             Breakthroughs, launches, and landmark collaborations that define who we are and where we're going.
           </p>
         </FadeIn>
