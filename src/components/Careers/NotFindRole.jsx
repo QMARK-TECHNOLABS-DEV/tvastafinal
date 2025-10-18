@@ -10,21 +10,21 @@ const NotFindRole = () => {
           <div className="flex flex-col items-start gap-[28px] w-full">
             {/* Title */}
             <FadeIn delay={0.4} duration={0.6}>
-              <h2 className="font-outfit font-semibold text-[28px] sm:text-[32px] lg:text-[38px] xl:text-[44px] leading-[130%] tracking-[-0.03em] text-[#0D192D]">
+              <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-subtitle leading-[130%] tracking-[-0.03em] text-[#0D192D]">
                 Didn't Find a Role That Fits?
               </h2>
             </FadeIn>
 
             {/* Subtitle */}
             <FadeIn delay={0.6} duration={0.6}>
-              <p className="w-full font-outfit font-medium text-[16px] sm:text-[18px] lg:text-[19px] xl:text-[20px] leading-[140%] sm:leading-[130%] lg:leading-[22px] tracking-[-0.01em] text-[#1D3357]">
+              <p className="w-full font-outfit font-medium text-card-mobile md:text-card leading-[140%] sm:leading-[130%] lg:leading-[22px] tracking-[-0.01em] text-[#1D3357]">
                 We're always on the lookout for exceptional talent.
               </p>
             </FadeIn>
 
             {/* Description */}
             <FadeIn delay={0.8} duration={0.6}>
-              <p className="w-full font-outfit font-medium text-[16px] sm:text-[18px] lg:text-[19px] xl:text-[20px] leading-[140%] sm:leading-[130%] lg:leading-[22px] tracking-[-0.01em] text-[#1D3357]">
+              <p className="w-full font-outfit font-medium text-card-mobile md:text-card leading-[140%] sm:leading-[130%] lg:leading-[22px] tracking-[-0.01em] text-[#1D3357]">
                 Drop us a message or send your resume - we'd love to hear from you.
               </p>
             </FadeIn>
@@ -37,7 +37,7 @@ const NotFindRole = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="font-outfit font-semibold text-[14px] sm:text-[15px] lg:text-[16px] leading-[20px] text-white">
+              <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[20px] text-white">
                 Contact Us
               </span>
               

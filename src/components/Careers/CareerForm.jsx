@@ -69,7 +69,7 @@ const CareerForm = () => {
             {/* Header */}
             <FadeIn delay={0.4} duration={0.6}>
               <div className="flex flex-row justify-center items-start w-full pb-8 border-b border-transparent">
-                <h2 className="font-outfit font-medium text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] leading-[40px] tracking-[-0.04em] text-white text-center max-w-[800px]">
+                <h2 className="font-outfit font-medium text-card-mobile md:text-subtitle leading-[40px] tracking-[-0.04em] text-white text-center max-w-[800px]">
                   Fill out the form and our team will reach out shortly.
                 </h2>
               </div>
@@ -79,7 +79,7 @@ const CareerForm = () => {
             <form onSubmit={handleSubmit} className="flex flex-col justify-center items-start gap-8 md:gap-12 lg:gap-16 w-full max-w-[1000px] mx-auto">
               {/* Full Name Field */}
               <div className="flex flex-col items-start gap-4 w-full">
-                <label className="font-outfit font-medium text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[130%] text-white">
+                <label className="font-outfit font-medium text-card-mobile md:text-description leading-[130%] text-white">
                   Full Name
                 </label>
                 <div className="box-border flex flex-row justify-center items-center py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 gap-[10px] w-full border-b border-white transition-all duration-300 hover:border-white/80">
@@ -89,7 +89,7 @@ const CareerForm = () => {
                     value={formData.fullName}
                     onChange={handleInputChange}
                     placeholder="Enter Your Full Name"
-                    className="w-full font-outfit font-normal text-[16px] sm:text-[17px] md:text-[18px] leading-[140%] text-white bg-transparent outline-none placeholder-white/60 transition-all duration-300 focus:placeholder-white/80"
+                    className="w-full font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white bg-transparent outline-none placeholder-white/60 transition-all duration-300 focus:placeholder-white/80"
                     required
                   />
                 </div>
@@ -97,7 +97,7 @@ const CareerForm = () => {
 
               {/* Work Email Field */}
               <div className="flex flex-col items-start gap-4 w-full">
-                <label className="font-outfit font-medium text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[130%] text-white">
+                <label className="font-outfit font-medium text-card-mobile md:text-description leading-[130%] text-white">
                   Work Email
                 </label>
                 <div className="box-border flex flex-row justify-center items-center py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 gap-[10px] w-full border-b border-white transition-all duration-300 hover:border-white/80">
@@ -107,7 +107,7 @@ const CareerForm = () => {
                     value={formData.workEmail}
                     onChange={handleInputChange}
                     placeholder="Enter Your Work Email"
-                    className="w-full font-outfit font-normal text-[16px] sm:text-[17px] md:text-[18px] leading-[140%] text-white bg-transparent outline-none placeholder-white/60 transition-all duration-300 focus:placeholder-white/80"
+                    className="w-full font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white bg-transparent outline-none placeholder-white/60 transition-all duration-300 focus:placeholder-white/80"
                     required
                   />
                 </div>
@@ -115,7 +115,7 @@ const CareerForm = () => {
 
               {/* WhatsApp Number Field */}
               <div className="flex flex-col items-start gap-4 w-full">
-                <label className="font-outfit font-medium text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[130%] text-white">
+                <label className="font-outfit font-medium text-card-mobile md:text-description leading-[130%] text-white">
                   Whatsapp Number
                 </label>
                 <div className="box-border flex flex-row justify-center items-center py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 gap-[10px] w-full border-b border-white transition-all duration-300 hover:border-white/80">
@@ -125,7 +125,7 @@ const CareerForm = () => {
                       <button
                         type="button"
                         onClick={() => setCountryDropdownOpen(!countryDropdownOpen)}
-                        className="flex items-center gap-2 text-white font-outfit font-normal text-[16px] sm:text-[17px] md:text-[18px] transition-all duration-300 hover:text-white/80"
+                        className="flex items-center gap-2 text-white font-outfit font-normal text-card-mobile md:text-card transition-all duration-300 hover:text-white/80"
                       >
                         {selectedCountryCode}
                         <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -158,7 +158,7 @@ const CareerForm = () => {
                       value={formData.whatsappNumber}
                       onChange={handleInputChange}
                       placeholder="Enter your number"
-                      className="flex-1 font-outfit font-normal text-[16px] sm:text-[17px] md:text-[18px] leading-[140%] text-white bg-transparent outline-none placeholder-white/60 transition-all duration-300 focus:placeholder-white/80"
+                      className="flex-1 font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white bg-transparent outline-none placeholder-white/60 transition-all duration-300 focus:placeholder-white/80"
                       required
                     />
                   </div>
@@ -167,7 +167,7 @@ const CareerForm = () => {
 
               {/* Job Role Field */}
               <div className="flex flex-col items-start gap-4 w-full">
-                <label className="font-outfit font-medium text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[130%] text-white">
+                <label className="font-outfit font-medium text-card-mobile md:text-description leading-[130%] text-white">
                   Your Job Role
                 </label>
                 <div className="box-border flex flex-row justify-center items-center py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 gap-[10px] w-full border-b border-white relative transition-all duration-300 hover:border-white/80">
@@ -176,7 +176,7 @@ const CareerForm = () => {
                     onClick={() => setJobRoleDropdownOpen(!jobRoleDropdownOpen)}
                     className="flex flex-row justify-between items-center w-full transition-all duration-300 hover:opacity-80"
                   >
-                    <span className="font-outfit font-normal text-[16px] sm:text-[17px] md:text-[18px] leading-[140%] text-white text-left flex-1">
+                    <span className="font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white text-left flex-1">
                       {formData.jobRole || 'Design Engineer'}
                     </span>
                     <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white transition-transform duration-300" 
@@ -208,11 +208,11 @@ const CareerForm = () => {
 
               {/* Resume Upload Field */}
               <div className="flex flex-col items-start gap-4 w-full">
-                <label className="font-outfit font-medium text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[130%] text-white">
+                <label className="font-outfit font-medium text-card-mobile md:text-description leading-[130%] text-white">
                   Resume Upload
                 </label>
                 <div className="box-border flex flex-col sm:flex-row justify-center items-start sm:items-center py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 gap-4 w-full border-b border-white transition-all duration-300 hover:border-white/80">
-                  <span className="flex-1 font-outfit font-normal text-[16px] sm:text-[17px] md:text-[18px] leading-[140%] text-white order-2 sm:order-1">
+                  <span className="flex-1 font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white order-2 sm:order-1">
                     {formData.resume ? formData.resume.name : 'Upload Your Resume (Max 2 MB File Size)'}
                   </span>
                   
@@ -227,49 +227,45 @@ const CareerForm = () => {
                       <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
                       <path d="M12,11L16,15H13V19H11V15H8L12,11Z" />
                     </svg>
-                    <span className="font-outfit font-medium text-[14px] sm:text-[15px] md:text-[16px] leading-[20px] text-[#0D192D]">
+                    <span className="font-outfit font-medium text-card-mobile leading-[20px] text-[#0D192D]">
                       Upload Resume
                     </span>
                   </label>
                 </div>
               </div>
 
-              {/* Message Field */}
-              <div className="flex flex-col items-start gap-4 w-full">
-                <label className="font-outfit font-medium text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[130%] text-white">
-                  Message
-                </label>
-                <div className="box-border flex flex-row justify-center items-start py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 gap-[10px] w-full border-b border-white transition-all duration-300 hover:border-white/80">
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Enter Your Message"
-                    rows={3}
-                    className="w-full font-outfit font-normal text-[16px] sm:text-[17px] md:text-[18px] leading-[140%] text-white bg-transparent outline-none placeholder-white/60 resize-none transition-all duration-300 focus:placeholder-white/80 min-h-[60px]"
-                  />
-                </div>
-              </div>
-
-              {/* Submit Button */}
-              <div className="w-full flex justify-center">
-                <AnimatedButton
-                  type="submit"
-                  className="flex flex-row justify-center items-center py-4 sm:py-5 px-6 sm:px-8 md:px-10 gap-[10px] bg-white rounded-[35px] transition-all duration-300 hover:bg-gray-100 hover:shadow-lg"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <span className="font-outfit font-medium text-[16px] sm:text-[17px] md:text-[18px] leading-[23px] text-[#1C1C1C]">
-                    Submit Application
-                  </span>
-                </AnimatedButton>
-              </div>
-            </form>
-          </div>
-        </div>
-      </SlideInUp>
-    </div>
-  );
-};
-
-export default CareerForm;
+                            {/* Message Field */}
+                            <div className="flex flex-col items-start gap-4 w-full">
+                              <label className="font-outfit font-medium text-card-mobile md:text-description leading-[130%] text-white">
+                                Message
+                              </label>
+                              <div className="box-border flex flex-row justify-center items-start py-4 sm:py-5 md:py-6 px-4 sm:px-5 md:px-6 gap-[10px] w-full border-b border-white transition-all duration-300 hover:border-white/80">
+                                <textarea
+                                  name="message"
+                                  value={formData.message}
+                                  onChange={handleInputChange}
+                                  placeholder="Enter your message"
+                                  rows="4"
+                                  className="w-full font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white bg-transparent outline-none placeholder-white/60 transition-all duration-300 focus:placeholder-white/80 resize-none"
+                                />
+                              </div>
+                            </div>
+              
+                            {/* Submit Button */}
+                            <AnimatedButton>
+                              <button
+                                type="submit"
+                                className="w-full py-4 px-6 bg-white rounded-full font-outfit font-medium text-card-mobile md:text-card text-[#0D192D] transition-all duration-300 hover:bg-gray-100 hover:scale-105"
+                              >
+                                Submit Application
+                              </button>
+                            </AnimatedButton>
+                          </form>
+                        </div>
+                      </div>
+                    </SlideInUp>
+                  </div>
+                );
+              };
+              
+              export default CareerForm;

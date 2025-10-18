@@ -23,14 +23,14 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-[30px] w-full max-w-[1256px] text-center">
           {/* Main Heading */}
           <FadeIn delay={0.3} duration={0.8}>
-            <h1 className="w-full font-outfit font-semibold text-[32px] md:text-[54px] leading-[106.2%] text-center tracking-[-0.02em] capitalize text-[#0D192D]">
+            <h1 className="w-full font-outfit font-semibold text-title-mobile md:text-title leading-[106.2%] text-center tracking-[-0.02em] capitalize text-[#0D192D]">
               Careers
             </h1>
           </FadeIn>
 
           {/* Subheading */}
           <FadeIn delay={0.6} duration={0.8}>
-            <p className="max-w-[1086px] font-outfit font-semibold text-[18px] md:text-[24px] leading-[170%] text-center tracking-[-0.02em] text-[#0D192D]">
+            <p className="max-w-[1086px] font-outfit font-semibold text-card-mobile md:text-description leading-[170%] text-center tracking-[-0.02em] text-[#0D192D]">
               Shape the Future of Construction with Us
             </p>
           </FadeIn>
