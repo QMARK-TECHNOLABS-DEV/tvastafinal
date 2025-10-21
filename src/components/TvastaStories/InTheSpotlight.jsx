@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FadeIn, SlideInUp, AnimatedCard } from '../../utils/animations.jsx';
+import { href } from 'react-router-dom';
 
 const InTheSpotlight = () => {
   const spotlightItems = [
@@ -15,9 +16,9 @@ const InTheSpotlight = () => {
       href: 'https://www.ndtv.com/education/iit-madras-faculty-alumni-develop-indias-first-3d-printing-construction-technology-1938598'
     },
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/inspot3.jpg',
-      title: "National Awards or Certifications"
-      // no href provided for this item
+      image: '/images/nationalawards.webp',
+      title: "National Awards or Certifications",
+      href: 'https://www.dailyo.in/business/anand-mahindra-tvasta-twitter-35296'
     }
   ];
 

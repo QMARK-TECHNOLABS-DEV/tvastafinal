@@ -131,7 +131,7 @@ const WhyChooseTvasta = () => {
           <div 
             className="w-full h-full"
             style={{
-              backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Why%20Choose%20Tvasta.jpg')`,
+              backgroundImage: `url('/images/newwhychosetvasta.jpeg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}

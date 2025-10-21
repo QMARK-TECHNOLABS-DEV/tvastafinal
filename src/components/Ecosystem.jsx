@@ -23,7 +23,7 @@ const Ecosystem = () => {
     {
       title: "Sustainable Materials",
       description: "Eco-friendly mixes engineered for strength, speed, and durability.",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/The%20Complete%203D%20Construction%20Ecosystem%204.png",
+      image: "/images/newsustain.jpeg",
       tag: "Sustainable Materials"
     }
   ];
