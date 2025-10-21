@@ -31,7 +31,8 @@ const WhyChoose3D = () => {
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d1.jpg" 
                   alt="Faster Time to Build" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white font-outfit font-medium text-lg text-center px-6">
@@ -56,7 +57,8 @@ const WhyChoose3D = () => {
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d2.jpg" 
                   alt="Design Without Limits" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white font-outfit font-medium text-lg text-center px-6">
@@ -84,7 +86,8 @@ const WhyChoose3D = () => {
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/sdsd.png" 
                   alt="Lower Material Waste" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white font-outfit font-medium text-lg text-center px-6">
@@ -109,7 +112,8 @@ const WhyChoose3D = () => {
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d4.png" 
                   alt="Built to Withstand" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white font-outfit font-medium text-lg text-center px-6">

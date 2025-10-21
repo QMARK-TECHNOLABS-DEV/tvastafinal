@@ -1,10 +1,10 @@
 const Ecosystem = () => {
   const techImages = [
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem1.jpg',
+    '/images/robotimg.jpeg',
     'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem2.jpg',
     'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem.jpg',
     'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem4.png',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/Our%203D%20Construction%20Ecosystem%205.jpg',
+    '/images/sustainable.jpeg',
   ];
 
   const ecosystemData = [
@@ -39,8 +39,8 @@ const Ecosystem = () => {
             <div
   className="w-full h-full"
   style={{
-    background: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url(${item.image}) center/contain no-repeat`,
-    backgroundColor: '#f5f5f5'
+    background: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url(${item.image}) center/${index === 0 || index === ecosystemData.length - 1 ? 'cover' : 'contain'} no-repeat`,
+    backgroundColor: index === 0 || index === ecosystemData.length - 1 ? 'transparent' : '#f5f5f5'
   }}
 >
               <div className="absolute top-4 left-4 bg-white rounded-full px-3 py-2 font-outfit font-semibold text-card-mobile md:text-card text-[#0D192D] border border-white/15">

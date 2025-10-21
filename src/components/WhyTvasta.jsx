@@ -64,7 +64,8 @@ const WhyTvasta = () => {
             >
               <div className="absolute bottom-6 left-6 flex flex-col gap-3">
                 <h3 className="font-outfit font-normal text-subtitle-mobile md:text-subtitle text-white max-w-[332px]">
-                  7 States Covered in India
+                  Global Footprint<br/>
+                  <span className="text-card-mobile md:text-card">Asia Pacific - Middle East - USA</span>
                 </h3>
               </div>
             </div>

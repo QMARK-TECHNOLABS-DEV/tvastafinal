@@ -22,6 +22,11 @@ const FoundersTeam = () => {
       name: "Kalyan",
       position: "CTO Construction R&D",
       image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Kalyan.png"
+    },
+    {
+      name: "Jay Prakash",
+      position: "CFO",
+      image: "/images/jayprakash.jpeg"
     }
   ];
 
