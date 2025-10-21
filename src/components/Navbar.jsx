@@ -46,16 +46,26 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <span className={`font-outfit text-[14px] ${
-              isActive('/who-we-are') 
-                ? 'text-[#E63946] font-semibold' 
-                : 'text-[#0D192D] font-medium'
-            }`}>
+            <motion.span 
+              className={`font-outfit text-[14px] ${
+                isActive('/who-we-are') 
+                  ? 'text-[#E63946] font-semibold' 
+                  : 'text-[#0D192D] font-medium'
+              }`}
+              whileHover={{ color: "#E63946" }}
+              transition={{ duration: 0.2 }}
+            >
               Who We Are
-            </span>
-            <svg className={`w-6 h-6 ${isActive('/who-we-are') ? 'text-[#E63946]' : 'text-[#0D192D]'}`} fill="currentColor" viewBox="0 0 24 24">
+            </motion.span>
+            <motion.svg 
+              className={`w-6 h-6 ${isActive('/who-we-are') ? 'text-[#E63946]' : 'text-[#0D192D]'}`} 
+              fill="currentColor" 
+              viewBox="0 0 24 24"
+              whileHover={{ color: "#E63946" }}
+              transition={{ duration: 0.2 }}
+            >
               <path d="M7 10l5 5 5-5z"/>
-            </svg>
+            </motion.svg>
           </motion.div>
         </Link>
         <Link to="/our-technology">
@@ -64,69 +74,103 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <span className={`font-outfit text-[14px] ${
-              isActive('/our-technology') 
-                ? 'text-[#E63946] font-semibold' 
-                : 'text-[#0D192D] font-medium'
-            }`}>
+            <motion.span 
+              className={`font-outfit text-[14px] ${
+                isActive('/our-technology') 
+                  ? 'text-[#E63946] font-semibold' 
+                  : 'text-[#0D192D] font-medium'
+              }`}
+              whileHover={{ color: "#E63946" }}
+              transition={{ duration: 0.2 }}
+            >
               Our Technology
-            </span>
-            <svg className={`w-6 h-6 ${isActive('/our-technology') ? 'text-[#E63946]' : 'text-[#0D192D]'}`} fill="currentColor" viewBox="0 0 24 24">
+            </motion.span>
+            <motion.svg 
+              className={`w-6 h-6 ${isActive('/our-technology') ? 'text-[#E63946]' : 'text-[#0D192D]'}`} 
+              fill="currentColor" 
+              viewBox="0 0 24 24"
+              whileHover={{ color: "#E63946" }}
+              transition={{ duration: 0.2 }}
+            >
               <path d="M7 10l5 5 5-5z"/>
-            </svg>
+            </motion.svg>
           </motion.div>
         </Link>
         <Link to="/projects">
-          <motion.span 
-            className={`font-outfit text-[14px] cursor-pointer ${
-              isActive('/projects') 
-                ? 'text-[#E63946] font-semibold' 
-                : 'text-[#0D192D] font-medium'
-            }`}
+          <motion.div 
+            className="cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            Projects
-          </motion.span>
+            <motion.span 
+              className={`font-outfit text-[14px] ${
+                isActive('/projects') 
+                  ? 'text-[#E63946] font-semibold' 
+                  : 'text-[#0D192D] font-medium'
+              }`}
+              whileHover={{ color: "#E63946" }}
+              transition={{ duration: 0.2 }}
+            >
+              Projects
+            </motion.span>
+          </motion.div>
         </Link>
         <Link to="/products">
-          <motion.span 
-            className={`font-outfit text-[14px] cursor-pointer ${
-              isActive('/products') 
-                ? 'text-[#E63946] font-semibold' 
-                : 'text-[#0D192D] font-medium'
-            }`}
-            whileHover={{ scale: 1.05, color: "#E63946" }}
+          <motion.div 
+            className="cursor-pointer"
+            whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            Products
-          </motion.span>
+            <motion.span 
+              className={`font-outfit text-[14px] ${
+                isActive('/products') 
+                  ? 'text-[#E63946] font-semibold' 
+                  : 'text-[#0D192D] font-medium'
+              }`}
+              whileHover={{ color: "#E63946" }}
+              transition={{ duration: 0.2 }}
+            >
+              Products
+            </motion.span>
+          </motion.div>
         </Link>
         <Link to="/tvasta-stories">
-          <motion.span 
-            className={`font-outfit text-[14px] cursor-pointer ${
-              isActive('/tvasta-stories') 
-                ? 'text-[#E63946] font-semibold' 
-                : 'text-[#0D192D] font-medium'
-            }`}
-            whileHover={{ scale: 1.05, color: "#E63946" }}
+          <motion.div 
+            className="cursor-pointer"
+            whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            TVASTA Stories
-          </motion.span>
+            <motion.span 
+              className={`font-outfit text-[14px] ${
+                isActive('/tvasta-stories') 
+                  ? 'text-[#E63946] font-semibold' 
+                  : 'text-[#0D192D] font-medium'
+              }`}
+              whileHover={{ color: "#E63946" }}
+              transition={{ duration: 0.2 }}
+            >
+              TVASTA Stories
+            </motion.span>
+          </motion.div>
         </Link>
         <Link to="/faqs">
-          <motion.span 
-            className={`font-outfit text-[14px] cursor-pointer ${
-              isActive('/faqs') 
-                ? 'text-[#E63946] font-semibold' 
-                : 'text-[#0D192D] font-medium'
-            }`}
-            whileHover={{ scale: 1.05, color: "#E63946" }}
+          <motion.div 
+            className="cursor-pointer"
+            whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            FAQ's
-          </motion.span>
+            <motion.span 
+              className={`font-outfit text-[14px] ${
+                isActive('/faqs') 
+                  ? 'text-[#E63946] font-semibold' 
+                  : 'text-[#0D192D] font-medium'
+              }`}
+              whileHover={{ color: "#E63946" }}
+              transition={{ duration: 0.2 }}
+            >
+              FAQ's
+            </motion.span>
+          </motion.div>
         </Link>
       </div>
 

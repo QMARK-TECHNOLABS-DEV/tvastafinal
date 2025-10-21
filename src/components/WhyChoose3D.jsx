@@ -23,11 +23,11 @@ const WhyChoose3D = () => {
           {/* Faster Time to Build */}
           <SlideInLeft delay={0.4} duration={0.8}>
             <motion.div 
-              className="flex flex-col gap-5 w-full lg:w-[597px]"
+              className="flex flex-col gap-5 w-full max-w-[597px] lg:w-[597px]"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
+              <div className="relative w-full h-[250px] sm:h-[280px] md:h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d1.jpg" 
                   alt="Faster Time to Build" 
@@ -48,11 +48,11 @@ const WhyChoose3D = () => {
           {/* Design Without Limits */}
           <SlideInRight delay={0.6} duration={0.8}>
             <motion.div 
-              className="flex flex-col gap-5 w-full lg:w-[597px]"
+              className="flex flex-col gap-5 w-full max-w-[597px] lg:w-[597px]"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
+              <div className="relative w-full h-[250px] sm:h-[280px] md:h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d2.jpg" 
                   alt="Design Without Limits" 
@@ -76,11 +76,11 @@ const WhyChoose3D = () => {
           {/* Lower Material Waste */}
           <SlideInLeft delay={0.8} duration={0.8}>
             <motion.div 
-              className="flex flex-col gap-5 w-full lg:w-[597px]"
+              className="flex flex-col gap-5 w-full max-w-[597px] lg:w-[597px]"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
+              <div className="relative w-full h-[250px] sm:h-[280px] md:h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/sdsd.png" 
                   alt="Lower Material Waste" 
@@ -101,11 +101,11 @@ const WhyChoose3D = () => {
           {/* Built to Withstand */}
           <SlideInRight delay={1.0} duration={0.8}>
             <motion.div 
-              className="flex flex-col gap-5 w-full lg:w-[597px]"
+              className="flex flex-col gap-5 w-full max-w-[597px] lg:w-[597px]"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-full h-[318px] rounded-[10px] overflow-hidden group">
+              <div className="relative w-full h-[250px] sm:h-[280px] md:h-[318px] rounded-[10px] overflow-hidden group">
                 <img 
                   src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whychose3d4.png" 
                   alt="Built to Withstand" 
