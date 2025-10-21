@@ -72,8 +72,8 @@ const Footer = ({ hideContactForm = false }) => {
             </div>
 
             {/* Submit Button */}
-            <button className="flex justify-center items-center px-6 py-5 bg-white rounded-[35px]">
-              <span className="font-outfit font-medium text-[24px] leading-[130%] text-[#1D3357]">
+            <button className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-white rounded-[35px]">
+              <span className="font-outfit font-semibold text-sm sm:text-base leading-[23px] text-[#1D3357]">
                 Send Message
               </span>
             </button>

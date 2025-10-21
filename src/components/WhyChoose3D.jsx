@@ -136,11 +136,16 @@ const WhyChoose3D = () => {
             <span className="font-outfit font-semibold text-sm sm:text-base leading-[23px] text-white">
               See How It Works
             </span>
-            <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-              <svg className="w-4 h-4 text-[#E63946]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </div>
+            <svg 
+              className="w-5 h-5 text-white" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </AnimatedButton>
         </div>
       </SlideInUp>

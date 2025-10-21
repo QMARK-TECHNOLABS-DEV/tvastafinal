@@ -1,11 +1,7 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
 import { FadeIn } from '../../utils/animations.jsx';
-import { useHorizontalScroll } from '../../hooks/useHorizontalScroll';
 
 const OurStory = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
   const storyText1 =
     "Founded in 2016 at IIT-Madras, Tvasta emerged with a vision to redefine civil construction through deep-tech innovation. In 2020, we unveiled India's first 3D-printed house, turning a research milestone into an industry-defining moment.";
 
@@ -14,26 +10,6 @@ const OurStory = () => {
 
   const words1 = storyText1.split(' ');
   const words2 = storyText2.split(' ');
-
-  // Detect mobile screen size
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024);
-    };
-    
-    handleResize(); // Check on mount
-    window.addEventListener('resize', handleResize);
-    
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Use horizontal scroll hook (disabled on mobile)
-  const { sectionRef, containerRef } = useHorizontalScroll({
-    enabled: !isMobile,
-    gap: 24, // 24px gap between images (gap-6 in Tailwind)
-    snap: true,
-    itemsCount: 3, // Three images
-  });
 
   return (
     <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
@@ -95,79 +71,36 @@ const OurStory = () => {
       </div>
 
       {/* Images Section */}
-      {isMobile ? (
-        // Mobile view: Normal grid layout
-        <div className="w-full mt-14">
-          <div className="grid grid-cols-4 gap-6">
-            <motion.div
-              className="col-span-4 md:col-span-3 w-full h-[300px] sm:h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory1.png"
-                alt="Our Story 1"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            <motion.div
-              className="col-span-4 md:col-span-1 w-full h-[300px] sm:h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory2.png"
-                alt="Our Story 2"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            <motion.div
-              className="col-span-4 w-full h-[300px] sm:h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src="/images/ourstory3.jpg"
-                alt="Our Story 3"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-          </div>
+      <div className="w-full mt-14">
+        <div className="grid grid-cols-4 gap-6">
+          <motion.div
+            className="col-span-4 md:col-span-3 w-full h-[300px] sm:h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory1.png"
+              alt="Our Story 1"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+          <motion.div
+            className="col-span-4 md:col-span-1 w-full h-[300px] sm:h-[400px] lg:h-[468px] rounded-[12px] overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory2.png"
+              alt="Our Story 2"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
         </div>
-      ) : (
-        // Desktop view: Horizontal scroll with GSAP
-        <div ref={sectionRef} className="w-full mt-14 h-screen flex items-center overflow-hidden">
-          <div ref={containerRef} className="flex gap-6 will-change-transform">
-            <div className="flex-shrink-0 w-[75vw] h-[468px] rounded-[12px] overflow-hidden">
-              <img
-                src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory1.png"
-                alt="Our Story 1"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex-shrink-0 w-[25vw] h-[468px] rounded-[12px] overflow-hidden">
-              <img
-                src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory2.png"
-                alt="Our Story 2"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex-shrink-0 w-[60vw] h-[468px] rounded-[12px] overflow-hidden">
-              <img
-                src="/images/ourstory3.jpg"
-                alt="Our Story 3"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 };

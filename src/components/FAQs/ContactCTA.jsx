@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FadeIn, AnimatedButton } from '../../utils/animations.jsx';
+import { FadeIn, AnimatedButton, SlideInLeft, SlideInRight } from '../../utils/animations.jsx';
 
 const ContactCTA = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  
+  const images = [
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
-    <section className="flex flex-row items-center gap-[60px] w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="flex flex-col justify-center items-start gap-[10px] flex-1 max-w-[712px]">
-        {/* Text Content */}
-        <div className="flex flex-col items-start gap-[28px] w-full">
-          <FadeIn delay={0.2}>
+    <section className="flex flex-col lg:flex-row items-center gap-[40px] lg:gap-[60px] w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Text Content */}
+      <SlideInLeft delay={0.2} duration={0.8}>
+        <div className="flex flex-col justify-center items-start gap-[28px] w-full lg:w-[712px]">
+          <FadeIn delay={0.3}>
             <h2 className="text-subtitle-mobile md:text-subtitle font-semibold leading-[130%] tracking-[-0.03em] text-[#0D192D] font-['Outfit']">
               Got more questions?
             </h2>
@@ -21,40 +37,63 @@ const ContactCTA = () => {
           </FadeIn>
 
           {/* Contact Button */}
-          <FadeIn delay={0.6}>
-            <AnimatedButton className="flex flex-row justify-center items-center py-4 px-7 gap-[10px] w-[166px] h-[52px] bg-[#1D3357] rounded-[20px] hover:bg-[#2a4a73] transition-all duration-300 group">
-              <span className="text-white font-semibold text-card-mobile md:text-card leading-[20px] font-['Outfit']">
+          <FadeIn delay={0.5}>
+            <AnimatedButton 
+              className="flex items-center justify-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[35px] hover:bg-[#2a4a73] transition-all duration-300 whitespace-nowrap"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="text-white font-semibold text-sm sm:text-base leading-[23px] font-['Outfit']">
                 Contact Us
               </span>
-              <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                <svg className="w-3 h-3 text-[#1D3357]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </div>
+              <svg 
+                className="w-5 h-5 text-white" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                viewBox="0 0 24 24" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </AnimatedButton>
           </FadeIn>
         </div>
-      </div>
+      </SlideInLeft>
 
-      {/* Image Container */}
-      <FadeIn delay={0.8} className="flex-none w-[508px] h-[400px] hidden lg:block">
-        <div 
-          className="w-full h-full bg-gray-200 rounded-[24px] bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/FAQs/contactimg.jpg'), linear-gradient(135deg, #f5f5f5, #e0e0e0)`
-          }}
-        >
-          {/* Fallback content if image is not available */}
-          {/* <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300 rounded-[24px]">
-            <div className="text-center p-8">
-              <svg className="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <p className="text-gray-500 font-['Outfit']">Contact Support</p>
-            </div>
-          </div> */}
+      {/* Right Image Slider */}
+      <SlideInRight delay={0.6} duration={0.8} className="flex-shrink-0 w-full lg:w-auto">
+        <div className="relative w-full sm:w-[400px] md:w-full lg:w-[508px] h-[300px] sm:h-[360px] md:h-[380px] lg:h-[400px] rounded-[24px] overflow-hidden">
+          {images.map((image, index) => (
+            <motion.img
+              key={index}
+              src={image}
+              alt={`Contact ${index + 1}`}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: activeSlide === index ? 1 : 0,
+                scale: activeSlide === index ? 1 : 1.1
+              }}
+              transition={{ duration: 0.7 }}
+            />
+          ))}
+          
+          {/* Navigation Dots */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveSlide(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  activeSlide === index ? 'bg-white w-8' : 'bg-white/50'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
-      </FadeIn>
+      </SlideInRight>
     </section>
   );
 };

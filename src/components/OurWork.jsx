@@ -7,7 +7,7 @@ const OurWork = () => {
           <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title leading-[120%] text-[#0D192D] text-center md:text-left">
             Our Work
           </h2>
-          <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[20px] text-white bg-[#1D3357] px-4 py-2 rounded-full cursor-pointer">
+          <span className="font-outfit font-semibold text-xs md:text-sm leading-[20px] text-white bg-[#1D3357] px-4 py-2 rounded-full cursor-pointer">
             View All Work
           </span>
         </div>

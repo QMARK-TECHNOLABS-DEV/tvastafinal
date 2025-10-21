@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, slideInFromLeft, staggerContainer } from '../../utils/animations';
 
 const BuildTogether = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  
+  const images = [
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section className="w-full py-[60px] sm:py-[70px] md:py-[80px] bg-white">
       <motion.div
@@ -42,20 +58,45 @@ const BuildTogether = () => {
           </motion.button>
         </motion.div>
 
-        {/* Right Image */}
+        {/* Right Image Slider */}
         <motion.div
           variants={slideInFromLeft}
           custom={1}
-          className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[508px] h-[250px] sm:h-[280px] md:h-[320px] lg:h-[350px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden lg:flex-none"
+          className="flex-shrink-0 w-full lg:w-auto"
         >
-          <div 
-            className="w-full h-full"
-            style={{
-              backgroundImage: `url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/letsbuild.jpg')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
+          <div className="relative w-full sm:w-[400px] md:w-full lg:w-[508px] h-[250px] sm:h-[280px] md:h-[320px] lg:h-[350px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden">
+            {images.map((image, index) => (
+              <motion.div
+                key={index}
+                className="absolute top-0 left-0 w-full h-full"
+                style={{
+                  backgroundImage: `url('${image}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: activeSlide === index ? 1 : 0,
+                  scale: activeSlide === index ? 1 : 1.1
+                }}
+                transition={{ duration: 0.7 }}
+              />
+            ))}
+            
+            {/* Navigation Dots */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveSlide(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    activeSlide === index ? 'bg-white w-8' : 'bg-white/50'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </section>

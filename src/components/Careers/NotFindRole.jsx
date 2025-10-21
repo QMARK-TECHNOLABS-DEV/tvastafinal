@@ -1,11 +1,28 @@
-import React from 'react';
-import { FadeIn, SlideInUp, AnimatedButton } from '../../utils/animations.jsx';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { FadeIn, SlideInUp, SlideInLeft, SlideInRight, AnimatedButton } from '../../utils/animations.jsx';
 
 const NotFindRole = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  
+  const images = [
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png',
+    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png'
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <div className="flex flex-col lg:flex-row items-center gap-[40px] sm:gap-[50px] lg:gap-[60px] w-full max-w-[1280px] px-4 sm:px-6 lg:px-8 xl:px-0">
       {/* Text Content */}
-      <SlideInUp delay={0.2} duration={0.8}>
+      <SlideInLeft delay={0.2} duration={0.8}>
         <div className="flex flex-col justify-center items-start gap-[10px] w-full lg:w-[712px]">
           <div className="flex flex-col items-start gap-[28px] w-full">
             {/* Title */}
@@ -31,36 +48,63 @@ const NotFindRole = () => {
           </div>
 
           {/* Contact Button */}
-          <SlideInUp delay={1.0} duration={0.6}>
+          <FadeIn delay={1.0} duration={0.6}>
             <AnimatedButton 
-              className="flex flex-row justify-center items-center py-[14px] px-[24px] sm:py-[15px] sm:px-[26px] lg:py-[16px] lg:px-[28px] gap-[10px] bg-[#1D3357] rounded-[20px] mt-4 sm:mt-5 lg:mt-6"
+              className="flex items-center justify-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[35px] hover:bg-[#2a4a73] transition-all duration-300 whitespace-nowrap mt-4"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[20px] text-white">
+              <span className="font-outfit font-semibold text-sm sm:text-base leading-[23px] text-white">
                 Contact Us
               </span>
-              
-              {/* Small white circle indicator */}
-              <div className="w-[20px] h-[20px] bg-white rounded-[63px]"></div>
+              <svg 
+                className="w-5 h-5 text-white" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                viewBox="0 0 24 24" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </AnimatedButton>
-          </SlideInUp>
+          </FadeIn>
         </div>
-      </SlideInUp>
+      </SlideInLeft>
 
-      {/* Image */}
-      <SlideInUp delay={0.4} duration={0.8}>
-        <div className="w-full sm:w-[400px] lg:w-[450px] xl:w-[508px] h-[250px] sm:h-[300px] lg:h-[350px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] lg:rounded-[24px] overflow-hidden">
-          <img 
-            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/careers/contactimg.jpg"
-            alt="Contact us - Join Tvasta team"
-            className="w-full h-full object-cover object-center"
-            style={{
-              backgroundColor: '#D9D9D9'
-            }}
-          />
+      {/* Right Image Slider */}
+      <SlideInRight delay={0.4} duration={0.8} className="flex-shrink-0 w-full lg:w-auto">
+        <div className="relative w-full sm:w-[400px] md:w-full lg:w-[508px] h-[300px] sm:h-[360px] md:h-[380px] lg:h-[400px] rounded-[24px] overflow-hidden">
+          {images.map((image, index) => (
+            <motion.img
+              key={index}
+              src={image}
+              alt={`Careers ${index + 1}`}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: activeSlide === index ? 1 : 0,
+                scale: activeSlide === index ? 1 : 1.1
+              }}
+              transition={{ duration: 0.7 }}
+            />
+          ))}
+          
+          {/* Navigation Dots */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveSlide(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  activeSlide === index ? 'bg-white w-8' : 'bg-white/50'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
-      </SlideInUp>
+      </SlideInRight>
     </div>
   );
 };
