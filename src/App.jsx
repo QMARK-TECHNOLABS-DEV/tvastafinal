@@ -1,14 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import WhoAreWePage from './pages/WhoAreWePage';
-import OurTechnologyPage from './pages/OurTechnologyPage';
-import ProjectsPage from './pages/ProjectsPage';
-import ProductsPage from './pages/ProductsPage';
-import TvastaStoriesPage from './pages/TvastaStoriesPage';
-import FAQsPage from './pages/FAQsPage';
-import ContactUsPage from './pages/ContactUsPage';
-import CareersPage from './pages/CareersPage';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import WhoAreWePage from "./pages/WhoAreWePage";
+import OurTechnologyPage from "./pages/OurTechnologyPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ProductsPage from "./pages/ProductsPage";
+import TvastaStoriesPage from "./pages/TvastaStoriesPage";
+import FAQsPage from "./pages/FAQsPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import CareersPage from "./pages/CareersPage";
+import PrintersPage from "./pages/PrintersPage";
+import GantryPrinters from "./pages/GantryPrinters";
 
 export default function App() {
   return (
@@ -23,6 +25,11 @@ export default function App() {
         <Route path="/faqs" element={<FAQsPage />} />
         <Route path="/contact-us" element={<ContactUsPage />} />
         <Route path="/careers" element={<CareersPage />} />
+        <Route path="/our-technology/printers" element={<PrintersPage />} />
+        <Route
+          path="/our-technology/printers/gantry-based"
+          element={<GantryPrinters />}
+        />
       </Routes>
     </Router>
   );
