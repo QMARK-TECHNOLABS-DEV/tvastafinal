@@ -1,7 +1,9 @@
 import React from "react";
 import { FadeIn, SlideInLeft, SlideInRight } from "../../utils/animations.jsx";
+import { useNavigate } from "react-router-dom";
 
 const ProvenPerformance = () => {
+  const navigate = useNavigate();
   const stats = [
     {
       id: 1,
@@ -76,7 +78,13 @@ const ProvenPerformance = () => {
 
           {/* CTA Button */}
           <FadeIn delay={0.8} duration={0.8}>
-            <button className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group">
+            <button
+              onClick={() => {
+                navigate("/projects");
+                window.scrollTo(0, 0);
+              }}
+              className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group"
+            >
               <span className="text-body-mobile md:text-body font-semibold text-white">
                 View Projects
               </span>

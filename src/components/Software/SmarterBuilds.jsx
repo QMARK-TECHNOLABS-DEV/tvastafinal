@@ -5,10 +5,8 @@ import {
   SlideInRight,
   AnimatedCard,
 } from "../../utils/animations.jsx";
-import { useNavigate } from "react-router-dom";
 
-const NeedMoreFlexibility = () => {
-  const navigate = useNavigate();
+const SmarterBuilds = () => {
   return (
     <section className="flex flex-col items-center w-full px-4 md:px-8 lg:px-20 py-[60px] md:py-[100px]">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-[40px] md:gap-[60px] lg:gap-[80px] w-full max-w-[1280px] mx-auto">
@@ -16,27 +14,21 @@ const NeedMoreFlexibility = () => {
         <div className="w-full lg:w-1/2 flex flex-col gap-[24px] md:gap-[30px]">
           <SlideInLeft delay={0.2} duration={0.8}>
             <h2 className="text-subtitle-mobile md:text-subtitle font-semibold leading-[1.25] text-[#0D192D] tracking-[-0.02em]">
-              Need More Design Flexibility?
+              Greener Materials, Smarter Builds
             </h2>
           </SlideInLeft>
 
           <FadeIn delay={0.4} duration={0.8}>
             <p className="text-body-mobile md:text-card font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
-              Explore our Robotic Arm Printers for complex, compact builds.
+              Explore Tvasta’s eco-friendly concrete.
             </p>
           </FadeIn>
 
           {/* CTA Button */}
           <FadeIn delay={0.6} duration={0.8}>
-            <button
-              onClick={() => {
-                navigate("/our-technology/printers/robotic-arm-based");
-                window.scrollTo(0, 0);
-              }}
-              className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group"
-            >
+            <button className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group">
               <span className="text-body-mobile md:text-body font-semibold text-white">
-                View Robotic Arm Printers
+                Discover Sustainable Materials
               </span>
               <svg
                 className="w-[16px] h-[16px] text-white transition-transform duration-300 group-hover:translate-x-1"
@@ -65,7 +57,7 @@ const NeedMoreFlexibility = () => {
             }}
           >
             <img
-              src="/images/roboticarmbased.jpg"
+              src="/images/proven2.jpg"
               alt="Robotic Arm Printers"
               className="w-full h-full object-cover"
             />
@@ -76,4 +68,4 @@ const NeedMoreFlexibility = () => {
   );
 };
 
-export default NeedMoreFlexibility;
+export default SmarterBuilds;
