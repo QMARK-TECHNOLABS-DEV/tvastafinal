@@ -13,6 +13,8 @@ import PrintersPage from "./pages/PrintersPage";
 import GantryPrinters from "./pages/GantryPrinters";
 import RoboticPrinters from "./pages/RoboticPrinters";
 import TvastaSoftware from "./pages/TvastaSoftware";
+import Materials from "./pages/Materials";
+import AccessoriesandTurnkey from "./pages/AccessoriesandTurnkey";
 
 export default function App() {
   return (
@@ -37,6 +39,11 @@ export default function App() {
           element={<RoboticPrinters />}
         />
         <Route path="/our-technology/software" element={<TvastaSoftware />} />
+        <Route path="/our-technology/materials" element={<Materials />} />
+        <Route
+          path="/our-technology/accessories"
+          element={<AccessoriesandTurnkey />}
+        />
       </Routes>
     </Router>
   );
