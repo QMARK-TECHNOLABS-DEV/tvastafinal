@@ -15,6 +15,7 @@ import RoboticPrinters from "./pages/RoboticPrinters";
 import TvastaSoftware from "./pages/TvastaSoftware";
 import Materials from "./pages/Materials";
 import AccessoriesandTurnkey from "./pages/AccessoriesandTurnkey";
+import ProjectCaseStudy from "./pages/ProjectCaseStudy";
 
 export default function App() {
   return (
@@ -44,6 +45,7 @@ export default function App() {
           path="/our-technology/accessories"
           element={<AccessoriesandTurnkey />}
         />
+        <Route path="/projects/casestudy" element={<ProjectCaseStudy />} />
       </Routes>
     </Router>
   );

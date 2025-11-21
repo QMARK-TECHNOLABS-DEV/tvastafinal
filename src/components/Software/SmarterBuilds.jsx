@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FadeIn,
   SlideInLeft,
@@ -7,6 +8,12 @@ import {
 } from "../../utils/animations.jsx";
 
 const SmarterBuilds = () => {
+  const navigate = useNavigate();
+
+  const handleMaterialsClick = () => {
+    navigate("/our-technology/materials");
+    window.scrollTo(0, 0);
+  };
   return (
     <section className="flex flex-col items-center w-full px-4 md:px-8 lg:px-20 py-[60px] md:py-[100px]">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-[40px] md:gap-[60px] lg:gap-[80px] w-full max-w-[1280px] mx-auto">
@@ -26,7 +33,10 @@ const SmarterBuilds = () => {
 
           {/* CTA Button */}
           <FadeIn delay={0.6} duration={0.8}>
-            <button className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group">
+            <button
+              onClick={handleMaterialsClick}
+              className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group"
+            >
               <span className="text-body-mobile md:text-body font-semibold text-white">
                 Discover Sustainable Materials
               </span>
