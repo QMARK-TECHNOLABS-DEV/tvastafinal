@@ -1,31 +1,48 @@
-import { FadeIn, SlideInUp, StaggeredList } from '../utils/animations.jsx';
+import { FadeIn, SlideInUp, StaggeredList } from "../utils/animations.jsx";
 
 const Ecosystem = () => {
+  const routeMap = {
+    "3D Printers": "/our-technology/printers",
+    "Accessories & Turnkey Services": "/our-technology/accessories",
+    Software: "/our-technology/software",
+    "Sustainable Materials": "/our-technology/materials",
+  };
+  const navigateTo = (tag) => {
+    window.scrollTo(0, 0);
+    window.location.href = routeMap[tag];
+  };
   const ecosystemItems = [
     {
       title: "3D Printers",
-      description: "Precision gantries and robotic arms built for scalable, on-site construction.",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/3d%20ecosystem.jpg",
-      tag: "3D Printers"
+      description:
+        "Precision gantries and robotic arms built for scalable, on-site construction.",
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/3d%20ecosystem.jpg",
+      tag: "3D Printers",
     },
     {
-      title: "Accessories & Turnkey Services", 
-      description: "End-to-end support from hardware to full project execution.",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Accessories%20&%20Turnkey%20Services.png",
-      tag: "Accessories & Turnkey Services"
+      title: "Accessories & Turnkey Services",
+      description:
+        "End-to-end support from hardware to full project execution.",
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Accessories%20&%20Turnkey%20Services.png",
+      tag: "Accessories & Turnkey Services",
     },
     {
       title: "Software",
-      description: "Advanced tools for slicing, simulation, and real-time print control.",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Software.png",
-      tag: "Software"
+      description:
+        "Advanced tools for slicing, simulation, and real-time print control.",
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Software.png",
+      tag: "Software",
     },
     {
       title: "Sustainable Materials",
-      description: "Eco-friendly mixes engineered for strength, speed, and durability.",
+      description:
+        "Eco-friendly mixes engineered for strength, speed, and durability.",
       image: "/images/newsustain.jpeg",
-      tag: "Sustainable Materials"
-    }
+      tag: "Sustainable Materials",
+    },
   ];
 
   return (
@@ -41,13 +58,14 @@ const Ecosystem = () => {
 
           <FadeIn delay={0.2} className="lg:w-[60%]">
             <p className="font-outfit font-normal text-card-mobile md:text-description leading-[30px] text-[#1D3357]">
-              From industrial-grade printers to automation-ready software.Tvasta delivers the full stack for next-gen construction.
+              From industrial-grade printers to automation-ready software.Tvasta
+              delivers the full stack for next-gen construction.
             </p>
           </FadeIn>
         </div>
 
         {/* Ecosystem Cards */}
-        <StaggeredList 
+        <StaggeredList
           staggerDelay={0.15}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
         >
@@ -56,14 +74,18 @@ const Ecosystem = () => {
               key={index}
               delay={index * 0.1}
               className="relative w-full h-[380px] lg:h-[420px] rounded-[20px] overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300"
+              onClick={() => navigateTo(item.tag)}
+              role="button"
+              tabIndex={0}
+              aria-label={`Go to ${item.tag}`}
             >
-              <div 
+              <div
                 className="w-full h-full bg-cover bg-center relative"
                 style={{
                   backgroundImage: `url('${item.image}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
                 }}
               >
                 {/* Gradient overlay */}

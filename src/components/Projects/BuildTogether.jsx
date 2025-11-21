@@ -1,15 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { fadeInUp, slideInFromLeft, staggerContainer } from '../../utils/animations';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  fadeInUp,
+  slideInFromLeft,
+  staggerContainer,
+} from "../../utils/animations";
 
 const BuildTogether = () => {
+  const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState(0);
-  
+
+  const handleContactClick = () => {
+    navigate("/contact-us");
+    window.scrollTo(0, 0);
+  };
+
   const images = [
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png'
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png",
   ];
 
   useEffect(() => {
@@ -39,17 +50,19 @@ const BuildTogether = () => {
           >
             Let's Build Something Together
           </motion.h2>
-          
+
           <motion.p
             variants={fadeInUp}
             className="text-card-mobile md:text-description font-normal leading-[30px] text-[#1D3357] w-full font-['Outfit']"
           >
-            Have a project in mind? Connect with us to bring your vision to life.
+            Have a project in mind? Connect with us to bring your vision to
+            life.
           </motion.p>
 
           {/* CTA Button */}
           <motion.button
             variants={fadeInUp}
+            onClick={handleContactClick}
             className="flex flex-row justify-center items-center py-3 sm:py-3.5 md:py-4 px-5 sm:px-6 md:px-7 gap-[8px] sm:gap-[9px] md:gap-[10px] bg-[#1D3357] rounded-[35px] group hover:bg-[#0D192D] transition-colors duration-300 whitespace-nowrap"
           >
             <span className="text-card-mobile md:text-card font-medium leading-[130%] text-white font-['Outfit']">
@@ -71,18 +84,18 @@ const BuildTogether = () => {
                 className="absolute top-0 left-0 w-full h-full"
                 style={{
                   backgroundImage: `url('${image}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
                 initial={{ opacity: 0 }}
-                animate={{ 
+                animate={{
                   opacity: activeSlide === index ? 1 : 0,
-                  scale: activeSlide === index ? 1 : 1.1
+                  scale: activeSlide === index ? 1 : 1.1,
                 }}
                 transition={{ duration: 0.7 }}
               />
             ))}
-            
+
             {/* Navigation Dots */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
               {images.map((_, index) => (
@@ -90,7 +103,7 @@ const BuildTogether = () => {
                   key={index}
                   onClick={() => setActiveSlide(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    activeSlide === index ? 'bg-white w-8' : 'bg-white/50'
+                    activeSlide === index ? "bg-white w-8" : "bg-white/50"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

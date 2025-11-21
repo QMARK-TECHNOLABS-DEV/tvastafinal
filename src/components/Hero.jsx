@@ -1,22 +1,28 @@
-import React from 'react';
-import { AnimatedButton, FadeIn, SlideInUp } from '../utils/animations.jsx';
+import React from "react";
+import { AnimatedButton, FadeIn, SlideInUp } from "../utils/animations.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Hero = React.memo(() => {
+  const navigate = useNavigate();
   return (
     <div className="relative w-full h-[818px] overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
-        <video 
-          autoPlay 
-          muted 
-          loop 
+        <video
+          autoPlay
+          muted
+          loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           style={{
-            background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45))'
+            background:
+              "linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45))",
           }}
         >
-          <source src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/herovideo.mp4" type="video/mp4" />
+          <source
+            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/herovideo.mp4"
+            type="video/mp4"
+          />
         </video>
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-45"></div>
@@ -45,7 +51,11 @@ const Hero = React.memo(() => {
           {/* CTA Button */}
           <SlideInUp delay={0.9} duration={0.6}>
             <div className="flex items-start gap-10">
-              <AnimatedButton 
+              <AnimatedButton
+                onClick={() => {
+                  navigate("/our-technology/printers");
+                  window.scrollTo(0, 0);
+                }}
                 className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[66px] btn-animate whitespace-nowrap"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -53,15 +63,19 @@ const Hero = React.memo(() => {
                 <span className="font-outfit font-semibold text-sm sm:text-base leading-[18px] text-white">
                   Explore Printers
                 </span>
-                <svg 
-                  className="w-5 h-5 text-white flex-shrink-0" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  className="w-5 h-5 text-white flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 12h14M12 5l7 7-7 7"
+                  />
                 </svg>
               </AnimatedButton>
             </div>
@@ -72,6 +86,6 @@ const Hero = React.memo(() => {
   );
 });
 
-Hero.displayName = 'Hero';
+Hero.displayName = "Hero";
 
 export default Hero;
