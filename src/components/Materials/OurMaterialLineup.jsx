@@ -37,7 +37,7 @@ const OurMaterialLineup = () => {
             </h2>
           </FadeIn>
           <FadeIn delay={0.3} duration={0.8}>
-            <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
+            <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
               Our 30 printable mixes support diverse build needs
             </p>
           </FadeIn>

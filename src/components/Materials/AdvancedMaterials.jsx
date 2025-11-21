@@ -53,7 +53,7 @@ const AdvancedMaterials = () => {
             </h2>
           </FadeIn>
           <FadeIn delay={0.3} duration={0.8}>
-            <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
+            <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
               Our Centre For Advanced Construction Materials (CACM) Powers
               Innovation In Printable Concrete. Every Mix Is Lab-Validated For
               Reliability In Real-World Conditions.
@@ -113,7 +113,7 @@ const AdvancedMaterials = () => {
                   </h3>
                 </FadeIn>
                 <FadeIn delay={0.5 + index * 0.1} duration={0.8}>
-                  <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-[#4A4A4A] tracking-[-0.02em]">
+                  <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-[#4A4A4A] tracking-[-0.02em]">
                     {lab.description}
                   </p>
                 </FadeIn>

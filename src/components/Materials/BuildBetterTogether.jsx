@@ -27,7 +27,7 @@ const BuildBetterTogether = () => {
           </SlideInLeft>
 
           <FadeIn delay={0.3} duration={0.8}>
-            <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-[#4A4A4A] tracking-[-0.02em]">
+            <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-[#4A4A4A] tracking-[-0.02em]">
               See how Tvasta's sustainable mixes can be tailored to your next
               construction project.
             </p>

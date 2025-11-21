@@ -9,12 +9,12 @@ import ReadyToBuildSmarter from "./ReadyToBuildSmarter.jsx";
 
 const AccessoriesandTurnkeyPage = () => {
   return (
-    <div>
+    <div className="w-full min-h-screen bg-white">
       <PageTransition className="relative w-full min-h-screen bg-white">
         <Navbar />
 
         {/* Main Content */}
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full px-4 md:px-6 lg:px-8">
           <Hero />
           <WhatWeProvide />
           <FieldReadyAccessories />

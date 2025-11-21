@@ -40,7 +40,7 @@ const FieldReadyAccessories = () => {
             </h2>
           </FadeIn>
           <FadeIn delay={0.3} duration={0.8}>
-            <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
+            <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
               Engineered To Ensure Consistent Quality, Reduced Downtime, And
               Faster Delivery.
             </p>
@@ -52,7 +52,7 @@ const FieldReadyAccessories = () => {
           {/* Carousel Container */}
           <div className="relative w-full overflow-visible">
             <div
-              className="flex gap-[24px] md:gap-[30px] transition-transform duration-500 ease-in-out"
+              className="flex gap-5 md:gap-[30px] transition-transform duration-500 ease-in-out"
               style={{
                 transform: `translateX(-${
                   currentIndex * (100 / accessories.length)
@@ -62,10 +62,11 @@ const FieldReadyAccessories = () => {
               {accessories.map((accessory) => (
                 <div
                   key={accessory.id}
-                  className="w-[85%] md:w-[70%] lg:w-[65%] flex-shrink-0"
+                  className="flex-shrink-0 basis-full md:basis-[70%] lg:basis-[65%] w-full max-w-full"
+                  style={{ minWidth: 0 }}
                 >
                   <AnimatedCard
-                    className="relative w-full h-[320px] md:h-[400px] lg:h-[450px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)] group cursor-pointer"
+                    className="relative w-full max-w-full h-[320px] md:h-[400px] lg:h-[450px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)] group cursor-pointer"
                     whileHover={{
                       y: -5,
                       boxShadow: "0px 15px 35px rgba(0,0,0,0.4)",
@@ -76,7 +77,8 @@ const FieldReadyAccessories = () => {
                       <img
                         src={accessory.image}
                         alt={accessory.label}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full max-w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        style={{ display: "block" }}
                       />
                     </div>
 
