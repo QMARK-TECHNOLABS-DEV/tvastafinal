@@ -1,15 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { FadeIn, SlideInLeft, SlideInRight, AnimatedButton } from '../../utils/animations.jsx';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  FadeIn,
+  SlideInLeft,
+  SlideInRight,
+  AnimatedButton,
+} from "../../utils/animations.jsx";
 
 const ProductsCustom = () => {
+  const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState(0);
-  
+
+  const handleContactClick = () => {
+    navigate("/contact-us");
+    window.scrollTo(0, 0);
+  };
+
   const images = [
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%20133%20(1).jpg',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%20134%20(1).jpg',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%20135%20(1).jpg',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%20136%20(1).jpg'
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%20133%20(1).jpg",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%20134%20(1).jpg",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%20135%20(1).jpg",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Products/Rectangle%20136%20(1).jpg",
   ];
 
   useEffect(() => {
@@ -22,7 +34,11 @@ const ProductsCustom = () => {
   return (
     <section className="flex flex-col md:flex-row items-center gap-[40px] md:gap-[60px] w-full max-w-[1280px] px-4 md:px-8">
       {/* Content */}
-      <SlideInLeft delay={0.2} duration={0.8} className="flex flex-col justify-center items-start py-6 gap-[10px] w-full md:flex-1 order-2 md:order-1">
+      <SlideInLeft
+        delay={0.2}
+        duration={0.8}
+        className="flex flex-col justify-center items-start py-6 gap-[10px] w-full md:flex-1 order-2 md:order-1"
+      >
         <div className="flex flex-col items-start gap-[28px] w-full">
           {/* Title */}
           <FadeIn delay={0.4} duration={0.8}>
@@ -30,17 +46,19 @@ const ProductsCustom = () => {
               Want Something Custom?
             </h2>
           </FadeIn>
-          
+
           {/* Description */}
           <FadeIn delay={0.6} duration={0.8}>
             <p className="text-card-mobile md:text-description font-normal text-[#1D3357] w-full">
-              Get in touch for bespoke furniture solutions or to integrate Tvasta products into your next public or private project.
+              Get in touch for bespoke furniture solutions or to integrate
+              Tvasta products into your next public or private project.
             </p>
           </FadeIn>
-          
+
           {/* Contact Button */}
           <FadeIn delay={0.8} duration={0.8}>
-            <AnimatedButton 
+            <AnimatedButton
+              onClick={handleContactClick}
               className="flex items-center justify-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[20px] hover:bg-[#2d4a73] transition-colors duration-300 group whitespace-nowrap"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -49,17 +67,29 @@ const ProductsCustom = () => {
                 Contact Us
               </span>
               <div className="w-[20px] h-[20px] bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                <svg className="w-[12px] h-[12px] text-[#1D3357]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                <svg
+                  className="w-[12px] h-[12px] text-[#1D3357]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </div>
             </AnimatedButton>
           </FadeIn>
         </div>
       </SlideInLeft>
-      
+
       {/* Image Slider */}
-      <SlideInRight delay={0.4} duration={0.8} className="flex-shrink-0 w-full lg:w-auto order-1 md:order-2">
+      <SlideInRight
+        delay={0.4}
+        duration={0.8}
+        className="flex-shrink-0 w-full lg:w-auto order-1 md:order-2"
+      >
         <div className="relative w-full sm:w-[400px] md:w-full lg:w-[508px] h-[250px] md:h-[350px] rounded-[24px] overflow-hidden">
           {images.map((image, index) => (
             <motion.img
@@ -68,14 +98,14 @@ const ProductsCustom = () => {
               alt={`Custom Product ${index + 1}`}
               className="absolute top-0 left-0 w-full h-full object-cover"
               initial={{ opacity: 0 }}
-              animate={{ 
+              animate={{
                 opacity: activeSlide === index ? 1 : 0,
-                scale: activeSlide === index ? 1 : 1.1
+                scale: activeSlide === index ? 1 : 1.1,
               }}
               transition={{ duration: 0.7 }}
             />
           ))}
-          
+
           {/* Navigation Dots */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
             {images.map((_, index) => (
@@ -83,7 +113,7 @@ const ProductsCustom = () => {
                 key={index}
                 onClick={() => setActiveSlide(index)}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                  activeSlide === index ? 'bg-white w-8' : 'bg-white/50'
+                  activeSlide === index ? "bg-white w-8" : "bg-white/50"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

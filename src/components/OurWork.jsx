@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const OurWork = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 my-6 sm:my-12 md:my-16">
       <div className="flex flex-col items-center gap-16 w-full">
@@ -7,7 +10,13 @@ const OurWork = () => {
           <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title leading-[120%] text-[#0D192D] text-center md:text-left">
             Our Work
           </h2>
-          <span className="font-outfit font-semibold text-xs md:text-sm leading-[20px] text-white bg-[#1D3357] px-4 py-2 rounded-full cursor-pointer">
+          <span
+            onClick={() => {
+              navigate("/projects");
+              window.scrollTo(0, 0);
+            }}
+            className="font-outfit font-semibold text-xs md:text-sm leading-[20px] text-white bg-[#1D3357] px-4 py-2 rounded-full cursor-pointer"
+          >
             View All Work
           </span>
         </div>
@@ -32,23 +41,34 @@ const OurWork = () => {
               {/* Content */}
               <div className="absolute bottom-4 left-4 flex flex-col gap-4 w-[calc(100%-32px)]">
                 <p className="font-outfit font-semibold text-lg leading-[160%] text-white">
-                  Precision-built printers for fast, reliable, and scalable 3D construction.
+                  Precision-built printers for fast, reliable, and scalable 3D
+                  construction.
                 </p>
 
-                <button className="flex justify-center items-center px-7 py-4 gap-[10px] bg-white rounded-[66px] w-fit">
+                <button
+                  onClick={() => {
+                    navigate("/our-technology/printers");
+                    window.scrollTo(0, 0);
+                  }}
+                  className="flex justify-center items-center px-7 py-4 gap-[10px] bg-white rounded-[66px] w-fit"
+                >
                   <span className="font-outfit font-semibold text-sm leading-[18px] text-[#0D192D]">
                     Explore Printers
                   </span>
-                  <svg 
-  className="w-5 h-5 text-black" 
-  fill="none" 
-  stroke="currentColor" 
-  strokeWidth="2" 
-  viewBox="0 0 24 24" 
-  xmlns="http://www.w3.org/2000/svg"
->
- <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
- </svg>
+                  <svg
+                    className="w-5 h-5 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 12h14M12 5l7 7-7 7"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -73,20 +93,30 @@ const OurWork = () => {
                   Design-forward pieces that blend utility with 3D-printed form.
                 </p>
 
-                <button className="flex justify-center items-center px-7 py-4 gap-[10px] bg-white rounded-[66px] w-fit">
+                <button
+                  onClick={() => {
+                    navigate("/products");
+                    window.scrollTo(0, 0);
+                  }}
+                  className="flex justify-center items-center px-7 py-4 gap-[10px] bg-white rounded-[66px] w-fit"
+                >
                   <span className="font-outfit font-semibold text-sm leading-[18px] text-[#0D192D]">
                     View Collection
                   </span>
-                  <svg 
-  className="w-5 h-5 text-black" 
-  fill="none" 
-  stroke="currentColor" 
-  strokeWidth="2" 
-  viewBox="0 0 24 24" 
-  xmlns="http://www.w3.org/2000/svg"
->
- <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
- </svg>
+                  <svg
+                    className="w-5 h-5 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 12h14M12 5l7 7-7 7"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -111,20 +141,30 @@ const OurWork = () => {
                   From homes to shelters, real-world impact across sectors.
                 </p>
 
-                <button className="flex justify-center items-center px-7 py-4 gap-[10px] bg-white rounded-[66px] w-fit">
+                <button
+                  onClick={() => {
+                    navigate("/projects/casestudy");
+                    window.scrollTo(0, 0);
+                  }}
+                  className="flex justify-center items-center px-7 py-4 gap-[10px] bg-white rounded-[66px] w-fit"
+                >
                   <span className="font-outfit font-semibold text-sm leading-[18px] text-[#0D192D]">
                     View Case Studies
                   </span>
-                   <svg 
-  className="w-5 h-5 text-black" 
-  fill="none" 
-  stroke="currentColor" 
-  strokeWidth="2" 
-  viewBox="0 0 24 24" 
-  xmlns="http://www.w3.org/2000/svg"
->
- <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
- </svg>
+                  <svg
+                    className="w-5 h-5 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 12h14M12 5l7 7-7 7"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
