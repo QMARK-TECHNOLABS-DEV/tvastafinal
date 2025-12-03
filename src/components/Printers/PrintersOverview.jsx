@@ -56,7 +56,7 @@ const PrintersOverview = () => {
             </h2>
           </FadeIn>
           <FadeIn delay={0.4} duration={0.8}>
-            <p className="text-card-mobile md:text-card font-normal leading-[1.7] text-center text-[#1D3357] max-w-[800px] tracking-[-0.02em]">
+            <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-center text-[#1D3357] max-w-[800px] tracking-[-0.02em]">
               Two Printer Types. One Construction Revolution
             </p>
           </FadeIn>
@@ -122,7 +122,7 @@ const PrintersOverview = () => {
               </FadeIn>
 
               <FadeIn delay={0.5 + index * 0.2} duration={0.8}>
-                <p className="text-body-mobile md:text-card font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
+                <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
                   {printer.description}
                 </p>
               </FadeIn>
@@ -154,7 +154,7 @@ const PrintersOverview = () => {
                           />
                         </svg>
                       </div>
-                      <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
+                      <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
                         {feature}
                       </p>
                     </div>
@@ -169,13 +169,13 @@ const PrintersOverview = () => {
                     navigate(printer.link);
                     window.scrollTo(0, 0);
                   }}
-                  className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group"
+                  className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] btn-primary w-fit group"
                 >
-                  <span className="text-body-mobile md:text-body font-semibold text-white">
+                  <span className="text-card-mobile md:text-card font-semibold text-white">
                     {printer.buttonText}
                   </span>
                   <svg
-                    className="w-[16px] h-[16px] text-white transition-transform duration-300 group-hover:translate-x-1"
+                    className="w-[16px] h-[16px] text-white btn-icon"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

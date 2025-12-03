@@ -108,13 +108,13 @@ const RoboticModels = () => {
             {/* Content Section */}
             <div className="w-full lg:w-1/2 flex flex-col gap-[24px] md:gap-[30px]">
               <FadeIn delay={0.3 + index * 0.1} duration={0.8}>
-                <h2 className="text-card-mobile md:text-subtitle font-semibold leading-[1.25] text-[#0D192D] tracking-[-0.02em]">
+                <h2 className="text-title-mobile md:text-title font-semibold leading-[1.25] text-[#0D192D] tracking-[-0.02em]">
                   {model.name}
                 </h2>
               </FadeIn>
 
               <FadeIn delay={0.4 + index * 0.1} duration={0.8}>
-                <p className="text-body-mobile md:text-card font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
+                <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
                   {model.description}
                 </p>
               </FadeIn>
@@ -122,7 +122,7 @@ const RoboticModels = () => {
               {/* Key Features */}
               <div className="flex flex-col gap-[12px]">
                 <FadeIn delay={0.5 + index * 0.1} duration={0.6}>
-                  <h3 className="text-body-mobile md:text-body font-semibold leading-[1.7] text-[#0D192D] tracking-[-0.02em]">
+                  <h3 className="text-subtitle-mobile md:text-subtitle font-semibold leading-[1.7] text-[#0D192D] tracking-[-0.02em]">
                     Key Features:
                   </h3>
                 </FadeIn>
@@ -153,7 +153,7 @@ const RoboticModels = () => {
                             />
                           </svg>
                         </div>
-                        <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
+                        <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
                           {feature}
                         </p>
                       </div>
@@ -164,12 +164,12 @@ const RoboticModels = () => {
 
               {/* CTA Button */}
               <FadeIn delay={0.8 + index * 0.1} duration={0.8}>
-                <button className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group">
-                  <span className="text-body-mobile md:text-body font-semibold text-white">
+                <button className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] btn-download w-fit group">
+                  <span className="text-card-mobile md:text-card font-semibold text-white">
                     {model.buttonText}
                   </span>
                   <svg
-                    className="w-[16px] h-[16px] text-white transition-transform duration-300 group-hover:translate-x-1"
+                    className="w-[16px] h-[16px] text-white btn-icon"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

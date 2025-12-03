@@ -18,7 +18,7 @@ const GantryDescription = () => {
 
         {/* Description Text */}
         <FadeIn delay={0.4} duration={0.8}>
-          <p className="text-body-mobile md:text-card font-normal leading-[1.7] text-center text-[#1D3357] tracking-[-0.02em] max-w-[1000px]">
+          <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-center text-[#1D3357] tracking-[-0.02em] max-w-[1000px]">
             Tvasta's gantry-based 3D printers are engineered for everything from
             R&D trials to full-scale onsite construction. With modular
             configurations and flexible print envelopes, these systems adapt to

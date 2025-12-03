@@ -57,7 +57,7 @@ const Ecosystem = () => {
           </FadeIn>
 
           <FadeIn delay={0.2} className="lg:w-[60%]">
-            <p className="font-outfit font-normal text-card-mobile md:text-description leading-[30px] text-[#1D3357]">
+            <p className="font-outfit font-normal text-description-mobile md:text-description leading-[30px] text-[#1D3357]">
               From industrial-grade printers to automation-ready software.Tvasta
               delivers the full stack for next-gen construction.
             </p>
@@ -93,14 +93,14 @@ const Ecosystem = () => {
 
                 {/* Category Tag */}
                 <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-1.5 bg-white rounded-full z-10">
-                  <span className="font-outfit font-medium text-sm text-[#0D192D]">
+                  <span className="font-outfit font-medium text-card-mobile md:text-card text-[#0D192D]">
                     {item.tag}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="absolute bottom-4 left-4 right-4 z-10">
-                  <p className="font-outfit font-medium text-base leading-[140%] text-white">
+                  <p className="font-outfit font-normal text-card-mobile md:text-card leading-[140%] text-white">
                     {item.description}
                   </p>
                 </div>

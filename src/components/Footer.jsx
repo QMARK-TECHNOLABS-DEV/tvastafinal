@@ -1,195 +1,214 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Footer = ({ hideContactForm = false }) => {
+const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
-  
+
+  const mainLinks = [
+    { name: "Who We Are", path: "/who-we-are" },
+    { name: "Our Technology", path: "/our-technology" },
+    { name: "Projects", path: "/projects" },
+    { name: "Products", path: "/products" },
+    { name: "TVASTA Stories", path: "/tvasta-stories" },
+    { name: "FAQs", path: "/faqs" },
+  ];
+
+  const technologyLinks = [
+    { name: "3D Printers", path: "/our-technology/printers" },
+    {
+      name: "Accessories & Turnkey Services",
+      path: "/our-technology/accessories",
+    },
+    { name: "3D Printed Furniture", path: "/products" },
+    { name: "Software", path: "/our-technology/software" },
+    { name: "Sustainable Materials", path: "/our-technology/materials" },
+  ];
+
+  const printerLinks = [
+    {
+      name: "Gantry-Based 3D Printers",
+      path: "/our-technology/printers/gantry-based",
+    },
+    {
+      name: "Robotic Arm-Based Printers",
+      path: "/our-technology/printers/robotic-arm-based",
+    },
+  ];
+
   return (
-    <div className="flex flex-col w-full bg-[#1D3357]">
-      {/* Contact Section - conditionally rendered */}
-      {!hideContactForm && (
-        <div className="flex flex-col gap-[75px] px-8 md:px-16 py-[75px]">
-          {/* Header */}
-          <div className="flex flex-col md:flex-row justify-between items-start gap-8 w-full">
-            <span className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-              CONTACT
-            </span>
-            <span className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-              Start Your 3D Construction Journey
-            </span>
+    <footer className="relative w-full bg-[#0D192D] overflow-hidden">
+      {/* Diagonal decorative shape - only at bottom section */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[340px]  sm:h-[650px] bg-[#0a2046] pointer-events-none"
+        style={{
+          clipPath: "polygon(45% 100%, 44.5% 95%, 100% 56%, 100% 100%)",
+        }}
+      ></div>
+
+      {/* Main Footer Content */}
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-12 pb-6">
+        {/* Top Section */}
+        <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-8 mb-12">
+          {/* Left Column - Logo & Info */}
+          <div className="flex flex-col gap-6 w-full lg:w-[380px] shrink-0">
+            {/* Logo */}
+            <Link
+              to="/"
+              onClick={scrollToTop}
+              className="flex items-center gap-2"
+            >
+              <img
+                src="/images/tvastanavlogo.png"
+                alt="Tvasta Logo"
+                className="h-[64px] md:h-[72px] w-auto object-contain"
+                style={{
+                  filter:
+                    "sepia(100) saturate(5.6) hue-rotate(30deg) brightness(5.08) contrast(5.08)",
+                }}
+              />
+            </Link>
+
+            {/* Tagline */}
+            <h3 className="font-outfit font-semibold text-[16px] leading-[140%] text-white">
+              India's 3D Construction Pioneers.
+            </h3>
+
+            {/* Description */}
+            <p className="font-outfit font-normal text-[14px] leading-[160%] text-gray-300">
+              Pushing the boundaries of how the world builds - with speed,
+              precision, and sustainability.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex items-center gap-3 mt-2">
+              <Link
+                to="/contact-us"
+                onClick={scrollToTop}
+                className="px-5 py-2.5 rounded-full font-outfit font-semibold text-[16px] md:text-[16px] leading-[20px] bg-white text-[#0D192D] hover:bg-gray-100 transition-all duration-200"
+              >
+                Contact Us
+              </Link>
+              <Link
+                to="/careers"
+                onClick={scrollToTop}
+                className="px-5 py-2.5 rounded-full font-outfit font-semibold text-[16px] md:text-[16px] leading-[20px] border border-white text-white bg-transparent hover:bg-white/5 transition-all duration-200"
+              >
+                Careers
+              </Link>
+            </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="flex flex-col items-end gap-9 w-full">
-            {/* Form Fields */}
-            <div className="flex flex-col lg:flex-row items-center gap-9 w-full">
-              {/* Name Field */}
-              <div className="flex flex-col gap-4 w-full lg:flex-1">
-                <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-                  Name
-                </label>
-                <div className="flex justify-center items-center px-4 py-6 border-b border-white w-full">
-                  <input 
-                    type="text" 
-                    placeholder="Your Name" 
-                    className="font-outfit font-normal text-lg leading-[140%] text-white bg-transparent w-full outline-none placeholder-white"
-                  />
-                </div>
-              </div>
-
-              {/* Email Field */}
-              <div className="flex flex-col gap-4 w-full lg:flex-1">
-                <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-                  Email
-                </label>
-                <div className="flex justify-center items-center px-4 py-6 border-b border-white w-full">
-                  <input 
-                    type="email" 
-                    placeholder="Your Email" 
-                    className="font-outfit font-normal text-lg leading-[140%] text-white bg-transparent w-full outline-none placeholder-white"
-                  />
-                </div>
-              </div>
-
-              {/* Message Field */}
-              <div className="flex flex-col gap-4 w-full lg:flex-1">
-                <label className="font-outfit font-medium text-[24px] leading-[130%] text-white">
-                  Message
-                </label>
-                <div className="flex justify-center items-center px-4 py-6 border-b border-white w-full">
-                  <input 
-                    type="text" 
-                    placeholder="Your Message" 
-                    className="font-outfit font-normal text-lg leading-[140%] text-white bg-transparent w-full outline-none placeholder-white"
-                  />
-                </div>
-              </div>
+          {/* Links Columns Container */}
+          <div className="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap gap-8 lg:gap-12 xl:gap-16">
+            {/* Main Links */}
+            <div className="flex flex-col gap-4 min-w-[140px]">
+              <h4 className="font-outfit font-semibold text-[16px] text-white mb-2">
+                Main Links
+              </h4>
+              {mainLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={scrollToTop}
+                  className="font-outfit font-normal text-[14px] text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
 
-            {/* Submit Button */}
-            <button className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-white rounded-[35px]">
-              <span className="font-outfit font-semibold text-sm sm:text-base leading-[23px] text-[#1D3357]">
-                Send Message
-              </span>
-            </button>
-          </div>
+            {/* Our Technology */}
+            <div className="flex flex-col gap-4 min-w-[200px]">
+              <h4 className="font-outfit font-semibold text-[16px] text-white mb-2">
+                Our Technology
+              </h4>
+              {technologyLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={scrollToTop}
+                  className="font-outfit font-normal text-[14px] text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
 
-          {/* Divider */}
-          <div className="w-full h-px border-t border-white"></div>
-        </div>
-      )}
-
-      {/* Footer Links */}
-      <div className="flex flex-col gap-16 px-8 md:px-16 py-[75px]">
-        {/* Top Links */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 w-full">
-          {/* Site Links */}
-          <div className="flex flex-col gap-6 w-full lg:w-[313px]">
-            <Link to="/who-we-are" onClick={scrollToTop} className="font-outfit font-medium text-[20px] leading-[130%] uppercase text-white hover:text-gray-300 transition-colors duration-200">
-              who we are
-            </Link>
-            <Link to="/our-technology" onClick={scrollToTop} className="font-outfit font-medium text-[20px] leading-[130%] uppercase text-white hover:text-gray-300 transition-colors duration-200">
-              Our Technology
-            </Link>
-            <Link to="/faqs" onClick={scrollToTop} className="font-outfit font-medium text-[20px] leading-[130%] uppercase text-white hover:text-gray-300 transition-colors duration-200">
-              FAQs
-            </Link>
-          </div>
-
-          {/* Contact Info */}
-          <div className="flex flex-col gap-6 w-full lg:w-[313px]">
-            <a 
-              href="mailto:info@tvstagroup.in" 
-              className="font-outfit font-medium text-[20px] leading-[130%] text-white hover:text-gray-300 transition-colors duration-200"
-            >
-              info@tvstagroup.in
-            </a>
-            <a 
-              href="tel:+918925812337" 
-              className="font-outfit font-medium text-[20px] leading-[130%] text-white hover:text-gray-300 transition-colors duration-200"
-            >
-              +91 89258 12337
-            </a>
-            <span className="font-outfit font-medium text-[20px] leading-[130%] text-white">
-              Chennai, India
-            </span>
-          </div>
-
-          {/* Company Description */}
-          <div className="flex flex-col items-end gap-6 w-full lg:w-[313px]">
-            <span className="font-outfit font-semibold text-[20px] leading-[130%] text-right text-white">
-              India's 3D Construction Pioneers.
-            </span>
-            <p className="font-outfit font-normal text-lg leading-[130%] text-right text-white">
-              Pushing the boundaries of how the world builds - with speed, precision, and sustainability.
-            </p>
+            {/* 3D Printers */}
+            <div className="flex flex-col gap-4 min-w-[180px]">
+              <h4 className="font-outfit font-semibold text-[16px] text-white mb-2">
+                3D Printers
+              </h4>
+              {printerLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={scrollToTop}
+                  className="font-outfit font-normal text-[14px] text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Bottom Links */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 w-full">
-          {/* Social Links */}
-          <div className="flex items-center gap-8">
-            {/* LinkedIn */}
-            <a 
-              href="https://www.linkedin.com/company/tvasta" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 transition-colors duration-200"
-              aria-label="LinkedIn"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
+        {/* Bottom Section */}
+        <div className="relative flex flex-col sm:flex-row justify-between items-center pt-8 pb-4">
+          {/* Copyright */}
+          <span className="font-outfit font-normal text-[13px] text-gray-400 py-4 sm:py-0">
+            © 2025 TVASTA. All Rights Reserved.
+          </span>
 
+          {/* Social Icons - White filled circles with dark icons */}
+          <div className="flex items-center gap-3 py-4 sm:py-0">
             {/* Facebook */}
-            <a 
-              href="https://www.facebook.com/tvastagroup" 
-              target="_blank" 
+            <a
+              href="https://www.facebook.com/tvastagroup"
+              target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 transition-colors duration-200"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#0D192D] hover:bg-gray-200 transition-all duration-200"
               aria-label="Facebook"
             >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
 
             {/* Instagram */}
-            <a 
-              href="https://www.instagram.com/tvasta3dp/" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/tvasta3dp/"
+              target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 transition-colors duration-200"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#0D192D] hover:bg-gray-200 transition-all duration-200"
               aria-label="Instagram"
             >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+
+            {/* YouTube */}
+            <a
+              href="https://www.youtube.com/@tvasta"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#0D192D] hover:bg-gray-200 transition-all duration-200"
+              aria-label="YouTube"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
           </div>
-
-          {/* Copyright */}
-          <span className="font-outfit font-normal text-[24px] leading-[130%] text-right text-white">
-            © 2024 Tvasta. All Rights Reserved.
-          </span>
-
-          {/* Back to Top */}
-          <span 
-            className="font-outfit font-medium text-[24px] leading-[130%] text-right text-white cursor-pointer hover:underline transition-colors duration-200 hover:text-gray-300"
-            onClick={scrollToTop}
-          >
-            BACK TO TOP
-          </span>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

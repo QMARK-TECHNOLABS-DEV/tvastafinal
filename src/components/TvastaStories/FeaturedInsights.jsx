@@ -28,7 +28,7 @@ const FeaturedInsights = () => {
   ];
 
   const [expanded, setExpanded] = React.useState([false, false, false]);
-  const WORD_LIMIT = 33;
+  const WORD_LIMIT = 35;
 
   const handleToggle = (idx) => {
     setExpanded((prev) => {
@@ -44,14 +44,14 @@ const FeaturedInsights = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <FadeIn>
-            <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#0D192D] leading-tight">
+            <h2 className="text-title-mobile md:text-title font-semibold text-[#0D192D] leading-tight">
               Latest from LinkedIn
             </h2>
           </FadeIn>
 
           <SlideInUp delay={0.2}>
             <button
-              className="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#1D3357] rounded-[35px] hover:bg-[#2D4367] transition-colors duration-300 whitespace-nowrap"
+              className="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 btn-primary whitespace-nowrap"
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/company/tvasta/",
@@ -60,10 +60,23 @@ const FeaturedInsights = () => {
                 )
               }
             >
-              <span className="text-[14px] sm:text-[15px] md:text-[16px] font-semibold text-white">
+              <span className="text-card-mobile md:text-card font-semibold text-white">
                 Visit LinkedIn
               </span>
               <ArrowUpRightIcon className="w-4 h-4 text-white" />
+              <svg
+                className="w-5 h-5 text-white btn-icon"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M12 5l7 7-7 7"
+                />
+              </svg>
             </button>
           </SlideInUp>
         </div>
@@ -103,7 +116,7 @@ const FeaturedInsights = () => {
 
                 {/* Content */}
                 <div className="flex flex-col">
-                  <p className="text-[14px] sm:text-[15px] md:text-[16px] font-normal text-[#0D192D] leading-relaxed">
+                  <p className="text-description-mobile md:text-description font-normal text-[#0D192D] leading-relaxed">
                     {expanded[index]
                       ? insight.title
                       : insight.title
@@ -114,7 +127,7 @@ const FeaturedInsights = () => {
                           ? "..."
                           : "")}{" "}
                     <span
-                      className="text-[14px] sm:text-[15px] font-semibold text-[#FF0000] hover:text-[#CC0000] transition-colors duration-300 cursor-pointer"
+                      className="text-card-mobile md:text-card font-semibold text-[#FF0000] hover:text-[#CC0000] transition-colors duration-300 cursor-pointer"
                       onClick={() => handleToggle(index)}
                     >
                       {expanded[index] ? "Read less" : "Read more..."}

@@ -1,15 +1,19 @@
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import { AnimatedButton, SlideInLeft, SlideInRight } from '../../utils/animations.jsx';
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import {
+  AnimatedButton,
+  SlideInLeft,
+  SlideInRight,
+} from "../../utils/animations.jsx";
 
 const BuildingTomorrow = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  
+
   const images = [
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png',
-    'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png'
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png",
   ];
 
   useEffect(() => {
@@ -34,21 +38,20 @@ const BuildingTomorrow = () => {
               </p>
             </div>
           </SlideInLeft>
-          
+
           <SlideInLeft delay={0.4}>
-            <AnimatedButton 
-              className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[20px] whitespace-nowrap"
-              whileHover={{ 
-                scale: 1.05, 
-                backgroundColor: "#0D192D",
-                transition: { duration: 0.3 }
+            <AnimatedButton
+              className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] btn-primary whitespace-nowrap"
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.3 },
               }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="font-outfit font-semibold text-card-mobile md:text-card text-white">
                 Work With Us
               </span>
-              <motion.div 
+              <motion.div
                 className="w-[24px] h-[24px] flex items-center justify-center flex-shrink-0"
                 whileHover={{ rotate: 15 }}
                 transition={{ duration: 0.2 }}
@@ -68,10 +71,23 @@ const BuildingTomorrow = () => {
                   />
                 </svg>
               </motion.div>
+              <svg
+                className="w-5 h-5 text-white btn-icon"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M12 5l7 7-7 7"
+                />
+              </svg>
             </AnimatedButton>
           </SlideInLeft>
         </div>
-        
+
         {/* Right Image Slider */}
         <SlideInRight delay={0.3} className="flex-shrink-0 w-full lg:w-auto">
           <div className="relative w-full sm:w-[400px] md:w-full lg:w-[450px] h-[300px] sm:h-[360px] md:h-[380px] lg:h-[400px] rounded-[24px] overflow-hidden">
@@ -82,14 +98,14 @@ const BuildingTomorrow = () => {
                 alt={`Building Tomorrow ${index + 1}`}
                 className="absolute top-0 left-0 w-full h-full object-cover"
                 initial={{ opacity: 0 }}
-                animate={{ 
+                animate={{
                   opacity: activeSlide === index ? 1 : 0,
-                  scale: activeSlide === index ? 1 : 1.1
+                  scale: activeSlide === index ? 1 : 1.1,
                 }}
                 transition={{ duration: 0.7 }}
               />
             ))}
-            
+
             {/* Navigation Dots */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
               {images.map((_, index) => (
@@ -97,7 +113,7 @@ const BuildingTomorrow = () => {
                   key={index}
                   onClick={() => setActiveSlide(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    activeSlide === index ? 'bg-white w-8' : 'bg-white/50'
+                    activeSlide === index ? "bg-white w-8" : "bg-white/50"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

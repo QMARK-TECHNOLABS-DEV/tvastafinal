@@ -37,7 +37,7 @@ const OurMaterialLineup = () => {
             </h2>
           </FadeIn>
           <FadeIn delay={0.3} duration={0.8}>
-            <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
+            <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
               Our 30 printable mixes support diverse build needs
             </p>
           </FadeIn>
@@ -73,13 +73,13 @@ const OurMaterialLineup = () => {
                 <div className="absolute inset-0 flex flex-col p-[24px] md:p-[28px]">
                   {/* Label Badge - Top Left */}
                   <div className="inline-flex items-center justify-center bg-white rounded-[30px] px-[12px] py-[6px] self-start mb-auto">
-                    <span className="text-[14px] md:text-[16px] font-semibold text-[#0D192D] tracking-[-0.02em]">
+                    <span className="text-card-mobile md:text-card font-semibold text-[#0D192D] tracking-[-0.02em]">
                       {material.label}
                     </span>
                   </div>
 
                   {/* Title - Bottom */}
-                  <h3 className="text-[16px] md:text-[18px] font-medium leading-[1.5] text-white tracking-[-0.02em]">
+                  <h3 className="text-card-mobile md:text-card font-medium leading-[1.5] text-white tracking-[-0.02em]">
                     {material.title}
                   </h3>
                 </div>

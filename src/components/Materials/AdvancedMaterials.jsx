@@ -48,12 +48,12 @@ const AdvancedMaterials = () => {
         {/* Header */}
         <div className="flex flex-col items-center gap-[16px] w-full max-w-[900px] mx-auto">
           <FadeIn delay={0.2} duration={0.8}>
-            <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[1.2] text-center text-[#0D192D] tracking-[-0.02em]">
+            <h2 className="text-title-mobile md:text-title font-semibold leading-[1.2] text-center text-[#0D192D] tracking-[-0.02em]">
               Advanced Materials, Backed by R&D
             </h2>
           </FadeIn>
           <FadeIn delay={0.3} duration={0.8}>
-            <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
+            <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
               Our Centre For Advanced Construction Materials (CACM) Powers
               Innovation In Printable Concrete. Every Mix Is Lab-Validated For
               Reliability In Real-World Conditions.
@@ -108,12 +108,12 @@ const AdvancedMaterials = () => {
               {/* Content */}
               <div className="flex flex-col gap-[16px] md:gap-[20px] w-full md:flex-1">
                 <FadeIn delay={0.4 + index * 0.1} duration={0.8}>
-                  <h3 className="text-card-mobile md:text-subtitle font-semibold leading-[1.3] text-[#0D192D] tracking-[-0.02em]">
+                  <h3 className="text-title-mobile md:text-title font-semibold leading-[1.3] text-[#0D192D] tracking-[-0.02em]">
                     {lab.title}
                   </h3>
                 </FadeIn>
                 <FadeIn delay={0.5 + index * 0.1} duration={0.8}>
-                  <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-[#4A4A4A] tracking-[-0.02em]">
+                  <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#4A4A4A] tracking-[-0.02em]">
                     {lab.description}
                   </p>
                 </FadeIn>

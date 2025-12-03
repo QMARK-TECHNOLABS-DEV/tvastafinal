@@ -25,7 +25,6 @@ const HomePage = () => {
           <WhyTvasta />
           <Technology />
           <Ecosystem />
-          <BuildBetterTogether />
           <Projects />
           <Questions />
         </div>
