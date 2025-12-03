@@ -44,7 +44,7 @@ const FeaturedInsights = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <FadeIn>
-            <h2 className="text-title-mobile md:text-title font-bold text-[#0D192D] leading-tight">
+            <h2 className="text-title-mobile md:text-title font-semibold text-[#0D192D] leading-tight">
               Latest from LinkedIn
             </h2>
           </FadeIn>
