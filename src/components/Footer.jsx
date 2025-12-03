@@ -22,7 +22,7 @@ const Footer = () => {
     { name: "3D Printers", path: "/our-technology/printers" },
     {
       name: "Accessories & Turnkey Services",
-      path: "/our-technology/accessories-turnkey",
+      path: "/our-technology/accessories",
     },
     { name: "3D Printed Furniture", path: "/products" },
     { name: "Software", path: "/our-technology/software" },
@@ -32,11 +32,11 @@ const Footer = () => {
   const printerLinks = [
     {
       name: "Gantry-Based 3D Printers",
-      path: "/our-technology/printers/gantry",
+      path: "/our-technology/printers/gantry-based",
     },
     {
       name: "Robotic Arm-Based Printers",
-      path: "/our-technology/printers/robotic",
+      path: "/our-technology/printers/robotic-arm-based",
     },
   ];
 
