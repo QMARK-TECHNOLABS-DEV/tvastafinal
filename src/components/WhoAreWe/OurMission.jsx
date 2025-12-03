@@ -1,4 +1,4 @@
-import { SlideInLeft, SlideInRight } from '../../utils/animations.jsx';
+import { SlideInLeft, SlideInRight } from "../../utils/animations.jsx";
 
 const OurMission = () => {
   return (
@@ -13,11 +13,16 @@ const OurMission = () => {
                 Our Mission
               </h2>
               <p className="font-outfit font-normal text-card-mobile md:text-description leading-[140%] text-[#1D3357] w-full">
-                Tvasta, a first principles-based technology builder, leverages automation and robotics to create 3D printing platforms that will revolutionize construction by automating 80% of the process for distributed infrastructure and mass customization, while also enabling high-precision, mass-customized component production across the manufacturing sector.
+                Tvasta, a first principles-based technology builder, leverages
+                automation and robotics to create 3D printing platforms that
+                will revolutionize construction by automating 80% of the process
+                for distributed infrastructure and mass customization, while
+                also enabling high-precision, mass-customized component
+                production across the manufacturing sector.
               </p>
             </div>
           </SlideInLeft>
-          
+
           {/* Our Vision Section */}
           <SlideInLeft delay={0.5}>
             <div className="flex flex-col items-start gap-[16px] w-full">
@@ -25,18 +30,19 @@ const OurMission = () => {
                 Our Vision
               </h2>
               <p className="font-outfit font-normal text-card-mobile md:text-description leading-[140%] text-[#1D3357] w-full">
-                To revolutionize global construction with modular, intelligent, and environmentally responsible solutions.
+                To revolutionize global construction with modular, intelligent,
+                and environmentally responsible solutions.
               </p>
             </div>
           </SlideInLeft>
         </div>
-        
+
         {/* Right Image */}
         <SlideInRight delay={0.2} className="w-full lg:w-1/2">
           <div className="w-full h-[320px] sm:h-[420px] lg:h-[536px] rounded-[16px] overflow-hidden">
-            <img 
-              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Rectangle.jpg" 
-              alt="Our Mission and Vision" 
+            <img
+              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Rectangle.jpg"
+              alt="Our Mission and Vision"
               className="w-full h-full object-cover"
             />
           </div>

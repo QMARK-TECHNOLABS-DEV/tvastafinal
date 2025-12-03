@@ -1,33 +1,37 @@
-import { motion } from 'framer-motion';
-import { FadeIn, StaggeredList } from '../../utils/animations.jsx';
+import { motion } from "framer-motion";
+import { FadeIn, StaggeredList } from "../../utils/animations.jsx";
 
 const FoundersTeam = () => {
   const founders = [
     {
       name: "Adithya VS",
       position: "Co-Founder & CEO",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Adithya%20VS.png"
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Adithya%20VS.png",
     },
     {
       name: "Parivarthan Reddy",
       position: "Co-Founder & COO",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Parivarthan%20Reddy.png"
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Parivarthan%20Reddy.png",
     },
     {
       name: "Pragadeeswar",
       position: "CTO Machines",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Pragadeeswar.png"
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Pragadeeswar.png",
     },
     {
       name: "Kalyan",
       position: "CTO Construction R&D",
-      image: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Kalyan.png"
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/Kalyan.png",
     },
     {
       name: "Jay Prakash",
       position: "CFO",
-      image: "/images/jayprakash.jpeg"
-    }
+      image: "/images/jayprakash.jpeg",
+    },
   ];
 
   return (
@@ -40,9 +44,9 @@ const FoundersTeam = () => {
           </h2>
         </div>
       </FadeIn>
-      
+
       {/* Team Cards Grid */}
-      <StaggeredList 
+      <StaggeredList
         className="flex flex-wrap justify-center items-center gap-[20px] w-full max-w-[1281px]"
         delay={0.4}
         staggerDelay={0.1}
@@ -51,21 +55,21 @@ const FoundersTeam = () => {
           <motion.div
             key={index}
             className="flex flex-col justify-end items-start p-[16px_12px] gap-[2px] w-[240.2px] h-[300px] rounded-[24px] relative overflow-hidden flex-grow-0 flex-shrink-0 basis-auto bg-gray-800"
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
-              transition: { duration: 0.3 }
+              transition: { duration: 0.3 },
             }}
           >
             {/* Background Image */}
-            <img 
+            <img
               src={founder.image}
               alt={founder.name}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover grayscale"
             />
-            
+
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            
+
             {/* Content */}
             <div className="relative z-10 flex flex-col gap-[2px] w-full">
               <h3 className="font-outfit font-bold text-card text-white w-full">

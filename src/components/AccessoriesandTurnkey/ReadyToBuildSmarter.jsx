@@ -27,7 +27,7 @@ const ReadyToBuildSmarter = () => {
           </SlideInLeft>
 
           <FadeIn delay={0.3} duration={0.8}>
-            <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-[#4A4A4A] tracking-[-0.02em]">
+            <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#4A4A4A] tracking-[-0.02em]">
               We're here to help you assess, execute, and excel on your terms.
             </p>
           </FadeIn>
@@ -35,7 +35,7 @@ const ReadyToBuildSmarter = () => {
           <FadeIn delay={0.4} duration={0.8}>
             <button
               onClick={handleContactClick}
-              className="inline-flex items-center justify-center gap-[8px] bg-[#0D192D] text-white rounded-[25px] px-[24px] py-[12px] text-[16px] md:text-[18px] font-semibold tracking-[-0.02em] hover:bg-[#1a2940] transition-colors duration-300 self-start shadow-[0px_4px_12px_rgba(0,0,0,0.15)] hover:shadow-[0px_6px_20px_rgba(0,0,0,0.25)]"
+              className="inline-flex items-center justify-center gap-[8px] btn-primary px-[24px] py-[12px] text-card-mobile md:text-card font-semibold tracking-[-0.02em] self-start shadow-[0px_4px_12px_rgba(0,0,0,0.15)]"
             >
               Contact Us
               <svg
@@ -44,7 +44,7 @@ const ReadyToBuildSmarter = () => {
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
+                className="w-5 h-5 btn-icon"
               >
                 <path
                   d="M7.5 15L12.5 10L7.5 5"

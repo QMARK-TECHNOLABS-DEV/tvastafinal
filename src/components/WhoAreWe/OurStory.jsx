@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { FadeIn } from '../../utils/animations.jsx';
+import { motion } from "framer-motion";
+import { FadeIn } from "../../utils/animations.jsx";
 
 const OurStory = () => {
   const storyText1 =
@@ -8,8 +8,8 @@ const OurStory = () => {
   const storyText2 =
     "Today, we are a vertically integrated construction-tech company that develops 3D printing platforms, smart materials, and proprietary software, powering real-world builds from flood-resilient homes to smart city infrastructure. We're transforming concrete into a tool for innovation, not limitation.";
 
-  const words1 = storyText1.split(' ');
-  const words2 = storyText2.split(' ');
+  const words1 = storyText1.split(" ");
+  const words2 = storyText2.split(" ");
 
   return (
     <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
@@ -26,7 +26,7 @@ const OurStory = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="font-outfit font-normal text-card-mobile md:text-subtitle leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
+            className="font-outfit font-normal text-description-mobile md:text-description leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
           >
             {words1.map((word, index) => (
               <motion.span
@@ -40,7 +40,7 @@ const OurStory = () => {
                   delay: index * 0.05,
                 }}
               >
-                {word}{' '}
+                {word}{" "}
               </motion.span>
             ))}
           </motion.div>
@@ -49,7 +49,7 @@ const OurStory = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="font-outfit font-normal text-card-mobile md:text-subtitle leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
+            className="font-outfit font-normal text-description-mobile md:text-description leading-[150%] tracking-[-0.5px] text-[#1D3357] w-full"
           >
             {words2.map((word, index) => (
               <motion.span
@@ -63,7 +63,7 @@ const OurStory = () => {
                   delay: words1.length * 0.05 + index * 0.05 + 0.5,
                 }}
               >
-                {word}{' '}
+                {word}{" "}
               </motion.span>
             ))}
           </motion.div>

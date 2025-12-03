@@ -63,11 +63,24 @@ const BuildTogether = () => {
           <motion.button
             variants={fadeInUp}
             onClick={handleContactClick}
-            className="flex flex-row justify-center items-center py-3 sm:py-3.5 md:py-4 px-5 sm:px-6 md:px-7 gap-[8px] sm:gap-[9px] md:gap-[10px] bg-[#1D3357] rounded-[35px] group hover:bg-[#0D192D] transition-colors duration-300 whitespace-nowrap"
+            className="flex flex-row justify-center items-center py-3 sm:py-3.5 md:py-4 px-5 sm:px-6 md:px-7 gap-[8px] sm:gap-[9px] md:gap-[10px] btn-primary group whitespace-nowrap"
           >
             <span className="text-card-mobile md:text-card font-medium leading-[130%] text-white font-['Outfit']">
               Contact Us
             </span>
+            <svg
+              className="w-5 h-5 text-white btn-icon"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 12h14M12 5l7 7-7 7"
+              />
+            </svg>
           </motion.button>
         </motion.div>
 

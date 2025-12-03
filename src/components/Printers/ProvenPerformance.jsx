@@ -48,7 +48,7 @@ const ProvenPerformance = () => {
           </FadeIn>
 
           <FadeIn delay={0.4} duration={0.8}>
-            <p className="text-body-mobile md:text-card font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
+            <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
               Deployed in diverse conditions - from Ladakh's cold to Chennai's
               coastal heat.
             </p>
@@ -62,7 +62,7 @@ const ProvenPerformance = () => {
                   <h3 className="text-subtitle-mobile md:text-subtitle font-semibold leading-[1.2] text-[#0D192D] tracking-[-0.02em]">
                     {stat.number}
                   </h3>
-                  <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
+                  <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
                     {stat.label}
                   </p>
                 </div>
@@ -71,7 +71,7 @@ const ProvenPerformance = () => {
           </div>
 
           <FadeIn delay={0.7} duration={0.8}>
-            <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
+            <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
               Calibrated for local terrain & codes
             </p>
           </FadeIn>
@@ -83,13 +83,13 @@ const ProvenPerformance = () => {
                 navigate("/projects");
                 window.scrollTo(0, 0);
               }}
-              className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group"
+              className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] btn-primary w-fit group"
             >
-              <span className="text-body-mobile md:text-body font-semibold text-white">
+              <span className="text-card-mobile md:text-card font-semibold text-white">
                 View Projects
               </span>
               <svg
-                className="w-[16px] h-[16px] text-white transition-transform duration-300 group-hover:translate-x-1"
+                className="w-[16px] h-[16px] text-white btn-icon"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -128,7 +128,7 @@ const ProvenPerformance = () => {
           </FadeIn>
 
           <FadeIn delay={0.4} duration={0.8}>
-            <p className="text-body-mobile md:text-card font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
+            <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
               Get in-depth access to:
             </p>
           </FadeIn>
@@ -156,7 +156,7 @@ const ProvenPerformance = () => {
                       />
                     </svg>
                   </div>
-                  <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
+                  <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-[#1D3357] tracking-[-0.02em]">
                     {feature}
                   </p>
                 </div>
@@ -166,12 +166,12 @@ const ProvenPerformance = () => {
 
           {/* CTA Button */}
           <FadeIn delay={0.9} duration={0.8}>
-            <button className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] bg-[#E63946] hover:bg-[#d32f3d] rounded-[20px] transition-colors duration-300 w-fit group">
-              <span className="text-body-mobile md:text-body font-semibold text-white">
+            <button className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] btn-download w-fit group">
+              <span className="text-card-mobile md:text-card font-semibold text-white">
                 Download Tech Specs PDF
               </span>
               <svg
-                className="w-[16px] h-[16px] text-white transition-transform duration-300 group-hover:translate-y-1"
+                className="w-[16px] h-[16px] text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -181,6 +181,19 @@ const ProvenPerformance = () => {
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M12 4v16m0 0l-4-4m4 4l4-4"
+                />
+              </svg>
+              <svg
+                className="w-5 h-5 text-white btn-icon"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M12 5l7 7-7 7"
                 />
               </svg>
             </button>

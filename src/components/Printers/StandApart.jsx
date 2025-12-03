@@ -75,7 +75,7 @@ const StandApart = () => {
                     <h3 className="text-card-mobile md:text-card font-semibold leading-[1.4] text-white tracking-[-0.02em]">
                       {feature.title}
                     </h3>
-                    <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-gray-300 tracking-[-0.02em]">
+                    <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-gray-300 tracking-[-0.02em]">
                       {feature.description}
                     </p>
                   </div>

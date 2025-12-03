@@ -53,13 +53,13 @@ const SoftwareStack = () => {
           <div className="flex flex-col gap-[20px]">
             <SlideInLeft delay={0.2} duration={0.8}>
               <div className="flex items-center gap-[8px] border-l-4 border-white pl-[16px]">
-                <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[1.06] text-white tracking-[-0.02em]">
+                <h2 className="text-title-mobile md:text-title font-semibold leading-[1.06] text-white tracking-[-0.02em]">
                   Our Software Stack
                 </h2>
               </div>
             </SlideInLeft>
             <FadeIn delay={0.3} duration={0.8}>
-              <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-gray-300 tracking-[-0.02em]">
+              <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-gray-300 tracking-[-0.02em]">
                 Tvasta's software suite translates complex designs into
                 optimized, print-ready paths, ensuring speed, precision, and
                 control across every project.
@@ -79,7 +79,7 @@ const SoftwareStack = () => {
                     <h3 className="text-card-mobile md:text-card font-semibold leading-[1.4] text-white tracking-[-0.02em]">
                       {feature.title}
                     </h3>
-                    <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-gray-300 tracking-[-0.02em]">
+                    <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-gray-300 tracking-[-0.02em]">
                       {feature.description}
                     </p>
                   </div>

@@ -68,13 +68,13 @@ const WhatWeProvide = () => {
                 <div className="absolute inset-0 flex flex-col p-[24px] md:p-[28px]">
                   {/* Label Badge - Top Left */}
                   <div className="inline-flex items-center justify-center bg-white rounded-[30px] px-[12px] py-[6px] self-start mb-auto">
-                    <span className="text-[14px] md:text-[16px] font-semibold text-[#0D192D] tracking-[-0.02em]">
+                    <span className="text-card-mobile md:text-card font-semibold text-[#0D192D] tracking-[-0.02em]">
                       {service.label}
                     </span>
                   </div>
 
                   {/* Title - Bottom */}
-                  <h3 className="text-[16px] md:text-[18px] font-medium leading-[1.5] text-white tracking-[-0.02em]">
+                  <h3 className="text-card-mobile md:text-card font-medium leading-[1.5] text-white tracking-[-0.02em]">
                     {service.title}
                   </h3>
                 </div>

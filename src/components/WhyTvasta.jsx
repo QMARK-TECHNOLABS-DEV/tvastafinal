@@ -49,8 +49,9 @@ const WhyTvasta = () => {
               }}
             >
               <div className="absolute bottom-6 left-6 flex flex-col gap-3">
-                <h3 className="font-outfit font-normal text-subtitle-mobile md:text-subtitle text-white max-w-[332px]">
-                  25,000+ Sq. Ft. 3D Printed
+                <h3 className="font-outfit font-normal text-card-mobile md:text-card text-white max-w-[332px]">
+                  25,000+
+                  <br /> Sq. Ft. 3D Printed
                 </h3>
               </div>
             </div>
@@ -67,8 +68,8 @@ const WhyTvasta = () => {
               }}
             >
               <div className="absolute bottom-6 left-6 flex flex-col gap-3">
-                <h3 className="font-outfit font-normal text-subtitle-mobile md:text-subtitle text-white max-w-[332px]">
-                  66% Cement Replaced in Mixes
+                <h3 className="font-outfit font-normal text-subtitle-card md:text-card text-white max-w-[332px]">
+                  66% <br /> Cement Replaced in Mixes
                 </h3>
               </div>
             </div>
@@ -85,7 +86,7 @@ const WhyTvasta = () => {
               }}
             >
               <div className="absolute bottom-6 left-6 flex flex-col gap-3">
-                <h3 className="font-outfit font-normal text-subtitle-mobile md:text-subtitle text-white max-w-[332px]">
+                <h3 className="font-outfit font-normal text-card-mobile md:text-card text-white max-w-[332px]">
                   Global Footprint
                   <br />
                   <span className="text-card-mobile md:text-card">

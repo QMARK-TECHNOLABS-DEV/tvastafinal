@@ -59,11 +59,11 @@ const ProductsCustom = () => {
           <FadeIn delay={0.8} duration={0.8}>
             <AnimatedButton
               onClick={handleContactClick}
-              className="flex items-center justify-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[20px] hover:bg-[#2d4a73] transition-colors duration-300 group whitespace-nowrap"
+              className="flex items-center justify-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] btn-primary group whitespace-nowrap"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="font-outfit font-semibold text-sm sm:text-base text-white">
+              <span className="font-outfit font-semibold text-card-mobile md:text-card text-white">
                 Contact Us
               </span>
               <div className="w-[20px] h-[20px] bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
@@ -79,6 +79,19 @@ const ProductsCustom = () => {
                   />
                 </svg>
               </div>
+              <svg
+                className="w-5 h-5 text-white btn-icon"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M12 5l7 7-7 7"
+                />
+              </svg>
             </AnimatedButton>
           </FadeIn>
         </div>

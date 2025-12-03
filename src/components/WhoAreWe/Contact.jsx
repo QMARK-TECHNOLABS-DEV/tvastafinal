@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import { FadeIn, SlideInUp, AnimatedButton } from '../../utils/animations.jsx';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { FadeIn, SlideInUp, AnimatedButton } from "../../utils/animations.jsx";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Handle form submission here
   };
 
@@ -39,11 +39,14 @@ const Contact = () => {
           </div>
         </div>
       </FadeIn>
-      
+
       {/* Form */}
       <div className="flex flex-col items-end gap-[36px] w-full max-w-[1312px]">
         <SlideInUp delay={0.4}>
-          <form onSubmit={handleSubmit} className="flex items-center gap-[36px] w-full">
+          <form
+            onSubmit={handleSubmit}
+            className="flex items-center gap-[36px] w-full"
+          >
             {/* Name Field */}
             <div className="flex flex-col items-start gap-[16px] w-[413.33px]">
               <label className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-white">
@@ -60,7 +63,7 @@ const Contact = () => {
                 />
               </div>
             </div>
-            
+
             {/* Email Field */}
             <div className="flex flex-col items-start gap-[16px] w-[413.33px]">
               <label className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-white">
@@ -77,7 +80,7 @@ const Contact = () => {
                 />
               </div>
             </div>
-            
+
             {/* Message Field */}
             <div className="flex flex-col items-start gap-[16px] w-[413.33px]">
               <label className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-white">
@@ -96,22 +99,34 @@ const Contact = () => {
             </div>
           </form>
         </SlideInUp>
-        
+
         {/* Submit Button */}
         <SlideInUp delay={0.6}>
           <AnimatedButton
             onClick={handleSubmit}
-            className="flex justify-center items-center px-[24px] py-[20px] gap-[10px] w-[201px] h-[57px] bg-white rounded-[35px]"
-            whileHover={{ 
+            className="flex justify-center items-center px-[24px] py-[20px] gap-[10px] w-[201px] h-[57px] btn-white"
+            whileHover={{
               scale: 1.05,
-              backgroundColor: "#F5F5F5",
-              transition: { duration: 0.3 }
+              transition: { duration: 0.3 },
             }}
             whileTap={{ scale: 0.95 }}
           >
             <span className="font-outfit font-medium text-description-mobile md:text-description leading-[130%] text-[#1D3357]">
               Send Message
             </span>
+            <svg
+              className="w-5 h-5 text-[#1D3357] btn-icon"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 12h14M12 5l7 7-7 7"
+              />
+            </svg>
           </AnimatedButton>
         </SlideInUp>
       </div>

@@ -11,6 +11,8 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const [isTechOpen, setIsTechOpen] = useState(false);
+
   // Helper function to check if a path is active
   const isActive = (path) => location.pathname === path;
 
@@ -78,36 +80,92 @@ const Navbar = () => {
             </motion.svg>
           </motion.div>
         </Link>
-        <Link to="/our-technology">
-          <motion.div
-            className="flex items-center gap-2 cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <motion.span
-              className={`font-outfit text-[14px] ${
-                isTechnologyActive()
-                  ? "text-[#E63946] font-semibold"
-                  : "text-[#0D192D] font-medium"
-              }`}
-              whileHover={{ color: "#E63946" }}
+        <div
+          className="relative"
+          onMouseEnter={() => setIsTechOpen(true)}
+          onMouseLeave={() => setIsTechOpen(false)}
+        >
+          <Link to="/our-technology">
+            <motion.div
+              className="flex items-center gap-2 cursor-pointer"
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              Our Technology
-            </motion.span>
-            <motion.svg
-              className={`w-6 h-6 ${
-                isTechnologyActive() ? "text-[#E63946]" : "text-[#0D192D]"
-              }`}
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              whileHover={{ color: "#E63946" }}
-              transition={{ duration: 0.2 }}
-            >
-              <path d="M7 10l5 5 5-5z" />
-            </motion.svg>
-          </motion.div>
-        </Link>
+              <motion.span
+                className={`font-outfit text-[14px] ${
+                  isTechnologyActive()
+                    ? "text-[#E63946] font-semibold"
+                    : "text-[#0D192D] font-medium"
+                }`}
+                whileHover={{ color: "#E63946" }}
+                transition={{ duration: 0.2 }}
+              >
+                Our Technology
+              </motion.span>
+              <motion.svg
+                className={`w-6 h-6 ${
+                  isTechnologyActive() ? "text-[#E63946]" : "text-[#0D192D]"
+                }`}
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                whileHover={{ color: "#E63946" }}
+                transition={{ duration: 0.2 }}
+              >
+                <path d="M7 10l5 5 5-5z" />
+              </motion.svg>
+            </motion.div>
+          </Link>
+
+          <AnimatePresence>
+            {isTechOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.12 }}
+                className="absolute left-0 top-full mt-3 w-64 bg-white rounded-xl shadow-lg border border-gray-100 z-50"
+              >
+                <div className="flex flex-col py-2">
+                  <Link
+                    to="/our-technology/printers"
+                    onClick={() => setIsTechOpen(false)}
+                    className="px-4 py-2 hover:bg-gray-50 text-[#0D192D] font-outfit text-sm"
+                  >
+                    3D Printers
+                  </Link>
+                  <Link
+                    to="/our-technology/accessories"
+                    onClick={() => setIsTechOpen(false)}
+                    className="px-4 py-2 hover:bg-gray-50 text-[#0D192D] font-outfit text-sm"
+                  >
+                    Accessories & Turnkey Services
+                  </Link>
+                  <Link
+                    to="/products"
+                    onClick={() => setIsTechOpen(false)}
+                    className="px-4 py-2 hover:bg-gray-50 text-[#0D192D] font-outfit text-sm"
+                  >
+                    3D Printed Furniture
+                  </Link>
+                  <Link
+                    to="/our-technology/software"
+                    onClick={() => setIsTechOpen(false)}
+                    className="px-4 py-2 hover:bg-gray-50 text-[#0D192D] font-outfit text-sm"
+                  >
+                    Software
+                  </Link>
+                  <Link
+                    to="/our-technology/materials"
+                    onClick={() => setIsTechOpen(false)}
+                    className="px-4 py-2 hover:bg-gray-50 text-[#0D192D] font-outfit text-sm"
+                  >
+                    Sustainable Materials
+                  </Link>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
         <Link to="/projects">
           <motion.div
             className="cursor-pointer"
@@ -190,24 +248,48 @@ const Navbar = () => {
       <div className="hidden lg:flex items-center gap-3">
         <Link to="/contact-us">
           <AnimatedButton
-            className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full whitespace-nowrap"
-            whileHover={{ scale: 1.05, backgroundColor: "#E5E7E5" }}
+            className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 btn-secondary whitespace-nowrap"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-[#0D192D] font-outfit font-medium text-sm">
-              Contact Us
-            </span>
+            <span className="font-outfit font-medium text-sm">Contact Us</span>
+            <svg
+              className="w-5 h-5 btn-icon"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 12h14M12 5l7 7-7 7"
+              />
+            </svg>
           </AnimatedButton>
         </Link>
         <Link to="/careers">
           <AnimatedButton
-            className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 bg-[#0D192D] rounded-full whitespace-nowrap"
-            whileHover={{ scale: 1.05, backgroundColor: "#1D3357" }}
+            className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 btn-primary whitespace-nowrap"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <span className="text-white font-outfit font-medium text-sm">
               Careers
             </span>
+            <svg
+              className="w-5 h-5 text-white btn-icon"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 12h14M12 5l7 7-7 7"
+              />
+            </svg>
           </AnimatedButton>
         </Link>
       </div>
@@ -393,24 +475,50 @@ const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <AnimatedButton
-                    className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 border border-[rgba(145,149,146,0.15)] bg-[#F9FAF9] rounded-full w-full whitespace-nowrap"
-                    whileHover={{ scale: 1.02, backgroundColor: "#E5E7E5" }}
+                    className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 btn-secondary w-full whitespace-nowrap"
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <span className="text-[#0D192D] font-outfit font-medium text-sm">
+                    <span className="font-outfit font-medium text-sm">
                       Contact Us
                     </span>
+                    <svg
+                      className="w-5 h-5 btn-icon"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 12h14M12 5l7 7-7 7"
+                      />
+                    </svg>
                   </AnimatedButton>
                 </Link>
                 <Link to="/careers" onClick={() => setIsMobileMenuOpen(false)}>
                   <AnimatedButton
-                    className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 bg-[#0D192D] rounded-full w-full whitespace-nowrap"
-                    whileHover={{ scale: 1.02, backgroundColor: "#1D3357" }}
+                    className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 btn-primary w-full whitespace-nowrap"
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <span className="text-white font-outfit font-medium text-sm">
                       Careers
                     </span>
+                    <svg
+                      className="w-5 h-5 text-white btn-icon"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 12h14M12 5l7 7-7 7"
+                      />
+                    </svg>
                   </AnimatedButton>
                 </Link>
               </div>
