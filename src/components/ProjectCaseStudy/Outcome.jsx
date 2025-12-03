@@ -32,7 +32,7 @@ const Outcome = () => {
         {/* Right Content */}
         <div className="flex flex-col gap-[20px] md:gap-[24px] w-full md:w-1/2">
           <SlideInRight delay={0.3} duration={0.8}>
-            <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[1.2] text-[#0D192D] tracking-[-0.02em]">
+            <h2 className="text-title-mobile md:text-title font-semibold leading-[1.2] text-[#0D192D] tracking-[-0.02em]">
               Outcome
             </h2>
           </SlideInRight>

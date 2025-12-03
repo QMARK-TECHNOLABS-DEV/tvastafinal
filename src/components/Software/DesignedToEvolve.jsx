@@ -29,12 +29,12 @@ const DesignedToEvolve = () => {
         {/* Header */}
         <div className="flex flex-col items-center gap-[16px] w-full">
           <FadeIn delay={0.2} duration={0.8}>
-            <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[1.2] text-center text-[#0D192D] tracking-[-0.02em]">
+            <h2 className="text-title-mobile md:text-title font-semibold leading-[1.2] text-center text-[#0D192D] tracking-[-0.02em]">
               Designed to Evolve
             </h2>
           </FadeIn>
           <FadeIn delay={0.3} duration={0.8}>
-            <p className="text-body-mobile md:text-card font-normal leading-[1.7] text-center text-[#1D3357] tracking-[-0.02em] max-w-[800px]">
+            <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-center text-[#1D3357] tracking-[-0.02em] max-w-full">
               From architects to engineers, Tvasta's software adapts to your
               design, terrain, and technology needs
             </p>
@@ -71,7 +71,7 @@ const DesignedToEvolve = () => {
                 <div className="absolute inset-0 flex flex-col justify-between p-[20px] md:p-[24px]">
                   {/* Tag */}
                   <div className="flex items-start">
-                    <span className="px-[12px] py-[6px] bg-white rounded-[20px] text-body-mobile md:text-body font-semibold text-[#0D192D] tracking-[-0.02em]">
+                    <span className="px-[12px] py-[6px] bg-white rounded-[20px] text-card-mobile md:text-card font-semibold text-[#0D192D] tracking-[-0.02em]">
                       {feature.tag}
                     </span>
                   </div>

@@ -35,14 +35,14 @@ const Hero = React.memo(() => {
           <div className="flex flex-col items-center gap-[30px] w-full filter drop-shadow-[0px_0px_24.9px_rgba(0,0,0,0.59)]">
             {/* Main Heading */}
             <FadeIn delay={0.3} duration={0.8}>
-              <h1 className="w-full max-w-[1256px] font-outfit font-semibold text-subtitle-mobile md:text-title leading-[106.2%] text-center tracking-[-0.02em] capitalize text-white">
+              <h1 className="w-full max-w-[1256px] font-outfit font-semibold text-title-mobile md:text-title leading-[106.2%] text-center tracking-[-0.02em] capitalize text-white">
                 Pioneering India's 3D Construction Revolution
               </h1>
             </FadeIn>
 
             {/* Subheading */}
             <FadeIn delay={0.6} duration={0.8}>
-              <p className="max-w-[857px] font-outfit font-semibold text-card-mobile md:text-description leading-[170%] text-center tracking-[-0.02em] text-white">
+              <p className="max-w-[857px] font-outfit font-semibold text-description-mobile md:text-description leading-[170%] text-center tracking-[-0.02em] text-white">
                 Trusted by innovators. Ready to deploy
               </p>
             </FadeIn>
@@ -56,15 +56,15 @@ const Hero = React.memo(() => {
                   navigate("/our-technology/printers");
                   window.scrollTo(0, 0);
                 }}
-                className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[66px] btn-animate whitespace-nowrap"
+                className="flex justify-center items-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] btn-primary whitespace-nowrap"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="font-outfit font-semibold text-sm sm:text-base leading-[18px] text-white">
+                <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[18px] text-white">
                   Explore Printers
                 </span>
                 <svg
-                  className="w-5 h-5 text-white flex-shrink-0"
+                  className="w-5 h-5 text-white flex-shrink-0 btn-icon"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"

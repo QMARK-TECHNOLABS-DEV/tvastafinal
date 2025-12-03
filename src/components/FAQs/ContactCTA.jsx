@@ -52,15 +52,15 @@ const ContactCTA = () => {
           <FadeIn delay={0.5}>
             <AnimatedButton
               onClick={handleContactClick}
-              className="flex items-center justify-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] bg-[#1D3357] rounded-[35px] hover:bg-[#2a4a73] transition-all duration-300 whitespace-nowrap"
+              className="flex items-center justify-center px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 gap-[10px] btn-primary whitespace-nowrap"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-white font-semibold text-sm sm:text-base leading-[23px] font-['Outfit']">
+              <span className="text-white font-semibold text-card-mobile md:text-card leading-[23px] font-['Outfit']">
                 Contact Us
               </span>
               <svg
-                className="w-5 h-5 text-white"
+                className="w-5 h-5 text-white btn-icon"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"

@@ -74,12 +74,12 @@ const WhyMaterialsStandOut = () => {
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-[20px] md:p-[24px]">
                   {/* Title */}
-                  <h3 className="text-[24px] md:text-[32px] lg:text-[36px] font-semibold leading-[1.4] text-white tracking-[-0.02em] mb-[12px]">
+                  <h3 className="text-card-mobile md:text-card font-semibold leading-[1.4] text-white tracking-[-0.02em] mb-[12px]">
                     {feature.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-body-mobile md:text-body font-normal leading-[1.7] text-gray-200 tracking-[-0.02em]">
+                  <p className="text-card-mobile md:text-card font-normal leading-[1.7] text-gray-200 tracking-[-0.02em]">
                     {feature.description}
                   </p>
                 </div>

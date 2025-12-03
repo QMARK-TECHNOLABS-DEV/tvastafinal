@@ -39,7 +39,7 @@ const Hero = () => {
             variants={fadeInUp}
             className="inline-flex items-center justify-center bg-white border border-[#E0E0E0] rounded-[30px] px-[20px] py-[8px] shadow-sm"
           >
-            <span className="text-[14px] md:text-[16px] font-medium text-[#0D192D] tracking-[-0.02em] font-['Outfit']">
+            <span className="text-card-mobile md:text-card font-medium text-[#0D192D] tracking-[-0.02em] font-['Outfit']">
               Project Case Study
             </span>
           </motion.div>

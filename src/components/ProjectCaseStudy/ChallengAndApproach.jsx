@@ -15,7 +15,7 @@ const ChallengAndApproach = () => {
           {/* Left Content */}
           <div className="flex flex-col gap-[20px] md:gap-[24px] w-full md:w-1/2">
             <SlideInLeft delay={0.2} duration={0.8}>
-              <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[1.2] text-[#0D192D] tracking-[-0.02em]">
+              <h2 className="text-title-mobile md:text-title font-semibold leading-[1.2] text-[#0D192D] tracking-[-0.02em]">
                 Challenge
               </h2>
             </SlideInLeft>
@@ -54,7 +54,7 @@ const ChallengAndApproach = () => {
         <div className="flex flex-col gap-[30px] md:gap-[40px] w-full">
           {/* Heading */}
           <FadeIn delay={0.2} duration={0.8}>
-            <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[1.2] text-[#0D192D] tracking-[-0.02em]">
+            <h2 className="text-title-mobile md:text-title font-semibold leading-[1.2] text-[#0D192D] tracking-[-0.02em]">
               Tvasta's Approach
             </h2>
           </FadeIn>

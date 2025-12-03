@@ -19,7 +19,7 @@ const Questions = () => {
           onClick={() => {
             window.open("https://wa.me/", "_blank");
           }}
-          className="flex justify-center items-center px-[24px] py-[16px] gap-[14px] bg-[#1D3357] rounded-[20px] w-[303px] h-[62px] group transition-all duration-300"
+          className="flex justify-center items-center px-[24px] py-[16px] gap-[14px] btn-primary w-[303px] h-[62px] group"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -34,9 +34,22 @@ const Questions = () => {
             </svg>
           </div>
 
-          <span className="font-outfit font-normal text-card text-white w-[211px] h-[25px] flex items-center">
+          <span className="font-outfit font-normal text-card-mobile md:text-card text-white whitespace-nowrap">
             Talk to Us on WhatsApp
           </span>
+          <svg
+            className="w-5 h-5 text-white btn-icon"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 12h14M12 5l7 7-7 7"
+            />
+          </svg>
         </AnimatedButton>
       </SlideInUp>
     </section>

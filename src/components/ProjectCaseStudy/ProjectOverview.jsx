@@ -99,7 +99,7 @@ const ProjectOverview = () => {
                   <div className="flex-shrink-0">{detail.icon}</div>
 
                   {/* Label */}
-                  <p className="text-[14px] md:text-[16px] font-medium leading-[1.5] text-[#0D192D] tracking-[-0.02em] whitespace-nowrap">
+                  <p className="text-card-mobile md:text-card font-medium leading-[1.5] text-[#0D192D] tracking-[-0.02em] whitespace-nowrap">
                     {detail.label}
                   </p>
                 </div>

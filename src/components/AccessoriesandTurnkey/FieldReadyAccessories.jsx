@@ -35,12 +35,12 @@ const FieldReadyAccessories = () => {
         {/* Header */}
         <div className="flex flex-col items-center gap-[16px] w-full">
           <FadeIn delay={0.2} duration={0.8}>
-            <h2 className="text-subtitle-mobile md:text-title font-semibold leading-[1.2] text-center text-[#0D192D] tracking-[-0.02em]">
+            <h2 className="text-title-mobile md:text-title font-semibold leading-[1.2] text-center text-[#0D192D] tracking-[-0.02em]">
               Field-Ready Accessories
             </h2>
           </FadeIn>
           <FadeIn delay={0.3} duration={0.8}>
-            <p className="text-[17px] md:text-[19px] font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
+            <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-center text-[#4A4A4A] tracking-[-0.02em]">
               Engineered To Ensure Consistent Quality, Reduced Downtime, And
               Faster Delivery.
             </p>
@@ -86,13 +86,13 @@ const FieldReadyAccessories = () => {
                     <div className="absolute inset-0 flex flex-col p-[24px] md:p-[28px]">
                       {/* Label Badge - Top Left */}
                       <div className="inline-flex items-center justify-center bg-white rounded-[30px] px-[12px] py-[6px] self-start mb-auto">
-                        <span className="text-[14px] md:text-[16px] font-semibold text-[#0D192D] tracking-[-0.02em]">
+                        <span className="text-card-mobile md:text-card font-semibold text-[#0D192D] tracking-[-0.02em]">
                           {accessory.label}
                         </span>
                       </div>
 
                       {/* Title - Bottom */}
-                      <h3 className="text-[16px] md:text-[18px] font-medium leading-[1.5] text-white tracking-[-0.02em]">
+                      <h3 className="text-card-mobile md:text-card font-medium leading-[1.5] text-white tracking-[-0.02em]">
                         {accessory.title}
                       </h3>
                     </div>

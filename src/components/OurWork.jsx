@@ -15,9 +15,22 @@ const OurWork = () => {
               navigate("/projects");
               window.scrollTo(0, 0);
             }}
-            className="font-outfit font-semibold text-xs md:text-sm leading-[20px] text-white bg-[#1D3357] px-4 py-2 rounded-full cursor-pointer"
+            className="font-outfit font-semibold text-card-mobile md:text-card leading-[20px] text-white btn-primary px-4 py-2 cursor-pointer flex items-center gap-2"
           >
             View All Work
+            <svg
+              className="w-5 h-5 text-white btn-icon"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 12h14M12 5l7 7-7 7"
+              />
+            </svg>
           </span>
         </div>
 
@@ -33,14 +46,14 @@ const OurWork = () => {
             >
               {/* Category Badge */}
               <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-2 bg-white rounded-full">
-                <span className="font-outfit font-semibold text-base text-[#0D192D]">
+                <span className="font-outfit font-semibold text-card-mobile md:text-card text-[#0D192D]">
                   3D Printers
                 </span>
               </div>
 
               {/* Content */}
               <div className="absolute bottom-4 left-4 flex flex-col gap-4 w-[calc(100%-32px)]">
-                <p className="font-outfit font-semibold text-lg leading-[160%] text-white">
+                <p className="font-outfit font-semibold text-card-mobile md:text-card leading-[160%] text-white">
                   Precision-built printers for fast, reliable, and scalable 3D
                   construction.
                 </p>
@@ -50,13 +63,13 @@ const OurWork = () => {
                     navigate("/our-technology/printers");
                     window.scrollTo(0, 0);
                   }}
-                  className="flex justify-center items-center px-7 py-4 gap-[10px] bg-white rounded-[66px] w-fit"
+                  className="flex justify-center items-center px-7 py-4 gap-[10px] btn-white w-fit"
                 >
-                  <span className="font-outfit font-semibold text-sm leading-[18px] text-[#0D192D]">
+                  <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[18px]">
                     Explore Printers
                   </span>
                   <svg
-                    className="w-5 h-5 text-black"
+                    className="w-5 h-5 btn-icon"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -83,13 +96,13 @@ const OurWork = () => {
               }}
             >
               <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-2 bg-white rounded-full">
-                <span className="font-outfit font-semibold text-base text-[#0D192D]">
+                <span className="font-outfit font-semibold text-card-mobile md:text-card text-[#0D192D]">
                   3D Printed Furniture
                 </span>
               </div>
 
               <div className="absolute bottom-4 left-4 flex flex-col gap-4 w-[calc(100%-32px)]">
-                <p className="font-outfit font-semibold text-lg leading-[160%] text-white">
+                <p className="font-outfit font-semibold text-card-mobile md:text-card leading-[160%] text-white">
                   Design-forward pieces that blend utility with 3D-printed form.
                 </p>
 
@@ -98,13 +111,13 @@ const OurWork = () => {
                     navigate("/products");
                     window.scrollTo(0, 0);
                   }}
-                  className="flex justify-center items-center px-7 py-4 gap-[10px] bg-white rounded-[66px] w-fit"
+                  className="flex justify-center items-center px-7 py-4 gap-[10px] btn-white w-fit"
                 >
-                  <span className="font-outfit font-semibold text-sm leading-[18px] text-[#0D192D]">
+                  <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[18px]">
                     View Collection
                   </span>
                   <svg
-                    className="w-5 h-5 text-black"
+                    className="w-5 h-5 btn-icon"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -131,13 +144,13 @@ const OurWork = () => {
               }}
             >
               <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-2 bg-white rounded-full">
-                <span className="font-outfit font-semibold text-base text-[#0D192D]">
+                <span className="font-outfit font-semibold text-card-mobile md:text-card text-[#0D192D]">
                   Projects Delivered
                 </span>
               </div>
 
               <div className="absolute bottom-4 left-4 flex flex-col gap-4 w-[calc(100%-32px)]">
-                <p className="font-outfit font-semibold text-lg leading-[160%] text-white">
+                <p className="font-outfit font-semibold text-card-mobile md:text-card leading-[160%] text-white">
                   From homes to shelters, real-world impact across sectors.
                 </p>
 
@@ -146,13 +159,13 @@ const OurWork = () => {
                     navigate("/projects/casestudy");
                     window.scrollTo(0, 0);
                   }}
-                  className="flex justify-center items-center px-7 py-4 gap-[10px] bg-white rounded-[66px] w-fit"
+                  className="flex justify-center items-center px-7 py-4 gap-[10px] btn-white w-fit"
                 >
-                  <span className="font-outfit font-semibold text-sm leading-[18px] text-[#0D192D]">
+                  <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[18px]">
                     View Case Studies
                   </span>
                   <svg
-                    className="w-5 h-5 text-black"
+                    className="w-5 h-5 btn-icon"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"

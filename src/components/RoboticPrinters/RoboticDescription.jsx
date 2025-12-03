@@ -18,7 +18,7 @@ const RoboticDescription = () => {
 
         {/* Description Text */}
         <FadeIn delay={0.4} duration={0.8}>
-          <p className="text-body-mobile md:text-card font-normal leading-[1.7] text-center text-[#1D3357] tracking-[-0.02em] max-w-[1050px]">
+          <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-center text-[#1D3357] tracking-[-0.02em] max-w-[1050px]">
             Tvasta’s robotic arm-based 3D printers bring freedom of movement,
             exceptional control, and architectural precision to every build.
             Designed for versatility, these systems are ideal for compact
