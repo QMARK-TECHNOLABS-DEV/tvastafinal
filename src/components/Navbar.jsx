@@ -140,13 +140,13 @@ const Navbar = () => {
                   >
                     Accessories & Turnkey Services
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/products"
                     onClick={() => setIsTechOpen(false)}
                     className="px-4 py-2 hover:bg-gray-50 text-[#0D192D] font-outfit text-sm"
                   >
                     3D Printed Furniture
-                  </Link>
+                  </Link> */}
                   <Link
                     to="/our-technology/software"
                     onClick={() => setIsTechOpen(false)}

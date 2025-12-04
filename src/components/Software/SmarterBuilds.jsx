@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FadeIn,
@@ -6,6 +6,56 @@ import {
   SlideInRight,
   AnimatedCard,
 } from "../../utils/animations.jsx";
+
+// Materials slider (uses images from OurMaterialLineup)
+const MaterialsSlider = () => {
+  const images = [
+    "/images/coastal.png",
+    "/images/extreme.png",
+    "/images/ms01.png",
+    "/images/ms03.png",
+  ];
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setActive((p) => (p + 1) % images.length),
+      4000
+    );
+    return () => clearInterval(id);
+  }, [images.length]);
+
+  return (
+    <>
+      {images.map((img, i) => (
+        <div
+          key={i}
+          className="absolute top-0 left-0 w-full h-full transition-all duration-700"
+          style={{
+            backgroundImage: `url('${img}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: active === i ? 1 : 0,
+            transform: active === i ? "scale(1)" : "scale(1.03)",
+          }}
+        />
+      ))}
+
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setActive(idx)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              active === idx ? "bg-white w-8" : "bg-white/50"
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
 
 const SmarterBuilds = () => {
   const navigate = useNavigate();
@@ -63,14 +113,10 @@ const SmarterBuilds = () => {
             className="relative w-full h-[250px] md:h-[380px] lg:h-[400px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]"
             whileHover={{
               y: -5,
-              boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
+              boxShadow: "0px 15px 35px rgba(13,25,45,0.2)",
             }}
           >
-            <img
-              src="/images/proven2.jpg"
-              alt="Robotic Arm Printers"
-              className="w-full h-full object-cover"
-            />
+            <MaterialsSlider />
           </AnimatedCard>
         </SlideInRight>
       </div>

@@ -58,14 +58,14 @@ const NeedMoreFlexibility = () => {
         {/* Right Image */}
         <SlideInRight delay={0.3} duration={0.8} className="w-full lg:w-1/2">
           <AnimatedCard
-            className="relative w-full h-[250px] md:h-[280px] lg:h-[300px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]"
+            className="relative w-full h-[250px] md:h-[300px] lg:h-[320px] rounded-[12px] overflow-hidden "
             whileHover={{
               y: -5,
               boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
             }}
           >
             <img
-              src="/images/roboticarmbased.jpg"
+              src="/images/rb.png"
               alt="Robotic Arm Printers"
               className="w-full h-full object-cover"
             />

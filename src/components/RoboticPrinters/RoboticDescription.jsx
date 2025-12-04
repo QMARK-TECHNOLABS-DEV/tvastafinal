@@ -7,18 +7,18 @@ const RoboticDescription = () => {
       <div className="flex flex-col items-center gap-[40px] w-full max-w-[1280px] mx-auto">
         {/* Image Section */}
         <SlideInUp delay={0.2} duration={0.8}>
-          <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]">
+          <div className="relative w-full md:w-[1200px] h-[300px] md:h-[450px] lg:h-[500px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]">
             <img
-              src="/images/robotic.jpg"
+              src="/images/robotic.png"
               alt="Robotic-based 3D Printer"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
           </div>
         </SlideInUp>
 
         {/* Description Text */}
         <FadeIn delay={0.4} duration={0.8}>
-          <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-center text-[#1D3357] tracking-[-0.02em] max-w-[1050px]">
+          <p className="text-description-mobile md:text-description font-normal leading-[1.7] text-center text-[#1D3357] tracking-[-0.02em] max-w-[1180px]">
             Tvasta’s robotic arm-based 3D printers bring freedom of movement,
             exceptional control, and architectural precision to every build.
             Designed for versatility, these systems are ideal for compact

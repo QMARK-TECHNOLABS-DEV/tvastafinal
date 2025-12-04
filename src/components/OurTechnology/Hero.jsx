@@ -31,27 +31,11 @@ const Hero = () => {
                 behavior: "smooth",
               });
             }}
-            className="flex items-center justify-center btn-primary font-outfit font-semibold text-card-mobile md:text-card px-7 py-4 border-none gap-[10px] cursor-pointer mx-auto"
+            className="flex items-center justify-center btn-primary font-outfit font-semibold text-card-mobile md:text-card px-7 py-4 border-none cursor-pointer mx-auto"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
             Learn More
-            <div className="w-5 h-5 rounded-full flex items-center justify-center">
-              <svg
-                className="w-5 h-5 text-white btn-icon"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M5 12h14M12 5l7 7-7 7"
-                />
-              </svg>
-            </div>
           </AnimatedButton>
         </SlideInUp>
       </div>
