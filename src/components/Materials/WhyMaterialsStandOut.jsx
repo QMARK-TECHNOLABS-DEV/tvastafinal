@@ -8,28 +8,28 @@ const WhyMaterialsStandOut = () => {
       title: "Geo-Engineered Mixes",
       description:
         "Go beyond traditional OPC. Our proprietary blends use geopolymers and mineral admixtures for superior durability.",
-      image: "/images/mso1.jpg",
+      image: "/images/ms01.png",
     },
     {
       id: 2,
       title: "Low-Carbon Alternatives",
       description:
         "Replace up to 66% cement with sustainable binders, lowering emissions without compromising strength.",
-      image: "/images/mso2.jpg",
+      image: "/images/ms02.png",
     },
     {
       id: 3,
       title: "Print-Optimized Flow",
       description:
         "Formulated for open-pot extrusion and inter-layer bonding. Pump-ready and layer-adhesive.",
-      image: "/images/mso3.jpg",
+      image: "/images/ms03.png",
     },
     {
       id: 4,
       title: "Tailored for Every Terrain",
       description:
         "Designed for India's toughest geographies - coastal spray, freezing ranges, and rapid climate variability.",
-      image: "/images/mso4.jpg",
+      image: "/images/ms04.png",
     },
   ];
 

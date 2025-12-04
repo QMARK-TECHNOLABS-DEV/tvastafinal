@@ -1,43 +1,48 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { fadeInUp, slideInFromLeft, staggerContainer } from '../../utils/animations';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  fadeInUp,
+  slideInFromLeft,
+  staggerContainer,
+} from "../../utils/animations";
 
 const WhyChooseTvasta = () => {
   const features = [
     {
       icon: (
-        <img 
-          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Icon1.png" 
-          alt="Speed of Execution" 
+        <img
+          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Icon1.png"
+          alt="Speed of Execution"
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
       ),
-      title: 'Speed of Execution',
-      description: `Tvasta's 3D construction printing technology enables faster project completion compared to traditional methods.`
+      title: "Speed of Execution",
+      description: `Tvasta's 3D construction printing technology enables faster project completion compared to traditional methods.`,
     },
     {
       icon: (
-        <img 
-          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon2.png" 
-          alt="Cost Efficiency" 
+        <img
+          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon2.png"
+          alt="Cost Efficiency"
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
       ),
-    title: 'Cost Efficiency',
-    description: 'Reduced labor costs and material waste lead to significant savings on construction projects.'
-  },
-  {
-    icon: (
-      <img 
-        src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon3.png" 
-        alt="Sustainable Innovation" 
-        className="w-5 h-5 object-contain filter brightness-0 invert"
-      />
-    ),
-    title: 'Sustainable Innovation',
-    description: 'Less material, less waste, and up to 66% cement replaced.'
-  }
-];
+      title: "Cost Efficiency",
+      description:
+        "Reduced labor costs and material waste lead to significant savings on construction projects.",
+    },
+    {
+      icon: (
+        <img
+          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon3.png"
+          alt="Sustainable Innovation"
+          className="w-5 h-5 object-contain filter brightness-0 invert"
+        />
+      ),
+      title: "Sustainable Innovation",
+      description: "Less material, less waste, and up to 66% cement replaced.",
+    },
+  ];
 
   return (
     <section className="w-full bg-[#0D192D] py-[60px] sm:py-[70px] md:py-[80px]">
@@ -98,23 +103,23 @@ const WhyChooseTvasta = () => {
             variants={fadeInUp}
             className="flex flex-col items-start gap-[10px] w-full max-w-[240px] mt-[15px] sm:mt-[18px] md:mt-[20px]"
           >
-            <button className="flex flex-row justify-center items-center py-[14px] sm:py-[15px] md:py-[16px] px-[24px] sm:px-[26px] md:px-[28px] gap-[8px] sm:gap-[9px] md:gap-[10px] w-full h-[48px] sm:h-[50px] md:h-[52px] bg-white rounded-[66px] group hover:bg-gray-100 transition-colors duration-300">
+            <button className="flex flex-row justify-center items-center py-[14px] sm:py-[15px] md:py-[16px] px-[24px] sm:px-[26px] md:px-[28px] gap-[8px] sm:gap-[9px] md:gap-[10px] w-full h-[48px] sm:h-[50px] md:h-[52px] btn-white group">
               <span className="text-card-mobile md:text-card font-semibold leading-[23px] text-[#0D192D] whitespace-nowrap font-['Outfit']">
                 Let's Build Together
               </span>
-              <svg 
-                width="20" 
-                height="20" 
-                viewBox="0 0 20 20" 
-                fill="none" 
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
               >
-                <path 
-                  d="M4.16669 15.8333L15.8334 4.16666M15.8334 4.16666H6.66669M15.8334 4.16666V13.3333" 
-                  stroke="#0D192D" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
+                <path
+                  d="M4.16669 15.8333L15.8334 4.16666M15.8334 4.16666H6.66669M15.8334 4.16666V13.3333"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
                 />
               </svg>
@@ -126,14 +131,14 @@ const WhyChooseTvasta = () => {
         <motion.div
           variants={slideInFromLeft}
           custom={1}
-          className="w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[632px] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[524px] lg:flex-1 overflow-hidden rounded-[20px] sm:rounded-[22px] md:rounded-[24px]"
+          className="w-full  h-[300px] sm:h-[350px] md:h-[660px]  lg:flex-1 overflow-hidden rounded-[20px] sm:rounded-[22px] md:rounded-[24px]"
         >
-          <div 
+          <div
             className="w-full h-full"
             style={{
               backgroundImage: `url('/images/newwhychosetvasta.jpeg')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           />
         </motion.div>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import {
   FadeIn,
   SlideInLeft,
@@ -9,6 +10,22 @@ import { useNavigate } from "react-router-dom";
 
 const PrintSmarter = () => {
   const navigate = useNavigate();
+  const images = [
+    "/images/subtract.png",
+    "/images/compatible.png",
+    "/images/tunable.png",
+    "/images/upgraded.jpg",
+  ];
+
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setActive((p) => (p + 1) % images.length),
+      4000
+    );
+    return () => clearInterval(id);
+  }, [images.length]);
   return (
     <section className="flex flex-col items-center w-full px-4 md:px-8 lg:px-20 py-[60px] md:py-[100px]">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-[40px] md:gap-[60px] lg:gap-[80px] w-full max-w-[1280px] mx-auto">
@@ -65,15 +82,65 @@ const PrintSmarter = () => {
               boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
             }}
           >
-            <img
-              src="/images/proven2.jpg"
-              alt="Robotic Arm Printers"
-              className="w-full h-full object-cover"
-            />
+            {/* Slider (BuildTogether-style) using images from SoftwareStack and DesignedToEvolve */}
+            <Slider />
           </AnimatedCard>
         </SlideInRight>
       </div>
     </section>
+  );
+};
+
+const Slider = ({}) => {
+  const images = [
+    "/images/subtract.png",
+    "/images/compatible.png",
+    "/images/tunable.png",
+    "/images/upgraded.jpg",
+  ];
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setActiveSlide((s) => (s + 1) % images.length),
+      4000
+    );
+    return () => clearInterval(id);
+  }, [images.length]);
+
+  return (
+    <div className="relative w-full h-full">
+      {images.map((img, i) => (
+        <motion.div
+          key={i}
+          className="absolute top-0 left-0 w-full h-full"
+          style={{
+            backgroundImage: `url('${img}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+          }}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: activeSlide === i ? 1 : 0,
+            scale: activeSlide === i ? 1 : 1.05,
+          }}
+          transition={{ duration: 0.7 }}
+        />
+      ))}
+
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setActiveSlide(idx)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              activeSlide === idx ? "bg-white w-8" : "bg-white/50"
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 

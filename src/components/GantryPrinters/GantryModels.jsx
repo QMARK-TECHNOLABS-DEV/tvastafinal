@@ -18,7 +18,7 @@ const GantryModels = () => {
         "Compatible with modular subsystems",
         "Ideal for material testing, prototypes & architectural studies",
       ],
-      image: "/images/rd.jpg",
+      image: "/images/rd.png",
       buttonText: "Download Brochure",
       isLeft: true,
     },
@@ -32,7 +32,7 @@ const GantryModels = () => {
         "Flexible X, Y, Z axis configurations",
         "Supports start-stop workflows",
       ],
-      image: "/images/pd.jpg",
+      image: "/images/pd.png",
       buttonText: "Download Brochure",
       isLeft: false,
     },
@@ -46,14 +46,14 @@ const GantryModels = () => {
         "Supports G+2 structure printing",
         "Includes portable subsystems for efficient deployment",
       ],
-      image: "/images/zt.jpg",
+      image: "/images/zt.png",
       buttonText: "Download Brochure",
       isLeft: true,
     },
   ];
 
   return (
-    <section className="flex flex-col items-center w-full px-4 md:px-8 lg:px-20 py-[60px] md:py-[100px]">
+    <section className="flex bg-white flex-col items-center w-full px-4 md:px-8 lg:px-20 py-[60px] md:py-[100px]">
       <div className="flex flex-col items-center gap-[60px] md:gap-[80px] w-full max-w-[1280px] mx-auto">
         {models.map((model, index) => (
           <div
@@ -70,16 +70,13 @@ const GantryModels = () => {
                 className="w-full lg:w-1/2"
               >
                 <AnimatedCard
-                  className="relative w-full h-[350px] md:h-[420px] lg:h-[480px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]"
-                  whileHover={{
-                    y: -5,
-                    boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
-                  }}
+                  className="relative w-full h-[350px] md:h-[420px] lg:h-[480px] overflow-hidden"
+                  whileHover={{ y: -5 }}
                 >
                   <img
                     src={model.image}
                     alt={model.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain object-center"
                   />
                 </AnimatedCard>
               </SlideInLeft>
@@ -90,16 +87,13 @@ const GantryModels = () => {
                 className="w-full lg:w-1/2"
               >
                 <AnimatedCard
-                  className="relative w-full h-[350px] md:h-[420px] lg:h-[480px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]"
-                  whileHover={{
-                    y: -5,
-                    boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
-                  }}
+                  className="relative w-full h-[350px] md:h-[420px] lg:h-[480px] overflow-hidden"
+                  whileHover={{ y: -5 }}
                 >
                   <img
                     src={model.image}
                     alt={model.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain object-center"
                   />
                 </AnimatedCard>
               </SlideInRight>
@@ -164,21 +158,21 @@ const GantryModels = () => {
 
               {/* CTA Button */}
               <FadeIn delay={0.8 + index * 0.1} duration={0.8}>
-                <button className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] btn-download w-fit group">
+                <button className="flex items-center justify-center gap-[10px] px-[24px] py-[12px] btn-download w-fit group">
                   <span className="text-card-mobile md:text-card font-semibold text-white">
                     {model.buttonText}
                   </span>
                   <svg
-                    className="w-[16px] h-[16px] text-white btn-icon"
+                    className="w-[20px] h-[20px] text-white"
                     fill="none"
                     stroke="currentColor"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
+                      d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3"
                     />
                   </svg>
                 </button>

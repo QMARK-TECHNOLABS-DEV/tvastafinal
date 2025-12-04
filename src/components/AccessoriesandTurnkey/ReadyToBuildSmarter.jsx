@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FadeIn,
@@ -6,6 +6,58 @@ import {
   SlideInRight,
   AnimatedCard,
 } from "../../utils/animations.jsx";
+
+// Right-side slider used inside ReadyToBuildSmarter
+const SliderContent = () => {
+  const images = [
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png",
+  ];
+
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setActive((p) => (p + 1) % images.length),
+      4000
+    );
+    return () => clearInterval(id);
+  }, [images.length]);
+
+  return (
+    <>
+      {images.map((img, idx) => (
+        <div
+          key={idx}
+          className="absolute top-0 left-0 w-full h-full transition-opacity duration-700"
+          style={{
+            backgroundImage: `url('${img}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: active === idx ? 1 : 0,
+            transform: active === idx ? "scale(1)" : "scale(1.05)",
+          }}
+        />
+      ))}
+
+      {/* Navigation Dots */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setActive(i)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              active === i ? "bg-white w-8" : "bg-white/50"
+            }`}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
 
 const ReadyToBuildSmarter = () => {
   const navigate = useNavigate();
@@ -58,21 +110,13 @@ const ReadyToBuildSmarter = () => {
           </FadeIn>
         </div>
 
-        {/* Right Image */}
+        {/* Right Image Slider (replaces static image) */}
         <div className="w-full md:w-1/2">
           <SlideInRight delay={0.3} duration={0.8}>
-            <AnimatedCard
-              className="relative w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)] group cursor-pointer"
-              whileHover={{
-                y: -5,
-                boxShadow: "0px 15px 35px rgba(0,0,0,0.4)",
-              }}
-            >
-              <img
-                src="/images/proven2.jpg"
-                alt="Ready to Build Smarter"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+            <AnimatedCard className="relative w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)] group cursor-pointer">
+              {/* Slider images (absolute stacked, fade between them) */}
+              {/** Images list **/}
+              <SliderContent />
             </AnimatedCard>
           </SlideInRight>
         </div>

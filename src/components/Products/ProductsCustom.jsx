@@ -66,7 +66,7 @@ const ProductsCustom = () => {
               <span className="font-outfit font-semibold text-card-mobile md:text-card text-white">
                 Contact Us
               </span>
-              <div className="w-[20px] h-[20px] bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+              {/* <div className="w-[20px] h-[20px] bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                 <svg
                   className="w-[12px] h-[12px] text-[#1D3357]"
                   fill="currentColor"
@@ -78,7 +78,7 @@ const ProductsCustom = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </div>
+              </div> */}
               <svg
                 className="w-5 h-5 text-white btn-icon"
                 fill="none"

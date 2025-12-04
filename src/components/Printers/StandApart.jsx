@@ -89,11 +89,11 @@ const StandApart = () => {
         <SlideInRight
           delay={0.4}
           duration={0.8}
-          className="w-full lg:w-1/2 h-[400px] md:h-[500px] lg:h-[600px]"
+          className="w-full lg:w-1/2 h-[400px] md:h-[750px] lg:h-[850px]"
         >
           <div className="relative w-full h-full rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)]">
             <img
-              src="/images/standapart.jpg"
+              src="/images/standapart.png"
               alt="Tvasta 3D Printer"
               className="w-full h-full object-cover"
             />

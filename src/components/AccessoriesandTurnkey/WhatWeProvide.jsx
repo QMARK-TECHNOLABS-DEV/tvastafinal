@@ -8,21 +8,21 @@ const WhatWeProvide = () => {
       label: "On-Site Hardware",
       title:
         "Auxiliary, IoT sensors, and mixer units designed to operate seamlessly with all our printers.",
-      image: "/images/wwp1.jpg",
+      image: "/images/wwp1.png",
     },
     {
       id: 2,
       label: "Deployment & Training",
       title:
         "End-to-end installation, calibration, and hands-on training to ensure seamless use on-site/factory.",
-      image: "/images/wwp2.jpg",
+      image: "/images/wwp2.png",
     },
     {
       id: 3,
       label: "Execution Support",
       title:
         "Service team, qualified crew DLPs (Delivery Lifecycle Partners), and consultants to co-deliver required use.",
-      image: "/images/wwp3.jpg",
+      image: "/images/wwp3.png",
     },
   ];
 

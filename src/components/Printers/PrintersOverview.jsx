@@ -16,7 +16,7 @@ const PrintersOverview = () => {
       type: "Gantry-Based 3D Printers",
       description:
         "Engineered for large-scale on-site and off-site construction. These printers are ideal for housing, shelters, and infrastructure projects with high volume and precision requirements.",
-      image: "/images/gantrybased3d.jpg",
+      image: "/images/gantrybased3d.png",
       features: [
         "Large build envelope (up to G+2 structures)",
         "Modular & relocatable for field deployment",
@@ -32,7 +32,7 @@ const PrintersOverview = () => {
       type: "Robotic Arm-Based Printers",
       description:
         "Designed for complex geometries and smaller-footprint architectural builds. With 6-axis flexibility, these printers are optimized for design-driven structures.",
-      image: "/images/roboticarmbased.jpg",
+      image: "/images/roboticarmbased.png",
       features: [
         "High-resolution finish for curved & parametric forms",
         "Compact footprint for indoor/campus settings",
@@ -46,7 +46,7 @@ const PrintersOverview = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center w-full px-4 md:px-8 lg:px-20 py-[60px] md:py-[100px]">
+    <section className="flex flex-col items-center w-full px-4 md:px-8 lg:px-20 bg-white py-[60px] md:py-[100px]">
       <div className="flex flex-col items-center gap-[60px] md:gap-[100px] w-full max-w-[1280px] mx-auto">
         {/* Section Header */}
         <div className="flex flex-col items-center gap-[20px] w-full">
@@ -78,7 +78,7 @@ const PrintersOverview = () => {
                 className="w-full lg:w-1/2"
               >
                 <AnimatedCard
-                  className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]"
+                  className="relative w-full h-[300px] md:h-[500px] lg:h-[550px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]"
                   whileHover={{
                     y: -5,
                     boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
@@ -87,7 +87,11 @@ const PrintersOverview = () => {
                   <img
                     src={printer.image}
                     alt={printer.type}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full ${
+                      printer.isLeft
+                        ? "object-cover"
+                        : "object-contain object-center"
+                    }`}
                   />
                 </AnimatedCard>
               </SlideInLeft>
@@ -98,7 +102,7 @@ const PrintersOverview = () => {
                 className="w-full lg:w-1/2"
               >
                 <AnimatedCard
-                  className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]"
+                  className="relative w-full h-[300px] md:h-[500px] lg:h-[550px]  overflow-hidden "
                   whileHover={{
                     y: -5,
                     boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
@@ -107,7 +111,11 @@ const PrintersOverview = () => {
                   <img
                     src={printer.image}
                     alt={printer.type}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full ${
+                      printer.isLeft
+                        ? "object-cover"
+                        : "object-contain object-center"
+                    }`}
                   />
                 </AnimatedCard>
               </SlideInRight>

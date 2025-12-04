@@ -1,5 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { FadeIn, SlideInLeft, SlideInRight } from "../../utils/animations.jsx";
+
+// SliderImages: auto-advancing 4-image slider using gantry images
+const SliderImages = () => {
+  const images = [
+    "/images/Rectangle 34625215.png",
+    "/images/gantrybased3d.png",
+    "/images/robotic.png",
+    "/images/zt.png",
+  ];
+
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <>
+      {images.map((image, index) => (
+        <motion.div
+          key={index}
+          className="absolute top-0 left-0 w-full h-full"
+          style={{
+            backgroundImage: `url('${image}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: activeSlide === index ? 1 : 0,
+            scale: activeSlide === index ? 1 : 1.03,
+          }}
+          transition={{ duration: 0.7 }}
+        />
+      ))}
+
+      {/* Navigation Dots */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveSlide(index)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              activeSlide === index ? "bg-white w-8" : "bg-white/50"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
 import { useNavigate } from "react-router-dom";
 
 const ProvenPerformance = () => {
@@ -30,7 +86,7 @@ const ProvenPerformance = () => {
       <div className="flex flex-col lg:flex-row items-center gap-[40px] md:gap-[60px] lg:gap-[80px] w-full max-w-[1280px] mx-auto  rounded-[12px] p-[30px] md:p-[40px] lg:p-[50px]">
         {/* Left Image */}
         <SlideInLeft delay={0.2} duration={0.8} className="w-full lg:w-1/2">
-          <div className="relative w-full h-[300px] md:h-[350px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]">
+          <div className="relative w-full h-[300px] md:h-[400px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]">
             <img
               src="/images/proven1.jpg"
               alt="Proven Performance"
@@ -108,14 +164,10 @@ const ProvenPerformance = () => {
 
       {/* Second Section - Download Tech Specs */}
       <div className="flex flex-col lg:flex-row-reverse items-center gap-[40px] md:gap-[60px] lg:gap-[80px] w-full max-w-[1280px] mx-auto rounded-[12px] p-[30px] md:p-[40px] lg:p-[50px]">
-        {/* Right Image */}
+        {/* Right Image (slider from gantry images) */}
         <SlideInRight delay={0.2} duration={0.8} className="w-full lg:w-1/2">
           <div className="relative w-full h-[300px] md:h-[350px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]">
-            <img
-              src="/images/proven2.jpg"
-              alt="Technical Specifications"
-              className="w-full h-full object-cover"
-            />
+            <SliderImages />
           </div>
         </SlideInRight>
 

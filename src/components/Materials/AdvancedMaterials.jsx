@@ -13,7 +13,7 @@ const AdvancedMaterials = () => {
       title: "Cement Lab",
       description:
         "Physical & chemical analysis, SCM calcination, and binder formulation at lab scale.",
-      image: "/images/cl.jpg",
+      image: "/images/cl.png",
       isLeft: false,
     },
     {
@@ -21,7 +21,7 @@ const AdvancedMaterials = () => {
       title: "Concrete Lab",
       description:
         "Mix design for self-compacting, pumpable, and geopolymer concretes. Equipped with compression testers (up to 1000 kN), flow table, L-box, and more.",
-      image: "/images/cnl.jpg",
+      image: "/images/cnl.png",
       isLeft: true,
     },
     {
@@ -29,7 +29,7 @@ const AdvancedMaterials = () => {
       title: "Durability & Shrinkage Lab",
       description:
         "RCPT, chloride migration, water permeability, sorptivity, and shrinkage studies in controlled conditions.",
-      image: "/images/dfl.jpg",
+      image: "/images/dfl.png",
       isLeft: false,
     },
     {
@@ -37,7 +37,7 @@ const AdvancedMaterials = () => {
       title: "Forensics Lab",
       description:
         "Diagnostic testing for ageing or disputed structures. Includes rebound hammer, pH meter, muffle furnace, and profiling tools.",
-      image: "/images/fl.jpg",
+      image: "/images/fl.png",
       isLeft: true,
     },
   ];
@@ -108,7 +108,7 @@ const AdvancedMaterials = () => {
               {/* Content */}
               <div className="flex flex-col gap-[16px] md:gap-[20px] w-full md:flex-1">
                 <FadeIn delay={0.4 + index * 0.1} duration={0.8}>
-                  <h3 className="text-title-mobile md:text-title font-semibold leading-[1.3] text-[#0D192D] tracking-[-0.02em]">
+                  <h3 className="text-subtitle-mobile md:text-subtitle font-semibold leading-[1.3] text-[#0D192D] tracking-[-0.02em]">
                     {lab.title}
                   </h3>
                 </FadeIn>

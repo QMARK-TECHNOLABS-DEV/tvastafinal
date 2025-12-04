@@ -1,72 +1,83 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { fadeInUp, staggerContainer, slideInFromLeft } from '../../utils/animations';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  fadeInUp,
+  staggerContainer,
+  slideInFromLeft,
+} from "../../utils/animations";
 
 const ExploreBuilds = () => {
-  const [activeCategory, setActiveCategory] = useState('Housing');
+  const [activeCategory, setActiveCategory] = useState("Housing");
 
   const categories = [
-    'Housing',
-    'Public Infrastructure', 
-    'R&D and Institutional'
+    "Housing",
+    "Public Infrastructure",
+    "R&D and Institutional",
   ];
 
   const projectData = {
-    'Housing': [
+    Housing: [
       {
         id: 1,
-        category: 'Housing',
-        title: 'IITM house',
-        description: 'Complete homes and infrastructure in days, not months.',
-        image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.jpg'
+        category: "Housing",
+        title: "IITM house",
+        description: "Complete homes and infrastructure in days, not months.",
+        image:
+          "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.jpg",
       },
       {
         id: 2,
-        category: 'Housing',
-        title: 'Indian Airforce Guest House',
-        description: 'Sustainable housing solutions with innovative design.',
-        image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectshouse2.jpg'
+        category: "Housing",
+        title: "Indian Airforce Guest House",
+        description: "Sustainable housing solutions with innovative design.",
+        image:
+          "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectshouse2.jpg",
       },
       {
         id: 3,
-        category: 'Housing',
-        title: 'GPL Villa',
-        description: 'Modern residential construction using 3D printing.',
-        image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectshouse3.jpg'
-      }
+        category: "Housing",
+        title: "GPL Villa",
+        description: "Modern residential construction using 3D printing.",
+        image:
+          "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectshouse3.jpg",
+      },
     ],
-    'Public Infrastructure': [
+    "Public Infrastructure": [
       {
         id: 4,
-        category: 'Public Infrastructure',
-        title: 'GCC Bus Shelter',
-        description: 'Infrastructure projects built for communities.',
-        image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic1.jpg'
+        category: "Public Infrastructure",
+        title: "GCC Bus Shelter",
+        description: "Infrastructure projects built for communities.",
+        image:
+          "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic1.jpg",
       },
       {
         id: 5,
-        category: 'Public Infrastructure',
-        title: 'Haslat Shelter',
-        description: 'Large-scale public construction initiatives.',
-        image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic2.jpg'
+        category: "Public Infrastructure",
+        title: "Haslat Shelter",
+        description: "Large-scale public construction initiatives.",
+        image:
+          "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic2.jpg",
       },
       {
         id: 6,
-        category: 'Public Infrastructure',
-        title: 'Chepauk Boundary wall',
-        description: 'Public facilities designed for sustainability.',
-        image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic3.jpg'
-      }
+        category: "Public Infrastructure",
+        title: "Chepauk Boundary wall",
+        description: "Public facilities designed for sustainability.",
+        image:
+          "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectspublic3.jpg",
+      },
     ],
-    'R&D and Institutional': [
+    "R&D and Institutional": [
       {
         id: 7,
-        category: 'R&D and Institutional',
-        title: 'IITM booth',
-        description: 'Research and institutional development projects.',
-        image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectsrd.png'
-      }
-    ]
+        category: "R&D and Institutional",
+        title: "IITM booth",
+        description: "Research and institutional development projects.",
+        image:
+          "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectsrd.png",
+      },
+    ],
   };
 
   // Get current projects based on active category
@@ -92,12 +103,13 @@ const ExploreBuilds = () => {
           >
             Explore Our Builds
           </motion.h2>
-          
+
           <motion.p
             variants={fadeInUp}
             className="text-card-mobile md:text-description font-medium leading-[125%] text-[#1D3357] text-center capitalize max-w-[1200px] mx-auto px-4 font-['Outfit']"
           >
-            Projects Powered By Tvasta's Technology—Across Terrains, Timelines, And Typologies.
+            Projects Powered By Tvasta's Technology—Across Terrains, Timelines,
+            And Typologies.
           </motion.p>
         </motion.div>
 
@@ -106,15 +118,16 @@ const ExploreBuilds = () => {
           variants={fadeInUp}
           className="flex flex-col justify-center items-center w-full px-4 md:px-8 lg:px-16"
         >
-          <div className="flex flex-row justify-center items-center py-[8px] sm:py-[10px] md:py-[11px] px-[20px] sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[60px] gap-[15px] sm:gap-[20px] md:gap-[30px] lg:gap-[50px] xl:gap-[62px] bg-[#F1F1F1] rounded-[200px] flex-wrap">
+          <div className="flex flex-col sm:flex-row justify-center items-center py-[8px] sm:py-[10px] md:py-[11px] px-[20px] sm:px-[30px] md:px-[40px] lg:px-[50px] xl:px-[60px] gap-[12px] sm:gap-[20px] md:gap-[30px] lg:gap-[50px] xl:gap-[62px] bg-[#F1FAEE] rounded-[200px]">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`flex-shrink-0 px-[16px] sm:px-[18px] md:px-[20px] lg:px-[24px] xl:px-[28px] py-[6px] sm:py-[7px] md:py-[8px] lg:py-[10px] xl:py-[12px] rounded-[58px] text-card-mobile leading-[120%] tracking-[-0.02em] capitalize transition-all duration-300 whitespace-nowrap font-['Outfit']
-                           ${activeCategory === category
-                             ? 'bg-white text-[#0D192D] shadow-[0px_4px_4px_rgba(0,0,0,0.05)] border border-[#DDDDDD]'
-                             : 'text-[#0D192D] hover:bg-white/50'
+                className={`flex-shrink-0 px-[16px] sm:px-[18px] md:px-[20px] lg:px-[24px] xl:px-[28px] py-[6px] sm:py-[7px] md:py-[8px] lg:py-[10px] xl:py-[12px] rounded-[58px] text-card-mobile md:text-card leading-[120%] tracking-[-0.02em] capitalize transition-all duration-300 whitespace-nowrap font-['Outfit']
+                           ${
+                             activeCategory === category
+                               ? "bg-white text-[#0D192D] shadow-[0px_4px_4px_rgba(0,0,0,0.05)] border border-[#DDDDDD]"
+                               : "text-[#0D192D] hover:bg-white/50"
                            }`}
               >
                 {category}
@@ -144,9 +157,9 @@ const ExploreBuilds = () => {
                     className="flex flex-col justify-between items-start p-[12px] sm:p-[14px] md:p-[16px] gap-[140px] sm:gap-[160px] md:gap-[180px] lg:gap-[200px] xl:gap-[222px] w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] h-[280px] sm:h-[320px] md:h-[350px] lg:h-[380px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden relative group cursor-pointer"
                     style={{
                       background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('${currentProjects[0].image}')`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backdropFilter: 'blur(24px)'
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backdropFilter: "blur(24px)",
                     }}
                   >
                     {/* Project Tag */}
@@ -181,9 +194,9 @@ const ExploreBuilds = () => {
                         className="flex flex-col justify-between items-start p-[12px] sm:p-[14px] md:p-[16px] gap-[140px] sm:gap-[160px] md:gap-[180px] lg:gap-[200px] xl:gap-[222px] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-[400px] h-[280px] sm:h-[320px] md:h-[350px] lg:h-[380px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden relative group cursor-pointer"
                         style={{
                           background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('${project.image}')`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center',
-                          backdropFilter: 'blur(24px)'
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backdropFilter: "blur(24px)",
                         }}
                       >
                         {/* Project Tag */}
@@ -214,13 +227,16 @@ const ExploreBuilds = () => {
                           key={`${activeCategory}-${project.id}`}
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.3, delay: (index + 3) * 0.1 }}
+                          transition={{
+                            duration: 0.3,
+                            delay: (index + 3) * 0.1,
+                          }}
                           className="flex flex-col justify-between items-start p-[12px] sm:p-[14px] md:p-[16px] gap-[140px] sm:gap-[160px] md:gap-[180px] lg:gap-[200px] xl:gap-[222px] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-[400px] h-[280px] sm:h-[320px] md:h-[350px] lg:h-[380px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden relative group cursor-pointer"
                           style={{
                             background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('${project.image}')`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backdropFilter: 'blur(24px)'
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            backdropFilter: "blur(24px)",
                           }}
                         >
                           {/* Project Tag */}
@@ -252,6 +268,5 @@ const ExploreBuilds = () => {
     </section>
   );
 };
-
 
 export default ExploreBuilds;
