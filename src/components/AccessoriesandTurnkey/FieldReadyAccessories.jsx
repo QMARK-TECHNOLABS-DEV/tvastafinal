@@ -23,26 +23,30 @@ const FieldReadyAccessories = () => {
     },
     {
       id: 3,
-      label: "Batching Plant",
-      title: "",
+      label: "Silos & Batching Plant",
+      title:
+        "Automated systems for continuous mix production, best for large-scale and onsite builds",
       image: "/images/fra2.png",
     },
     {
       id: 4,
-      label: "Dosing Pump",
-      title: "",
+      label: "Custom Nozzles",
+      title:
+        "Tailored heads for varying design profiles, flow rates and build scales",
       image: "/images/fra3.png",
     },
     {
       id: 5,
-      label: "Materials & Additives",
-      title: "",
+      label: "Tvasta 3D Materials",
+      title:
+        "Plug-and-print dry mix and propreitary additives optimized for structural integrity and printability",
       image: "/images/fra4.png",
     },
     {
       id: 6,
-      label: "Pallets",
-      title: "",
+      label: "Movable Pallets",
+      title:
+        "Dual sets for efficient module transfer within microfactory setups",
       image: "/images/fra5.png",
     },
   ];
