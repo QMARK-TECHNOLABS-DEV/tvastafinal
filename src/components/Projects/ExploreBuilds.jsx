@@ -153,7 +153,9 @@ const ExploreBuilds = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3 }}
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.92 }}
+                    transition={{ type: "spring", stiffness: 600, damping: 10 }}
                     className="flex flex-col justify-between items-start p-[12px] sm:p-[14px] md:p-[16px] gap-[140px] sm:gap-[160px] md:gap-[180px] lg:gap-[200px] xl:gap-[222px] w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] h-[280px] sm:h-[320px] md:h-[350px] lg:h-[380px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden relative group cursor-pointer"
                     style={{
                       background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('${currentProjects[0].image}')`,
@@ -190,7 +192,13 @@ const ExploreBuilds = () => {
                         key={`${activeCategory}-${project.id}`}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                        whileHover={{ scale: 1.08 }}
+                        whileTap={{ scale: 0.92 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 600,
+                          damping: 10,
+                        }}
                         className="flex flex-col justify-between items-start p-[12px] sm:p-[14px] md:p-[16px] gap-[140px] sm:gap-[160px] md:gap-[180px] lg:gap-[200px] xl:gap-[222px] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-[400px] h-[280px] sm:h-[320px] md:h-[350px] lg:h-[380px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden relative group cursor-pointer"
                         style={{
                           background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('${project.image}')`,
@@ -227,9 +235,12 @@ const ExploreBuilds = () => {
                           key={`${activeCategory}-${project.id}`}
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
+                          whileHover={{ scale: 1.08 }}
+                          whileTap={{ scale: 0.92 }}
                           transition={{
-                            duration: 0.3,
-                            delay: (index + 3) * 0.1,
+                            type: "spring",
+                            stiffness: 600,
+                            damping: 10,
                           }}
                           className="flex flex-col justify-between items-start p-[12px] sm:p-[14px] md:p-[16px] gap-[140px] sm:gap-[160px] md:gap-[180px] lg:gap-[200px] xl:gap-[222px] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-[400px] h-[280px] sm:h-[320px] md:h-[350px] lg:h-[380px] xl:h-[400px] rounded-[20px] sm:rounded-[22px] md:rounded-[24px] overflow-hidden relative group cursor-pointer"
                           style={{
