@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FadeIn,
@@ -6,6 +6,57 @@ import {
   SlideInRight,
   AnimatedCard,
 } from "../../utils/animations.jsx";
+
+// Slider used to mirror BuildTogether's right-side images
+const BuildSlider = () => {
+  const images = [
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom1.png",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom2.jpg",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom3.png",
+    "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/buildingtom4.png",
+  ];
+
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setActive((p) => (p + 1) % images.length),
+      4000
+    );
+    return () => clearInterval(id);
+  }, [images.length]);
+
+  return (
+    <>
+      {images.map((img, i) => (
+        <div
+          key={i}
+          className="absolute top-0 left-0 w-full h-full transition-all duration-700"
+          style={{
+            backgroundImage: `url('${img}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: active === i ? 1 : 0,
+            transform: active === i ? "scale(1)" : "scale(1.05)",
+          }}
+        />
+      ))}
+
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setActive(idx)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              active === idx ? "bg-white w-8" : "bg-white/50"
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
 
 const BuildBetterTogether = () => {
   const navigate = useNavigate();
@@ -59,21 +110,15 @@ const BuildBetterTogether = () => {
           </FadeIn>
         </div>
 
-        {/* Right Image */}
+        {/* Right Image Slider (reuse BuildTogether images) */}
         <div className="w-full md:w-1/2">
           <SlideInRight delay={0.3} duration={0.8}>
             <AnimatedCard
               className="relative w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)] group cursor-pointer"
-              whileHover={{
-                y: -5,
-                boxShadow: "0px 15px 35px rgba(0,0,0,0.4)",
-              }}
+              whileHover={{ y: -5, boxShadow: "0px 15px 35px rgba(0,0,0,0.4)" }}
             >
-              <img
-                src="/images/proven2.jpg"
-                alt="Build Better Together"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+              {/** Slider images (stacked absolute divs) */}
+              <BuildSlider />
             </AnimatedCard>
           </SlideInRight>
         </div>

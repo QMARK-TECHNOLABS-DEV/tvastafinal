@@ -18,7 +18,7 @@ const RoboticModels = () => {
         "Simplified setup and maintenance",
         "Ideal for prefabs, facades, and design elements",
       ],
-      image: "/images/robo1.jpg",
+      image: "/images/rp.png",
       buttonText: "Download Brochure",
       isLeft: true,
     },
@@ -32,7 +32,7 @@ const RoboticModels = () => {
         "Integrated pressure & laser sensors for real-time calibration",
         "Built for on-ground deployment, on-site calibration and positioning solutions",
       ],
-      image: "/images/robo2.jpg",
+      image: "/images/rc.png",
       buttonText: "Download Brochure",
       isLeft: false,
     },
@@ -46,7 +46,7 @@ const RoboticModels = () => {
         "Low-footprint production printer that can print on either side of the rail",
         "Low-maintenance, high-throughput operation",
       ],
-      image: "/images/robo3.jpg",
+      image: "/images/rt.png",
       buttonText: "Download Brochure",
       isLeft: true,
     },
@@ -70,7 +70,7 @@ const RoboticModels = () => {
                 className="w-full lg:w-1/2"
               >
                 <AnimatedCard
-                  className="relative w-full h-[350px] md:h-[420px] lg:h-[480px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]"
+                  className="relative w-full h-[350px] md:h-[420px] lg:h-[480px] rounded-[12px]  overflow-hidden "
                   whileHover={{
                     y: -5,
                     boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
@@ -79,7 +79,7 @@ const RoboticModels = () => {
                   <img
                     src={model.image}
                     alt={model.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain object-center"
                   />
                 </AnimatedCard>
               </SlideInLeft>
@@ -90,7 +90,7 @@ const RoboticModels = () => {
                 className="w-full lg:w-1/2"
               >
                 <AnimatedCard
-                  className="relative w-full h-[350px] md:h-[420px] lg:h-[480px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]"
+                  className="relative w-full h-[350px] md:h-[420px] lg:h-[480px] rounded-[12px]  overflow-hidden "
                   whileHover={{
                     y: -5,
                     boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
@@ -99,7 +99,7 @@ const RoboticModels = () => {
                   <img
                     src={model.image}
                     alt={model.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                 </AnimatedCard>
               </SlideInRight>
@@ -164,21 +164,21 @@ const RoboticModels = () => {
 
               {/* CTA Button */}
               <FadeIn delay={0.8 + index * 0.1} duration={0.8}>
-                <button className="flex items-center justify-center gap-[8px] px-[24px] py-[12px] btn-download w-fit group">
+                <button className="flex items-center justify-center gap-[10px] px-[24px] py-[12px] btn-download w-fit group">
                   <span className="text-card-mobile md:text-card font-semibold text-white">
                     {model.buttonText}
                   </span>
                   <svg
-                    className="w-[16px] h-[16px] text-white btn-icon"
+                    className="w-[20px] h-[20px] text-white"
                     fill="none"
                     stroke="currentColor"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
+                      d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3"
                     />
                   </svg>
                 </button>

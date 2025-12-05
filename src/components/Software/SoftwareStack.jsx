@@ -46,7 +46,7 @@ const SoftwareStack = () => {
 
   return (
     <section className="relative w-full bg-[#0D192D] overflow-hidden py-[60px] md:py-[100px]">
-      <div className="flex flex-col lg:flex-row items-center gap-[40px] md:gap-[60px] lg:gap-[80px] w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-20">
+      <div className="flex flex-col lg:flex-row items-stretch gap-[40px] md:gap-[60px] lg:gap-[80px] w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-20">
         {/* Left Content Section */}
         <div className="w-full lg:w-1/2 flex flex-col gap-[40px] md:gap-[50px]">
           {/* Header */}
@@ -90,16 +90,17 @@ const SoftwareStack = () => {
         </div>
 
         {/* Right Image Section */}
-        <SlideInRight delay={0.4} duration={0.8} className="w-full lg:w-1/2">
+        <SlideInRight
+          delay={0.4}
+          duration={0.8}
+          className="w-full lg:w-1/2 lg:flex-1"
+        >
           <AnimatedCard
-            className="relative w-full h-[400px] md:h-[500px] lg:h-full rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)]"
-            whileHover={{
-              y: -5,
-              boxShadow: "0px_15px_35px_rgba(0,0,0,0.4)",
-            }}
+            className="relative w-full h-full min-h-[320px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)]"
+            whileHover={{ y: -5, boxShadow: "0px 15px 35px rgba(0,0,0,0.4)" }}
           >
             <img
-              src="/images/Subtract.jpg"
+              src="/images/subtract.png"
               alt="Tvasta Software Stack"
               className="w-full h-full object-cover"
             />

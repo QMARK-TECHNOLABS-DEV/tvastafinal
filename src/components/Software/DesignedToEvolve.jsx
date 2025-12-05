@@ -7,13 +7,13 @@ const DesignedToEvolve = () => {
       id: 1,
       tag: "Cross-Compatible",
       title: "Works seamlessly with all Tvasta's printer types",
-      image: "/images/compatible.jpg",
+      image: "/images/compatible.png",
     },
     {
       id: 2,
       tag: "Custom-Tunable",
       title: "With third-party inputs & advanced controls",
-      image: "/images/tunable.jpg",
+      image: "/images/tunable.png",
     },
     {
       id: 3,

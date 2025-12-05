@@ -8,21 +8,21 @@ const OurMaterialLineup = () => {
       label: "T-Mix Rapid",
       title:
         "Fast-setting, high early strength mix for fiber-reinforced 3D-printed concrete additive construction.",
-      image: "/images/rapid.jpg",
+      image: "/images/rapid.png",
     },
     {
       id: 2,
       label: "T-Mix Coastal",
       title:
         "Marine-grade durability for littoral and high-salinity zones. Blended for corrosion-shield and finish retention.",
-      image: "/images/coastal.jpg",
+      image: "/images/coastal.png",
     },
     {
       id: 3,
       label: "T-Mix Extreme",
       title:
         "Engineered to perform under sub-zero conditions and high freeze—thaw for mountain terrains.",
-      image: "/images/extreme.jpg",
+      image: "/images/extreme.png",
     },
   ];
 

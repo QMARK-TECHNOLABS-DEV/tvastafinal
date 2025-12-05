@@ -37,7 +37,13 @@ const OurWork = () => {
         {/* Content Groups */}
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10 w-full">
           {/* Card 1 - Printers */}
-          <div className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group">
+          <div
+            className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group cursor-pointer"
+            onClick={() => {
+              navigate("/our-technology/printers");
+              window.scrollTo(0, 0);
+            }}
+          >
             <div
               className="w-full h-full bg-cover bg-center"
               style={{
@@ -45,7 +51,7 @@ const OurWork = () => {
               }}
             >
               {/* Category Badge */}
-              <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-2 bg-white rounded-full">
+              <div className="absolute top-4 left-4 flex justify-center items-center h-[40px] px-4 bg-white rounded-full">
                 <span className="font-outfit font-semibold text-card-mobile md:text-card text-[#0D192D]">
                   3D Printers
                 </span>
@@ -63,7 +69,7 @@ const OurWork = () => {
                     navigate("/our-technology/printers");
                     window.scrollTo(0, 0);
                   }}
-                  className="flex justify-center items-center px-7 py-4 gap-[10px] btn-white w-fit"
+                  className="flex justify-center items-center h-[40px] px-4 gap-[10px] btn-white w-fit"
                 >
                   <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[18px]">
                     Explore Printers
@@ -88,14 +94,20 @@ const OurWork = () => {
           </div>
 
           {/* Card 2 - Collection */}
-          <div className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group">
+          <div
+            className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group cursor-pointer"
+            onClick={() => {
+              navigate("/products");
+              window.scrollTo(0, 0);
+            }}
+          >
             <div
               className="w-full h-full bg-cover bg-center"
               style={{
                 backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/ourwork2.jpg')`,
               }}
             >
-              <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-2 bg-white rounded-full">
+              <div className="absolute top-4 left-4 flex justify-center items-center h-[40px] px-4 bg-white rounded-full">
                 <span className="font-outfit font-semibold text-card-mobile md:text-card text-[#0D192D]">
                   3D Printed Furniture
                 </span>
@@ -111,7 +123,7 @@ const OurWork = () => {
                     navigate("/products");
                     window.scrollTo(0, 0);
                   }}
-                  className="flex justify-center items-center px-7 py-4 gap-[10px] btn-white w-fit"
+                  className="flex justify-center items-center h-[40px] px-4 gap-[10px] btn-white w-fit"
                 >
                   <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[18px]">
                     View Collection
@@ -136,14 +148,20 @@ const OurWork = () => {
           </div>
 
           {/* Card 3 - Case Studies */}
-          <div className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group">
+          <div
+            className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group cursor-pointer"
+            onClick={() => {
+              navigate("/projects/casestudy");
+              window.scrollTo(0, 0);
+            }}
+          >
             <div
               className="w-full h-full bg-cover bg-center"
               style={{
                 backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/ourwork3.jpg')`,
               }}
             >
-              <div className="absolute top-4 left-4 flex justify-center items-center px-3 py-2 bg-white rounded-full">
+              <div className="absolute top-4 left-4 flex justify-center items-center h-[40px] px-4 bg-white rounded-full">
                 <span className="font-outfit font-semibold text-card-mobile md:text-card text-[#0D192D]">
                   Projects Delivered
                 </span>
@@ -159,7 +177,7 @@ const OurWork = () => {
                     navigate("/projects/casestudy");
                     window.scrollTo(0, 0);
                   }}
-                  className="flex justify-center items-center px-7 py-4 gap-[10px] btn-white w-fit"
+                  className="flex justify-center items-center h-[40px] px-4 gap-[10px] btn-white w-fit"
                 >
                   <span className="font-outfit font-semibold text-card-mobile md:text-card leading-[18px]">
                     View Case Studies

@@ -68,14 +68,14 @@ const ProductsCategories = () => {
               whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
             >
               {/* Button */}
-              <div className="flex justify-center items-center px-3 py-2 mx-auto bg-white/95 backdrop-blur-md border border-white/15 rounded-full max-w-[90%]">
-                <span className="text-card-mobile md:text-card font-semibold leading-[1.6] text-[#0D192D] text-center px-2">
+              <div className="flex justify-start items-center px-3 py-2 bg-white/95 backdrop-blur-md border border-white/15 rounded-full w-fit">
+                <span className="text-card-mobile md:text-card font-semibold leading-[1.6] text-[#0D192D] text-left">
                   {category.buttonText}
                 </span>
               </div>
 
               {/* Description */}
-              <p className="text-card-mobile md:text-card font-semibold leading-[1.6] text-white text-start mx-auto max-w-[90%] px-2">
+              <p className="text-card-mobile md:text-card font-semibold leading-[1.6] text-white text-start max-w-[90%] px-2">
                 {category.description}
               </p>
             </AnimatedCard>
