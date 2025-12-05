@@ -67,17 +67,6 @@ const Navbar = () => {
             >
               Who We Are
             </motion.span>
-            <motion.svg
-              className={`w-6 h-6 ${
-                isActive("/who-we-are") ? "text-[#E63946]" : "text-[#0D192D]"
-              }`}
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              whileHover={{ color: "#E63946" }}
-              transition={{ duration: 0.2 }}
-            >
-              <path d="M7 10l5 5 5-5z" />
-            </motion.svg>
           </motion.div>
         </Link>
         <div
@@ -349,17 +338,6 @@ const Navbar = () => {
                   >
                     Who We Are
                   </span>
-                  <svg
-                    className={`w-5 h-5 ${
-                      isActive("/who-we-are")
-                        ? "text-[#E63946]"
-                        : "text-[#0D192D]"
-                    }`}
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M7 10l5 5 5-5z" />
-                  </svg>
                 </motion.div>
               </Link>
 
