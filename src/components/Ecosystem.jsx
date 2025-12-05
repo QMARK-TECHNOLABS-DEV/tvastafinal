@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FadeIn, SlideInUp, StaggeredList } from "../utils/animations.jsx";
 
 const Ecosystem = () => {
@@ -71,16 +70,14 @@ const Ecosystem = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
         >
           {ecosystemItems.map((item, index) => (
-            <motion.div
+            <SlideInUp
               key={index}
-              className="relative w-full h-[380px] lg:h-[420px] rounded-[20px] overflow-hidden group cursor-pointer"
+              delay={index * 0.1}
+              className="relative w-full h-[380px] lg:h-[420px] rounded-[20px] overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => navigateTo(item.tag)}
               role="button"
               tabIndex={0}
               aria-label={`Go to ${item.tag}`}
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.92 }}
-              transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
               <div
                 className="w-full h-full bg-cover bg-center relative"
@@ -108,7 +105,7 @@ const Ecosystem = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </SlideInUp>
           ))}
         </StaggeredList>
       </div>
