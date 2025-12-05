@@ -30,9 +30,10 @@ const WhyChoose3D = () => {
           {/* Faster Time to Build */}
           <SlideInLeft delay={0.4} duration={0.8}>
             <motion.div
-              className="flex flex-col items-start gap-5 w-full lg:w-[597px]"
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.3 }}
+              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
               <div className="relative w-full h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden group">
                 <img
@@ -56,9 +57,10 @@ const WhyChoose3D = () => {
           {/* Design Without Limits */}
           <SlideInRight delay={0.6} duration={0.8}>
             <motion.div
-              className="flex flex-col items-start gap-5 w-full lg:w-[597px]"
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.3 }}
+              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
               <div className="relative w-[calc(100%+8rem)] -mx-16 lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden group">
                 <img
@@ -85,9 +87,10 @@ const WhyChoose3D = () => {
           {/* Lower Material Waste */}
           <SlideInLeft delay={0.8} duration={0.8}>
             <motion.div
-              className="flex flex-col items-start gap-5 w-full lg:w-[597px]"
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.3 }}
+              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
               <div className="relative w-[calc(100%-4rem)] mx-auto lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden group">
                 <img
@@ -111,9 +114,10 @@ const WhyChoose3D = () => {
           {/* Built to Withstand */}
           <SlideInRight delay={1.0} duration={0.8}>
             <motion.div
-              className="flex flex-col items-start gap-5 w-full lg:w-[597px]"
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.3 }}
+              className="flex flex-col items-start gap-5 w-full lg:w-[597px] cursor-pointer"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
               <div className="relative w-[calc(100%-4rem)] mx-auto lg:w-full lg:mx-0 h-[250px] lg:h-[318px] rounded-[10px] overflow-hidden group">
                 <img

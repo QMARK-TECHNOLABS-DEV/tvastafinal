@@ -53,10 +53,9 @@ const OurMaterialLineup = () => {
             >
               <AnimatedCard
                 className="relative w-full h-[320px] md:h-[360px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)] group cursor-pointer"
-                whileHover={{
-                  y: -5,
-                  boxShadow: "0px 15px 35px rgba(0,0,0,0.4)",
-                }}
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.92 }}
+                transition={{ type: "spring", stiffness: 600, damping: 10 }}
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">

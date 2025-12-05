@@ -58,14 +58,16 @@ const ProductsCategories = () => {
           {categories.map((category, index) => (
             <AnimatedCard
               key={category.id}
-              className="flex flex-col justify-between items-start p-4 gap-[20px] w-full h-[350px] md:h-[400px] rounded-[24px] overflow-hidden relative group cursor-pointer transition-all duration-300"
+              className="flex flex-col justify-between items-start p-4 gap-[20px] w-full h-[350px] md:h-[400px] rounded-[24px] overflow-hidden relative group cursor-pointer"
               style={{
                 backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url(${category.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
               }}
-              whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
               {/* Button */}
               <div className="flex justify-start items-center px-3 py-2 bg-white/95 backdrop-blur-md border border-white/15 rounded-full w-fit">

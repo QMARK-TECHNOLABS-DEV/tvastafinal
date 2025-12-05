@@ -55,10 +55,9 @@ const WhyMaterialsStandOut = () => {
             >
               <AnimatedCard
                 className="relative w-full h-[280px] md:h-[300px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(0,0,0,0.3)] group cursor-pointer"
-                whileHover={{
-                  y: -5,
-                  boxShadow: "0px_15px_35px_rgba(0,0,0,0.4)",
-                }}
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.92 }}
+                transition={{ type: "spring", stiffness: 600, damping: 10 }}
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
