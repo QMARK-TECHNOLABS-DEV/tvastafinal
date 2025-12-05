@@ -41,7 +41,7 @@ const WhyTvasta = () => {
         <div className="flex flex-col lg:flex-row items-start gap-8 w-full">
           <FadeIn delay={0.2}>
             <motion.div
-              className="relative w-full lg:w-[392px] h-[500px] rounded-2xl overflow-hidden cursor-pointer"
+              className="relative w-full md:w-[360px] h-[500px] rounded-2xl overflow-hidden cursor-pointer"
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.92 }}
               transition={{ type: "spring", stiffness: 600, damping: 10 }}
@@ -64,7 +64,7 @@ const WhyTvasta = () => {
 
           <FadeIn delay={0.4}>
             <motion.div
-              className="relative w-full lg:w-[392px] h-[500px] rounded-2xl overflow-hidden cursor-pointer"
+              className="relative w-full md:w-[360px] h-[500px] rounded-2xl overflow-hidden cursor-pointer"
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.92 }}
               transition={{ type: "spring", stiffness: 600, damping: 10 }}
@@ -86,7 +86,7 @@ const WhyTvasta = () => {
 
           <FadeIn delay={0.6}>
             <motion.div
-              className="relative w-full lg:w-[392px] h-[500px] rounded-2xl overflow-hidden cursor-pointer"
+              className="relative w-full md:w-[360px] h-[500px] rounded-2xl overflow-hidden cursor-pointer"
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.92 }}
               transition={{ type: "spring", stiffness: 600, damping: 10 }}
