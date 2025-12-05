@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Ecosystem = () => {
   const navigate = useNavigate();
@@ -77,9 +78,12 @@ const Ecosystem = () => {
                 index === ecosystemData.length - 1 ? "lg:col-span-2" : ""
               }`}
             >
-              <div
+              <motion.div
                 onClick={() => handleCardClick(item.path)}
-                className="relative w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-[24px] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+                className="relative w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-[24px] overflow-hidden cursor-pointer"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.92 }}
+                transition={{ type: "spring", stiffness: 600, damping: 10 }}
               >
                 <div
                   className="w-full h-full"
@@ -104,7 +108,7 @@ const Ecosystem = () => {
                     {item.description}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>
