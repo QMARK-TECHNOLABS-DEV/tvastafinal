@@ -37,7 +37,13 @@ const OurWork = () => {
         {/* Content Groups */}
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10 w-full">
           {/* Card 1 - Printers */}
-          <div className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group">
+          <div
+            className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group cursor-pointer"
+            onClick={() => {
+              navigate("/our-technology/printers");
+              window.scrollTo(0, 0);
+            }}
+          >
             <div
               className="w-full h-full bg-cover bg-center"
               style={{
@@ -88,7 +94,13 @@ const OurWork = () => {
           </div>
 
           {/* Card 2 - Collection */}
-          <div className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group">
+          <div
+            className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group cursor-pointer"
+            onClick={() => {
+              navigate("/products");
+              window.scrollTo(0, 0);
+            }}
+          >
             <div
               className="w-full h-full bg-cover bg-center"
               style={{
@@ -136,7 +148,13 @@ const OurWork = () => {
           </div>
 
           {/* Card 3 - Case Studies */}
-          <div className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group">
+          <div
+            className="relative w-full max-w-[400px] h-[400px] rounded-[24px] overflow-hidden group cursor-pointer"
+            onClick={() => {
+              navigate("/projects/casestudy");
+              window.scrollTo(0, 0);
+            }}
+          >
             <div
               className="w-full h-full bg-cover bg-center"
               style={{

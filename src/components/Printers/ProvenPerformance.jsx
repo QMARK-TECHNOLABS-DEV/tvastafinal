@@ -166,7 +166,7 @@ const ProvenPerformance = () => {
       <div className="flex flex-col lg:flex-row-reverse items-center gap-[40px] md:gap-[60px] lg:gap-[80px] w-full max-w-[1280px] mx-auto rounded-[12px] p-[30px] md:p-[40px] lg:p-[50px]">
         {/* Right Image (slider from gantry images) */}
         <SlideInRight delay={0.2} duration={0.8} className="w-full lg:w-1/2">
-          <div className="relative w-full h-[300px] md:h-[350px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]">
+          <div className="relative w-full h-[300px] md:h-[450px] rounded-[12px] overflow-hidden shadow-[0px_10px_25.9px_rgba(13,25,45,0.15)]">
             <SliderImages />
           </div>
         </SlideInRight>
