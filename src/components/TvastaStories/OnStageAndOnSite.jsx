@@ -1,21 +1,24 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FadeIn, SlideInUp, AnimatedCard } from '../../utils/animations.jsx';
+import React from "react";
+import { motion } from "framer-motion";
+import { FadeIn, SlideInUp, AnimatedCard } from "../../utils/animations.jsx";
 
 const OnStageAndOnSite = () => {
   const stageItems = [
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/spot1.jpg',
-      title: "Industry panel participation"
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/spot1.jpg",
+      title: "Industry panel participation",
     },
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/spot2.jpg',
-      title: "Academic sessions at IITs"
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/spot2.jpg",
+      title: "Academic sessions at IITs",
     },
     {
-      image: 'https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/spot2.png',
-      title: "Print demos at expos"
-    }
+      image:
+        "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/tvastastories/spot2.png",
+      title: "Print demos at expos",
+    },
   ];
 
   return (
@@ -27,10 +30,11 @@ const OnStageAndOnSite = () => {
             On Stage and On-Site
           </h2>
         </SlideInUp>
-        
+
         <SlideInUp delay={0.4}>
           <p className="w-full max-w-[1035px] font-outfit font-medium text-card-mobile md:text-description text-center capitalize text-[#1D3357]">
-            See where Tvasta's been—live demos, keynotes, and smart city showcases.
+            See where Tvasta's been—live demos, keynotes, and smart city
+            showcases.
           </p>
         </SlideInUp>
       </FadeIn>
@@ -48,21 +52,18 @@ const OnStageAndOnSite = () => {
           >
             <AnimatedCard
               className="flex flex-col justify-end items-start p-3 gap-2.5 w-full h-[400px] md:h-[450px] lg:h-[500px] bg-[#606060] rounded-2xl overflow-hidden cursor-pointer"
-              whileHover={{ 
-                y: -10, 
-                scale: 1.02,
-                boxShadow: "0 25px 50px rgba(0,0,0,0.15)"
-              }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 600, damping: 10 }}
               style={{
                 backgroundImage: `url(${item.image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
               }}
             >
               {/* Content Card */}
-              <motion.div 
+              <motion.div
                 className="flex justify-center items-center p-2.5 gap-2.5 w-full bg-white rounded-[10px]"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
