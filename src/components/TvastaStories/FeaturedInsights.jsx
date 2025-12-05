@@ -74,9 +74,7 @@ const FeaturedInsights = () => {
             <SlideInUp key={insight.id} delay={0.1 * index}>
               <AnimatedCard
                 className="group relative flex flex-col gap-4 bg-white overflow-hidden cursor-pointer"
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.92 }}
-                transition={{ type: "spring", stiffness: 600, damping: 10 }}
+                whileHover={{ y: -8 }}
               >
                 {/* Image Container */}
                 <div
@@ -91,7 +89,7 @@ const FeaturedInsights = () => {
                   <img
                     src={insight.image}
                     alt={`Insight ${insight.id}`}
-                    className="w-full h-full object-cover transition-transform duration-500 "
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
 
                   {/* Black Overlay on Hover */}
