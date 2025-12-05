@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { FadeIn, SlideInLeft, SlideInRight } from "../utils/animations.jsx";
 
 const WhyTvasta = () => {
@@ -38,63 +39,75 @@ const WhyTvasta = () => {
 
         {/* Stats Cards */}
         <div className="flex flex-col lg:flex-row items-start gap-8 w-full">
-          <FadeIn
-            delay={0.2}
-            className="relative w-full lg:w-[392px] h-[500px] rounded-2xl overflow-hidden"
-          >
-            <div
-              className="w-full h-full bg-cover bg-center relative"
-              style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.86) 67.12%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.jpg')`,
-              }}
+          <FadeIn delay={0.2}>
+            <motion.div
+              className="relative w-full lg:w-[392px] h-[500px] rounded-2xl overflow-hidden cursor-pointer"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
-              <div className="absolute bottom-6 left-6 flex flex-col gap-3">
-                <h3 className="font-outfit font-normal text-card-mobile md:text-card text-white max-w-[332px]">
-                  25,000+
-                  <br /> Sq. Ft. 3D Printed
-                </h3>
+              <div
+                className="w-full h-full bg-cover bg-center relative"
+                style={{
+                  backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.86) 67.12%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.jpg')`,
+                }}
+              >
+                <div className="absolute bottom-6 left-6 flex flex-col gap-3">
+                  <h3 className="font-outfit font-normal text-card-mobile md:text-card text-white max-w-[332px]">
+                    25,000+
+                    <br /> Sq. Ft. 3D Printed
+                  </h3>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </FadeIn>
 
-          <FadeIn
-            delay={0.4}
-            className="relative w-full lg:w-[392px] h-[500px] rounded-2xl overflow-hidden"
-          >
-            <div
-              className="w-full h-full bg-cover bg-center relative"
-              style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta2.png')`,
-              }}
+          <FadeIn delay={0.4}>
+            <motion.div
+              className="relative w-full lg:w-[392px] h-[500px] rounded-2xl overflow-hidden cursor-pointer"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
-              <div className="absolute bottom-6 left-6 flex flex-col gap-3">
-                <h3 className="font-outfit font-normal text-subtitle-card md:text-card text-white max-w-[332px]">
-                  66% <br /> Cement Replaced in Mixes
-                </h3>
+              <div
+                className="w-full h-full bg-cover bg-center relative"
+                style={{
+                  backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta2.png')`,
+                }}
+              >
+                <div className="absolute bottom-6 left-6 flex flex-col gap-3">
+                  <h3 className="font-outfit font-normal text-subtitle-card md:text-card text-white max-w-[332px]">
+                    66% <br /> Cement Replaced in Mixes
+                  </h3>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </FadeIn>
 
-          <FadeIn
-            delay={0.6}
-            className="relative w-full lg:w-[392px] h-[500px] rounded-2xl overflow-hidden"
-          >
-            <div
-              className="w-full h-full bg-cover bg-center relative"
-              style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta3.jpg')`,
-              }}
+          <FadeIn delay={0.6}>
+            <motion.div
+              className="relative w-full lg:w-[392px] h-[500px] rounded-2xl overflow-hidden cursor-pointer"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 600, damping: 10 }}
             >
-              <div className="absolute bottom-6 left-6 flex flex-col gap-3">
-                <h3 className="font-outfit font-normal text-card-mobile md:text-card text-white max-w-[332px]">
-                  Global Footprint
-                  <br />
-                  <span className="text-card-mobile md:text-card">
-                    Asia Pacific - Middle East - USA
-                  </span>
-                </h3>
+              <div
+                className="w-full h-full bg-cover bg-center relative"
+                style={{
+                  backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%), url('https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta3.jpg')`,
+                }}
+              >
+                <div className="absolute bottom-6 left-6 flex flex-col gap-3">
+                  <h3 className="font-outfit font-normal text-card-mobile md:text-card text-white max-w-[332px]">
+                    Global Footprint
+                    <br />
+                    <span className="text-card-mobile md:text-card">
+                      Asia Pacific - Middle East - USA
+                    </span>
+                  </h3>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </FadeIn>
         </div>
       </div>
