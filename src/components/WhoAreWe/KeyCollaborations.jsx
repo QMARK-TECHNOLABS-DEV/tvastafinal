@@ -17,7 +17,7 @@ const KeyCollaborations = () => {
   const doubledLogos = [...logos, ...logos, ...logos];
 
   return (
-    <div className="flex flex-col items-center gap-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-10 my-6 sm:my-16 md:my-10 overflow-hidden">
+    <div className="flex flex-col items-center gap-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-10  overflow-hidden">
       {/* Section Title */}
       <FadeIn delay={0.2}>
         <h2 className="font-outfit font-semibold text-subtitle-mobile md:text-title text-center text-[#0D192D]">

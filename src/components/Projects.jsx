@@ -15,15 +15,15 @@ const Projects = () => {
   const projectData = {
     Housing: [
       {
-        src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/whytvasta1.jpg",
+        src: "/images/Group%2085.png",
         alt: "Housing Project 1",
       },
       {
-        src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectshouse2.jpg",
+        src: "/images/Group%2086.png",
         alt: "Housing Project 2",
       },
       {
-        src: "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/projectshouse3.jpg",
+        src: "/images/Group%2087.png",
         alt: "Housing Project 3",
       },
     ],
@@ -131,7 +131,7 @@ const Projects = () => {
                     <motion.img
                       src={currentProjects[0].src}
                       alt={currentProjects[0].alt}
-                      className="w-[600px] h-[400px] object-cover rounded-[12px]"
+                      className="w-[400px] h-[500px] object-cover rounded-[12px]"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     />
@@ -145,7 +145,7 @@ const Projects = () => {
                       <motion.img
                         src={project.src}
                         alt={project.alt}
-                        className="w-[400px] h-[350px] object-cover rounded-[12px]"
+                        className="w-[400px] h-[500px] object-cover rounded-[12px]"
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.3 }}
                       />
@@ -164,7 +164,7 @@ const Projects = () => {
                     <motion.img
                       src={currentProjects[0].src}
                       alt={currentProjects[0].alt}
-                      className="w-full max-w-[500px] h-[300px] object-cover rounded-[12px]"
+                      className="w-full max-w-[500px] h-[420px] object-cover rounded-[12px]"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     />
@@ -186,7 +186,7 @@ const Projects = () => {
                         alt={project.alt}
                         className={`${
                           index === 2 ? "w-full max-w-[350px]" : "w-full"
-                        } h-[250px] object-cover rounded-[12px]`}
+                        } h-[380px] object-cover rounded-[12px]`}
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.3 }}
                       />
@@ -204,7 +204,7 @@ const Projects = () => {
                     <motion.img
                       src={project.src}
                       alt={project.alt}
-                      className="w-full h-[200px] object-cover rounded-[12px]"
+                      className="w-full h-[320px] object-cover rounded-[12px]"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     />

@@ -19,8 +19,10 @@ const Hero = React.memo(() => {
               "linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45))",
           }}
         >
+          {/* https://tvasta.blr1.cdn.digitaloceanspaces.com/media/herovideo.mp4 */}
+          {/* https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Tvasta%20Website%20video_2%20(2).mp4 */}
           <source
-            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/herovideo.mp4"
+            src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Tvasta%20Website%20video_2%20(2).mp4"
             type="video/mp4"
           />
         </video>

@@ -11,7 +11,7 @@ const WhyChooseTvasta = () => {
     {
       icon: (
         <img
-          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/Icon1.png"
+          src="/images/vector1.png"
           alt="Speed of Execution"
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
@@ -22,7 +22,7 @@ const WhyChooseTvasta = () => {
     {
       icon: (
         <img
-          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon2.png"
+          src="/images/vector2.png"
           alt="Cost Efficiency"
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
@@ -34,7 +34,7 @@ const WhyChooseTvasta = () => {
     {
       icon: (
         <img
-          src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Projects/icon3.png"
+          src="/images/vector3.png"
           alt="Sustainable Innovation"
           className="w-5 h-5 object-contain filter brightness-0 invert"
         />
@@ -136,7 +136,7 @@ const WhyChooseTvasta = () => {
           <div
             className="w-full h-full"
             style={{
-              backgroundImage: `url('/images/newwhychosetvasta.jpeg')`,
+              backgroundImage: `url('/images/newwhychosetvasta.jpg')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

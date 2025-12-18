@@ -205,6 +205,47 @@ const Footer = () => {
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
+
+            {/* X (Streamline) */}
+            <a
+              href="https://x.com/tvasta3dp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#0D192D] hover:bg-gray-200 transition-all duration-200"
+              aria-label="X"
+            >
+              <svg
+                className="w-4 h-4"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <desc>Twitter X Streamline Icon: https://streamlinehq.com</desc>
+                <path
+                  strokeWidth="1"
+                  d="M12.6 0.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867 -5.07 -4.425 5.07H0.316l5.733 -6.57L0 0.75h5.063l3.495 4.633L12.601 0.75Zm-0.86 13.028h1.36L4.323 2.145H2.865z"
+                />
+              </svg>
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/tvasta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#0D192D] hover:bg-gray-200 transition-all duration-200"
+              aria-label="LinkedIn"
+            >
+              <svg
+                className="w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.036-1.852-3.036-1.853 0-2.136 1.445-2.136 2.939v5.666H8.356V9h3.413v1.561h.049c.476-.9 1.637-1.85 3.369-1.85 3.601 0 4.268 2.37 4.268 5.455v6.286zM5.337 7.433c-1.144 0-2.071-.929-2.071-2.075 0-1.146.927-2.075 2.071-2.075 1.146 0 2.075.929 2.075 2.075 0 1.146-.929 2.075-2.075 2.075zM7.115 20.452H3.559V9h3.556v11.452z" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>

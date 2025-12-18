@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { FadeIn, SlideInUp, StaggeredList } from "../utils/animations.jsx";
 
 const Ecosystem = () => {
@@ -8,9 +9,10 @@ const Ecosystem = () => {
     Software: "/our-technology/software",
     "Sustainable Materials": "/our-technology/materials",
   };
+  const navigate = useNavigate();
   const navigateTo = (tag) => {
     window.scrollTo(0, 0);
-    window.location.href = routeMap[tag];
+    navigate(routeMap[tag]);
   };
   const ecosystemItems = [
     {
@@ -75,6 +77,12 @@ const Ecosystem = () => {
               key={index}
               className="relative w-full h-[380px] lg:h-[420px] rounded-[20px] overflow-hidden group cursor-pointer"
               onClick={() => navigateTo(item.tag)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  navigateTo(item.tag);
+                }
+              }}
               role="button"
               tabIndex={0}
               aria-label={`Go to ${item.tag}`}

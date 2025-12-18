@@ -18,7 +18,7 @@ const GantryModels = () => {
         "Compatible with modular subsystems",
         "Ideal for material testing, prototypes & architectural studies",
       ],
-      image: "/images/rd.png",
+      image: "/images/po1.png",
       buttonText: "Download Brochure",
       isLeft: true,
     },

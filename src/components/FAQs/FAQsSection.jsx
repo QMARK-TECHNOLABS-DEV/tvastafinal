@@ -14,7 +14,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle, index }) => {
         {/* Question */}
         <button
           onClick={onToggle}
-          className="text-left w-full text-card-mobile md:text-subtitle font-normal leading-[40px] text-[#101010] font-['Outfit'] hover:text-[#E63946] transition-colors duration-300 focus:outline-none"
+          className="text-left w-full text-description-mobile md:text-description font-normal leading-[40px] text-[#101010] font-['Outfit'] hover:text-[#E63946] transition-colors duration-300 focus:outline-none"
         >
           {question}
         </button>
@@ -42,7 +42,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle, index }) => {
                 </div>
 
                 {/* Answer text */}
-                <div className="flex-1 text-card-mobile md:text-description font-normal leading-[160%] text-[#101010] font-['Outfit'] whitespace-pre-line">
+                <div className="flex-1 text-description-mobile md:text-description font-normal leading-[160%] text-[#101010] font-['Outfit'] whitespace-pre-line">
                   {answer}
                 </div>
               </div>
@@ -539,7 +539,7 @@ After Printing:
             "What are the main cost components in conventional concrete construction compared to 3D printing?",
           answer: (
             <div className="w-full overflow-x-auto">
-              <table className="w-full border-collapse text-card-mobile md:text-card">
+              <table className="w-full border-collapse text-description-mobile md:text-description">
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="border border-gray-300 px-3 py-2 text-left font-semibold">
@@ -899,10 +899,10 @@ The above activities can be coupled with introduction of concrete 3D Printing, t
         {/* FAQ Items grouped by section */}
         {Object.entries(groupedCurrentFaqs).map(([sectionTitle, faqs]) => (
           <div key={sectionTitle} className="flex flex-col gap-8 w-full">
-            <h3 className="text-subtitle-mobile md:text-subtitle font-semibold text-[#E63946] font-['Outfit']">
+            <h3 className="text-description-mobile md:text-description font-semibold text-[#E63946] font-['Outfit']">
               {sectionTitle}
             </h3>
-            <div className="flex flex-col gap-[40px] w-full">
+            <div className="flex flex-col gap-[40px] w-full ">
               {faqs.map((faq) => (
                 <FAQItem
                   key={faq.globalIndex}

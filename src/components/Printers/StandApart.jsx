@@ -15,7 +15,7 @@ const StandApart = () => {
       icon: CogIcon,
       title: "Plug & Print Ready",
       description:
-        "Modular installation, minimal assembly time, field-calibrated for India's terrain",
+        "Modular installation, minimal assembly time, field calibrated for India's terrain",
     },
     {
       id: 2,
@@ -27,21 +27,21 @@ const StandApart = () => {
     {
       id: 3,
       icon: PencilSquareIcon,
-      title: "Design-Led Flexibility",
+      title: "Design Led Flexibility",
       description:
-        "Print straight walls or curved structures — no formwork required",
+        "Print straight walls or curved structures no formwork required",
     },
     {
       id: 4,
       icon: BeakerIcon,
       title: "Material Agility",
       description:
-        "Compatible with custom eco-concrete mixes and local aggregates",
+        "Compatible with custom eco concrete mixes and local aggregates",
     },
     {
       id: 5,
       icon: CommandLineIcon,
-      title: "Real-Time Automation",
+      title: "Real Time Automation",
       description:
         "Controlled through Tvasta's proprietary software stack with live monitoring & slicing",
     },

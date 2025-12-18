@@ -100,9 +100,9 @@ const SoftwareStack = () => {
             whileHover={{ y: -5, boxShadow: "0px 15px 35px rgba(0,0,0,0.4)" }}
           >
             <img
-              src="/images/subtract.png"
+              src="/images/softwarestack.png"
               alt="Tvasta Software Stack"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-right-top"
             />
           </AnimatedCard>
         </SlideInRight>

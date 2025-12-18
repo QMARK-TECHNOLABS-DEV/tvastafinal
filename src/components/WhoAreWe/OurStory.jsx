@@ -81,7 +81,7 @@ const OurStory = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory1.png"
+              src="/images/ourstory1.png"
               alt="Our Story 1"
               className="w-full h-full object-cover"
             />
@@ -94,7 +94,7 @@ const OurStory = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://tvasta.blr1.cdn.digitaloceanspaces.com/media/Who%20Are%20We/ourstory2.png"
+              src="/images/ourstory2.png"
               alt="Our Story 2"
               className="w-full h-full object-cover"
             />

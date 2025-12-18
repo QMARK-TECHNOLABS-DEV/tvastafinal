@@ -108,7 +108,7 @@ const ExploreBuilds = () => {
             variants={fadeInUp}
             className="text-card-mobile md:text-description font-medium leading-[125%] text-[#1D3357] text-center capitalize max-w-[1200px] mx-auto px-4 font-['Outfit']"
           >
-            Projects Powered By Tvasta's Technology—Across Terrains, Timelines,
+            Projects Powered By Tvasta's Technology Across Terrains, Timelines,
             And Typologies.
           </motion.p>
         </motion.div>

@@ -10,7 +10,7 @@ const Ecosystem = () => {
     "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem2.jpg",
     "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem.jpg",
     "https://tvasta.blr1.cdn.digitaloceanspaces.com/media/OurTechnology/3decosystem4.png",
-    "/images/sustainable.jpeg",
+    "/images/susmat.png",
   ];
 
   const ecosystemData = [

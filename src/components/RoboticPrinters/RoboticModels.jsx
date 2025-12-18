@@ -90,7 +90,7 @@ const RoboticModels = () => {
                 className="w-full lg:w-1/2"
               >
                 <AnimatedCard
-                  className="relative w-full h-[350px] md:h-[420px] lg:h-[480px] rounded-[12px]  overflow-hidden "
+                  className="relative w-full h-[350px] md:h-[550px] lg:h-[600px] rounded-[12px]  overflow-hidden "
                   whileHover={{
                     y: -5,
                     boxShadow: "0px_15px_35px_rgba(13,25,45,0.2)",
