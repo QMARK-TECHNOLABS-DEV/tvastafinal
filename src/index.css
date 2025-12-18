@@ -318,6 +318,79 @@
     transform: translateY(-20px);
     transition: opacity 300ms ease-in, transform 300ms ease-in;
   }
+
+  /* ---- react-select / select styling to match form inputs ---- */
+  .react-select-container .react-select__control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+    min-height: 36px; /* matches input line height on mobile */
+    padding: 0 6px;
+  }
+
+  .react-select-container .react-select__value-container {
+    padding: 0;
+  }
+
+  .react-select-container .react-select__single-value,
+  .react-select-container .react-select__option,
+  .react-select-container .react-select__input input {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px; /* text-card-mobile */
+    line-height: 1.4;
+    color: #fff;
+  }
+
+  .react-select-container .react-select__indicator-separator {
+    display: none;
+  }
+  .react-select-container .react-select__dropdown-indicator svg {
+    color: #fff;
+  }
+
+  .react-select-container .react-select__option {
+    padding: 8px 12px;
+  }
+
+  /* Ensure flags scale with text using em */
+  .react-select-container .react-select__single-value svg,
+  .react-select-container .react-select__option svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+  }
+
+  /* Make menu lists scrollable with mouse wheel and touch — allow momentum scrolling on iOS */
+  .react-select-container .react-select__menu-list {
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+  }
+
+  /* Specific overrides for the compact code select to prevent an extra short underline */
+  .react-select-code .react-select__control {
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+  .react-select-code .react-select__control .react-select__value-container {
+    padding-bottom: 0 !important;
+  }
+  .react-select-code .react-select__single-value {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .react-select-container .react-select__single-value,
+    .react-select-container .react-select__option,
+    .react-select-container .react-select__input input {
+      font-size: 20px; /* md:text-card */
+    }
+    .react-select-container .react-select__control {
+      min-height: 44px;
+    }
+  }
 }
 
 @layer utilities {
@@ -465,13 +538,12 @@
 
   .contact-form-select option {
     background-color: #0d192d !important;
-    background: #0d192d !important;
-    color: white !important;
-    padding: 12px 16px !important;
-    border: none !important;
-    font-size: 16px !important;
-    line-height: 1.4 !important;
-    margin: 0 !important;
+  }
+
+  /* Force underline for the Job Role native select (overrides global select { border: none !important }) */
+  .job-role-select {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+    padding-bottom: 0.75rem !important; /* align with pb-3 */
   }
 
   .contact-form-select option:hover,

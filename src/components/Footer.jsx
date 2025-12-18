@@ -195,7 +195,7 @@ const Footer = () => {
 
             {/* YouTube */}
             <a
-              href="https://www.youtube.com/@tvasta"
+              href="https://www.youtube.com/@tvasta3d"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#0D192D] hover:bg-gray-200 transition-all duration-200"
@@ -208,7 +208,7 @@ const Footer = () => {
 
             {/* X (Streamline) */}
             <a
-              href="https://x.com/tvasta3dp"
+              href="https://x.com/Tvasta3D"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-[#0D192D] hover:bg-gray-200 transition-all duration-200"
